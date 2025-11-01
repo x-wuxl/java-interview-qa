@@ -1,0 +1,138 @@
+---
+layout: default
+title: 分类浏览
+permalink: /categories.html
+---
+
+<div class="categories-page">
+    <h1>按分类浏览面试题</h1>
+
+    <div class="category-description">
+        <p>所有面试题按主题分类整理，点击分类名称可展开查看该分类下的所有题目。</p>
+    </div>
+
+    {% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+
+    <div class="categories-list">
+        {% for category in categories %}
+        <div class="category-section" id="{{ category }}">
+            <h2 class="category-title">
+                <span class="category-icon">📚</span>
+                {{ category }}
+                {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
+                <span class="category-count">({{ category_posts | size }} 题)</span>
+            </h2>
+
+            <ul class="posts-in-category">
+                {% for post in category_posts %}
+                <li>
+                    <a href="{{ post.url | relative_url }}">
+                        <span class="post-title">{{ post.title }}</span>
+                        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                    </a>
+                    {% if post.excerpt %}
+                    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="back-to-top">
+        <a href="#top" class="btn">返回顶部</a>
+    </div>
+</div>
+
+<style>
+    .category-section {
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .category-section:last-child {
+        border-bottom: none;
+    }
+
+    .category-title {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        padding: 0.5rem 0;
+        border-left: 4px solid #3498db;
+        padding-left: 1rem;
+    }
+
+    .category-icon {
+        margin-right: 0.5rem;
+    }
+
+    .category-count {
+        color: #7f8c8d;
+        font-size: 0.9em;
+        font-weight: normal;
+    }
+
+    .posts-in-category {
+        list-style: none;
+        padding: 0;
+    }
+
+    .posts-in-category li {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .posts-in-category li:hover {
+        background: #e9ecef;
+        transform: translateX(5px);
+    }
+
+    .posts-in-category a {
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #2c3e50;
+    }
+
+    .post-title {
+        flex: 1;
+        font-weight: 500;
+    }
+
+    .post-date {
+        color: #7f8c8d;
+        font-size: 0.85em;
+        margin-left: 1rem;
+    }
+
+    .post-excerpt {
+        margin-top: 0.5rem;
+        color: #6c757d;
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    .back-to-top {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .category-description {
+        background: #e3f2fd;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+        margin-bottom: 2rem;
+        border-left: 4px solid #2196f3;
+    }
+
+    .category-description p {
+        margin: 0;
+        color: #1565c0;
+    }
+</style>
