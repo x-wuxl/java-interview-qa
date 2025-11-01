@@ -1,8 +1,8 @@
 # Site settings
 title: "Java Interview Q&A"
 description: "Comprehensive Java backend interview questions and answers — built with Jekyll + GitHub Pages."
-baseurl: "" # Leave empty for GitHub Pages project site
-url: "https://x-wuxl.github.io/java-interview-qa"
+baseurl: "/java-interview-qa" # Must match repository name for GitHub Pages project site
+url: "https://x-wuxl.github.io"
 
 author: "wuxl"
 
