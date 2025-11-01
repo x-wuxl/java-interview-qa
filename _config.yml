@@ -1,0 +1,24 @@
+# Site settings
+title: "Java Interview Q&A"
+description: "Comprehensive Java backend interview questions and answers — built with Jekyll + GitHub Pages."
+baseurl: "" # Leave empty for GitHub Pages project site
+url: "https://x-wuxl.github.io/java-interview-qa"
+
+author: "wuxl"
+
+# Theme
+theme: minima
+markdown: kramdown
+highlighter: rouge
+
+# Plugins (these work natively on GitHub Pages)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
