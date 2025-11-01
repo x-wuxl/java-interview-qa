@@ -24,30 +24,6 @@ layout: default
         {% endfor %}
     </div>
 
-    <h2 class="recent-posts-heading">最新面试题</h2>
-    <ul class="post-list">
-        {% for post in site.posts limit:10 %}
-        <li>
-            <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
-            <h3>
-                <a class="post-link" href="{{ post.url | relative_url }}">
-                    {{ post.title | escape }}
-                </a>
-            </h3>
-            {% if post.categories %}
-            <div class="post-categories">
-                {% for category in post.categories %}
-                <span class="category-tag">{{ category }}</span>
-                {% endfor %}
-            </div>
-            {% endif %}
-            {% if post.excerpt %}
-            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-            {% endif %}
-        </li>
-        {% endfor %}
-    </ul>
-
     <p class="view-all">
         <a href="{{ '/categories.html' | relative_url }}" class="btn">查看所有分类</a>
     </p>
