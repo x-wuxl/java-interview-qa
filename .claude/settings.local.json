@@ -4,7 +4,8 @@
       "Bash(mkdir:*)",
       "Bash(tree:*)",
       "Bash(dir:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(2025-11-02-database-read-write-splitting-code-implementation.md)"
     ],
     "deny": [],
     "ask": []
