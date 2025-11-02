@@ -7,6 +7,10 @@ permalink: /categories.html
 <div class="categories-page">
     <h1>按分类浏览面试题</h1>
 
+    <div class="learning-path-notice">
+        <p>文章已按照<strong>渐进式学习路径</strong>排列，从基础到进阶循序渐进，建议按照顺序学习以获得最佳效果。</p>
+    </div>
+
     {% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
 
     <div class="categories-list">
@@ -18,15 +22,44 @@ permalink: /categories.html
                 <span class="category-count">({{ category_posts | size }})</span>
             </h2>
 
-            <ul class="posts-in-category">
-                {% for post in category_posts %}
-                <li>
-                    <a href="{{ post.url | relative_url }}">
-                        {{ post.title }}
-                    </a>
-                </li>
+            {% comment %}检查是否有学习路径配置{% endcomment %}
+            {% assign learning_path = site.data.learning_paths[category] %}
+            
+            {% if learning_path %}
+                {% comment %}按照学习路径配置展示（带主题分组）{% endcomment %}
+                {% for topic_data in learning_path %}
+                    {% assign topic_name = topic_data[0] %}
+                    {% assign post_titles = topic_data[1] %}
+                    
+                    <div class="topic-group">
+                        <h3 class="topic-title">{{ topic_name }}</h3>
+                        <ul class="posts-in-category">
+                            {% for title in post_titles %}
+                                {% assign matching_post = site.posts | where: "title", title | first %}
+                                {% if matching_post %}
+                                <li>
+                                    <span class="post-number">{{ forloop.index }}</span>
+                                    <a href="{{ matching_post.url | relative_url }}">
+                                        {{ matching_post.title }}
+                                    </a>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
                 {% endfor %}
-            </ul>
+            {% else %}
+                {% comment %}降级方案：没有配置则使用原有排序{% endcomment %}
+                <ul class="posts-in-category">
+                    {% for post in category_posts %}
+                    <li>
+                        <a href="{{ post.url | relative_url }}">
+                            {{ post.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
@@ -64,6 +97,22 @@ permalink: /categories.html
         margin-left: 0.5rem;
     }
 
+    /* 主题分组样式 */
+    .topic-group {
+        margin-bottom: 2rem;
+    }
+
+    .topic-title {
+        color: #2c3e50;
+        font-size: 1.05rem;
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+        padding: 0.5rem 0.75rem;
+        background: #f8f9fa;
+        border-left: 3px solid #27ae60;
+        border-radius: 2px;
+    }
+
     .posts-in-category {
         list-style: none;
         padding: 0;
@@ -75,6 +124,8 @@ permalink: /categories.html
         background: transparent;
         border-radius: 0;
         transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
     }
 
     .posts-in-category li:hover {
@@ -82,12 +133,28 @@ permalink: /categories.html
         transform: translateX(3px);
     }
 
+    /* 文章序号样式 */
+    .post-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 24px;
+        height: 24px;
+        margin-right: 0.75rem;
+        background: #3498db;
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
     .posts-in-category a {
         text-decoration: none;
-        display: block;
         color: #333333;
         font-size: 1rem;
         font-weight: normal;
+        flex: 1;
     }
 
     .posts-in-category a:hover {
@@ -110,5 +177,28 @@ permalink: /categories.html
     .category-description p {
         margin: 0;
         color: #1565c0;
+    }
+
+    /* 提示信息样式 */
+    .learning-path-notice {
+        background: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 1rem 1.25rem;
+        margin-bottom: 2rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+    }
+
+    .learning-path-notice::before {
+        content: "💡";
+        margin-right: 0.75rem;
+        font-size: 1.2rem;
+    }
+
+    .learning-path-notice p {
+        margin: 0;
+        color: #856404;
+        font-size: 0.95rem;
     }
 </style>
