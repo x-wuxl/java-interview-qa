@@ -57,38 +57,111 @@ permalink: /categories.html
                 <span class="category-count">({{ category_posts | size }})</span>
             </h2>
 
-            {% comment %}检查是否有学习路径配置{% endcomment %}
-            {% assign learning_path = site.data.learning_paths[category] %}
+            {% comment %}获取该分类下已按全局顺序排序的文章列表{% endcomment %}
+            {% assign sorted_posts = site.data.global_order.sorted_by_category[category] %}
             
-            {% if learning_path %}
-                {% comment %}按照学习路径配置展示（带主题分组）{% endcomment %}
-                {% for topic_data in learning_path %}
-                    {% assign topic_name = topic_data[0] %}
-                    {% assign post_titles = topic_data[1] %}
-                    
-                    <div class="topic-group">
-                        <h3 class="topic-title">{{ topic_name }}</h3>
-                        <ul class="posts-in-category">
+            {% if sorted_posts %}
+                {% comment %}检查是否有学习路径配置（用于主题分组）{% endcomment %}
+                {% assign learning_path = site.data.learning_paths[category] %}
+                
+                {% if learning_path %}
+                    {% comment %}按照学习路径配置的主题分组展示，但文章顺序按全局顺序{% endcomment %}
+                    {% for topic_data in learning_path %}
+                        {% assign topic_name = topic_data[0] %}
+                        {% assign post_titles = topic_data[1] %}
+                        
+                        {% comment %}筛选出属于当前主题的文章（按全局顺序）{% endcomment %}
+                        {% assign topic_posts = "" | split: "" %}
+                        {% for sorted_post in sorted_posts %}
                             {% for title in post_titles %}
-                                {% assign matching_post = site.posts | where: "title", title | first %}
-                                {% if matching_post %}
-                                <li>
-                                    <span class="post-number">{{ forloop.index }}</span>
-                                    <a href="{{ matching_post.url | relative_url }}">
-                                        {{ matching_post.title }}
-                                    </a>
-                                </li>
+                                {% if title == sorted_post.title %}
+                                    {% assign topic_posts = topic_posts | push: sorted_post %}
+                                    {% break %}
                                 {% endif %}
                             {% endfor %}
-                        </ul>
-                    </div>
-                {% endfor %}
+                        {% endfor %}
+                        
+                        {% if topic_posts.size > 0 %}
+                        <div class="topic-group">
+                            <h3 class="topic-title">{{ topic_name }}</h3>
+                            <ul class="posts-in-category">
+                                {% for post in topic_posts %}
+                                    {% assign matching_post = site.posts | where: "title", post.title | first %}
+                                    {% if matching_post %}
+                                    <li>
+                                        <span class="post-number">{{ post.order }}</span>
+                                        <a href="{{ matching_post.url | relative_url }}">
+                                            {{ post.title }}
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                    
+                    {% comment %}显示没有主题分组的文章（按全局顺序）{% endcomment %}
+                    {% assign ungrouped_posts = "" | split: "" %}
+                    {% for sorted_post in sorted_posts %}
+                        {% assign in_group = false %}
+                        {% for topic_data in learning_path %}
+                            {% assign post_titles = topic_data[1] %}
+                            {% for title in post_titles %}
+                                {% if title == sorted_post.title %}
+                                    {% assign in_group = true %}
+                                    {% break %}
+                                {% endif %}
+                            {% endfor %}
+                            {% if in_group %}{% break %}{% endif %}
+                        {% endfor %}
+                        {% unless in_group %}
+                            {% assign ungrouped_posts = ungrouped_posts | push: sorted_post %}
+                        {% endunless %}
+                    {% endfor %}
+                    
+                    {% if ungrouped_posts.size > 0 %}
+                    <ul class="posts-in-category">
+                        {% for post in ungrouped_posts %}
+                            {% assign matching_post = site.posts | where: "title", post.title | first %}
+                            {% if matching_post %}
+                            <li>
+                                <span class="post-number">{{ post.order }}</span>
+                                <a href="{{ matching_post.url | relative_url }}">
+                                    {{ post.title }}
+                                </a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                {% else %}
+                    {% comment %}没有学习路径配置，直接按全局顺序显示{% endcomment %}
+                    <ul class="posts-in-category">
+                        {% for post in sorted_posts %}
+                            {% assign matching_post = site.posts | where: "title", post.title | first %}
+                            {% if matching_post %}
+                            <li>
+                                <span class="post-number">{{ post.order }}</span>
+                                <a href="{{ matching_post.url | relative_url }}">
+                                    {{ post.title }}
+                                </a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             {% else %}
-                {% comment %}降级方案：没有配置则使用原有排序，但也显示序号{% endcomment %}
+                {% comment %}降级方案：如果没有预排序列表，使用原有方式{% endcomment %}
                 <ul class="posts-in-category">
                     {% for post in category_posts %}
                     <li>
-                        <span class="post-number">{{ forloop.index }}</span>
+                        {% assign global_order = site.data.global_order.title_order[post.title] %}
+                        {% if global_order %}
+                            <span class="post-number">{{ global_order }}</span>
+                        {% else %}
+                            <span class="post-number">{{ forloop.index }}</span>
+                        {% endif %}
                         <a href="{{ post.url | relative_url }}">
                             {{ post.title }}
                         </a>
