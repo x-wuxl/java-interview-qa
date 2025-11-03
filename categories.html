@@ -11,10 +11,45 @@ permalink: /categories.html
         <p>文章已按照<strong>渐进式学习路径</strong>排列，从基础到进阶循序渐进，建议按照顺序学习以获得最佳效果。</p>
     </div>
 
-    {% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+    {% comment %}定义分类的学习路径顺序（按照从基础到进阶的顺序）{% endcomment %}
+    {% assign category_order = "Java基础|集合框架|并发编程|JVM|MySQL|Redis|Spring框架|分布式|中间件|设计模式" | split: "|" %}
+    
+    {% comment %}获取所有分类{% endcomment %}
+    {% assign all_categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq %}
+    
+    {% comment %}按学习路径顺序排序分类{% endcomment %}
+    {% assign sorted_categories = "" | split: "" %}
+    {% for cat_order in category_order %}
+        {% comment %}检查该分类是否存在{% endcomment %}
+        {% assign found = false %}
+        {% for cat in all_categories %}
+            {% if cat == cat_order %}
+                {% assign found = true %}
+            {% endif %}
+        {% endfor %}
+        {% if found %}
+            {% assign sorted_categories = sorted_categories | push: cat_order %}
+        {% endif %}
+    {% endfor %}
+    
+    {% comment %}添加未在顺序中定义的其他分类（按字母排序）{% endcomment %}
+    {% assign other_categories = "" | split: "" %}
+    {% for category in all_categories %}
+        {% assign is_sorted = false %}
+        {% for sorted_cat in sorted_categories %}
+            {% if sorted_cat == category %}
+                {% assign is_sorted = true %}
+            {% endif %}
+        {% endfor %}
+        {% unless is_sorted %}
+            {% assign other_categories = other_categories | push: category %}
+        {% endunless %}
+    {% endfor %}
+    {% assign other_categories = other_categories | sort %}
+    {% assign sorted_categories = sorted_categories | concat: other_categories %}
 
     <div class="categories-list">
-        {% for category in categories %}
+        {% for category in sorted_categories %}
         <div class="category-section" id="{{ category }}">
             <h2 class="category-title">
                 {{ category }}
@@ -49,10 +84,11 @@ permalink: /categories.html
                     </div>
                 {% endfor %}
             {% else %}
-                {% comment %}降级方案：没有配置则使用原有排序{% endcomment %}
+                {% comment %}降级方案：没有配置则使用原有排序，但也显示序号{% endcomment %}
                 <ul class="posts-in-category">
                     {% for post in category_posts %}
                     <li>
+                        <span class="post-number">{{ forloop.index }}</span>
                         <a href="{{ post.url | relative_url }}">
                             {{ post.title }}
                         </a>
