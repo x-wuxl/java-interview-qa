@@ -30,6 +30,8 @@ def parse_learning_path():
             if match:
                 order = int(match.group(1))
                 title = match.group(2).strip().strip('"')
+                # 去除转义符：将 \" 转换为 "
+                title = title.replace('\\"', '"').replace('\\\\"', '"')
                 titles_order[title] = order
     
     print(f"✅ 解析了 {len(titles_order)} 篇文章的全局顺序")

@@ -39,18 +39,66 @@ layout: default
 
     <footer class="post-footer">
         <div class="post-navigation">
-            {% if page.previous.url %}
-            <div class="prev-post">
-                <span>上一题：</span>
-                <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
-            </div>
-            {% endif %}
+            {% comment %}按全局顺序获取上一题和下一题{% endcomment %}
+            {% assign global_order = site.data.global_order.title_order %}
+            {% assign current_order = global_order[page.title] %}
+            
+            {% if current_order %}
+                {% assign prev_post = null %}
+                {% assign next_post = null %}
+                {% assign prev_order = current_order | minus: 1 %}
+                {% assign next_order = current_order | plus: 1 %}
+                
+                {% comment %}查找上一题{% endcomment %}
+                {% if prev_order > 0 %}
+                    {% for post in site.posts %}
+                        {% assign post_order = global_order[post.title] %}
+                        {% if post_order == prev_order %}
+                            {% assign prev_post = post %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                
+                {% comment %}查找下一题{% endcomment %}
+                {% if next_order <= 461 %}
+                    {% for post in site.posts %}
+                        {% assign post_order = global_order[post.title] %}
+                        {% if post_order == next_order %}
+                            {% assign next_post = post %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                
+                {% if prev_post %}
+                <div class="prev-post">
+                    <span>上一题（{{ prev_order }}）：</span>
+                    <a href="{{ prev_post.url | relative_url }}">{{ prev_post.title }}</a>
+                </div>
+                {% endif %}
 
-            {% if page.next.url %}
-            <div class="next-post">
-                <span>下一题：</span>
-                <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
-            </div>
+                {% if next_post %}
+                <div class="next-post">
+                    <span>下一题（{{ next_order }}）：</span>
+                    <a href="{{ next_post.url | relative_url }}">{{ next_post.title }}</a>
+                </div>
+                {% endif %}
+            {% else %}
+                {% comment %}降级方案：如果没有全局顺序，使用原有方式{% endcomment %}
+                {% if page.previous.url %}
+                <div class="prev-post">
+                    <span>上一题：</span>
+                    <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+                </div>
+                {% endif %}
+
+                {% if page.next.url %}
+                <div class="next-post">
+                    <span>下一题：</span>
+                    <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
+                </div>
+                {% endif %}
             {% endif %}
         </div>
 

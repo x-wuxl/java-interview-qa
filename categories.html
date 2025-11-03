@@ -66,11 +66,21 @@ permalink: /categories.html
                 
                 {% if learning_path %}
                     {% comment %}按照学习路径配置的主题分组展示，但文章顺序按全局顺序{% endcomment %}
+                    {% comment %}首先收集所有已分组的文章标题{% endcomment %}
+                    {% assign grouped_titles = "" | split: "" %}
+                    {% for topic_data in learning_path %}
+                        {% assign post_titles = topic_data[1] %}
+                        {% for title in post_titles %}
+                            {% assign grouped_titles = grouped_titles | push: title %}
+                        {% endfor %}
+                    {% endfor %}
+                    
+                    {% comment %}然后按全局顺序遍历文章，分配到对应主题{% endcomment %}
                     {% for topic_data in learning_path %}
                         {% assign topic_name = topic_data[0] %}
                         {% assign post_titles = topic_data[1] %}
                         
-                        {% comment %}筛选出属于当前主题的文章（按全局顺序）{% endcomment %}
+                        {% comment %}筛选出属于当前主题的文章（严格按全局顺序）{% endcomment %}
                         {% assign topic_posts = "" | split: "" %}
                         {% for sorted_post in sorted_posts %}
                             {% for title in post_titles %}
@@ -85,6 +95,7 @@ permalink: /categories.html
                         <div class="topic-group">
                             <h3 class="topic-title">{{ topic_name }}</h3>
                             <ul class="posts-in-category">
+                                {% comment %}topic_posts已经是从sorted_posts按顺序筛选的，所以这里直接遍历即可{% endcomment %}
                                 {% for post in topic_posts %}
                                     {% assign matching_post = site.posts | where: "title", post.title | first %}
                                     {% if matching_post %}
