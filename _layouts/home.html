@@ -3,28 +3,90 @@ layout: default
 ---
 
 <div class="home">
-    <h1 class="page-heading">{{ page.title }}</h1>
+    <div class="hero-section">
+        <h1 class="page-heading">{{ page.title }}</h1>
+        <p class="hero-subtitle">系统化学习 Java 后端开发，为面试做好充分准备</p>
+        
+        <div class="stats-container">
+            {% assign total_posts = site.posts | size %}
+            {% assign total_categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | size %}
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-content">
+                    <div class="stat-number">{{ total_posts }}</div>
+                    <div class="stat-label">精选题目</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🗂️</div>
+                <div class="stat-content">
+                    <div class="stat-number">{{ total_categories }}</div>
+                    <div class="stat-label">知识分类</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-content">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">系统化学习</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     {{ content }}
 
+    <div class="category-section-header">
+        <h2 class="section-title">
+            <span class="title-icon">📋</span>
+            知识分类
+        </h2>
+        <p class="section-description">点击下方分类卡片，按主题系统学习</p>
+    </div>
+
     <div class="category-grid">
         {% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+        {% assign category_icons = "Java基础:☕|集合框架:📦|并发编程:⚡|JVM:🔧|MySQL:💾|Redis:⚙️|Spring框架:🌱|分布式:🌐|中间件:🔌|设计模式:🎨" | split: "|" %}
         {% for category in categories %}
+        {% assign icon = "📖" %}
+        {% for icon_map in category_icons %}
+            {% assign parts = icon_map | split: ":" %}
+            {% if parts[0] == category %}
+                {% assign icon = parts[1] %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
         <div class="category-card">
-            <h2>
-                <a href="{{ '/categories.html#' | append: category | relative_url }}">
-                    {{ category }}
+            <div class="card-header">
+                <span class="category-icon">{{ icon }}</span>
+                <h2 class="category-title">
+                    <a href="{{ '/categories.html#' | append: category | relative_url }}">
+                        {{ category }}
+                    </a>
+                </h2>
+            </div>
+            <div class="card-content">
+                <p class="post-count">
+                    {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
+                    <span class="count-number">{{ category_posts | size }}</span>
+                    <span class="count-label">道题目</span>
+                </p>
+            </div>
+            <div class="card-footer">
+                <a href="{{ '/categories.html#' | append: category | relative_url }}" class="card-link">
+                    开始学习 <span class="arrow">→</span>
                 </a>
-            </h2>
-            <p class="post-count">
-                {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
-                {{ category_posts | size }} 道题目
-            </p>
+            </div>
         </div>
         {% endfor %}
     </div>
 
-    <p class="view-all">
-        <a href="{{ '/categories.html' | relative_url }}" class="btn">查看所有分类</a>
-    </p>
+    <div class="view-all-section">
+        <a href="{{ '/categories.html' | relative_url }}" class="btn btn-primary">
+            <span>查看所有分类</span>
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
 </div>
