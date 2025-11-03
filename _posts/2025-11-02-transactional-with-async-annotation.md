@@ -5,7 +5,7 @@ date: 2025-11-02
 description: "深入分析@Transactional和@Async注解同时使用时的事务失效问题、原因及正确的处理方案"
 author: "wuxl"
 categories: [Spring框架]
-tags: [Spring, @Transactional, @Async, 异步事务, 多线程]
+tags: [Spring, "@Transactional", "@Async", 异步事务, 多线程]
 ---
 
 ## 问题

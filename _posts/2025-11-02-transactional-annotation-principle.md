@@ -5,7 +5,7 @@ date: 2025-11-02
 description: "深入解析Spring事务的底层实现机制，包括AOP代理、TransactionInterceptor、事务管理器等核心源码"
 author: "wuxl"
 categories: [Spring框架]
-tags: [Spring, @Transactional, AOP, 源码分析, 事务原理, TransactionInterceptor]
+tags: [Spring, "@Transactional", AOP, 源码分析, 事务原理, TransactionInterceptor]
 ---
 
 ## 问题

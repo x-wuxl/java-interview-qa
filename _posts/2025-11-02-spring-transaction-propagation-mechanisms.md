@@ -5,7 +5,7 @@ date: 2025-11-02
 description: "全面解析Spring的7种事务传播行为，包括REQUIRED、REQUIRES_NEW等常用传播机制的原理和应用场景"
 author: "wuxl"
 categories: [Spring框架]
-tags: [Spring, 事务传播, Propagation, 事务管理, @Transactional]
+tags: [Spring, 事务传播, Propagation, 事务管理, "@Transactional"]
 ---
 
 ## 问题

@@ -5,7 +5,7 @@ date: 2025-11-02
 description: "全面解析Spring事务管理机制，包括ACID特性、隔离级别、传播行为、实现原理等核心概念"
 author: "wuxl"
 categories: [Spring框架]
-tags: [Spring, 事务管理, ACID, 隔离级别, 传播机制, @Transactional]
+tags: [Spring, 事务管理, ACID, 隔离级别, 传播机制, "@Transactional"]
 ---
 
 ## 问题

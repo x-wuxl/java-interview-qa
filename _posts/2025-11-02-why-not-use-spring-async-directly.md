@@ -5,7 +5,7 @@ date: 2025-11-02
 description: "详解@Async注解的潜在问题和风险，包括默认线程池的隐患、异常处理缺陷等，提供最佳实践方案"
 author: "wuxl"
 categories: [Spring框架]
-tags: [Spring, @Async, 异步编程, 线程池, 最佳实践]
+tags: [Spring, "@Async", 异步编程, 线程池, 最佳实践]
 ---
 
 ## 问题

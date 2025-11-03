@@ -5,7 +5,7 @@ date: 2025-11-02
 description: "深入解析Spring事务在多线程环境下失效的原因及ThreadLocal机制，提供正确的多线程事务处理方案"
 author: "wuxl"
 categories: [Spring框架]
-tags: [Spring, 事务管理, 多线程, ThreadLocal, @Transactional]
+tags: [Spring, 事务管理, 多线程, ThreadLocal, "@Transactional"]
 ---
 
 ## 问题

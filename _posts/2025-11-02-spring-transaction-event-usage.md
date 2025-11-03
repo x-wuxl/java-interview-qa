@@ -5,7 +5,7 @@ date: 2025-11-02
 description: "详解Spring事务事件机制@TransactionalEventListener的使用方法、执行时机和实际应用场景"
 author: "wuxl"
 categories: [Spring框架]
-tags: [Spring, 事务事件, @TransactionalEventListener, 事件驱动, 事务回调]
+tags: [Spring, 事务事件, "@TransactionalEventListener", 事件驱动, 事务回调]
 ---
 
 ## 问题

@@ -5,7 +5,7 @@ date: 2025-11-02
 description: "详解Spring事务的两种开启方式：声明式事务和编程式事务，包括配置方法和使用示例"
 author: "wuxl"
 categories: [Spring框架]
-tags: [Spring, 事务管理, @Transactional, 声明式事务, 编程式事务]
+tags: [Spring, 事务管理, "@Transactional", 声明式事务, 编程式事务]
 ---
 
 ## 问题

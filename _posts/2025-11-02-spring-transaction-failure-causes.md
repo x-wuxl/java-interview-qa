@@ -5,7 +5,7 @@ date: 2025-11-02
 description: "详解Spring事务失效的8大常见原因及解决方案，包括方法非public、自调用、异常类型不匹配等高频面试考点"
 author: "wuxl"
 categories: [Spring框架]
-tags: [Spring, 事务失效, @Transactional, AOP, 事务回滚]
+tags: [Spring, 事务失效, "@Transactional", AOP, 事务回滚]
 ---
 
 ## 问题
