@@ -84,7 +84,29 @@ def generate_global_order_yaml():
                 posts_by_category[category] = []
             posts_by_category[category].append(post)
     
-    # 保存到 _data/global_order.yml
+    # 构建数据结构
+    data = {
+        'title_order': titles_order,
+        'sorted_by_category': {}
+    }
+    
+    # 为每个分类生成排序后的文章列表
+    for category in sorted(posts_by_category.keys()):
+        category_posts = posts_by_category[category]
+        # 按全局顺序排序
+        sorted_category_posts = []
+        for post in category_posts:
+            order = titles_order.get(post['title'], 999999)
+            sorted_category_posts.append({
+                'title': post['title'],
+                'order': order,
+                'url': post['url']
+            })
+        
+        sorted_category_posts.sort(key=lambda x: x['order'])
+        data['sorted_by_category'][category] = sorted_category_posts
+    
+    # 使用 YAML 库保存，确保格式正确
     output_path = Path('_data/global_order.yml')
     output_path.parent.mkdir(exist_ok=True)
     
@@ -94,35 +116,9 @@ def generate_global_order_yaml():
         f.write("# 从学习路径排序_优化版.md 自动生成\n")
         f.write("# ========================================\n\n")
         
-        f.write("# 标题 -> 全局顺序号的映射\n")
-        f.write("title_order:\n")
-        
-        # 按顺序号排序
-        sorted_items = sorted(titles_order.items(), key=lambda x: x[1])
-        for title, order in sorted_items:
-            # 转义特殊字符
-            title_escaped = title.replace(':', '：').replace('"', '\\"').replace('\\', '\\\\')
-            f.write(f'  "{title_escaped}": {order}\n')
-        
-        f.write("\n# 每个分类下按全局顺序排序的文章列表\n")
-        f.write("sorted_by_category:\n")
-        
-        for category in sorted(posts_by_category.keys()):
-            category_posts = posts_by_category[category]
-            # 按全局顺序排序
-            sorted_category_posts = []
-            for post in category_posts:
-                order = titles_order.get(post['title'], 999999)
-                sorted_category_posts.append((order, post))
-            
-            sorted_category_posts.sort(key=lambda x: x[0])
-            
-            f.write(f"  {category}:\n")
-            for order, post in sorted_category_posts:
-                title_escaped = post['title'].replace(':', '：').replace('"', '\\"').replace('\\', '\\\\')
-                f.write(f'    - title: "{title_escaped}"\n')
-                f.write(f'      order: {order}\n')
-                f.write(f'      url: {post["url"]}\n')
+        # 使用 yaml.dump 确保正确的转义
+        import yaml
+        yaml.dump(data, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
     
     print(f"✅ 已生成全局顺序配置文件: {output_path}")
     print(f"   共 {len(titles_order)} 篇文章的全局顺序")

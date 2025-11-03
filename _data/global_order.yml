@@ -3,2440 +3,2437 @@
 # 从学习路径排序_优化版.md 自动生成
 # ========================================
 
-# 标题 -> 全局顺序号的映射
 title_order:
-  "什么是深拷贝和浅拷贝？": 1
-  "如何理解Java中的多态？": 2
-  "接口和抽象类的区别，如何选择？": 3
-  "为什么建议多用组合少用继承？": 4
-  "Java是值传递还是引用传递？": 5
-  "有了equals为什么还需要hashCode方法": 6
-  "什么是反射机制？为什么反射慢？": 7
-  "String、StringBuilder和StringBuffer的区别？": 8
-  "String为什么设计成不可变的？": 9
-  "String是如何实现不可变的？": 10
-  "String有长度限制吗？是多少？": 11
-  "String中intern的原理是什么？": 12
-  "为什么JDK9中把String的char[]改成了byte[]？": 13
-  "JDK9中对字符串的拼接做了什么优化？": 14
-  "字符串常量是什么时候进入到字符串常量池的？": 15
-  "String a = \\\\"ab\\\\"; String b = \\\\"a\\\\" + \\\\"b\\\\"; a==b吗？": 16
-  "String str = new String(\\\\"hollis\\\\")创建了几个对象？": 17
-  "什么是泛型？有什么好处？": 18
-  "什么是类型擦除": 19
-  "泛型中K、T、V、E、Object等分别代表什么含义": 20
-  "泛型中上下界限定符extends和super有什么区别": 21
-  "什么是序列化与反序列化": 22
-  "Java序列化的原理是什么": 23
-  "你知道fastjson的反序列化漏洞吗": 24
-  "serialVersionUID有何用途？如果没定义会有什么问题？": 25
-  "什么是AIO、BIO和NIO？": 26
-  "Lambda表达式是如何实现的": 27
-  "Stream的并行流一定比串行流更快吗": 28
-  "Arrays.sort使用什么排序算法实现的": 29
-  "BigDecimal(double)和BigDecimal(String)有什么区别": 30
-  "为什么不能用BigDecimal的equals方法做等值比较": 31
-  "为什么不能用浮点数表示金额": 32
-  "SimpleDateFormat是线程安全的吗？使用时应该注意什么": 33
-  "什么是单例模式，如何实现一个单例？": 34
-  "什么是工厂模式？": 35
-  "什么是策略模式？": 36
-  "什么是模板方法模式？": 37
-  "什么是责任链模式？": 38
-  "什么是观察者模式？": 39
-  "策略模式与代理模式的区别": 40
-  "ArrayList与LinkedList有什么区别？": 41
-  "ArrayList的扩容机制是怎样的？": 42
-  "ArrayList扩容机制详解：初始容量与1.5倍扩容": 43
-  "ArrayList和LinkedList的时间复杂度": 44
-  "CopyOnWriteArrayList是如何实现的？": 45
-  "HashMap的底层实现原理": 46
-  "HashMap为什么线程不安全？": 47
-  "HashMap的容量为什么是2的幂次方？": 48
-  "HashMap的加载因子为什么是0.75？": 49
-  "HashMap什么时候扩容？": 50
-  "HashMap扩容机制详解": 51
-  "HashMap的hash方法原理": 52
-  "HashMap为什么在链表长度为8时转为红黑树？": 53
-  "HashMap在JDK1.7和1.8中的区别": 54
-  "为什么HashMap有时候链表长度超过8也不树化？": 55
-  "HashMap的key可以为null吗？": 56
-  "Hashtable、HashMap、ConcurrentHashMap的区别": 57
-  "ConcurrentHashMap是如何实现的？": 58
-  "ConcurrentHashMap在JDK1.7和1.8中有什么不同？": 59
-  "LinkedHashMap是如何实现的？": 60
-  "TreeMap和HashMap有什么区别？": 61
-  "WeakHashMap了解吗？": 62
-  "HashSet和HashMap有什么关系？": 63
-  "PriorityQueue的底层实现原理": 64
-  "ArrayDeque和LinkedList作为队列的区别": 65
-  "JVM的运行时内存区域是怎样的？": 66
-  "JVM为什么要把堆和栈区分出来呢？": 67
-  "虚拟机中的堆一定是线程共享的吗？": 68
-  "什么是方法区？是如何实现的？": 69
-  "方法区存储什么数据？": 70
-  "Java的堆是如何分代的？为什么分代？": 71
-  "什么是堆外内存？如何使用堆外内存？": 72
-  "OutOfMemory和StackOverflow的区别是什么？": 73
-  "内存泄漏和内存溢出的区别是什么？": 74
-  "一个Java进程占用的内存都有哪些部分？": 75
-  "JVM内存结构全面解析": 76
-  "JVM是如何创建对象的？": 77
-  "一个对象的结构是什么样的？": 78
-  "JVM如何保证给对象分配内存过程的线程安全？": 79
-  "Java中的对象一定在堆上分配内存吗？": 80
-  "什么是逃逸分析？": 81
-  "JVM如何判断对象是否存活？": 82
-  "什么是强引用、软引用、弱引用和虚引用？": 83
-  "JVM有哪些垃圾回收算法": 84
-  "新生代和老年代的GC算法": 85
-  "JVM中一次完整的GC流程是怎样的": 86
-  "YoungGC和FullGC的触发条件是什么": 87
-  "FullGC多久一次算正常": 88
-  "什么是三色标记算法": 89
-  "什么是跨代引用，有什么问题": 90
-  "什么是STW（Stop-The-World）及其影响": 91
-  "什么是安全点（Safe Point），有什么作用": 92
-  "介绍下CMS的垃圾回收过程": 93
-  "G1和CMS有什么区别？": 94
-  "为什么G1从JDK9之后成为默认的垃圾回收器？": 95
-  "JDK11中新出的ZGC有什么特点？": 96
-  "Java8和Java11的GC有什么区别？": 97
-  "新生代和老年代的垃圾回收器有何区别？": 98
-  "项目中如何选择垃圾回收器？为啥选择这个？": 99
-  "说一说JVM的并发回收和并行回收": 100
-  "新生代如果只有一个Eden+一个Survivor可以吗？": 101
-  "Java中的类什么时候会被加载？": 102
-  "Java中类加载的过程是怎么样的？": 103
-  "Java类加载流程与过程": 104
-  "类的生命周期是怎么样的？": 105
-  "什么是双亲委派？如何破坏？": 106
-  "双亲委派机制的核心思想是什么？": 107
-  "双亲委派机制如何打破（详细补充）": 108
-  "破坏双亲委派之后，能重写String类吗？": 109
-  "如何判断JVM中类和其他类是不是同一个类？": 110
-  "JDK 1.8和1.9中类加载器有哪些不同？": 111
-  "什么是Class常量池，和运行时常量池关系是什么？": 112
-  "运行时常量池和字符串常量池的关系是什么？": 113
-  "字符串常量池是如何实现的？": 114
-  "什么是编译和反编译？": 115
-  "Java一定就是平台无关的吗？": 116
-  "Java是如何实现平台无关的？": 117
-  "Java是编译型还是解释型语言？": 118
-  "什么是AOT编译？和JIT有啥区别？": 119
-  "简单介绍一下JIT优化技术？": 120
-  "常见的JVM工具有哪些": 121
-  "JVM调优参数详解": 122
-  "常用的JVM启动参数有哪些": 123
-  "Java发生了OOM一定会导致JVM退出吗": 124
-  "什么情况会导致JVM退出": 125
-  "对JDK进程执行kill -9有什么影响": 126
-  "什么是SPI，和API有什么区别": 127
-  "创建线程有几种方式？": 128
-  "线程有几种状态，状态之间的流转是怎样的？": 129
-  "Java是如何判断一个线程是否存活的？": 130
-  "Thread.sleep(0)的作用是什么？": 131
-  "什么是守护线程，和普通线程有什么区别？": 132
-  "什么是多线程中的上下文切换？": 133
-  "线程是如何被调度的？": 134
-  "线程同步的方式有哪些？": 135
-  "什么是死锁，如何解决？": 136
-  "run、start、wait、sleep、notify、notifyAll区别": 137
-  "什么是并发，什么是并行？": 138
-  "能不能谈谈你对线程安全的理解？": 139
-  "有哪些实现线程安全的方案": 140
-  "并发编程中的原子性和数据库ACID的原子性一样吗？": 141
-  "指令重排序": 142
-  "final关键字与可见性是否有关": 143
-  "什么是Java内存模型（JMM）？": 144
-  "什么是happens-before原则？": 145
-  "happens-before和as-if-serial有啥区别和联系？": 146
-  "有了MESI为啥还需要JMM？": 147
-  "什么是总线嗅探和总线风暴，和JMM有什么关系？": 148
-  "到底啥是内存屏障？到底怎么加的？": 149
-  "volatile能保证原子性吗？为什么？": 150
-  "有了synchronized为什么还需要volatile": 151
-  "volatile如何保证可见性和有序性": 152
-  "volatile关键字与禁止重排序如何解决多线程可见性": 153
-  "什么是CAS？存在什么问题？": 154
-  "介绍下CAS": 155
-  "CAS操作类": 156
-  "CAS一定有自旋吗？": 157
-  "CAS在操作系统层面是如何保证原子性的": 158
-  "有了CAS为啥还需要volatile": 159
-  "ABA问题": 160
-  "什么是Unsafe？": 161
-  "synchronized是怎么实现的？": 162
-  "synchronized锁的是什么？": 163
-  "synchronized是如何保证原子性、可见性、有序性的？": 164
-  "synchronized的锁优化是怎样的？": 165
-  "synchronized的锁升级过程是怎样的？": 166
-  "synchronized升级过程中有几次自旋？": 167
-  "synchronized的锁能降级吗？": 168
-  "为什么JDK15要废弃偏向锁？": 169
-  "synchronized是否可重入": 170
-  "synchronized是非公平锁吗，那么是如何体现的？": 171
-  "synchronized和ReentrantLock的区别": 172
-  "synchronized和lock区别": 173
-  "int a = 1是原子性操作吗": 174
-  "如何保证多线程下i++结果正确": 175
-  "如何理解AQS？": 176
-  "AQS的同步队列和条件队列原理": 177
-  "AQS是如何实现线程的等待和唤醒的？": 178
-  "AQS为什么采用双向链表？": 179
-  "什么是AQS的独占模式和共享模式？": 180
-  "AQS操作类有哪些？": 181
-  "什么是可重入锁，怎么实现可重入锁？": 182
-  "可重入锁的底层实现": 183
-  "公平锁和非公平锁的区别": 184
-  "Lock是否公平，能否实现非公平，如何实现？": 185
-  "ReentrantLock增加了哪些高级功能？": 186
-  "什么是线程池，如何实现的？": 187
-  "ForkJoinPool和ThreadPoolExecutor的区别是什么？": 188
-  "线程池的拒绝策略有哪些？": 189
-  "为什么不建议通过Executors构建线程池？": 190
-  "线程数设定成多少更合适？": 191
-  "如何让Java的线程池顺序执行任务？": 192
-  "如何实现一个动态线程池？": 193
-  "线程池多线程操作对象是否需要加volatile保障可见性？": 194
-  "CompletableFuture的底层是如何实现的？": 195
-  "如何对多线程进行编排？": 196
-  "CountDownLatch、CyclicBarrier、Semaphore区别？": 197
-  "LongAdder和AtomicLong的区别？": 198
-  "什么是ThreadLocal，如何实现的？": 199
-  "ThreadLocalMap的数据结构": 200
-  "ThreadLocalMap的冲突解决机制": 201
-  "ThreadLocalMap的扩容机制": 202
-  "ThreadLocal为什么会导致内存泄漏？如何解决？": 203
-  "ThreadLocal的key是弱引用，在get()时发生GC后key会是null吗？": 204
-  "ThreadLocal的应用场景有哪些？": 205
-  "有了InheritableThreadLocal为啥还需要TransmittableThreadLocal？": 206
-  "探测式清理和启发式清理": 207
-  "父子线程之间怎么共享、传递数据？": 208
-  "为什么不能在try-catch中捕获子线程的异常？": 209
-  "如何实现主线程捕获子线程异常？": 210
-  "Java线程出现异常，进程为啥不会退出？": 211
-  "有三个线程T1,T2,T3如何保证顺序执行？": 212
-  "三个线程分别顺序打印0-100": 213
-  "JDK21中的虚拟线程是怎么回事？": 214
-  "为什么虚拟线程不能用synchronized？": 215
-  "为什么虚拟线程不要和线程池一起用？": 216
-  "为什么虚拟线程尽量避免使用ThreadLocal？": 217
-  "InnoDB为什么使用B+树实现索引？": 218
-  "InnoDB中的索引类型？": 219
-  "什么是聚簇索引和非聚簇索引？": 220
-  "什么是回表，怎么减少回表的次数？": 221
-  "什么是索引覆盖、索引下推？": 222
-  "InnoDB和MyISAM有什么区别？": 223
-  "MyISAM的索引结构是怎么样的，它存在的问题是什么？": 224
-  "唯一索引和主键索引的区别？": 225
-  "MySQL是如何保证唯一性索引的唯一性的？": 226
-  "从InnoDB索引结构分析索引Key长度限制": 227
-  "什么是最左前缀匹配？为什么要遵守？": 228
-  "MySQL索引一定遵循最左前缀匹配吗？": 229
-  "A,B,C的联合索引，按照AB,AC,BC查询，能走索引吗？": 230
-  "a,b两个单独索引，where a=xx and b=xx走哪个索引？为什么？": 231
-  "什么是索引合并，原理是什么？": 232
-  "什么是索引跳跃扫描？": 233
-  "设计索引的时候有哪些原则？": 234
-  "区分度不高的字段建索引一定没用吗？": 235
-  "联合索引是越多越好吗？": 236
-  "MySQL索引建立与性能影响": 237
-  "MySQL索引存储与失效场景详解": 238
-  "MySQL索引失效情况": 239
-  "MySQL索引，最左匹配，索引覆盖，索引下推，索引失效情况，查询优化": 240
-  "用了索引还是很慢，可能是什么原因？": 241
-  "索引失效的问题如何排查？": 242
-  "MySQL选错索引的原因及解决方案": 243
-  "WHERE条件顺序对索引的影响": 244
-  "UUID和自增ID做主键哪个好，为什么？": 245
-  "CHAR与VARCHAR的区别及使用场景": 246
-  "CHAR、VARCHAR、TEXT的区别与VARCHAR长度限制详解": 247
-  "MySQL中BLOB与TEXT的区别及使用场景": 248
-  "什么是数据库事务？": 249
-  "MySQL事务ACID实现原理": 250
-  "MySQL中的事务隔离级别": 251
-  "什么是脏读、幻读、不可重复读？": 252
-  "InnoDB如何解决脏读、不可重复读和幻读？": 253
-  "InnoDB的RR到底有没有解决幻读？": 254
-  "如何理解MVCC？": 255
-  "什么是ReadView，什么样的ReadView可见？": 256
-  "当前读和快照读有什么区别？": 257
-  "二级索引在索引覆盖时如何使用MVCC？": 258
-  "为什么MySQL默认使用RR隔离级别？": 259
-  "为什么默认RR，大厂要改成RC？": 260
-  "MySQL的select会用到事务吗": 261
-  "介绍下InnoDB的锁机制": 262
-  "InnoDB中的表级锁、页级锁、行级锁": 263
-  "MySQL的行级锁锁的到底是什么": 264
-  "什么是排他锁和共享锁": 265
-  "什么是意向锁": 266
-  "FOR UPDATE语句InnoDB加了哪些锁": 267
-  "什么是MySQL的元数据锁（MDL锁）？": 268
-  "MySQL只操作同一条记录也会发生死锁吗": 269
-  "数据库死锁如何解决": 270
-  "MySQL锁机制全面解析": 271
-  "乐观锁与悲观锁如何实现": 272
-  "数据库乐观锁的过程中完全没有加任何锁吗": 273
-  "什么是数据库的锁升级,InnoDB支持吗": 274
-  "InnoDB加索引会锁表吗？": 275
-  "MySQL并发控制手段详解": 276
-  "MySQL一条SQL语句的执行过程": 277
-  "SQL查询语句的执行顺序": 278
-  "为什么大厂不建议使用多表JOIN": 279
-  "ON和WHERE的区别详解": 280
-  "SQL执行计划分析的时候，要关注哪些信息？": 281
-  "MySQL优化器的索引成本计算": 282
-  "如何进行SQL调优？": 283
-  "慢SQL的问题如何排查？": 284
-  "执行计划中，key有值，还是很慢怎么办？": 285
-  "ORDER BY是怎么实现的？": 286
-  "Using filesort能优化吗，怎么优化？": 287
-  "MySQL的深度分页如何优化？": 288
-  "limit 0,100和limit 10000000,100一样吗？": 289
-  "MySQL的limit+orderby为什么会数据重复？": 290
-  "MySQL中like的模糊查询如何优化？": 291
-  "小表驱动大表的原理与性能优化": 292
-  "MySQL慢查询优化": 293
-  "MySQL慢查询的排除与优化": 294
-  "MySQL优化（综合）": 295
-  "MySQL存储引擎详解与对比": 296
-  "InnoDB Buffer Pool缓冲池详解": 297
-  "Buffer Pool的读写过程详解": 298
-  "InnoDB支持的行格式详解": 299
-  "InnoDB的数据页与B+树的关系": 300
-  "InnoDB的页分裂和页合并机制": 301
-  "什么是事务的2阶段提交": 302
-  "InnoDB的一次更新事务是怎么实现的": 303
-  "undolog会一直存在吗？什么时候删除": 304
-  "介绍下MySQL5.7中的组提交": 305
-  "MySQL执行大事务会存在什么问题": 306
-  "binlog、redolog和undolog的区别": 307
-  "MySQL主从复制的过程": 308
-  "MySQL的并行复制原理": 309
-  "MySQL主从复制详解": 310
-  "MySQL主从同步：binlog的三种模式详解": 311
-  "MySQL三种日志、主从架构与复制原理": 312
-  "MySQL三种日志类型综合说明": 313
-  "什么是数据库的主从延迟，如何解决？": 314
-  "数据库读写分离的代码实现方案": 315
-  "MySQL是AP的还是CP的系统？": 316
-  "什么是OnlineDDL": 317
-  "MySQL怎么做热点数据高效更新？": 318
-  "高并发情况下自增主键会不会重复，为什么？": 319
-  "MySQL自增主键用完了会怎么样？": 320
-  "什么情况会导致自增主键不连续？": 321
-  "MySQL获取主键ID的瓶颈在哪里？如何优化？": 322
-  "数据库扫表任务如何避免出现死循环？": 323
-  "数据库怎么做加密和解密？": 324
-  "数据库加密后怎么做模糊查询？": 325
-  "MySQL支持Emoji表情存储的完整解决方案": 326
-  "阿里的数据库能抗秒杀的原理": 327
-  "MySQL分库分表方案与动态扩展策略": 328
-  "MySQL驱动表概念及选择策略": 329
-  "Redis有哪些数据结构？": 330
-  "Redis底层结构": 331
-  "Redis的String是如何实现的？": 332
-  "Redis的List是如何实现的？": 333
-  "Redis的Hash是如何实现的？": 334
-  "Redis的Set是如何实现的？": 335
-  "Redis的ZSet是如何实现的？": 336
-  "什么是跳表？为什么用跳表？": 337
-  "Redis跳表实现，hash底层实现，为什么使用ziplist，如何扩容": 338
-  "Redis的HyperLogLog了解过吗？": 339
-  "Redis的优势，解决了哪些问题": 340
-  "Redis的持久化机制有哪些？": 341
-  "RDB和AOF的区别是什么？": 342
-  "Redis AOF日志写入流程与刷盘策略": 343
-  "Redis故障恢复：RDB和AOF的区别": 344
-  "Redis的主从复制原理": 345
-  "Redis主从复制过程详解": 346
-  "Redis如何实现高可用": 347
-  "Redis的哨兵模式详解": 348
-  "Redis哨兵模式选主策略详解": 349
-  "Redis的集群模式详解": 350
-  "Redis的过期策略详解": 351
-  "Redis内存淘汰策略详解": 352
-  "Redis分布式锁的实现": 353
-  "Redis缓存一致性问题与解决方案": 354
-  "Redis热点key问题如何解决": 355
-  "介绍一下Spring的IOC": 356
-  "Spring IOC与AOP全面解析": 357
-  "Spring中的Bean是线程安全的吗？": 358
-  "SpringBean的初始化过程详解": 359
-  "SpringBean的生命周期详解": 360
-  "Spring中的Bean作用域详解": 361
-  "@Lazy注解能解决循环依赖吗？": 362
-  "Spring循环依赖问题详解": 363
-  "Spring三级缓存机制深度解析": 364
-  "介绍一下Spring的AOP": 365
-  "AOP通知类型": 366
-  "Spring AOP实现，动态代理": 367
-  "Spring的AOP在什么场景下会失效？": 368
-  "Spring中如何开启事务？": 369
-  "Spring的事务传播机制有哪些？": 370
-  "Spring事务失效可能是哪些原因？": 371
-  "Spring事务管理全面解析": 372
-  "Spring事务实现原理及@Transactional注解原理": 373
-  "Spring的事务在多线程下生效吗？为什么？": 374
-  "同时使用@Transactional与@Async时，事务会不会生效？": 375
-  "Spring中的事务事件如何使用？": 376
-  "为什么不建议直接使用Spring的@Async？": 377
-  "SpringBoot和Spring的区别是什么？": 378
-  "SpringBoot核心模块有哪些？": 379
-  "SpringBoot是如何实现自动配置的？": 380
-  "SpringBoot的启动流程是怎么样的？": 381
-  "SpringBoot是如何实现main方法启动Web项目的？": 382
-  "Spring6.0和SpringBoot3.0有什么新特性？": 383
-  "为什么SpringBoot3中移除了spring.factories？": 384
-  "SpringBoot如何做优雅停机？": 385
-  "SpringMVC三层架构的好处": 386
-  "Spring框架中用到的设计模式": 387
-  "如何自定义一个SpringBoot Starter？": 388
-  "实现一个SpringBoot Starter（实战案例）": 389
-  "什么是微服务？": 390
-  "SpringCloud有哪些核心组件？": 391
-  "Eureka的工作原理是什么？": 392
-  "Ribbon的负载均衡策略有哪些？": 393
-  "Feign的工作原理是什么？": 394
-  "Hystrix的熔断机制是什么？": 395
-  "Gateway的工作原理是什么？": 396
-  "Nacos和Eureka的区别？": 397
-  "负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解": 398
-  "什么是CAP理论？": 399
-  "什么是BASE理论？": 400
-  "CAP协议、ACID理论、BASE理论、一致性模型对比详解": 401
-  "什么是最终一致性？": 402
-  "什么是一致性Hash？": 403
-  "分布式ID生成方案有哪些？": 404
-  "雪花算法是什么？": 405
-  "什么是分布式事务？": 406
-  "分布式事务的解决方案有哪些？": 407
-  "分布式事务方案对比：2PC、3PC、TCC、消息补偿": 408
-  "什么是2PC和3PC？": 409
-  "什么是TCC？": 410
-  "什么是Saga？": 411
-  "AT模式：Seata的自动化两阶段提交": 412
-  "什么是分布式锁？": 413
-  "分布式锁的实现方式有哪些？": 414
-  "Redis实现分布式锁的原理？": 415
-  "Zookeeper实现分布式锁的原理？": 416
-  "什么是分库分表？": 417
-  "什么时候需要分库分表？": 418
-  "分库分表的策略有哪些？": 419
-  "分库分表后如何解决跨库查询？": 420
-  "分库分表后如何解决分布式事务？": 421
-  "ShardingSphere的原理是什么？": 422
-  "为什么要使用消息队列？": 423
-  "消息队列的使用场景有哪些？": 424
-  "Kafka、ActiveMQ、RabbitMQ和RocketMQ都有哪些区别？": 425
-  "Kafka的架构是怎么样的？": 426
-  "Kafka为什么有Topic还要用Partition？": 427
-  "Kafka为什么这么快？": 428
-  "Kafka消息的发送过程简单介绍一下？": 429
-  "Kafka如何保证消息不丢失？": 430
-  "为什么Kafka没办法100%保证消息不丢失？": 431
-  "Kafka怎么保证消费只消费一次的？": 432
-  "Kafka如何实现顺序消费？": 433
-  "RocketMQ的架构是怎么样的？": 434
-  "RocketMQ如何保证消息不丢失？": 435
-  "RocketMQ的延迟消息是如何实现的？": 436
-  "RabbitMQ的架构是怎么样的？": 437
-  "RabbitMQ如何保证消息的可靠性？": 438
-  "RabbitMQ死信队列（Dead Letter Queue）详解": 439
-  "RabbitMQ的Exchange(交换器)有哪4种类型？": 440
-  "什么是RPC，和HTTP有什么区别？": 441
-  "为什么RPC要比HTTP更快一些？": 442
-  "什么场景只能用HTTP，不能用RPC？": 443
-  "Dubbo的整体架构是怎么样的？": 444
-  "Dubbo的服务调用的过程是什么样的？": 445
-  "Dubbo如何实现像本地方法一样调用远程方法的？": 446
-  "Dubbo支持哪些调用协议？": 447
-  "Dubbo支持哪些序列化方式？": 448
-  "Dubbo支持哪些负载均衡策略？": 449
-  "Dubbo支持哪些服务治理？": 450
-  "Dubbo服务发现与路由的概念有什么不同？": 451
-  "Dubbo的SPI和JDK的SPI有什么区别？": 452
-  "为什么Dubbo不用JDK的SPI？": 453
-  "什么是Dubbo的优雅停机，怎么实现的？": 454
-  "什么是泛化调用？": 455
-  "为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？": 456
-  "什么是倒排索引？": 457
-  "ElasticSearch 为什么快？": 458
-  "什么是 ElasticSearch 的深度分页问题？如何解决？": 459
-  "如何保证 ES 和数据库的数据一致性？": 460
-  "如何优化 ElasticSearch 搜索性能？": 461
-
-# 每个分类下按全局顺序排序的文章列表
+  什么是深拷贝和浅拷贝？: 1
+  如何理解Java中的多态？: 2
+  接口和抽象类的区别，如何选择？: 3
+  为什么建议多用组合少用继承？: 4
+  Java是值传递还是引用传递？: 5
+  有了equals为什么还需要hashCode方法: 6
+  什么是反射机制？为什么反射慢？: 7
+  String、StringBuilder和StringBuffer的区别？: 8
+  String为什么设计成不可变的？: 9
+  String是如何实现不可变的？: 10
+  String有长度限制吗？是多少？: 11
+  String中intern的原理是什么？: 12
+  为什么JDK9中把String的char[]改成了byte[]？: 13
+  JDK9中对字符串的拼接做了什么优化？: 14
+  字符串常量是什么时候进入到字符串常量池的？: 15
+  String a = \"ab\"; String b = \"a\" + \"b\"; a==b吗？: 16
+  String str = new String(\"hollis\")创建了几个对象？: 17
+  什么是泛型？有什么好处？: 18
+  什么是类型擦除: 19
+  泛型中K、T、V、E、Object等分别代表什么含义: 20
+  泛型中上下界限定符extends和super有什么区别: 21
+  什么是序列化与反序列化: 22
+  Java序列化的原理是什么: 23
+  你知道fastjson的反序列化漏洞吗: 24
+  serialVersionUID有何用途？如果没定义会有什么问题？: 25
+  什么是AIO、BIO和NIO？: 26
+  Lambda表达式是如何实现的: 27
+  Stream的并行流一定比串行流更快吗: 28
+  Arrays.sort使用什么排序算法实现的: 29
+  BigDecimal(double)和BigDecimal(String)有什么区别: 30
+  为什么不能用BigDecimal的equals方法做等值比较: 31
+  为什么不能用浮点数表示金额: 32
+  SimpleDateFormat是线程安全的吗？使用时应该注意什么: 33
+  什么是单例模式，如何实现一个单例？: 34
+  什么是工厂模式？: 35
+  什么是策略模式？: 36
+  什么是模板方法模式？: 37
+  什么是责任链模式？: 38
+  什么是观察者模式？: 39
+  策略模式与代理模式的区别: 40
+  ArrayList与LinkedList有什么区别？: 41
+  ArrayList的扩容机制是怎样的？: 42
+  ArrayList扩容机制详解：初始容量与1.5倍扩容: 43
+  ArrayList和LinkedList的时间复杂度: 44
+  CopyOnWriteArrayList是如何实现的？: 45
+  HashMap的底层实现原理: 46
+  HashMap为什么线程不安全？: 47
+  HashMap的容量为什么是2的幂次方？: 48
+  HashMap的加载因子为什么是0.75？: 49
+  HashMap什么时候扩容？: 50
+  HashMap扩容机制详解: 51
+  HashMap的hash方法原理: 52
+  HashMap为什么在链表长度为8时转为红黑树？: 53
+  HashMap在JDK1.7和1.8中的区别: 54
+  为什么HashMap有时候链表长度超过8也不树化？: 55
+  HashMap的key可以为null吗？: 56
+  Hashtable、HashMap、ConcurrentHashMap的区别: 57
+  ConcurrentHashMap是如何实现的？: 58
+  ConcurrentHashMap在JDK1.7和1.8中有什么不同？: 59
+  LinkedHashMap是如何实现的？: 60
+  TreeMap和HashMap有什么区别？: 61
+  WeakHashMap了解吗？: 62
+  HashSet和HashMap有什么关系？: 63
+  PriorityQueue的底层实现原理: 64
+  ArrayDeque和LinkedList作为队列的区别: 65
+  JVM的运行时内存区域是怎样的？: 66
+  JVM为什么要把堆和栈区分出来呢？: 67
+  虚拟机中的堆一定是线程共享的吗？: 68
+  什么是方法区？是如何实现的？: 69
+  方法区存储什么数据？: 70
+  Java的堆是如何分代的？为什么分代？: 71
+  什么是堆外内存？如何使用堆外内存？: 72
+  OutOfMemory和StackOverflow的区别是什么？: 73
+  内存泄漏和内存溢出的区别是什么？: 74
+  一个Java进程占用的内存都有哪些部分？: 75
+  JVM内存结构全面解析: 76
+  JVM是如何创建对象的？: 77
+  一个对象的结构是什么样的？: 78
+  JVM如何保证给对象分配内存过程的线程安全？: 79
+  Java中的对象一定在堆上分配内存吗？: 80
+  什么是逃逸分析？: 81
+  JVM如何判断对象是否存活？: 82
+  什么是强引用、软引用、弱引用和虚引用？: 83
+  JVM有哪些垃圾回收算法: 84
+  新生代和老年代的GC算法: 85
+  JVM中一次完整的GC流程是怎样的: 86
+  YoungGC和FullGC的触发条件是什么: 87
+  FullGC多久一次算正常: 88
+  什么是三色标记算法: 89
+  什么是跨代引用，有什么问题: 90
+  什么是STW（Stop-The-World）及其影响: 91
+  什么是安全点（Safe Point），有什么作用: 92
+  介绍下CMS的垃圾回收过程: 93
+  G1和CMS有什么区别？: 94
+  为什么G1从JDK9之后成为默认的垃圾回收器？: 95
+  JDK11中新出的ZGC有什么特点？: 96
+  Java8和Java11的GC有什么区别？: 97
+  新生代和老年代的垃圾回收器有何区别？: 98
+  项目中如何选择垃圾回收器？为啥选择这个？: 99
+  说一说JVM的并发回收和并行回收: 100
+  新生代如果只有一个Eden+一个Survivor可以吗？: 101
+  Java中的类什么时候会被加载？: 102
+  Java中类加载的过程是怎么样的？: 103
+  Java类加载流程与过程: 104
+  类的生命周期是怎么样的？: 105
+  什么是双亲委派？如何破坏？: 106
+  双亲委派机制的核心思想是什么？: 107
+  双亲委派机制如何打破（详细补充）: 108
+  破坏双亲委派之后，能重写String类吗？: 109
+  如何判断JVM中类和其他类是不是同一个类？: 110
+  JDK 1.8和1.9中类加载器有哪些不同？: 111
+  什么是Class常量池，和运行时常量池关系是什么？: 112
+  运行时常量池和字符串常量池的关系是什么？: 113
+  字符串常量池是如何实现的？: 114
+  什么是编译和反编译？: 115
+  Java一定就是平台无关的吗？: 116
+  Java是如何实现平台无关的？: 117
+  Java是编译型还是解释型语言？: 118
+  什么是AOT编译？和JIT有啥区别？: 119
+  简单介绍一下JIT优化技术？: 120
+  常见的JVM工具有哪些: 121
+  JVM调优参数详解: 122
+  常用的JVM启动参数有哪些: 123
+  Java发生了OOM一定会导致JVM退出吗: 124
+  什么情况会导致JVM退出: 125
+  对JDK进程执行kill -9有什么影响: 126
+  什么是SPI，和API有什么区别: 127
+  创建线程有几种方式？: 128
+  线程有几种状态，状态之间的流转是怎样的？: 129
+  Java是如何判断一个线程是否存活的？: 130
+  Thread.sleep(0)的作用是什么？: 131
+  什么是守护线程，和普通线程有什么区别？: 132
+  什么是多线程中的上下文切换？: 133
+  线程是如何被调度的？: 134
+  线程同步的方式有哪些？: 135
+  什么是死锁，如何解决？: 136
+  run、start、wait、sleep、notify、notifyAll区别: 137
+  什么是并发，什么是并行？: 138
+  能不能谈谈你对线程安全的理解？: 139
+  有哪些实现线程安全的方案: 140
+  并发编程中的原子性和数据库ACID的原子性一样吗？: 141
+  指令重排序: 142
+  final关键字与可见性是否有关: 143
+  什么是Java内存模型（JMM）？: 144
+  什么是happens-before原则？: 145
+  happens-before和as-if-serial有啥区别和联系？: 146
+  有了MESI为啥还需要JMM？: 147
+  什么是总线嗅探和总线风暴，和JMM有什么关系？: 148
+  到底啥是内存屏障？到底怎么加的？: 149
+  volatile能保证原子性吗？为什么？: 150
+  有了synchronized为什么还需要volatile: 151
+  volatile如何保证可见性和有序性: 152
+  volatile关键字与禁止重排序如何解决多线程可见性: 153
+  什么是CAS？存在什么问题？: 154
+  介绍下CAS: 155
+  CAS操作类: 156
+  CAS一定有自旋吗？: 157
+  CAS在操作系统层面是如何保证原子性的: 158
+  有了CAS为啥还需要volatile: 159
+  ABA问题: 160
+  什么是Unsafe？: 161
+  synchronized是怎么实现的？: 162
+  synchronized锁的是什么？: 163
+  synchronized是如何保证原子性、可见性、有序性的？: 164
+  synchronized的锁优化是怎样的？: 165
+  synchronized的锁升级过程是怎样的？: 166
+  synchronized升级过程中有几次自旋？: 167
+  synchronized的锁能降级吗？: 168
+  为什么JDK15要废弃偏向锁？: 169
+  synchronized是否可重入: 170
+  synchronized是非公平锁吗，那么是如何体现的？: 171
+  synchronized和ReentrantLock的区别: 172
+  synchronized和lock区别: 173
+  int a = 1是原子性操作吗: 174
+  如何保证多线程下i++结果正确: 175
+  如何理解AQS？: 176
+  AQS的同步队列和条件队列原理: 177
+  AQS是如何实现线程的等待和唤醒的？: 178
+  AQS为什么采用双向链表？: 179
+  什么是AQS的独占模式和共享模式？: 180
+  AQS操作类有哪些？: 181
+  什么是可重入锁，怎么实现可重入锁？: 182
+  可重入锁的底层实现: 183
+  公平锁和非公平锁的区别: 184
+  Lock是否公平，能否实现非公平，如何实现？: 185
+  ReentrantLock增加了哪些高级功能？: 186
+  什么是线程池，如何实现的？: 187
+  ForkJoinPool和ThreadPoolExecutor的区别是什么？: 188
+  线程池的拒绝策略有哪些？: 189
+  为什么不建议通过Executors构建线程池？: 190
+  线程数设定成多少更合适？: 191
+  如何让Java的线程池顺序执行任务？: 192
+  如何实现一个动态线程池？: 193
+  线程池多线程操作对象是否需要加volatile保障可见性？: 194
+  CompletableFuture的底层是如何实现的？: 195
+  如何对多线程进行编排？: 196
+  CountDownLatch、CyclicBarrier、Semaphore区别？: 197
+  LongAdder和AtomicLong的区别？: 198
+  什么是ThreadLocal，如何实现的？: 199
+  ThreadLocalMap的数据结构: 200
+  ThreadLocalMap的冲突解决机制: 201
+  ThreadLocalMap的扩容机制: 202
+  ThreadLocal为什么会导致内存泄漏？如何解决？: 203
+  ThreadLocal的key是弱引用，在get()时发生GC后key会是null吗？: 204
+  ThreadLocal的应用场景有哪些？: 205
+  有了InheritableThreadLocal为啥还需要TransmittableThreadLocal？: 206
+  探测式清理和启发式清理: 207
+  父子线程之间怎么共享、传递数据？: 208
+  为什么不能在try-catch中捕获子线程的异常？: 209
+  如何实现主线程捕获子线程异常？: 210
+  Java线程出现异常，进程为啥不会退出？: 211
+  有三个线程T1,T2,T3如何保证顺序执行？: 212
+  三个线程分别顺序打印0-100: 213
+  JDK21中的虚拟线程是怎么回事？: 214
+  为什么虚拟线程不能用synchronized？: 215
+  为什么虚拟线程不要和线程池一起用？: 216
+  为什么虚拟线程尽量避免使用ThreadLocal？: 217
+  InnoDB为什么使用B+树实现索引？: 218
+  InnoDB中的索引类型？: 219
+  什么是聚簇索引和非聚簇索引？: 220
+  什么是回表，怎么减少回表的次数？: 221
+  什么是索引覆盖、索引下推？: 222
+  InnoDB和MyISAM有什么区别？: 223
+  MyISAM的索引结构是怎么样的，它存在的问题是什么？: 224
+  唯一索引和主键索引的区别？: 225
+  MySQL是如何保证唯一性索引的唯一性的？: 226
+  从InnoDB索引结构分析索引Key长度限制: 227
+  什么是最左前缀匹配？为什么要遵守？: 228
+  MySQL索引一定遵循最左前缀匹配吗？: 229
+  A,B,C的联合索引，按照AB,AC,BC查询，能走索引吗？: 230
+  a,b两个单独索引，where a=xx and b=xx走哪个索引？为什么？: 231
+  什么是索引合并，原理是什么？: 232
+  什么是索引跳跃扫描？: 233
+  设计索引的时候有哪些原则？: 234
+  区分度不高的字段建索引一定没用吗？: 235
+  联合索引是越多越好吗？: 236
+  MySQL索引建立与性能影响: 237
+  MySQL索引存储与失效场景详解: 238
+  MySQL索引失效情况: 239
+  MySQL索引，最左匹配，索引覆盖，索引下推，索引失效情况，查询优化: 240
+  用了索引还是很慢，可能是什么原因？: 241
+  索引失效的问题如何排查？: 242
+  MySQL选错索引的原因及解决方案: 243
+  WHERE条件顺序对索引的影响: 244
+  UUID和自增ID做主键哪个好，为什么？: 245
+  CHAR与VARCHAR的区别及使用场景: 246
+  CHAR、VARCHAR、TEXT的区别与VARCHAR长度限制详解: 247
+  MySQL中BLOB与TEXT的区别及使用场景: 248
+  什么是数据库事务？: 249
+  MySQL事务ACID实现原理: 250
+  MySQL中的事务隔离级别: 251
+  什么是脏读、幻读、不可重复读？: 252
+  InnoDB如何解决脏读、不可重复读和幻读？: 253
+  InnoDB的RR到底有没有解决幻读？: 254
+  如何理解MVCC？: 255
+  什么是ReadView，什么样的ReadView可见？: 256
+  当前读和快照读有什么区别？: 257
+  二级索引在索引覆盖时如何使用MVCC？: 258
+  为什么MySQL默认使用RR隔离级别？: 259
+  为什么默认RR，大厂要改成RC？: 260
+  MySQL的select会用到事务吗: 261
+  介绍下InnoDB的锁机制: 262
+  InnoDB中的表级锁、页级锁、行级锁: 263
+  MySQL的行级锁锁的到底是什么: 264
+  什么是排他锁和共享锁: 265
+  什么是意向锁: 266
+  FOR UPDATE语句InnoDB加了哪些锁: 267
+  什么是MySQL的元数据锁（MDL锁）？: 268
+  MySQL只操作同一条记录也会发生死锁吗: 269
+  数据库死锁如何解决: 270
+  MySQL锁机制全面解析: 271
+  乐观锁与悲观锁如何实现: 272
+  数据库乐观锁的过程中完全没有加任何锁吗: 273
+  什么是数据库的锁升级,InnoDB支持吗: 274
+  InnoDB加索引会锁表吗？: 275
+  MySQL并发控制手段详解: 276
+  MySQL一条SQL语句的执行过程: 277
+  SQL查询语句的执行顺序: 278
+  为什么大厂不建议使用多表JOIN: 279
+  ON和WHERE的区别详解: 280
+  SQL执行计划分析的时候，要关注哪些信息？: 281
+  MySQL优化器的索引成本计算: 282
+  如何进行SQL调优？: 283
+  慢SQL的问题如何排查？: 284
+  执行计划中，key有值，还是很慢怎么办？: 285
+  ORDER BY是怎么实现的？: 286
+  Using filesort能优化吗，怎么优化？: 287
+  MySQL的深度分页如何优化？: 288
+  limit 0,100和limit 10000000,100一样吗？: 289
+  MySQL的limit+orderby为什么会数据重复？: 290
+  MySQL中like的模糊查询如何优化？: 291
+  小表驱动大表的原理与性能优化: 292
+  MySQL慢查询优化: 293
+  MySQL慢查询的排除与优化: 294
+  MySQL优化（综合）: 295
+  MySQL存储引擎详解与对比: 296
+  InnoDB Buffer Pool缓冲池详解: 297
+  Buffer Pool的读写过程详解: 298
+  InnoDB支持的行格式详解: 299
+  InnoDB的数据页与B+树的关系: 300
+  InnoDB的页分裂和页合并机制: 301
+  什么是事务的2阶段提交: 302
+  InnoDB的一次更新事务是怎么实现的: 303
+  undolog会一直存在吗？什么时候删除: 304
+  介绍下MySQL5.7中的组提交: 305
+  MySQL执行大事务会存在什么问题: 306
+  binlog、redolog和undolog的区别: 307
+  MySQL主从复制的过程: 308
+  MySQL的并行复制原理: 309
+  MySQL主从复制详解: 310
+  MySQL主从同步：binlog的三种模式详解: 311
+  MySQL三种日志、主从架构与复制原理: 312
+  MySQL三种日志类型综合说明: 313
+  什么是数据库的主从延迟，如何解决？: 314
+  数据库读写分离的代码实现方案: 315
+  MySQL是AP的还是CP的系统？: 316
+  什么是OnlineDDL: 317
+  MySQL怎么做热点数据高效更新？: 318
+  高并发情况下自增主键会不会重复，为什么？: 319
+  MySQL自增主键用完了会怎么样？: 320
+  什么情况会导致自增主键不连续？: 321
+  MySQL获取主键ID的瓶颈在哪里？如何优化？: 322
+  数据库扫表任务如何避免出现死循环？: 323
+  数据库怎么做加密和解密？: 324
+  数据库加密后怎么做模糊查询？: 325
+  MySQL支持Emoji表情存储的完整解决方案: 326
+  阿里的数据库能抗秒杀的原理: 327
+  MySQL分库分表方案与动态扩展策略: 328
+  MySQL驱动表概念及选择策略: 329
+  Redis有哪些数据结构？: 330
+  Redis底层结构: 331
+  Redis的String是如何实现的？: 332
+  Redis的List是如何实现的？: 333
+  Redis的Hash是如何实现的？: 334
+  Redis的Set是如何实现的？: 335
+  Redis的ZSet是如何实现的？: 336
+  什么是跳表？为什么用跳表？: 337
+  Redis跳表实现，hash底层实现，为什么使用ziplist，如何扩容: 338
+  Redis的HyperLogLog了解过吗？: 339
+  Redis的优势，解决了哪些问题: 340
+  Redis的持久化机制有哪些？: 341
+  RDB和AOF的区别是什么？: 342
+  Redis AOF日志写入流程与刷盘策略: 343
+  Redis故障恢复：RDB和AOF的区别: 344
+  Redis的主从复制原理: 345
+  Redis主从复制过程详解: 346
+  Redis如何实现高可用: 347
+  Redis的哨兵模式详解: 348
+  Redis哨兵模式选主策略详解: 349
+  Redis的集群模式详解: 350
+  Redis的过期策略详解: 351
+  Redis内存淘汰策略详解: 352
+  Redis分布式锁的实现: 353
+  Redis缓存一致性问题与解决方案: 354
+  Redis热点key问题如何解决: 355
+  介绍一下Spring的IOC: 356
+  Spring IOC与AOP全面解析: 357
+  Spring中的Bean是线程安全的吗？: 358
+  SpringBean的初始化过程详解: 359
+  SpringBean的生命周期详解: 360
+  Spring中的Bean作用域详解: 361
+  '@Lazy注解能解决循环依赖吗？': 362
+  Spring循环依赖问题详解: 363
+  Spring三级缓存机制深度解析: 364
+  介绍一下Spring的AOP: 365
+  AOP通知类型: 366
+  Spring AOP实现，动态代理: 367
+  Spring的AOP在什么场景下会失效？: 368
+  Spring中如何开启事务？: 369
+  Spring的事务传播机制有哪些？: 370
+  Spring事务失效可能是哪些原因？: 371
+  Spring事务管理全面解析: 372
+  Spring事务实现原理及@Transactional注解原理: 373
+  Spring的事务在多线程下生效吗？为什么？: 374
+  同时使用@Transactional与@Async时，事务会不会生效？: 375
+  Spring中的事务事件如何使用？: 376
+  为什么不建议直接使用Spring的@Async？: 377
+  SpringBoot和Spring的区别是什么？: 378
+  SpringBoot核心模块有哪些？: 379
+  SpringBoot是如何实现自动配置的？: 380
+  SpringBoot的启动流程是怎么样的？: 381
+  SpringBoot是如何实现main方法启动Web项目的？: 382
+  Spring6.0和SpringBoot3.0有什么新特性？: 383
+  为什么SpringBoot3中移除了spring.factories？: 384
+  SpringBoot如何做优雅停机？: 385
+  SpringMVC三层架构的好处: 386
+  Spring框架中用到的设计模式: 387
+  如何自定义一个SpringBoot Starter？: 388
+  实现一个SpringBoot Starter（实战案例）: 389
+  什么是微服务？: 390
+  SpringCloud有哪些核心组件？: 391
+  Eureka的工作原理是什么？: 392
+  Ribbon的负载均衡策略有哪些？: 393
+  Feign的工作原理是什么？: 394
+  Hystrix的熔断机制是什么？: 395
+  Gateway的工作原理是什么？: 396
+  Nacos和Eureka的区别？: 397
+  负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解: 398
+  什么是CAP理论？: 399
+  什么是BASE理论？: 400
+  CAP协议、ACID理论、BASE理论、一致性模型对比详解: 401
+  什么是最终一致性？: 402
+  什么是一致性Hash？: 403
+  分布式ID生成方案有哪些？: 404
+  雪花算法是什么？: 405
+  什么是分布式事务？: 406
+  分布式事务的解决方案有哪些？: 407
+  分布式事务方案对比：2PC、3PC、TCC、消息补偿: 408
+  什么是2PC和3PC？: 409
+  什么是TCC？: 410
+  什么是Saga？: 411
+  AT模式：Seata的自动化两阶段提交: 412
+  什么是分布式锁？: 413
+  分布式锁的实现方式有哪些？: 414
+  Redis实现分布式锁的原理？: 415
+  Zookeeper实现分布式锁的原理？: 416
+  什么是分库分表？: 417
+  什么时候需要分库分表？: 418
+  分库分表的策略有哪些？: 419
+  分库分表后如何解决跨库查询？: 420
+  分库分表后如何解决分布式事务？: 421
+  ShardingSphere的原理是什么？: 422
+  为什么要使用消息队列？: 423
+  消息队列的使用场景有哪些？: 424
+  Kafka、ActiveMQ、RabbitMQ和RocketMQ都有哪些区别？: 425
+  Kafka的架构是怎么样的？: 426
+  Kafka为什么有Topic还要用Partition？: 427
+  Kafka为什么这么快？: 428
+  Kafka消息的发送过程简单介绍一下？: 429
+  Kafka如何保证消息不丢失？: 430
+  为什么Kafka没办法100%保证消息不丢失？: 431
+  Kafka怎么保证消费只消费一次的？: 432
+  Kafka如何实现顺序消费？: 433
+  RocketMQ的架构是怎么样的？: 434
+  RocketMQ如何保证消息不丢失？: 435
+  RocketMQ的延迟消息是如何实现的？: 436
+  RabbitMQ的架构是怎么样的？: 437
+  RabbitMQ如何保证消息的可靠性？: 438
+  RabbitMQ死信队列（Dead Letter Queue）详解: 439
+  RabbitMQ的Exchange(交换器)有哪4种类型？: 440
+  什么是RPC，和HTTP有什么区别？: 441
+  为什么RPC要比HTTP更快一些？: 442
+  什么场景只能用HTTP，不能用RPC？: 443
+  Dubbo的整体架构是怎么样的？: 444
+  Dubbo的服务调用的过程是什么样的？: 445
+  Dubbo如何实现像本地方法一样调用远程方法的？: 446
+  Dubbo支持哪些调用协议？: 447
+  Dubbo支持哪些序列化方式？: 448
+  Dubbo支持哪些负载均衡策略？: 449
+  Dubbo支持哪些服务治理？: 450
+  Dubbo服务发现与路由的概念有什么不同？: 451
+  Dubbo的SPI和JDK的SPI有什么区别？: 452
+  为什么Dubbo不用JDK的SPI？: 453
+  什么是Dubbo的优雅停机，怎么实现的？: 454
+  什么是泛化调用？: 455
+  为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？: 456
+  什么是倒排索引？: 457
+  ElasticSearch 为什么快？: 458
+  什么是 ElasticSearch 的深度分页问题？如何解决？: 459
+  如何保证 ES 和数据库的数据一致性？: 460
+  如何优化 ElasticSearch 搜索性能？: 461
 sorted_by_category:
   AOP:
-    - title: "Spring IOC与AOP全面解析"
-      order: 357
-      url: 2025-11-02-spring-ioc-aop-overview
+  - title: Spring IOC与AOP全面解析
+    order: 357
+    url: 2025-11-02-spring-ioc-aop-overview
   API网关:
-    - title: "Gateway的工作原理是什么？"
-      order: 396
-      url: 2025-11-02-gateway-working-principle
+  - title: Gateway的工作原理是什么？
+    order: 396
+    url: 2025-11-02-gateway-working-principle
   Dubbo:
-    - title: "什么是RPC，和HTTP有什么区别？"
-      order: 441
-      url: 2025-11-02-what-is-rpc-and-difference-with-http
-    - title: "为什么RPC要比HTTP更快一些？"
-      order: 442
-      url: 2025-11-02-why-rpc-faster-than-http
-    - title: "什么场景只能用HTTP，不能用RPC？"
-      order: 443
-      url: 2025-11-02-when-http-required-over-rpc
-    - title: "Dubbo的整体架构是怎么样的？"
-      order: 444
-      url: 2025-11-02-dubbo-architecture-overview
-    - title: "Dubbo的服务调用的过程是什么样的？"
-      order: 445
-      url: 2025-11-02-dubbo-service-invocation-process
-    - title: "Dubbo如何实现像本地方法一样调用远程方法的？"
-      order: 446
-      url: 2025-11-02-dubbo-proxy-mechanism-for-local-like-remote-call
-    - title: "Dubbo支持哪些调用协议？"
-      order: 447
-      url: 2025-11-02-dubbo-supported-protocols
-    - title: "Dubbo支持哪些序列化方式？"
-      order: 448
-      url: 2025-11-02-dubbo-serialization-methods
-    - title: "Dubbo支持哪些负载均衡策略？"
-      order: 449
-      url: 2025-11-02-dubbo-load-balance-strategies
-    - title: "Dubbo支持哪些服务治理？"
-      order: 450
-      url: 2025-11-02-dubbo-service-governance-features
-    - title: "Dubbo服务发现与路由的概念有什么不同？"
-      order: 451
-      url: 2025-11-02-dubbo-service-discovery-vs-routing
-    - title: "Dubbo的SPI和JDK的SPI有什么区别？"
-      order: 452
-      url: 2025-11-02-dubbo-spi-vs-jdk-spi
-    - title: "为什么Dubbo不用JDK的SPI？"
-      order: 453
-      url: 2025-11-02-why-dubbo-not-use-jdk-spi
-    - title: "什么是Dubbo的优雅停机，怎么实现的？"
-      order: 454
-      url: 2025-11-02-dubbo-graceful-shutdown
-    - title: "什么是泛化调用？"
-      order: 455
-      url: 2025-11-02-dubbo-generic-invocation
+  - title: 什么是RPC，和HTTP有什么区别？
+    order: 441
+    url: 2025-11-02-what-is-rpc-and-difference-with-http
+  - title: 为什么RPC要比HTTP更快一些？
+    order: 442
+    url: 2025-11-02-why-rpc-faster-than-http
+  - title: 什么场景只能用HTTP，不能用RPC？
+    order: 443
+    url: 2025-11-02-when-http-required-over-rpc
+  - title: Dubbo的整体架构是怎么样的？
+    order: 444
+    url: 2025-11-02-dubbo-architecture-overview
+  - title: Dubbo的服务调用的过程是什么样的？
+    order: 445
+    url: 2025-11-02-dubbo-service-invocation-process
+  - title: Dubbo如何实现像本地方法一样调用远程方法的？
+    order: 446
+    url: 2025-11-02-dubbo-proxy-mechanism-for-local-like-remote-call
+  - title: Dubbo支持哪些调用协议？
+    order: 447
+    url: 2025-11-02-dubbo-supported-protocols
+  - title: Dubbo支持哪些序列化方式？
+    order: 448
+    url: 2025-11-02-dubbo-serialization-methods
+  - title: Dubbo支持哪些负载均衡策略？
+    order: 449
+    url: 2025-11-02-dubbo-load-balance-strategies
+  - title: Dubbo支持哪些服务治理？
+    order: 450
+    url: 2025-11-02-dubbo-service-governance-features
+  - title: Dubbo服务发现与路由的概念有什么不同？
+    order: 451
+    url: 2025-11-02-dubbo-service-discovery-vs-routing
+  - title: Dubbo的SPI和JDK的SPI有什么区别？
+    order: 452
+    url: 2025-11-02-dubbo-spi-vs-jdk-spi
+  - title: 为什么Dubbo不用JDK的SPI？
+    order: 453
+    url: 2025-11-02-why-dubbo-not-use-jdk-spi
+  - title: 什么是Dubbo的优雅停机，怎么实现的？
+    order: 454
+    url: 2025-11-02-dubbo-graceful-shutdown
+  - title: 什么是泛化调用？
+    order: 455
+    url: 2025-11-02-dubbo-generic-invocation
   ElasticSearch:
-    - title: "为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？"
-      order: 456
-      url: 2025-11-02-why-use-elasticsearch
-    - title: "什么是倒排索引？"
-      order: 457
-      url: 2025-11-02-inverted-index-in-elasticsearch
-    - title: "ElasticSearch 为什么快？"
-      order: 458
-      url: 2025-11-02-why-elasticsearch-is-fast
-    - title: "什么是 ElasticSearch 的深度分页问题？如何解决？"
-      order: 459
-      url: 2025-11-02-elasticsearch-deep-pagination-problem
-    - title: "如何保证 ES 和数据库的数据一致性？"
-      order: 460
-      url: 2025-11-02-elasticsearch-mysql-data-consistency
-    - title: "如何优化 ElasticSearch 搜索性能？"
-      order: 461
-      url: 2025-11-02-elasticsearch-search-performance-optimization
+  - title: 为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？
+    order: 456
+    url: 2025-11-02-why-use-elasticsearch
+  - title: 什么是倒排索引？
+    order: 457
+    url: 2025-11-02-inverted-index-in-elasticsearch
+  - title: ElasticSearch 为什么快？
+    order: 458
+    url: 2025-11-02-why-elasticsearch-is-fast
+  - title: 什么是 ElasticSearch 的深度分页问题？如何解决？
+    order: 459
+    url: 2025-11-02-elasticsearch-deep-pagination-problem
+  - title: 如何保证 ES 和数据库的数据一致性？
+    order: 460
+    url: 2025-11-02-elasticsearch-mysql-data-consistency
+  - title: 如何优化 ElasticSearch 搜索性能？
+    order: 461
+    url: 2025-11-02-elasticsearch-search-performance-optimization
   IOC:
-    - title: "介绍一下Spring的IOC"
-      order: 356
-      url: 2025-11-02-spring-ioc-introduction
-    - title: "Spring IOC与AOP全面解析"
-      order: 357
-      url: 2025-11-02-spring-ioc-aop-overview
-    - title: "Spring中的Bean是线程安全的吗？"
-      order: 358
-      url: 2025-11-02-spring-bean-thread-safety
-    - title: "SpringBean的初始化过程详解"
-      order: 359
-      url: 2025-11-02-spring-bean-initialization
-    - title: "SpringBean的生命周期详解"
-      order: 360
-      url: 2025-11-02-spring-bean-lifecycle
-    - title: "Spring中的Bean作用域详解"
-      order: 361
-      url: 2025-11-02-spring-bean-scopes
-    - title: "@Lazy注解能解决循环依赖吗？"
-      order: 362
-      url: 2025-11-02-spring-lazy-circular-dependency
-    - title: "Spring循环依赖问题详解"
-      order: 363
-      url: 2025-11-02-spring-circular-dependency
-    - title: "Spring三级缓存机制深度解析"
-      order: 364
-      url: 2025-11-02-spring-three-level-cache
+  - title: 介绍一下Spring的IOC
+    order: 356
+    url: 2025-11-02-spring-ioc-introduction
+  - title: Spring IOC与AOP全面解析
+    order: 357
+    url: 2025-11-02-spring-ioc-aop-overview
+  - title: Spring中的Bean是线程安全的吗？
+    order: 358
+    url: 2025-11-02-spring-bean-thread-safety
+  - title: SpringBean的初始化过程详解
+    order: 359
+    url: 2025-11-02-spring-bean-initialization
+  - title: SpringBean的生命周期详解
+    order: 360
+    url: 2025-11-02-spring-bean-lifecycle
+  - title: Spring中的Bean作用域详解
+    order: 361
+    url: 2025-11-02-spring-bean-scopes
+  - title: '@Lazy注解能解决循环依赖吗？'
+    order: 362
+    url: 2025-11-02-spring-lazy-circular-dependency
+  - title: Spring循环依赖问题详解
+    order: 363
+    url: 2025-11-02-spring-circular-dependency
+  - title: Spring三级缓存机制深度解析
+    order: 364
+    url: 2025-11-02-spring-three-level-cache
   JVM:
-    - title: "JVM的运行时内存区域是怎样的？"
-      order: 66
-      url: 2025-11-01-jvm-runtime-memory-areas
-    - title: "JVM为什么要把堆和栈区分出来呢？"
-      order: 67
-      url: 2025-11-01-why-separate-heap-and-stack
-    - title: "虚拟机中的堆一定是线程共享的吗？"
-      order: 68
-      url: 2025-11-01-is-jvm-heap-always-thread-shared
-    - title: "什么是方法区？是如何实现的？"
-      order: 69
-      url: 2025-11-01-what-is-method-area
-    - title: "方法区存储什么数据？"
-      order: 70
-      url: 2025-11-01-method-area-storage-contents
-    - title: "Java的堆是如何分代的？为什么分代？"
-      order: 71
-      url: 2025-11-01-java-heap-generation-design
-    - title: "什么是堆外内存？如何使用堆外内存？"
-      order: 72
-      url: 2025-11-01-off-heap-memory-explained
-    - title: "OutOfMemory和StackOverflow的区别是什么？"
-      order: 73
-      url: 2025-11-01-outofmemory-vs-stackoverflow
-    - title: "内存泄漏和内存溢出的区别是什么？"
-      order: 74
-      url: 2025-11-01-memory-leak-vs-memory-overflow
-    - title: "一个Java进程占用的内存都有哪些部分？"
-      order: 75
-      url: 2025-11-01-java-process-memory-composition
-    - title: "JVM内存结构全面解析"
-      order: 76
-      url: 2025-11-01-jvm-memory-structure-overview
-    - title: "JVM是如何创建对象的？"
-      order: 77
-      url: 2025-11-01-jvm-object-creation-process
-    - title: "一个对象的结构是什么样的？"
-      order: 78
-      url: 2025-11-01-java-object-structure
-    - title: "JVM如何保证给对象分配内存过程的线程安全？"
-      order: 79
-      url: 2025-11-01-object-allocation-thread-safety
-    - title: "Java中的对象一定在堆上分配内存吗？"
-      order: 80
-      url: 2025-11-01-java-object-memory-location
-    - title: "什么是逃逸分析？"
-      order: 81
-      url: 2025-11-01-escape-analysis
-    - title: "JVM如何判断对象是否存活？"
-      order: 82
-      url: 2025-11-01-object-survival-detection
-    - title: "什么是强引用、软引用、弱引用和虚引用？"
-      order: 83
-      url: 2025-11-01-java-four-reference-types
-    - title: "JVM有哪些垃圾回收算法"
-      order: 84
-      url: 2025-11-01-jvm-garbage-collection-algorithms
-    - title: "新生代和老年代的GC算法"
-      order: 85
-      url: 2025-11-01-young-old-generation-gc-algorithms
-    - title: "JVM中一次完整的GC流程是怎样的"
-      order: 86
-      url: 2025-11-01-complete-gc-process-in-jvm
-    - title: "YoungGC和FullGC的触发条件是什么"
-      order: 87
-      url: 2025-11-01-younggc-fullgc-trigger-conditions
-    - title: "FullGC多久一次算正常"
-      order: 88
-      url: 2025-11-01-how-often-fullgc-is-normal
-    - title: "什么是三色标记算法"
-      order: 89
-      url: 2025-11-01-tricolor-marking-algorithm
-    - title: "什么是跨代引用，有什么问题"
-      order: 90
-      url: 2025-11-01-cross-generation-references
-    - title: "什么是STW（Stop-The-World）及其影响"
-      order: 91
-      url: 2025-11-01-stop-the-world-stw-explained
-    - title: "什么是安全点（Safe Point），有什么作用"
-      order: 92
-      url: 2025-11-01-safepoint-explained
-    - title: "介绍下CMS的垃圾回收过程"
-      order: 93
-      url: 2025-11-01-cms-garbage-collection-process
-    - title: "G1和CMS有什么区别？"
-      order: 94
-      url: 2025-11-01-g1-vs-cms-comparison
-    - title: "为什么G1从JDK9之后成为默认的垃圾回收器？"
-      order: 95
-      url: 2025-11-01-g1-default-garbage-collector
-    - title: "JDK11中新出的ZGC有什么特点？"
-      order: 96
-      url: 2025-11-01-zgc-characteristics
-    - title: "Java8和Java11的GC有什么区别？"
-      order: 97
-      url: 2025-11-01-java8-vs-java11-gc-differences
-    - title: "新生代和老年代的垃圾回收器有何区别？"
-      order: 98
-      url: 2025-11-01-young-old-generation-collectors
-    - title: "项目中如何选择垃圾回收器？为啥选择这个？"
-      order: 99
-      url: 2025-11-01-garbage-collector-selection-strategy
-    - title: "说一说JVM的并发回收和并行回收"
-      order: 100
-      url: 2025-11-01-concurrent-vs-parallel-gc
-    - title: "新生代如果只有一个Eden+一个Survivor可以吗？"
-      order: 101
-      url: 2025-11-01-new-generation-eden-survivor-design
-    - title: "Java中的类什么时候会被加载？"
-      order: 102
-      url: 2025-11-01-when-java-class-loaded
-    - title: "Java中类加载的过程是怎么样的？"
-      order: 103
-      url: 2025-11-01-java-class-loading-process
-    - title: "类的生命周期是怎么样的？"
-      order: 105
-      url: 2025-11-01-class-lifecycle-in-jvm
-    - title: "什么是双亲委派？如何破坏？"
-      order: 106
-      url: 2025-11-01-parent-delegation-model
-    - title: "双亲委派机制的核心思想是什么？"
-      order: 107
-      url: 2025-11-01-parent-delegation-core-idea
-    - title: "双亲委派机制如何打破（详细补充）"
-      order: 108
-      url: 2025-11-01-how-to-break-parent-delegation-detailed
-    - title: "破坏双亲委派之后，能重写String类吗？"
-      order: 109
-      url: 2025-11-01-can-override-string-after-breaking-parent-delegation
-    - title: "如何判断JVM中类和其他类是不是同一个类？"
-      order: 110
-      url: 2025-11-01-how-to-determine-same-class-in-jvm
-    - title: "JDK 1.8和1.9中类加载器有哪些不同？"
-      order: 111
-      url: 2025-11-01-classloader-differences-jdk8-vs-jdk9
-    - title: "什么是Class常量池，和运行时常量池关系是什么？"
-      order: 112
-      url: 2025-11-01-class-constant-pool-vs-runtime-constant-pool
-    - title: "运行时常量池和字符串常量池的关系是什么？"
-      order: 113
-      url: 2025-11-01-runtime-constant-pool-vs-string-pool
-    - title: "字符串常量池是如何实现的？"
-      order: 114
-      url: 2025-11-01-string-pool-implementation
-    - title: "什么是编译和反编译？"
-      order: 115
-      url: 2025-11-01-compilation-decompilation-concepts
-    - title: "Java一定就是平台无关的吗？"
-      order: 116
-      url: 2025-11-01-java-platform-independence-limitations
-    - title: "Java是如何实现平台无关的？"
-      order: 117
-      url: 2025-11-01-java-platform-independence
-    - title: "Java是编译型还是解释型语言？"
-      order: 118
-      url: 2025-11-01-java-compiled-or-interpreted
-    - title: "什么是AOT编译？和JIT有啥区别？"
-      order: 119
-      url: 2025-11-01-aot-vs-jit-compilation
-    - title: "简单介绍一下JIT优化技术？"
-      order: 120
-      url: 2025-11-01-jit-optimization-techniques
-    - title: "常见的JVM工具有哪些"
-      order: 121
-      url: 2025-11-01-common-jvm-tools
-    - title: "JVM调优参数详解"
-      order: 122
-      url: 2025-11-01-jvm-tuning-parameters
-    - title: "常用的JVM启动参数有哪些"
-      order: 123
-      url: 2025-11-01-common-jvm-startup-parameters
-    - title: "Java发生了OOM一定会导致JVM退出吗"
-      order: 124
-      url: 2025-11-01-will-oom-cause-jvm-exit
-    - title: "什么情况会导致JVM退出"
-      order: 125
-      url: 2025-11-01-what-causes-jvm-exit
-    - title: "对JDK进程执行kill -9有什么影响"
-      order: 126
-      url: 2025-11-01-impact-of-kill-9-on-jvm
+  - title: JVM的运行时内存区域是怎样的？
+    order: 66
+    url: 2025-11-01-jvm-runtime-memory-areas
+  - title: JVM为什么要把堆和栈区分出来呢？
+    order: 67
+    url: 2025-11-01-why-separate-heap-and-stack
+  - title: 虚拟机中的堆一定是线程共享的吗？
+    order: 68
+    url: 2025-11-01-is-jvm-heap-always-thread-shared
+  - title: 什么是方法区？是如何实现的？
+    order: 69
+    url: 2025-11-01-what-is-method-area
+  - title: 方法区存储什么数据？
+    order: 70
+    url: 2025-11-01-method-area-storage-contents
+  - title: Java的堆是如何分代的？为什么分代？
+    order: 71
+    url: 2025-11-01-java-heap-generation-design
+  - title: 什么是堆外内存？如何使用堆外内存？
+    order: 72
+    url: 2025-11-01-off-heap-memory-explained
+  - title: OutOfMemory和StackOverflow的区别是什么？
+    order: 73
+    url: 2025-11-01-outofmemory-vs-stackoverflow
+  - title: 内存泄漏和内存溢出的区别是什么？
+    order: 74
+    url: 2025-11-01-memory-leak-vs-memory-overflow
+  - title: 一个Java进程占用的内存都有哪些部分？
+    order: 75
+    url: 2025-11-01-java-process-memory-composition
+  - title: JVM内存结构全面解析
+    order: 76
+    url: 2025-11-01-jvm-memory-structure-overview
+  - title: JVM是如何创建对象的？
+    order: 77
+    url: 2025-11-01-jvm-object-creation-process
+  - title: 一个对象的结构是什么样的？
+    order: 78
+    url: 2025-11-01-java-object-structure
+  - title: JVM如何保证给对象分配内存过程的线程安全？
+    order: 79
+    url: 2025-11-01-object-allocation-thread-safety
+  - title: Java中的对象一定在堆上分配内存吗？
+    order: 80
+    url: 2025-11-01-java-object-memory-location
+  - title: 什么是逃逸分析？
+    order: 81
+    url: 2025-11-01-escape-analysis
+  - title: JVM如何判断对象是否存活？
+    order: 82
+    url: 2025-11-01-object-survival-detection
+  - title: 什么是强引用、软引用、弱引用和虚引用？
+    order: 83
+    url: 2025-11-01-java-four-reference-types
+  - title: JVM有哪些垃圾回收算法
+    order: 84
+    url: 2025-11-01-jvm-garbage-collection-algorithms
+  - title: 新生代和老年代的GC算法
+    order: 85
+    url: 2025-11-01-young-old-generation-gc-algorithms
+  - title: JVM中一次完整的GC流程是怎样的
+    order: 86
+    url: 2025-11-01-complete-gc-process-in-jvm
+  - title: YoungGC和FullGC的触发条件是什么
+    order: 87
+    url: 2025-11-01-younggc-fullgc-trigger-conditions
+  - title: FullGC多久一次算正常
+    order: 88
+    url: 2025-11-01-how-often-fullgc-is-normal
+  - title: 什么是三色标记算法
+    order: 89
+    url: 2025-11-01-tricolor-marking-algorithm
+  - title: 什么是跨代引用，有什么问题
+    order: 90
+    url: 2025-11-01-cross-generation-references
+  - title: 什么是STW（Stop-The-World）及其影响
+    order: 91
+    url: 2025-11-01-stop-the-world-stw-explained
+  - title: 什么是安全点（Safe Point），有什么作用
+    order: 92
+    url: 2025-11-01-safepoint-explained
+  - title: 介绍下CMS的垃圾回收过程
+    order: 93
+    url: 2025-11-01-cms-garbage-collection-process
+  - title: G1和CMS有什么区别？
+    order: 94
+    url: 2025-11-01-g1-vs-cms-comparison
+  - title: 为什么G1从JDK9之后成为默认的垃圾回收器？
+    order: 95
+    url: 2025-11-01-g1-default-garbage-collector
+  - title: JDK11中新出的ZGC有什么特点？
+    order: 96
+    url: 2025-11-01-zgc-characteristics
+  - title: Java8和Java11的GC有什么区别？
+    order: 97
+    url: 2025-11-01-java8-vs-java11-gc-differences
+  - title: 新生代和老年代的垃圾回收器有何区别？
+    order: 98
+    url: 2025-11-01-young-old-generation-collectors
+  - title: 项目中如何选择垃圾回收器？为啥选择这个？
+    order: 99
+    url: 2025-11-01-garbage-collector-selection-strategy
+  - title: 说一说JVM的并发回收和并行回收
+    order: 100
+    url: 2025-11-01-concurrent-vs-parallel-gc
+  - title: 新生代如果只有一个Eden+一个Survivor可以吗？
+    order: 101
+    url: 2025-11-01-new-generation-eden-survivor-design
+  - title: Java中的类什么时候会被加载？
+    order: 102
+    url: 2025-11-01-when-java-class-loaded
+  - title: Java中类加载的过程是怎么样的？
+    order: 103
+    url: 2025-11-01-java-class-loading-process
+  - title: 类的生命周期是怎么样的？
+    order: 105
+    url: 2025-11-01-class-lifecycle-in-jvm
+  - title: 什么是双亲委派？如何破坏？
+    order: 106
+    url: 2025-11-01-parent-delegation-model
+  - title: 双亲委派机制的核心思想是什么？
+    order: 107
+    url: 2025-11-01-parent-delegation-core-idea
+  - title: 双亲委派机制如何打破（详细补充）
+    order: 108
+    url: 2025-11-01-how-to-break-parent-delegation-detailed
+  - title: 破坏双亲委派之后，能重写String类吗？
+    order: 109
+    url: 2025-11-01-can-override-string-after-breaking-parent-delegation
+  - title: 如何判断JVM中类和其他类是不是同一个类？
+    order: 110
+    url: 2025-11-01-how-to-determine-same-class-in-jvm
+  - title: JDK 1.8和1.9中类加载器有哪些不同？
+    order: 111
+    url: 2025-11-01-classloader-differences-jdk8-vs-jdk9
+  - title: 什么是Class常量池，和运行时常量池关系是什么？
+    order: 112
+    url: 2025-11-01-class-constant-pool-vs-runtime-constant-pool
+  - title: 运行时常量池和字符串常量池的关系是什么？
+    order: 113
+    url: 2025-11-01-runtime-constant-pool-vs-string-pool
+  - title: 字符串常量池是如何实现的？
+    order: 114
+    url: 2025-11-01-string-pool-implementation
+  - title: 什么是编译和反编译？
+    order: 115
+    url: 2025-11-01-compilation-decompilation-concepts
+  - title: Java一定就是平台无关的吗？
+    order: 116
+    url: 2025-11-01-java-platform-independence-limitations
+  - title: Java是如何实现平台无关的？
+    order: 117
+    url: 2025-11-01-java-platform-independence
+  - title: Java是编译型还是解释型语言？
+    order: 118
+    url: 2025-11-01-java-compiled-or-interpreted
+  - title: 什么是AOT编译？和JIT有啥区别？
+    order: 119
+    url: 2025-11-01-aot-vs-jit-compilation
+  - title: 简单介绍一下JIT优化技术？
+    order: 120
+    url: 2025-11-01-jit-optimization-techniques
+  - title: 常见的JVM工具有哪些
+    order: 121
+    url: 2025-11-01-common-jvm-tools
+  - title: JVM调优参数详解
+    order: 122
+    url: 2025-11-01-jvm-tuning-parameters
+  - title: 常用的JVM启动参数有哪些
+    order: 123
+    url: 2025-11-01-common-jvm-startup-parameters
+  - title: Java发生了OOM一定会导致JVM退出吗
+    order: 124
+    url: 2025-11-01-will-oom-cause-jvm-exit
+  - title: 什么情况会导致JVM退出
+    order: 125
+    url: 2025-11-01-what-causes-jvm-exit
+  - title: 对JDK进程执行kill -9有什么影响
+    order: 126
+    url: 2025-11-01-impact-of-kill-9-on-jvm
   Java:
-    - title: "ArrayList与LinkedList有什么区别？"
-      order: 41
-      url: 2025-11-02-arraylist-vs-linkedlist
-    - title: "ArrayList的扩容机制是怎样的？"
-      order: 42
-      url: 2025-11-02-arraylist-expansion-mechanism
-    - title: "ArrayList扩容机制详解：初始容量与1.5倍扩容"
-      order: 43
-      url: 2025-11-02-arraylist-expansion-details
-    - title: "ArrayList和LinkedList的时间复杂度"
-      order: 44
-      url: 2025-11-02-arraylist-linkedlist-time-complexity
-    - title: "HashMap的底层实现原理"
-      order: 46
-      url: 2025-11-02-hashmap-underlying-implementation
-    - title: "HashMap为什么线程不安全？"
-      order: 47
-      url: 2025-11-02-why-hashmap-not-thread-safe
-    - title: "HashMap的容量为什么是2的幂次方？"
-      order: 48
-      url: 2025-11-02-why-hashmap-capacity-power-of-two
-    - title: "HashMap的加载因子为什么是0.75？"
-      order: 49
-      url: 2025-11-02-why-hashmap-load-factor-0-75
-    - title: "HashMap什么时候扩容？"
-      order: 50
-      url: 2025-11-02-when-does-hashmap-resize
-    - title: "HashMap扩容机制详解"
-      order: 51
-      url: 2025-11-02-hashmap-resize-mechanism
-    - title: "HashMap的hash方法原理"
-      order: 52
-      url: 2025-11-02-hashmap-hash-method-principle
-    - title: "HashMap为什么在链表长度为8时转为红黑树？"
-      order: 53
-      url: 2025-11-02-why-hashmap-treeify-threshold-8
-    - title: "HashMap在JDK1.7和1.8中的区别"
-      order: 54
-      url: 2025-11-02-hashmap-jdk7-vs-jdk8
-    - title: "为什么HashMap有时候链表长度超过8也不树化？"
-      order: 55
-      url: 2025-11-02-why-hashmap-not-treeify-when-length-over-8
-    - title: "HashMap的key可以为null吗？"
-      order: 56
-      url: 2025-11-02-can-hashmap-key-be-null
-    - title: "Hashtable、HashMap、ConcurrentHashMap的区别"
-      order: 57
-      url: 2025-11-02-hashtable-hashmap-concurrenthashmap-differences
-    - title: "LinkedHashMap是如何实现的？"
-      order: 60
-      url: 2025-11-02-linkedhashmap-implementation
-    - title: "TreeMap和HashMap有什么区别？"
-      order: 61
-      url: 2025-11-02-treemap-vs-hashmap
-    - title: "WeakHashMap了解吗？"
-      order: 62
-      url: 2025-11-02-weakhashmap-explained
-    - title: "HashSet和HashMap有什么关系？"
-      order: 63
-      url: 2025-11-02-hashset-and-hashmap-relationship
-    - title: "什么是并发，什么是并行？"
-      order: 138
-      url: 2025-11-02-concurrency-vs-parallelism
-    - title: "能不能谈谈你对线程安全的理解？"
-      order: 139
-      url: 2025-11-02-thread-safety-understanding
-    - title: "有哪些实现线程安全的方案"
-      order: 140
-      url: 2025-11-02-thread-safety-solutions
-    - title: "并发编程中的原子性和数据库ACID的原子性一样吗？"
-      order: 141
-      url: 2025-11-02-atomicity-concurrency-vs-database
-    - title: "什么是Java内存模型（JMM）？"
-      order: 144
-      url: 2025-11-02-what-is-java-memory-model
-    - title: "什么是happens-before原则？"
-      order: 145
-      url: 2025-11-02-what-is-happens-before
-    - title: "happens-before和as-if-serial有啥区别和联系？"
-      order: 146
-      url: 2025-11-02-happens-before-vs-as-if-serial
-    - title: "有了MESI为啥还需要JMM？"
-      order: 147
-      url: 2025-11-02-why-jmm-when-mesi-exists
-    - title: "什么是总线嗅探和总线风暴，和JMM有什么关系？"
-      order: 148
-      url: 2025-11-02-bus-snooping-and-bus-storm
-    - title: "到底啥是内存屏障？到底怎么加的？"
-      order: 149
-      url: 2025-11-02-memory-barrier-explained
-    - title: "synchronized是怎么实现的？"
-      order: 162
-      url: 2025-11-02-synchronized-implementation
-    - title: "synchronized锁的是什么？"
-      order: 163
-      url: 2025-11-02-synchronized-lock-target
-    - title: "synchronized是如何保证原子性、可见性、有序性的？"
-      order: 164
-      url: 2025-11-02-synchronized-atomicity-visibility-ordering
-    - title: "synchronized的锁优化是怎样的？"
-      order: 165
-      url: 2025-11-02-synchronized-lock-optimization
-    - title: "synchronized的锁升级过程是怎样的？"
-      order: 166
-      url: 2025-11-02-synchronized-lock-upgrade
-    - title: "synchronized升级过程中有几次自旋？"
-      order: 167
-      url: 2025-11-02-synchronized-spin-times
-    - title: "synchronized的锁能降级吗？"
-      order: 168
-      url: 2025-11-02-synchronized-lock-downgrade
-    - title: "为什么JDK15要废弃偏向锁？"
-      order: 169
-      url: 2025-11-02-why-jdk15-deprecate-biased-locking
-    - title: "synchronized是否可重入"
-      order: 170
-      url: 2025-11-02-synchronized-reentrant
-    - title: "synchronized是非公平锁吗，那么是如何体现的？"
-      order: 171
-      url: 2025-11-02-synchronized-fairness
-    - title: "synchronized和lock区别"
-      order: 173
-      url: 2025-11-02-synchronized-vs-lock
-    - title: "可重入锁的底层实现"
-      order: 183
-      url: 2025-11-02-reentrant-lock-implementation
+  - title: ArrayList与LinkedList有什么区别？
+    order: 41
+    url: 2025-11-02-arraylist-vs-linkedlist
+  - title: ArrayList的扩容机制是怎样的？
+    order: 42
+    url: 2025-11-02-arraylist-expansion-mechanism
+  - title: ArrayList扩容机制详解：初始容量与1.5倍扩容
+    order: 43
+    url: 2025-11-02-arraylist-expansion-details
+  - title: ArrayList和LinkedList的时间复杂度
+    order: 44
+    url: 2025-11-02-arraylist-linkedlist-time-complexity
+  - title: HashMap的底层实现原理
+    order: 46
+    url: 2025-11-02-hashmap-underlying-implementation
+  - title: HashMap为什么线程不安全？
+    order: 47
+    url: 2025-11-02-why-hashmap-not-thread-safe
+  - title: HashMap的容量为什么是2的幂次方？
+    order: 48
+    url: 2025-11-02-why-hashmap-capacity-power-of-two
+  - title: HashMap的加载因子为什么是0.75？
+    order: 49
+    url: 2025-11-02-why-hashmap-load-factor-0-75
+  - title: HashMap什么时候扩容？
+    order: 50
+    url: 2025-11-02-when-does-hashmap-resize
+  - title: HashMap扩容机制详解
+    order: 51
+    url: 2025-11-02-hashmap-resize-mechanism
+  - title: HashMap的hash方法原理
+    order: 52
+    url: 2025-11-02-hashmap-hash-method-principle
+  - title: HashMap为什么在链表长度为8时转为红黑树？
+    order: 53
+    url: 2025-11-02-why-hashmap-treeify-threshold-8
+  - title: HashMap在JDK1.7和1.8中的区别
+    order: 54
+    url: 2025-11-02-hashmap-jdk7-vs-jdk8
+  - title: 为什么HashMap有时候链表长度超过8也不树化？
+    order: 55
+    url: 2025-11-02-why-hashmap-not-treeify-when-length-over-8
+  - title: HashMap的key可以为null吗？
+    order: 56
+    url: 2025-11-02-can-hashmap-key-be-null
+  - title: Hashtable、HashMap、ConcurrentHashMap的区别
+    order: 57
+    url: 2025-11-02-hashtable-hashmap-concurrenthashmap-differences
+  - title: LinkedHashMap是如何实现的？
+    order: 60
+    url: 2025-11-02-linkedhashmap-implementation
+  - title: TreeMap和HashMap有什么区别？
+    order: 61
+    url: 2025-11-02-treemap-vs-hashmap
+  - title: WeakHashMap了解吗？
+    order: 62
+    url: 2025-11-02-weakhashmap-explained
+  - title: HashSet和HashMap有什么关系？
+    order: 63
+    url: 2025-11-02-hashset-and-hashmap-relationship
+  - title: 什么是并发，什么是并行？
+    order: 138
+    url: 2025-11-02-concurrency-vs-parallelism
+  - title: 能不能谈谈你对线程安全的理解？
+    order: 139
+    url: 2025-11-02-thread-safety-understanding
+  - title: 有哪些实现线程安全的方案
+    order: 140
+    url: 2025-11-02-thread-safety-solutions
+  - title: 并发编程中的原子性和数据库ACID的原子性一样吗？
+    order: 141
+    url: 2025-11-02-atomicity-concurrency-vs-database
+  - title: 什么是Java内存模型（JMM）？
+    order: 144
+    url: 2025-11-02-what-is-java-memory-model
+  - title: 什么是happens-before原则？
+    order: 145
+    url: 2025-11-02-what-is-happens-before
+  - title: happens-before和as-if-serial有啥区别和联系？
+    order: 146
+    url: 2025-11-02-happens-before-vs-as-if-serial
+  - title: 有了MESI为啥还需要JMM？
+    order: 147
+    url: 2025-11-02-why-jmm-when-mesi-exists
+  - title: 什么是总线嗅探和总线风暴，和JMM有什么关系？
+    order: 148
+    url: 2025-11-02-bus-snooping-and-bus-storm
+  - title: 到底啥是内存屏障？到底怎么加的？
+    order: 149
+    url: 2025-11-02-memory-barrier-explained
+  - title: synchronized是怎么实现的？
+    order: 162
+    url: 2025-11-02-synchronized-implementation
+  - title: synchronized锁的是什么？
+    order: 163
+    url: 2025-11-02-synchronized-lock-target
+  - title: synchronized是如何保证原子性、可见性、有序性的？
+    order: 164
+    url: 2025-11-02-synchronized-atomicity-visibility-ordering
+  - title: synchronized的锁优化是怎样的？
+    order: 165
+    url: 2025-11-02-synchronized-lock-optimization
+  - title: synchronized的锁升级过程是怎样的？
+    order: 166
+    url: 2025-11-02-synchronized-lock-upgrade
+  - title: synchronized升级过程中有几次自旋？
+    order: 167
+    url: 2025-11-02-synchronized-spin-times
+  - title: synchronized的锁能降级吗？
+    order: 168
+    url: 2025-11-02-synchronized-lock-downgrade
+  - title: 为什么JDK15要废弃偏向锁？
+    order: 169
+    url: 2025-11-02-why-jdk15-deprecate-biased-locking
+  - title: synchronized是否可重入
+    order: 170
+    url: 2025-11-02-synchronized-reentrant
+  - title: synchronized是非公平锁吗，那么是如何体现的？
+    order: 171
+    url: 2025-11-02-synchronized-fairness
+  - title: synchronized和lock区别
+    order: 173
+    url: 2025-11-02-synchronized-vs-lock
+  - title: 可重入锁的底层实现
+    order: 183
+    url: 2025-11-02-reentrant-lock-implementation
   Java基础:
-    - title: "什么是深拷贝和浅拷贝？"
-      order: 1
-      url: 2025-11-01-deep-copy-shallow-copy
-    - title: "如何理解Java中的多态？"
-      order: 2
-      url: 2025-11-01-java-polymorphism
-    - title: "接口和抽象类的区别，如何选择？"
-      order: 3
-      url: 2025-11-01-interface-vs-abstract-class
-    - title: "为什么建议多用组合少用继承？"
-      order: 4
-      url: 2025-11-01-composition-over-inheritance
-    - title: "Java是值传递还是引用传递？"
-      order: 5
-      url: 2025-11-01-pass-by-value-or-reference
-    - title: "有了equals为什么还需要hashCode方法"
-      order: 6
-      url: 2025-11-01-why-need-hashcode
-    - title: "什么是反射机制？为什么反射慢？"
-      order: 7
-      url: 2025-11-01-java-reflection
-    - title: "String、StringBuilder和StringBuffer的区别？"
-      order: 8
-      url: 2025-11-01-string-stringbuilder-stringbuffer
-    - title: "String为什么设计成不可变的？"
-      order: 9
-      url: 2025-11-01-why-string-immutable
-    - title: "String是如何实现不可变的？"
-      order: 10
-      url: 2025-11-01-how-string-immutable
-    - title: "String有长度限制吗？是多少？"
-      order: 11
-      url: 2025-11-01-string-length-limit
-    - title: "String中intern的原理是什么？"
-      order: 12
-      url: 2025-11-01-string-intern
-    - title: "为什么JDK9中把String的char[]改成了byte[]？"
-      order: 13
-      url: 2025-11-01-jdk9-string-byte-array
-    - title: "JDK9中对字符串的拼接做了什么优化？"
-      order: 14
-      url: 2025-11-01-jdk9-string-concat-optimization
-    - title: "字符串常量是什么时候进入到字符串常量池的？"
-      order: 15
-      url: 2025-11-01-string-pool-timing
-    - title: "什么是泛型？有什么好处？"
-      order: 18
-      url: 2025-11-01-what-is-generics
-    - title: "什么是类型擦除"
-      order: 19
-      url: 2025-11-01-type-erasure
-    - title: "泛型中K、T、V、E、Object等分别代表什么含义"
-      order: 20
-      url: 2025-11-01-generic-type-naming
-    - title: "泛型中上下界限定符extends和super有什么区别"
-      order: 21
-      url: 2025-11-01-generic-bounds-extends-super
-    - title: "什么是序列化与反序列化"
-      order: 22
-      url: 2025-11-01-what-is-serialization
-    - title: "Java序列化的原理是什么"
-      order: 23
-      url: 2025-11-01-java-serialization-principle
-    - title: "你知道fastjson的反序列化漏洞吗"
-      order: 24
-      url: 2025-11-01-fastjson-deserialization-vulnerability
-    - title: "serialVersionUID有何用途？如果没定义会有什么问题？"
-      order: 25
-      url: 2025-11-01-serialversionuid-purpose
-    - title: "什么是AIO、BIO和NIO？"
-      order: 26
-      url: 2025-11-01-aio-bio-nio
-    - title: "Lambda表达式是如何实现的"
-      order: 27
-      url: 2025-11-01-lambda-implementation
-    - title: "Stream的并行流一定比串行流更快吗"
-      order: 28
-      url: 2025-11-01-parallel-stream-performance
-    - title: "Arrays.sort使用什么排序算法实现的"
-      order: 29
-      url: 2025-11-01-arrays-sort-algorithm
-    - title: "BigDecimal(double)和BigDecimal(String)有什么区别"
-      order: 30
-      url: 2025-11-01-bigdecimal-constructor-difference
-    - title: "为什么不能用BigDecimal的equals方法做等值比较"
-      order: 31
-      url: 2025-11-01-bigdecimal-equals-problem
-    - title: "为什么不能用浮点数表示金额"
-      order: 32
-      url: 2025-11-01-float-money-problem
-    - title: "SimpleDateFormat是线程安全的吗？使用时应该注意什么"
-      order: 33
-      url: 2025-11-01-simpledateformat-thread-safety
-    - title: "Java类加载流程与过程"
-      order: 104
-      url: 2025-11-01-java-class-loading
-    - title: "什么是SPI，和API有什么区别"
-      order: 127
-      url: 2025-11-01-spi-vs-api
-    - title: "final关键字与可见性是否有关"
-      order: 143
-      url: 2025-11-01-final-keyword-visibility
-    - title: "String str = new String(\\"hollis\\")创建了几个对象？"
-      order: 999999
-      url: 2025-11-01-new-string-objects-count
-    - title: "String a = \\"ab\\"; String b = \\"a\\" + \\"b\\"; a==b吗？"
-      order: 999999
-      url: 2025-11-01-string-constant-pool-concatenation
+  - title: 什么是深拷贝和浅拷贝？
+    order: 1
+    url: 2025-11-01-deep-copy-shallow-copy
+  - title: 如何理解Java中的多态？
+    order: 2
+    url: 2025-11-01-java-polymorphism
+  - title: 接口和抽象类的区别，如何选择？
+    order: 3
+    url: 2025-11-01-interface-vs-abstract-class
+  - title: 为什么建议多用组合少用继承？
+    order: 4
+    url: 2025-11-01-composition-over-inheritance
+  - title: Java是值传递还是引用传递？
+    order: 5
+    url: 2025-11-01-pass-by-value-or-reference
+  - title: 有了equals为什么还需要hashCode方法
+    order: 6
+    url: 2025-11-01-why-need-hashcode
+  - title: 什么是反射机制？为什么反射慢？
+    order: 7
+    url: 2025-11-01-java-reflection
+  - title: String、StringBuilder和StringBuffer的区别？
+    order: 8
+    url: 2025-11-01-string-stringbuilder-stringbuffer
+  - title: String为什么设计成不可变的？
+    order: 9
+    url: 2025-11-01-why-string-immutable
+  - title: String是如何实现不可变的？
+    order: 10
+    url: 2025-11-01-how-string-immutable
+  - title: String有长度限制吗？是多少？
+    order: 11
+    url: 2025-11-01-string-length-limit
+  - title: String中intern的原理是什么？
+    order: 12
+    url: 2025-11-01-string-intern
+  - title: 为什么JDK9中把String的char[]改成了byte[]？
+    order: 13
+    url: 2025-11-01-jdk9-string-byte-array
+  - title: JDK9中对字符串的拼接做了什么优化？
+    order: 14
+    url: 2025-11-01-jdk9-string-concat-optimization
+  - title: 字符串常量是什么时候进入到字符串常量池的？
+    order: 15
+    url: 2025-11-01-string-pool-timing
+  - title: 什么是泛型？有什么好处？
+    order: 18
+    url: 2025-11-01-what-is-generics
+  - title: 什么是类型擦除
+    order: 19
+    url: 2025-11-01-type-erasure
+  - title: 泛型中K、T、V、E、Object等分别代表什么含义
+    order: 20
+    url: 2025-11-01-generic-type-naming
+  - title: 泛型中上下界限定符extends和super有什么区别
+    order: 21
+    url: 2025-11-01-generic-bounds-extends-super
+  - title: 什么是序列化与反序列化
+    order: 22
+    url: 2025-11-01-what-is-serialization
+  - title: Java序列化的原理是什么
+    order: 23
+    url: 2025-11-01-java-serialization-principle
+  - title: 你知道fastjson的反序列化漏洞吗
+    order: 24
+    url: 2025-11-01-fastjson-deserialization-vulnerability
+  - title: serialVersionUID有何用途？如果没定义会有什么问题？
+    order: 25
+    url: 2025-11-01-serialversionuid-purpose
+  - title: 什么是AIO、BIO和NIO？
+    order: 26
+    url: 2025-11-01-aio-bio-nio
+  - title: Lambda表达式是如何实现的
+    order: 27
+    url: 2025-11-01-lambda-implementation
+  - title: Stream的并行流一定比串行流更快吗
+    order: 28
+    url: 2025-11-01-parallel-stream-performance
+  - title: Arrays.sort使用什么排序算法实现的
+    order: 29
+    url: 2025-11-01-arrays-sort-algorithm
+  - title: BigDecimal(double)和BigDecimal(String)有什么区别
+    order: 30
+    url: 2025-11-01-bigdecimal-constructor-difference
+  - title: 为什么不能用BigDecimal的equals方法做等值比较
+    order: 31
+    url: 2025-11-01-bigdecimal-equals-problem
+  - title: 为什么不能用浮点数表示金额
+    order: 32
+    url: 2025-11-01-float-money-problem
+  - title: SimpleDateFormat是线程安全的吗？使用时应该注意什么
+    order: 33
+    url: 2025-11-01-simpledateformat-thread-safety
+  - title: Java类加载流程与过程
+    order: 104
+    url: 2025-11-01-java-class-loading
+  - title: 什么是SPI，和API有什么区别
+    order: 127
+    url: 2025-11-01-spi-vs-api
+  - title: final关键字与可见性是否有关
+    order: 143
+    url: 2025-11-01-final-keyword-visibility
+  - title: String str = new String("hollis")创建了几个对象？
+    order: 999999
+    url: 2025-11-01-new-string-objects-count
+  - title: String a = "ab"; String b = "a" + "b"; a==b吗？
+    order: 999999
+    url: 2025-11-01-string-constant-pool-concatenation
   Java并发编程:
-    - title: "指令重排序"
-      order: 142
-      url: 2025-11-02-instruction-reordering
-    - title: "volatile能保证原子性吗？为什么？"
-      order: 150
-      url: 2025-11-02-volatile-atomicity
-    - title: "有了synchronized为什么还需要volatile"
-      order: 151
-      url: 2025-11-02-volatile-vs-synchronized
-    - title: "volatile如何保证可见性和有序性"
-      order: 152
-      url: 2025-11-02-volatile-visibility-ordering
-    - title: "volatile关键字与禁止重排序如何解决多线程可见性"
-      order: 153
-      url: 2025-11-02-volatile-multithreading-visibility
-    - title: "什么是CAS？存在什么问题？"
-      order: 154
-      url: 2025-11-02-what-is-cas
-    - title: "介绍下CAS"
-      order: 155
-      url: 2025-11-02-cas-introduction
-    - title: "CAS操作类"
-      order: 156
-      url: 2025-11-02-cas-atomic-classes
-    - title: "CAS一定有自旋吗？"
-      order: 157
-      url: 2025-11-02-cas-spin
-    - title: "CAS在操作系统层面是如何保证原子性的"
-      order: 158
-      url: 2025-11-02-cas-os-atomicity
-    - title: "有了CAS为啥还需要volatile"
-      order: 159
-      url: 2025-11-02-cas-volatile-relationship
-    - title: "ABA问题"
-      order: 160
-      url: 2025-11-02-aba-problem
-    - title: "什么是Unsafe？"
-      order: 161
-      url: 2025-11-02-what-is-unsafe
-    - title: "int a = 1是原子性操作吗"
-      order: 174
-      url: 2025-11-02-int-assignment-atomicity
-    - title: "如何保证多线程下i++结果正确"
-      order: 175
-      url: 2025-11-02-thread-safe-increment
-    - title: "什么是线程池，如何实现的？"
-      order: 187
-      url: 2025-11-02-what-is-thread-pool-and-implementation
-    - title: "ForkJoinPool和ThreadPoolExecutor的区别是什么？"
-      order: 188
-      url: 2025-11-02-forkjoinpool-vs-threadpoolexecutor
-    - title: "线程池的拒绝策略有哪些？"
-      order: 189
-      url: 2025-11-02-thread-pool-rejection-policies
-    - title: "为什么不建议通过Executors构建线程池？"
-      order: 190
-      url: 2025-11-02-why-not-use-executors
-    - title: "线程数设定成多少更合适？"
-      order: 191
-      url: 2025-11-02-optimal-thread-pool-size
-    - title: "如何让Java的线程池顺序执行任务？"
-      order: 192
-      url: 2025-11-02-sequential-task-execution-in-thread-pool
-    - title: "如何实现一个动态线程池？"
-      order: 193
-      url: 2025-11-02-dynamic-thread-pool-implementation
-    - title: "CompletableFuture的底层是如何实现的？"
-      order: 195
-      url: 2025-11-02-completablefuture-implementation
-    - title: "如何对多线程进行编排？"
-      order: 196
-      url: 2025-11-02-multi-thread-orchestration
+  - title: 指令重排序
+    order: 142
+    url: 2025-11-02-instruction-reordering
+  - title: volatile能保证原子性吗？为什么？
+    order: 150
+    url: 2025-11-02-volatile-atomicity
+  - title: 有了synchronized为什么还需要volatile
+    order: 151
+    url: 2025-11-02-volatile-vs-synchronized
+  - title: volatile如何保证可见性和有序性
+    order: 152
+    url: 2025-11-02-volatile-visibility-ordering
+  - title: volatile关键字与禁止重排序如何解决多线程可见性
+    order: 153
+    url: 2025-11-02-volatile-multithreading-visibility
+  - title: 什么是CAS？存在什么问题？
+    order: 154
+    url: 2025-11-02-what-is-cas
+  - title: 介绍下CAS
+    order: 155
+    url: 2025-11-02-cas-introduction
+  - title: CAS操作类
+    order: 156
+    url: 2025-11-02-cas-atomic-classes
+  - title: CAS一定有自旋吗？
+    order: 157
+    url: 2025-11-02-cas-spin
+  - title: CAS在操作系统层面是如何保证原子性的
+    order: 158
+    url: 2025-11-02-cas-os-atomicity
+  - title: 有了CAS为啥还需要volatile
+    order: 159
+    url: 2025-11-02-cas-volatile-relationship
+  - title: ABA问题
+    order: 160
+    url: 2025-11-02-aba-problem
+  - title: 什么是Unsafe？
+    order: 161
+    url: 2025-11-02-what-is-unsafe
+  - title: int a = 1是原子性操作吗
+    order: 174
+    url: 2025-11-02-int-assignment-atomicity
+  - title: 如何保证多线程下i++结果正确
+    order: 175
+    url: 2025-11-02-thread-safe-increment
+  - title: 什么是线程池，如何实现的？
+    order: 187
+    url: 2025-11-02-what-is-thread-pool-and-implementation
+  - title: ForkJoinPool和ThreadPoolExecutor的区别是什么？
+    order: 188
+    url: 2025-11-02-forkjoinpool-vs-threadpoolexecutor
+  - title: 线程池的拒绝策略有哪些？
+    order: 189
+    url: 2025-11-02-thread-pool-rejection-policies
+  - title: 为什么不建议通过Executors构建线程池？
+    order: 190
+    url: 2025-11-02-why-not-use-executors
+  - title: 线程数设定成多少更合适？
+    order: 191
+    url: 2025-11-02-optimal-thread-pool-size
+  - title: 如何让Java的线程池顺序执行任务？
+    order: 192
+    url: 2025-11-02-sequential-task-execution-in-thread-pool
+  - title: 如何实现一个动态线程池？
+    order: 193
+    url: 2025-11-02-dynamic-thread-pool-implementation
+  - title: CompletableFuture的底层是如何实现的？
+    order: 195
+    url: 2025-11-02-completablefuture-implementation
+  - title: 如何对多线程进行编排？
+    order: 196
+    url: 2025-11-02-multi-thread-orchestration
   MySQL:
-    - title: "InnoDB为什么使用B+树实现索引？"
-      order: 218
-      url: 2025-11-02-why-innodb-uses-b-plus-tree-index
-    - title: "InnoDB中的索引类型？"
-      order: 219
-      url: 2025-11-02-innodb-index-types
-    - title: "什么是聚簇索引和非聚簇索引？"
-      order: 220
-      url: 2025-11-02-clustered-vs-non-clustered-index
-    - title: "什么是回表，怎么减少回表的次数？"
-      order: 221
-      url: 2025-11-02-what-is-index-lookup-and-how-to-reduce
-    - title: "什么是索引覆盖、索引下推？"
-      order: 222
-      url: 2025-11-02-covering-index-and-index-condition-pushdown
-    - title: "InnoDB和MyISAM有什么区别？"
-      order: 223
-      url: 2025-11-02-innodb-vs-myisam-differences
-    - title: "MyISAM的索引结构是怎么样的，它存在的问题是什么？"
-      order: 224
-      url: 2025-11-02-myisam-index-structure-and-problems
-    - title: "唯一索引和主键索引的区别？"
-      order: 225
-      url: 2025-11-02-unique-index-vs-primary-key-index
-    - title: "MySQL是如何保证唯一性索引的唯一性的？"
-      order: 226
-      url: 2025-11-02-mysql-unique-index-guarantee
-    - title: "什么是最左前缀匹配？为什么要遵守？"
-      order: 228
-      url: 2025-11-02-mysql-leftmost-prefix-matching
-    - title: "MySQL索引一定遵循最左前缀匹配吗？"
-      order: 229
-      url: 2025-11-02-mysql-leftmost-prefix-exceptions
-    - title: "A,B,C的联合索引，按照AB,AC,BC查询，能走索引吗？"
-      order: 230
-      url: 2025-11-02-mysql-composite-index-usage-patterns
-    - title: "a,b两个单独索引，where a=xx and b=xx走哪个索引？为什么？"
-      order: 231
-      url: 2025-11-02-mysql-dual-index-selection
-    - title: "什么是索引合并，原理是什么？"
-      order: 232
-      url: 2025-11-02-mysql-index-merge-explained
-    - title: "什么是索引跳跃扫描？"
-      order: 233
-      url: 2025-11-02-mysql-index-skip-scan
-    - title: "设计索引的时候有哪些原则？"
-      order: 234
-      url: 2025-11-02-mysql-index-design-principles
-    - title: "区分度不高的字段建索引一定没用吗？"
-      order: 235
-      url: 2025-11-02-mysql-low-selectivity-index
-    - title: "联合索引是越多越好吗？"
-      order: 236
-      url: 2025-11-02-mysql-too-many-indexes
-    - title: "MySQL索引失效情况"
-      order: 239
-      url: 2025-11-02-mysql-index-failure-scenarios
-    - title: "MySQL索引，最左匹配，索引覆盖，索引下推，索引失效情况，查询优化"
-      order: 240
-      url: 2025-11-02-mysql-index-comprehensive-guide
-    - title: "用了索引还是很慢，可能是什么原因？"
-      order: 241
-      url: 2025-11-02-mysql-index-slow-despite-usage
-    - title: "索引失效的问题如何排查？"
-      order: 242
-      url: 2025-11-02-mysql-index-failure-troubleshooting
-    - title: "UUID和自增ID做主键哪个好，为什么？"
-      order: 245
-      url: 2025-11-02-uuid-vs-auto-increment-id-as-primary-key
-    - title: "SQL执行计划分析的时候，要关注哪些信息？"
-      order: 281
-      url: 2025-11-02-sql-execution-plan-key-points
-    - title: "如何进行SQL调优？"
-      order: 283
-      url: 2025-11-02-how-to-optimize-sql-queries
-    - title: "慢SQL的问题如何排查？"
-      order: 284
-      url: 2025-11-02-how-to-troubleshoot-slow-sql
-    - title: "执行计划中，key有值，还是很慢怎么办？"
-      order: 285
-      url: 2025-11-02-explain-key-exists-but-still-slow
-    - title: "ORDER BY是怎么实现的？"
-      order: 286
-      url: 2025-11-02-how-mysql-order-by-works
-    - title: "Using filesort能优化吗，怎么优化？"
-      order: 287
-      url: 2025-11-02-optimize-using-filesort
-    - title: "MySQL的深度分页如何优化？"
-      order: 288
-      url: 2025-11-02-mysql-deep-pagination-optimization
-    - title: "limit 0,100和limit 10000000,100一样吗？"
-      order: 289
-      url: 2025-11-02-limit-shallow-vs-deep-pagination
-    - title: "MySQL的limit+orderby为什么会数据重复？"
-      order: 290
-      url: 2025-11-02-mysql-limit-order-by-duplicate-data
-    - title: "MySQL中like的模糊查询如何优化？"
-      order: 291
-      url: 2025-11-02-mysql-like-query-optimization
-    - title: "MySQL慢查询优化"
-      order: 293
-      url: 2025-11-02-mysql-slow-query-optimization
-    - title: "MySQL慢查询的排除与优化"
-      order: 294
-      url: 2025-11-02-mysql-slow-query-troubleshooting
-    - title: "MySQL优化（综合）"
-      order: 295
-      url: 2025-11-02-comprehensive-mysql-optimization
-    - title: "MySQL怎么做热点数据高效更新？"
-      order: 318
-      url: 2025-11-02-mysql-hotspot-data-update
-    - title: "高并发情况下自增主键会不会重复，为什么？"
-      order: 319
-      url: 2025-11-02-mysql-auto-increment-concurrency
-    - title: "MySQL自增主键用完了会怎么样？"
-      order: 320
-      url: 2025-11-02-mysql-auto-increment-exhausted
-    - title: "什么情况会导致自增主键不连续？"
-      order: 321
-      url: 2025-11-02-mysql-auto-increment-gaps
-    - title: "MySQL获取主键ID的瓶颈在哪里？如何优化？"
-      order: 322
-      url: 2025-11-02-mysql-auto-increment-bottleneck
-    - title: "数据库扫表任务如何避免出现死循环？"
-      order: 323
-      url: 2025-11-02-database-scan-deadloop-prevention
-    - title: "数据库怎么做加密和解密？"
-      order: 324
-      url: 2025-11-02-database-encryption-decryption
-    - title: "数据库加密后怎么做模糊查询？"
-      order: 325
-      url: 2025-11-02-encrypted-data-fuzzy-search
-    - title: "阿里的数据库能抗秒杀的原理"
-      order: 327
-      url: 2025-11-02-alibaba-database-anti-spike
+  - title: InnoDB为什么使用B+树实现索引？
+    order: 218
+    url: 2025-11-02-why-innodb-uses-b-plus-tree-index
+  - title: InnoDB中的索引类型？
+    order: 219
+    url: 2025-11-02-innodb-index-types
+  - title: 什么是聚簇索引和非聚簇索引？
+    order: 220
+    url: 2025-11-02-clustered-vs-non-clustered-index
+  - title: 什么是回表，怎么减少回表的次数？
+    order: 221
+    url: 2025-11-02-what-is-index-lookup-and-how-to-reduce
+  - title: 什么是索引覆盖、索引下推？
+    order: 222
+    url: 2025-11-02-covering-index-and-index-condition-pushdown
+  - title: InnoDB和MyISAM有什么区别？
+    order: 223
+    url: 2025-11-02-innodb-vs-myisam-differences
+  - title: MyISAM的索引结构是怎么样的，它存在的问题是什么？
+    order: 224
+    url: 2025-11-02-myisam-index-structure-and-problems
+  - title: 唯一索引和主键索引的区别？
+    order: 225
+    url: 2025-11-02-unique-index-vs-primary-key-index
+  - title: MySQL是如何保证唯一性索引的唯一性的？
+    order: 226
+    url: 2025-11-02-mysql-unique-index-guarantee
+  - title: 什么是最左前缀匹配？为什么要遵守？
+    order: 228
+    url: 2025-11-02-mysql-leftmost-prefix-matching
+  - title: MySQL索引一定遵循最左前缀匹配吗？
+    order: 229
+    url: 2025-11-02-mysql-leftmost-prefix-exceptions
+  - title: A,B,C的联合索引，按照AB,AC,BC查询，能走索引吗？
+    order: 230
+    url: 2025-11-02-mysql-composite-index-usage-patterns
+  - title: a,b两个单独索引，where a=xx and b=xx走哪个索引？为什么？
+    order: 231
+    url: 2025-11-02-mysql-dual-index-selection
+  - title: 什么是索引合并，原理是什么？
+    order: 232
+    url: 2025-11-02-mysql-index-merge-explained
+  - title: 什么是索引跳跃扫描？
+    order: 233
+    url: 2025-11-02-mysql-index-skip-scan
+  - title: 设计索引的时候有哪些原则？
+    order: 234
+    url: 2025-11-02-mysql-index-design-principles
+  - title: 区分度不高的字段建索引一定没用吗？
+    order: 235
+    url: 2025-11-02-mysql-low-selectivity-index
+  - title: 联合索引是越多越好吗？
+    order: 236
+    url: 2025-11-02-mysql-too-many-indexes
+  - title: MySQL索引失效情况
+    order: 239
+    url: 2025-11-02-mysql-index-failure-scenarios
+  - title: MySQL索引，最左匹配，索引覆盖，索引下推，索引失效情况，查询优化
+    order: 240
+    url: 2025-11-02-mysql-index-comprehensive-guide
+  - title: 用了索引还是很慢，可能是什么原因？
+    order: 241
+    url: 2025-11-02-mysql-index-slow-despite-usage
+  - title: 索引失效的问题如何排查？
+    order: 242
+    url: 2025-11-02-mysql-index-failure-troubleshooting
+  - title: UUID和自增ID做主键哪个好，为什么？
+    order: 245
+    url: 2025-11-02-uuid-vs-auto-increment-id-as-primary-key
+  - title: SQL执行计划分析的时候，要关注哪些信息？
+    order: 281
+    url: 2025-11-02-sql-execution-plan-key-points
+  - title: 如何进行SQL调优？
+    order: 283
+    url: 2025-11-02-how-to-optimize-sql-queries
+  - title: 慢SQL的问题如何排查？
+    order: 284
+    url: 2025-11-02-how-to-troubleshoot-slow-sql
+  - title: 执行计划中，key有值，还是很慢怎么办？
+    order: 285
+    url: 2025-11-02-explain-key-exists-but-still-slow
+  - title: ORDER BY是怎么实现的？
+    order: 286
+    url: 2025-11-02-how-mysql-order-by-works
+  - title: Using filesort能优化吗，怎么优化？
+    order: 287
+    url: 2025-11-02-optimize-using-filesort
+  - title: MySQL的深度分页如何优化？
+    order: 288
+    url: 2025-11-02-mysql-deep-pagination-optimization
+  - title: limit 0,100和limit 10000000,100一样吗？
+    order: 289
+    url: 2025-11-02-limit-shallow-vs-deep-pagination
+  - title: MySQL的limit+orderby为什么会数据重复？
+    order: 290
+    url: 2025-11-02-mysql-limit-order-by-duplicate-data
+  - title: MySQL中like的模糊查询如何优化？
+    order: 291
+    url: 2025-11-02-mysql-like-query-optimization
+  - title: MySQL慢查询优化
+    order: 293
+    url: 2025-11-02-mysql-slow-query-optimization
+  - title: MySQL慢查询的排除与优化
+    order: 294
+    url: 2025-11-02-mysql-slow-query-troubleshooting
+  - title: MySQL优化（综合）
+    order: 295
+    url: 2025-11-02-comprehensive-mysql-optimization
+  - title: MySQL怎么做热点数据高效更新？
+    order: 318
+    url: 2025-11-02-mysql-hotspot-data-update
+  - title: 高并发情况下自增主键会不会重复，为什么？
+    order: 319
+    url: 2025-11-02-mysql-auto-increment-concurrency
+  - title: MySQL自增主键用完了会怎么样？
+    order: 320
+    url: 2025-11-02-mysql-auto-increment-exhausted
+  - title: 什么情况会导致自增主键不连续？
+    order: 321
+    url: 2025-11-02-mysql-auto-increment-gaps
+  - title: MySQL获取主键ID的瓶颈在哪里？如何优化？
+    order: 322
+    url: 2025-11-02-mysql-auto-increment-bottleneck
+  - title: 数据库扫表任务如何避免出现死循环？
+    order: 323
+    url: 2025-11-02-database-scan-deadloop-prevention
+  - title: 数据库怎么做加密和解密？
+    order: 324
+    url: 2025-11-02-database-encryption-decryption
+  - title: 数据库加密后怎么做模糊查询？
+    order: 325
+    url: 2025-11-02-encrypted-data-fuzzy-search
+  - title: 阿里的数据库能抗秒杀的原理
+    order: 327
+    url: 2025-11-02-alibaba-database-anti-spike
   RabbitMQ:
-    - title: "RabbitMQ的架构是怎么样的？"
-      order: 437
-      url: 2025-11-02-rabbitmq-architecture
-    - title: "RabbitMQ如何保证消息的可靠性？"
-      order: 438
-      url: 2025-11-02-rabbitmq-message-reliability
-    - title: "RabbitMQ死信队列（Dead Letter Queue）详解"
-      order: 439
-      url: 2025-11-02-rabbitmq-dead-letter-queue
-    - title: "RabbitMQ的Exchange(交换器)有哪4种类型？"
-      order: 440
-      url: 2025-11-02-rabbitmq-exchange-types
+  - title: RabbitMQ的架构是怎么样的？
+    order: 437
+    url: 2025-11-02-rabbitmq-architecture
+  - title: RabbitMQ如何保证消息的可靠性？
+    order: 438
+    url: 2025-11-02-rabbitmq-message-reliability
+  - title: RabbitMQ死信队列（Dead Letter Queue）详解
+    order: 439
+    url: 2025-11-02-rabbitmq-dead-letter-queue
+  - title: RabbitMQ的Exchange(交换器)有哪4种类型？
+    order: 440
+    url: 2025-11-02-rabbitmq-exchange-types
   Redis:
-    - title: "Redis的持久化机制有哪些？"
-      order: 341
-      url: 2025-11-02-redis-persistence-mechanisms
-    - title: "RDB和AOF的区别是什么？"
-      order: 342
-      url: 2025-11-02-rdb-vs-aof-differences
-    - title: "Redis AOF日志写入流程与刷盘策略"
-      order: 343
-      url: 2025-11-02-redis-aof-write-process-and-fsync
-    - title: "Redis故障恢复：RDB和AOF的区别"
-      order: 344
-      url: 2025-11-02-redis-recovery-rdb-vs-aof
-    - title: "Redis的过期策略详解"
-      order: 351
-      url: 2025-11-02-redis-expiration-strategy
-    - title: "Redis内存淘汰策略详解"
-      order: 352
-      url: 2025-11-02-redis-memory-eviction-policy
-    - title: "Redis实现分布式锁的原理？"
-      order: 415
-      url: 2025-11-02-redis-distributed-lock-principle
+  - title: Redis的持久化机制有哪些？
+    order: 341
+    url: 2025-11-02-redis-persistence-mechanisms
+  - title: RDB和AOF的区别是什么？
+    order: 342
+    url: 2025-11-02-rdb-vs-aof-differences
+  - title: Redis AOF日志写入流程与刷盘策略
+    order: 343
+    url: 2025-11-02-redis-aof-write-process-and-fsync
+  - title: Redis故障恢复：RDB和AOF的区别
+    order: 344
+    url: 2025-11-02-redis-recovery-rdb-vs-aof
+  - title: Redis的过期策略详解
+    order: 351
+    url: 2025-11-02-redis-expiration-strategy
+  - title: Redis内存淘汰策略详解
+    order: 352
+    url: 2025-11-02-redis-memory-eviction-policy
+  - title: Redis实现分布式锁的原理？
+    order: 415
+    url: 2025-11-02-redis-distributed-lock-principle
   RocketMQ:
-    - title: "RocketMQ的架构是怎么样的？"
-      order: 434
-      url: 2025-11-02-rocketmq-architecture
-    - title: "RocketMQ如何保证消息不丢失？"
-      order: 435
-      url: 2025-11-02-rocketmq-message-reliability
-    - title: "RocketMQ的延迟消息是如何实现的？"
-      order: 436
-      url: 2025-11-02-rocketmq-delayed-message
+  - title: RocketMQ的架构是怎么样的？
+    order: 434
+    url: 2025-11-02-rocketmq-architecture
+  - title: RocketMQ如何保证消息不丢失？
+    order: 435
+    url: 2025-11-02-rocketmq-message-reliability
+  - title: RocketMQ的延迟消息是如何实现的？
+    order: 436
+    url: 2025-11-02-rocketmq-delayed-message
   SpringCloud:
-    - title: "什么是微服务？"
-      order: 390
-      url: 2025-11-02-what-is-microservices
-    - title: "SpringCloud有哪些核心组件？"
-      order: 391
-      url: 2025-11-02-springcloud-core-components
-    - title: "Eureka的工作原理是什么？"
-      order: 392
-      url: 2025-11-02-eureka-working-principle
-    - title: "Ribbon的负载均衡策略有哪些？"
-      order: 393
-      url: 2025-11-02-ribbon-load-balancing-strategies
-    - title: "Feign的工作原理是什么？"
-      order: 394
-      url: 2025-11-02-feign-working-principle
-    - title: "Hystrix的熔断机制是什么？"
-      order: 395
-      url: 2025-11-02-hystrix-circuit-breaker
-    - title: "Gateway的工作原理是什么？"
-      order: 396
-      url: 2025-11-02-gateway-working-principle
-    - title: "Nacos和Eureka的区别？"
-      order: 397
-      url: 2025-11-02-nacos-vs-eureka
+  - title: 什么是微服务？
+    order: 390
+    url: 2025-11-02-what-is-microservices
+  - title: SpringCloud有哪些核心组件？
+    order: 391
+    url: 2025-11-02-springcloud-core-components
+  - title: Eureka的工作原理是什么？
+    order: 392
+    url: 2025-11-02-eureka-working-principle
+  - title: Ribbon的负载均衡策略有哪些？
+    order: 393
+    url: 2025-11-02-ribbon-load-balancing-strategies
+  - title: Feign的工作原理是什么？
+    order: 394
+    url: 2025-11-02-feign-working-principle
+  - title: Hystrix的熔断机制是什么？
+    order: 395
+    url: 2025-11-02-hystrix-circuit-breaker
+  - title: Gateway的工作原理是什么？
+    order: 396
+    url: 2025-11-02-gateway-working-principle
+  - title: Nacos和Eureka的区别？
+    order: 397
+    url: 2025-11-02-nacos-vs-eureka
   Spring框架:
-    - title: "介绍一下Spring的IOC"
-      order: 356
-      url: 2025-11-02-spring-ioc-introduction
-    - title: "Spring IOC与AOP全面解析"
-      order: 357
-      url: 2025-11-02-spring-ioc-aop-overview
-    - title: "Spring中的Bean是线程安全的吗？"
-      order: 358
-      url: 2025-11-02-spring-bean-thread-safety
-    - title: "SpringBean的初始化过程详解"
-      order: 359
-      url: 2025-11-02-spring-bean-initialization
-    - title: "SpringBean的生命周期详解"
-      order: 360
-      url: 2025-11-02-spring-bean-lifecycle
-    - title: "Spring中的Bean作用域详解"
-      order: 361
-      url: 2025-11-02-spring-bean-scopes
-    - title: "@Lazy注解能解决循环依赖吗？"
-      order: 362
-      url: 2025-11-02-spring-lazy-circular-dependency
-    - title: "Spring循环依赖问题详解"
-      order: 363
-      url: 2025-11-02-spring-circular-dependency
-    - title: "Spring三级缓存机制深度解析"
-      order: 364
-      url: 2025-11-02-spring-three-level-cache
-    - title: "介绍一下Spring的AOP"
-      order: 365
-      url: 2025-11-02-spring-aop-introduction
-    - title: "AOP通知类型"
-      order: 366
-      url: 2025-11-02-spring-aop-advice-types
-    - title: "Spring AOP实现，动态代理"
-      order: 367
-      url: 2025-11-02-spring-aop-dynamic-proxy
-    - title: "Spring的AOP在什么场景下会失效？"
-      order: 368
-      url: 2025-11-02-spring-aop-failure-scenarios
-    - title: "Spring中如何开启事务？"
-      order: 369
-      url: 2025-11-02-how-to-enable-transaction-in-spring
-    - title: "Spring的事务传播机制有哪些？"
-      order: 370
-      url: 2025-11-02-spring-transaction-propagation-mechanisms
-    - title: "Spring事务失效可能是哪些原因？"
-      order: 371
-      url: 2025-11-02-spring-transaction-failure-causes
-    - title: "Spring事务管理全面解析"
-      order: 372
-      url: 2025-11-02-spring-transaction-overview
-    - title: "Spring事务实现原理及@Transactional注解原理"
-      order: 373
-      url: 2025-11-02-transactional-annotation-principle
-    - title: "Spring的事务在多线程下生效吗？为什么？"
-      order: 374
-      url: 2025-11-02-spring-transaction-in-multithreading
-    - title: "同时使用@Transactional与@Async时，事务会不会生效？"
-      order: 375
-      url: 2025-11-02-transactional-with-async-annotation
-    - title: "Spring中的事务事件如何使用？"
-      order: 376
-      url: 2025-11-02-spring-transaction-event-usage
-    - title: "为什么不建议直接使用Spring的@Async？"
-      order: 377
-      url: 2025-11-02-why-not-use-spring-async-directly
-    - title: "SpringBoot和Spring的区别是什么？"
-      order: 378
-      url: 2025-11-02-springboot-vs-spring-differences
-    - title: "SpringBoot核心模块有哪些？"
-      order: 379
-      url: 2025-11-02-springboot-core-modules
-    - title: "SpringBoot是如何实现自动配置的？"
-      order: 380
-      url: 2025-11-02-springboot-autoconfiguration-principle
-    - title: "SpringBoot的启动流程是怎么样的？"
-      order: 381
-      url: 2025-11-02-springboot-startup-process
-    - title: "SpringBoot是如何实现main方法启动Web项目的？"
-      order: 382
-      url: 2025-11-02-springboot-main-method-web-startup
-    - title: "Spring6.0和SpringBoot3.0有什么新特性？"
-      order: 383
-      url: 2025-11-02-spring6-springboot3-new-features
-    - title: "为什么SpringBoot3中移除了spring.factories？"
-      order: 384
-      url: 2025-11-02-why-springboot3-removed-spring-factories
-    - title: "SpringBoot如何做优雅停机？"
-      order: 385
-      url: 2025-11-02-springboot-graceful-shutdown
-    - title: "SpringMVC三层架构的好处"
-      order: 386
-      url: 2025-11-02-benefits-of-springmvc-three-tier-architecture
-    - title: "Spring框架中用到的设计模式"
-      order: 387
-      url: 2025-11-02-design-patterns-in-spring-framework
-    - title: "如何自定义一个SpringBoot Starter？"
-      order: 388
-      url: 2025-11-02-how-to-create-custom-springboot-starter
-    - title: "实现一个SpringBoot Starter（实战案例）"
-      order: 389
-      url: 2025-11-02-implement-springboot-starter-example
-    - title: "什么是微服务？"
-      order: 390
-      url: 2025-11-02-what-is-microservices
-    - title: "SpringCloud有哪些核心组件？"
-      order: 391
-      url: 2025-11-02-springcloud-core-components
-    - title: "Eureka的工作原理是什么？"
-      order: 392
-      url: 2025-11-02-eureka-working-principle
-    - title: "Ribbon的负载均衡策略有哪些？"
-      order: 393
-      url: 2025-11-02-ribbon-load-balancing-strategies
-    - title: "Feign的工作原理是什么？"
-      order: 394
-      url: 2025-11-02-feign-working-principle
-    - title: "Hystrix的熔断机制是什么？"
-      order: 395
-      url: 2025-11-02-hystrix-circuit-breaker
-    - title: "Gateway的工作原理是什么？"
-      order: 396
-      url: 2025-11-02-gateway-working-principle
-    - title: "Nacos和Eureka的区别？"
-      order: 397
-      url: 2025-11-02-nacos-vs-eureka
+  - title: 介绍一下Spring的IOC
+    order: 356
+    url: 2025-11-02-spring-ioc-introduction
+  - title: Spring IOC与AOP全面解析
+    order: 357
+    url: 2025-11-02-spring-ioc-aop-overview
+  - title: Spring中的Bean是线程安全的吗？
+    order: 358
+    url: 2025-11-02-spring-bean-thread-safety
+  - title: SpringBean的初始化过程详解
+    order: 359
+    url: 2025-11-02-spring-bean-initialization
+  - title: SpringBean的生命周期详解
+    order: 360
+    url: 2025-11-02-spring-bean-lifecycle
+  - title: Spring中的Bean作用域详解
+    order: 361
+    url: 2025-11-02-spring-bean-scopes
+  - title: '@Lazy注解能解决循环依赖吗？'
+    order: 362
+    url: 2025-11-02-spring-lazy-circular-dependency
+  - title: Spring循环依赖问题详解
+    order: 363
+    url: 2025-11-02-spring-circular-dependency
+  - title: Spring三级缓存机制深度解析
+    order: 364
+    url: 2025-11-02-spring-three-level-cache
+  - title: 介绍一下Spring的AOP
+    order: 365
+    url: 2025-11-02-spring-aop-introduction
+  - title: AOP通知类型
+    order: 366
+    url: 2025-11-02-spring-aop-advice-types
+  - title: Spring AOP实现，动态代理
+    order: 367
+    url: 2025-11-02-spring-aop-dynamic-proxy
+  - title: Spring的AOP在什么场景下会失效？
+    order: 368
+    url: 2025-11-02-spring-aop-failure-scenarios
+  - title: Spring中如何开启事务？
+    order: 369
+    url: 2025-11-02-how-to-enable-transaction-in-spring
+  - title: Spring的事务传播机制有哪些？
+    order: 370
+    url: 2025-11-02-spring-transaction-propagation-mechanisms
+  - title: Spring事务失效可能是哪些原因？
+    order: 371
+    url: 2025-11-02-spring-transaction-failure-causes
+  - title: Spring事务管理全面解析
+    order: 372
+    url: 2025-11-02-spring-transaction-overview
+  - title: Spring事务实现原理及@Transactional注解原理
+    order: 373
+    url: 2025-11-02-transactional-annotation-principle
+  - title: Spring的事务在多线程下生效吗？为什么？
+    order: 374
+    url: 2025-11-02-spring-transaction-in-multithreading
+  - title: 同时使用@Transactional与@Async时，事务会不会生效？
+    order: 375
+    url: 2025-11-02-transactional-with-async-annotation
+  - title: Spring中的事务事件如何使用？
+    order: 376
+    url: 2025-11-02-spring-transaction-event-usage
+  - title: 为什么不建议直接使用Spring的@Async？
+    order: 377
+    url: 2025-11-02-why-not-use-spring-async-directly
+  - title: SpringBoot和Spring的区别是什么？
+    order: 378
+    url: 2025-11-02-springboot-vs-spring-differences
+  - title: SpringBoot核心模块有哪些？
+    order: 379
+    url: 2025-11-02-springboot-core-modules
+  - title: SpringBoot是如何实现自动配置的？
+    order: 380
+    url: 2025-11-02-springboot-autoconfiguration-principle
+  - title: SpringBoot的启动流程是怎么样的？
+    order: 381
+    url: 2025-11-02-springboot-startup-process
+  - title: SpringBoot是如何实现main方法启动Web项目的？
+    order: 382
+    url: 2025-11-02-springboot-main-method-web-startup
+  - title: Spring6.0和SpringBoot3.0有什么新特性？
+    order: 383
+    url: 2025-11-02-spring6-springboot3-new-features
+  - title: 为什么SpringBoot3中移除了spring.factories？
+    order: 384
+    url: 2025-11-02-why-springboot3-removed-spring-factories
+  - title: SpringBoot如何做优雅停机？
+    order: 385
+    url: 2025-11-02-springboot-graceful-shutdown
+  - title: SpringMVC三层架构的好处
+    order: 386
+    url: 2025-11-02-benefits-of-springmvc-three-tier-architecture
+  - title: Spring框架中用到的设计模式
+    order: 387
+    url: 2025-11-02-design-patterns-in-spring-framework
+  - title: 如何自定义一个SpringBoot Starter？
+    order: 388
+    url: 2025-11-02-how-to-create-custom-springboot-starter
+  - title: 实现一个SpringBoot Starter（实战案例）
+    order: 389
+    url: 2025-11-02-implement-springboot-starter-example
+  - title: 什么是微服务？
+    order: 390
+    url: 2025-11-02-what-is-microservices
+  - title: SpringCloud有哪些核心组件？
+    order: 391
+    url: 2025-11-02-springcloud-core-components
+  - title: Eureka的工作原理是什么？
+    order: 392
+    url: 2025-11-02-eureka-working-principle
+  - title: Ribbon的负载均衡策略有哪些？
+    order: 393
+    url: 2025-11-02-ribbon-load-balancing-strategies
+  - title: Feign的工作原理是什么？
+    order: 394
+    url: 2025-11-02-feign-working-principle
+  - title: Hystrix的熔断机制是什么？
+    order: 395
+    url: 2025-11-02-hystrix-circuit-breaker
+  - title: Gateway的工作原理是什么？
+    order: 396
+    url: 2025-11-02-gateway-working-principle
+  - title: Nacos和Eureka的区别？
+    order: 397
+    url: 2025-11-02-nacos-vs-eureka
   Zookeeper:
-    - title: "Zookeeper实现分布式锁的原理？"
-      order: 416
-      url: 2025-11-02-zookeeper-distributed-lock-principle
+  - title: Zookeeper实现分布式锁的原理？
+    order: 416
+    url: 2025-11-02-zookeeper-distributed-lock-principle
   中间件:
-    - title: "Redis有哪些数据结构？"
-      order: 330
-      url: 2025-11-02-redis-data-structures-overview
-    - title: "Redis底层结构"
-      order: 331
-      url: 2025-11-02-redis-underlying-structures
-    - title: "Redis的String是如何实现的？"
-      order: 332
-      url: 2025-11-02-redis-string-implementation
-    - title: "Redis的List是如何实现的？"
-      order: 333
-      url: 2025-11-02-redis-list-implementation
-    - title: "Redis的Hash是如何实现的？"
-      order: 334
-      url: 2025-11-02-redis-hash-implementation
-    - title: "Redis的Set是如何实现的？"
-      order: 335
-      url: 2025-11-02-redis-set-implementation
-    - title: "Redis的ZSet是如何实现的？"
-      order: 336
-      url: 2025-11-02-redis-zset-implementation
-    - title: "什么是跳表？为什么用跳表？"
-      order: 337
-      url: 2025-11-02-redis-skiplist-explained
-    - title: "Redis跳表实现，hash底层实现，为什么使用ziplist，如何扩容"
-      order: 338
-      url: 2025-11-02-redis-skiplist-hash-ziplist-expansion
-    - title: "Redis的HyperLogLog了解过吗？"
-      order: 339
-      url: 2025-11-02-redis-hyperloglog-explained
-    - title: "Redis的优势，解决了哪些问题"
-      order: 340
-      url: 2025-11-02-redis-advantages-and-problems-solved
-    - title: "Redis的主从复制原理"
-      order: 345
-      url: 2025-11-02-redis-master-slave-replication-principle
-    - title: "Redis主从复制过程详解"
-      order: 346
-      url: 2025-11-02-redis-replication-process-detailed
-    - title: "Redis如何实现高可用"
-      order: 347
-      url: 2025-11-02-how-redis-achieves-high-availability
-    - title: "Redis的哨兵模式详解"
-      order: 348
-      url: 2025-11-02-redis-sentinel-mode
-    - title: "Redis哨兵模式选主策略详解"
-      order: 349
-      url: 2025-11-02-redis-sentinel-leader-election-strategy
-    - title: "Redis的集群模式详解"
-      order: 350
-      url: 2025-11-02-redis-cluster-mode
-    - title: "Redis分布式锁的实现"
-      order: 353
-      url: 2025-11-02-redis-distributed-lock-implementation
-    - title: "Redis缓存一致性问题与解决方案"
-      order: 354
-      url: 2025-11-02-redis-cache-consistency
-    - title: "Redis热点key问题如何解决"
-      order: 355
-      url: 2025-11-02-redis-hotkey-solution
-    - title: "负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解"
-      order: 398
-      url: 2025-11-02-load-balance-strategies
-    - title: "为什么要使用消息队列？"
-      order: 423
-      url: 2025-11-02-why-use-message-queue
-    - title: "消息队列的使用场景有哪些？"
-      order: 424
-      url: 2025-11-02-message-queue-use-cases
-    - title: "Kafka、ActiveMQ、RabbitMQ和RocketMQ都有哪些区别？"
-      order: 425
-      url: 2025-11-02-message-queue-comparison
-    - title: "Kafka的架构是怎么样的？"
-      order: 426
-      url: 2025-11-02-kafka-architecture
-    - title: "Kafka为什么有Topic还要用Partition？"
-      order: 427
-      url: 2025-11-02-kafka-topic-partition-design
-    - title: "Kafka为什么这么快？"
-      order: 428
-      url: 2025-11-02-why-kafka-is-fast
-    - title: "Kafka消息的发送过程简单介绍一下？"
-      order: 429
-      url: 2025-11-02-kafka-message-sending-process
-    - title: "Kafka如何保证消息不丢失？"
-      order: 430
-      url: 2025-11-02-kafka-message-reliability
-    - title: "为什么Kafka没办法100%保证消息不丢失？"
-      order: 431
-      url: 2025-11-02-kafka-cannot-guarantee-zero-message-loss
-    - title: "Kafka怎么保证消费只消费一次的？"
-      order: 432
-      url: 2025-11-02-kafka-exactly-once-semantics
-    - title: "Kafka如何实现顺序消费？"
-      order: 433
-      url: 2025-11-02-kafka-ordered-message-consumption
-    - title: "RocketMQ的架构是怎么样的？"
-      order: 434
-      url: 2025-11-02-rocketmq-architecture
-    - title: "RocketMQ如何保证消息不丢失？"
-      order: 435
-      url: 2025-11-02-rocketmq-message-reliability
-    - title: "RocketMQ的延迟消息是如何实现的？"
-      order: 436
-      url: 2025-11-02-rocketmq-delayed-message
-    - title: "RabbitMQ的架构是怎么样的？"
-      order: 437
-      url: 2025-11-02-rabbitmq-architecture
-    - title: "RabbitMQ如何保证消息的可靠性？"
-      order: 438
-      url: 2025-11-02-rabbitmq-message-reliability
-    - title: "RabbitMQ死信队列（Dead Letter Queue）详解"
-      order: 439
-      url: 2025-11-02-rabbitmq-dead-letter-queue
-    - title: "RabbitMQ的Exchange(交换器)有哪4种类型？"
-      order: 440
-      url: 2025-11-02-rabbitmq-exchange-types
-    - title: "什么是RPC，和HTTP有什么区别？"
-      order: 441
-      url: 2025-11-02-what-is-rpc-and-difference-with-http
-    - title: "为什么RPC要比HTTP更快一些？"
-      order: 442
-      url: 2025-11-02-why-rpc-faster-than-http
-    - title: "什么场景只能用HTTP，不能用RPC？"
-      order: 443
-      url: 2025-11-02-when-http-required-over-rpc
-    - title: "Dubbo的整体架构是怎么样的？"
-      order: 444
-      url: 2025-11-02-dubbo-architecture-overview
-    - title: "Dubbo的服务调用的过程是什么样的？"
-      order: 445
-      url: 2025-11-02-dubbo-service-invocation-process
-    - title: "Dubbo如何实现像本地方法一样调用远程方法的？"
-      order: 446
-      url: 2025-11-02-dubbo-proxy-mechanism-for-local-like-remote-call
-    - title: "Dubbo支持哪些调用协议？"
-      order: 447
-      url: 2025-11-02-dubbo-supported-protocols
-    - title: "Dubbo支持哪些序列化方式？"
-      order: 448
-      url: 2025-11-02-dubbo-serialization-methods
-    - title: "Dubbo支持哪些负载均衡策略？"
-      order: 449
-      url: 2025-11-02-dubbo-load-balance-strategies
-    - title: "Dubbo支持哪些服务治理？"
-      order: 450
-      url: 2025-11-02-dubbo-service-governance-features
-    - title: "Dubbo服务发现与路由的概念有什么不同？"
-      order: 451
-      url: 2025-11-02-dubbo-service-discovery-vs-routing
-    - title: "Dubbo的SPI和JDK的SPI有什么区别？"
-      order: 452
-      url: 2025-11-02-dubbo-spi-vs-jdk-spi
-    - title: "为什么Dubbo不用JDK的SPI？"
-      order: 453
-      url: 2025-11-02-why-dubbo-not-use-jdk-spi
-    - title: "什么是Dubbo的优雅停机，怎么实现的？"
-      order: 454
-      url: 2025-11-02-dubbo-graceful-shutdown
-    - title: "什么是泛化调用？"
-      order: 455
-      url: 2025-11-02-dubbo-generic-invocation
-    - title: "为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？"
-      order: 456
-      url: 2025-11-02-why-use-elasticsearch
-    - title: "什么是倒排索引？"
-      order: 457
-      url: 2025-11-02-inverted-index-in-elasticsearch
-    - title: "ElasticSearch 为什么快？"
-      order: 458
-      url: 2025-11-02-why-elasticsearch-is-fast
-    - title: "什么是 ElasticSearch 的深度分页问题？如何解决？"
-      order: 459
-      url: 2025-11-02-elasticsearch-deep-pagination-problem
-    - title: "如何保证 ES 和数据库的数据一致性？"
-      order: 460
-      url: 2025-11-02-elasticsearch-mysql-data-consistency
-    - title: "如何优化 ElasticSearch 搜索性能？"
-      order: 461
-      url: 2025-11-02-elasticsearch-search-performance-optimization
+  - title: Redis有哪些数据结构？
+    order: 330
+    url: 2025-11-02-redis-data-structures-overview
+  - title: Redis底层结构
+    order: 331
+    url: 2025-11-02-redis-underlying-structures
+  - title: Redis的String是如何实现的？
+    order: 332
+    url: 2025-11-02-redis-string-implementation
+  - title: Redis的List是如何实现的？
+    order: 333
+    url: 2025-11-02-redis-list-implementation
+  - title: Redis的Hash是如何实现的？
+    order: 334
+    url: 2025-11-02-redis-hash-implementation
+  - title: Redis的Set是如何实现的？
+    order: 335
+    url: 2025-11-02-redis-set-implementation
+  - title: Redis的ZSet是如何实现的？
+    order: 336
+    url: 2025-11-02-redis-zset-implementation
+  - title: 什么是跳表？为什么用跳表？
+    order: 337
+    url: 2025-11-02-redis-skiplist-explained
+  - title: Redis跳表实现，hash底层实现，为什么使用ziplist，如何扩容
+    order: 338
+    url: 2025-11-02-redis-skiplist-hash-ziplist-expansion
+  - title: Redis的HyperLogLog了解过吗？
+    order: 339
+    url: 2025-11-02-redis-hyperloglog-explained
+  - title: Redis的优势，解决了哪些问题
+    order: 340
+    url: 2025-11-02-redis-advantages-and-problems-solved
+  - title: Redis的主从复制原理
+    order: 345
+    url: 2025-11-02-redis-master-slave-replication-principle
+  - title: Redis主从复制过程详解
+    order: 346
+    url: 2025-11-02-redis-replication-process-detailed
+  - title: Redis如何实现高可用
+    order: 347
+    url: 2025-11-02-how-redis-achieves-high-availability
+  - title: Redis的哨兵模式详解
+    order: 348
+    url: 2025-11-02-redis-sentinel-mode
+  - title: Redis哨兵模式选主策略详解
+    order: 349
+    url: 2025-11-02-redis-sentinel-leader-election-strategy
+  - title: Redis的集群模式详解
+    order: 350
+    url: 2025-11-02-redis-cluster-mode
+  - title: Redis分布式锁的实现
+    order: 353
+    url: 2025-11-02-redis-distributed-lock-implementation
+  - title: Redis缓存一致性问题与解决方案
+    order: 354
+    url: 2025-11-02-redis-cache-consistency
+  - title: Redis热点key问题如何解决
+    order: 355
+    url: 2025-11-02-redis-hotkey-solution
+  - title: 负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解
+    order: 398
+    url: 2025-11-02-load-balance-strategies
+  - title: 为什么要使用消息队列？
+    order: 423
+    url: 2025-11-02-why-use-message-queue
+  - title: 消息队列的使用场景有哪些？
+    order: 424
+    url: 2025-11-02-message-queue-use-cases
+  - title: Kafka、ActiveMQ、RabbitMQ和RocketMQ都有哪些区别？
+    order: 425
+    url: 2025-11-02-message-queue-comparison
+  - title: Kafka的架构是怎么样的？
+    order: 426
+    url: 2025-11-02-kafka-architecture
+  - title: Kafka为什么有Topic还要用Partition？
+    order: 427
+    url: 2025-11-02-kafka-topic-partition-design
+  - title: Kafka为什么这么快？
+    order: 428
+    url: 2025-11-02-why-kafka-is-fast
+  - title: Kafka消息的发送过程简单介绍一下？
+    order: 429
+    url: 2025-11-02-kafka-message-sending-process
+  - title: Kafka如何保证消息不丢失？
+    order: 430
+    url: 2025-11-02-kafka-message-reliability
+  - title: 为什么Kafka没办法100%保证消息不丢失？
+    order: 431
+    url: 2025-11-02-kafka-cannot-guarantee-zero-message-loss
+  - title: Kafka怎么保证消费只消费一次的？
+    order: 432
+    url: 2025-11-02-kafka-exactly-once-semantics
+  - title: Kafka如何实现顺序消费？
+    order: 433
+    url: 2025-11-02-kafka-ordered-message-consumption
+  - title: RocketMQ的架构是怎么样的？
+    order: 434
+    url: 2025-11-02-rocketmq-architecture
+  - title: RocketMQ如何保证消息不丢失？
+    order: 435
+    url: 2025-11-02-rocketmq-message-reliability
+  - title: RocketMQ的延迟消息是如何实现的？
+    order: 436
+    url: 2025-11-02-rocketmq-delayed-message
+  - title: RabbitMQ的架构是怎么样的？
+    order: 437
+    url: 2025-11-02-rabbitmq-architecture
+  - title: RabbitMQ如何保证消息的可靠性？
+    order: 438
+    url: 2025-11-02-rabbitmq-message-reliability
+  - title: RabbitMQ死信队列（Dead Letter Queue）详解
+    order: 439
+    url: 2025-11-02-rabbitmq-dead-letter-queue
+  - title: RabbitMQ的Exchange(交换器)有哪4种类型？
+    order: 440
+    url: 2025-11-02-rabbitmq-exchange-types
+  - title: 什么是RPC，和HTTP有什么区别？
+    order: 441
+    url: 2025-11-02-what-is-rpc-and-difference-with-http
+  - title: 为什么RPC要比HTTP更快一些？
+    order: 442
+    url: 2025-11-02-why-rpc-faster-than-http
+  - title: 什么场景只能用HTTP，不能用RPC？
+    order: 443
+    url: 2025-11-02-when-http-required-over-rpc
+  - title: Dubbo的整体架构是怎么样的？
+    order: 444
+    url: 2025-11-02-dubbo-architecture-overview
+  - title: Dubbo的服务调用的过程是什么样的？
+    order: 445
+    url: 2025-11-02-dubbo-service-invocation-process
+  - title: Dubbo如何实现像本地方法一样调用远程方法的？
+    order: 446
+    url: 2025-11-02-dubbo-proxy-mechanism-for-local-like-remote-call
+  - title: Dubbo支持哪些调用协议？
+    order: 447
+    url: 2025-11-02-dubbo-supported-protocols
+  - title: Dubbo支持哪些序列化方式？
+    order: 448
+    url: 2025-11-02-dubbo-serialization-methods
+  - title: Dubbo支持哪些负载均衡策略？
+    order: 449
+    url: 2025-11-02-dubbo-load-balance-strategies
+  - title: Dubbo支持哪些服务治理？
+    order: 450
+    url: 2025-11-02-dubbo-service-governance-features
+  - title: Dubbo服务发现与路由的概念有什么不同？
+    order: 451
+    url: 2025-11-02-dubbo-service-discovery-vs-routing
+  - title: Dubbo的SPI和JDK的SPI有什么区别？
+    order: 452
+    url: 2025-11-02-dubbo-spi-vs-jdk-spi
+  - title: 为什么Dubbo不用JDK的SPI？
+    order: 453
+    url: 2025-11-02-why-dubbo-not-use-jdk-spi
+  - title: 什么是Dubbo的优雅停机，怎么实现的？
+    order: 454
+    url: 2025-11-02-dubbo-graceful-shutdown
+  - title: 什么是泛化调用？
+    order: 455
+    url: 2025-11-02-dubbo-generic-invocation
+  - title: 为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？
+    order: 456
+    url: 2025-11-02-why-use-elasticsearch
+  - title: 什么是倒排索引？
+    order: 457
+    url: 2025-11-02-inverted-index-in-elasticsearch
+  - title: ElasticSearch 为什么快？
+    order: 458
+    url: 2025-11-02-why-elasticsearch-is-fast
+  - title: 什么是 ElasticSearch 的深度分页问题？如何解决？
+    order: 459
+    url: 2025-11-02-elasticsearch-deep-pagination-problem
+  - title: 如何保证 ES 和数据库的数据一致性？
+    order: 460
+    url: 2025-11-02-elasticsearch-mysql-data-consistency
+  - title: 如何优化 ElasticSearch 搜索性能？
+    order: 461
+    url: 2025-11-02-elasticsearch-search-performance-optimization
   分布式:
-    - title: "什么是CAP理论？"
-      order: 399
-      url: 2025-11-02-what-is-cap-theorem
-    - title: "什么是BASE理论？"
-      order: 400
-      url: 2025-11-02-what-is-base-theorem
-    - title: "CAP协议、ACID理论、BASE理论、一致性模型对比详解"
-      order: 401
-      url: 2025-11-02-cap-acid-base-consistency-models
-    - title: "什么是最终一致性？"
-      order: 402
-      url: 2025-11-02-what-is-eventual-consistency
-    - title: "什么是一致性Hash？"
-      order: 403
-      url: 2025-11-02-consistent-hashing
-    - title: "分布式ID生成方案有哪些？"
-      order: 404
-      url: 2025-11-02-distributed-id-generation-solutions
-    - title: "雪花算法是什么？"
-      order: 405
-      url: 2025-11-02-snowflake-algorithm
-    - title: "什么是分布式事务？"
-      order: 406
-      url: 2025-11-02-what-is-distributed-transaction
-    - title: "分布式事务的解决方案有哪些？"
-      order: 407
-      url: 2025-11-02-distributed-transaction-solutions
-    - title: "分布式事务方案对比：2PC、3PC、TCC、消息补偿"
-      order: 408
-      url: 2025-11-02-distributed-transaction-solutions-comparison
-    - title: "什么是2PC和3PC？"
-      order: 409
-      url: 2025-11-02-what-is-2pc-and-3pc
-    - title: "什么是TCC？"
-      order: 410
-      url: 2025-11-02-what-is-tcc
-    - title: "什么是Saga？"
-      order: 411
-      url: 2025-11-02-what-is-saga
-    - title: "AT模式：Seata的自动化两阶段提交"
-      order: 412
-      url: 2025-11-02-seata-at-mode-explained
-    - title: "什么是分布式锁？"
-      order: 413
-      url: 2025-11-02-what-is-distributed-lock
-    - title: "分布式锁的实现方式有哪些？"
-      order: 414
-      url: 2025-11-02-distributed-lock-implementations
-    - title: "Redis实现分布式锁的原理？"
-      order: 415
-      url: 2025-11-02-redis-distributed-lock-principle
-    - title: "Zookeeper实现分布式锁的原理？"
-      order: 416
-      url: 2025-11-02-zookeeper-distributed-lock-principle
-    - title: "什么是分库分表？"
-      order: 417
-      url: 2025-11-02-what-is-database-sharding
-    - title: "什么时候需要分库分表？"
-      order: 418
-      url: 2025-11-02-when-to-use-database-sharding
-    - title: "分库分表的策略有哪些？"
-      order: 419
-      url: 2025-11-02-database-sharding-strategies
-    - title: "分库分表后如何解决跨库查询？"
-      order: 420
-      url: 2025-11-02-cross-database-query-solutions
-    - title: "分库分表后如何解决分布式事务？"
-      order: 421
-      url: 2025-11-02-distributed-transaction-in-sharding
-    - title: "ShardingSphere的原理是什么？"
-      order: 422
-      url: 2025-11-02-shardingsphere-principle
+  - title: 什么是CAP理论？
+    order: 399
+    url: 2025-11-02-what-is-cap-theorem
+  - title: 什么是BASE理论？
+    order: 400
+    url: 2025-11-02-what-is-base-theorem
+  - title: CAP协议、ACID理论、BASE理论、一致性模型对比详解
+    order: 401
+    url: 2025-11-02-cap-acid-base-consistency-models
+  - title: 什么是最终一致性？
+    order: 402
+    url: 2025-11-02-what-is-eventual-consistency
+  - title: 什么是一致性Hash？
+    order: 403
+    url: 2025-11-02-consistent-hashing
+  - title: 分布式ID生成方案有哪些？
+    order: 404
+    url: 2025-11-02-distributed-id-generation-solutions
+  - title: 雪花算法是什么？
+    order: 405
+    url: 2025-11-02-snowflake-algorithm
+  - title: 什么是分布式事务？
+    order: 406
+    url: 2025-11-02-what-is-distributed-transaction
+  - title: 分布式事务的解决方案有哪些？
+    order: 407
+    url: 2025-11-02-distributed-transaction-solutions
+  - title: 分布式事务方案对比：2PC、3PC、TCC、消息补偿
+    order: 408
+    url: 2025-11-02-distributed-transaction-solutions-comparison
+  - title: 什么是2PC和3PC？
+    order: 409
+    url: 2025-11-02-what-is-2pc-and-3pc
+  - title: 什么是TCC？
+    order: 410
+    url: 2025-11-02-what-is-tcc
+  - title: 什么是Saga？
+    order: 411
+    url: 2025-11-02-what-is-saga
+  - title: AT模式：Seata的自动化两阶段提交
+    order: 412
+    url: 2025-11-02-seata-at-mode-explained
+  - title: 什么是分布式锁？
+    order: 413
+    url: 2025-11-02-what-is-distributed-lock
+  - title: 分布式锁的实现方式有哪些？
+    order: 414
+    url: 2025-11-02-distributed-lock-implementations
+  - title: Redis实现分布式锁的原理？
+    order: 415
+    url: 2025-11-02-redis-distributed-lock-principle
+  - title: Zookeeper实现分布式锁的原理？
+    order: 416
+    url: 2025-11-02-zookeeper-distributed-lock-principle
+  - title: 什么是分库分表？
+    order: 417
+    url: 2025-11-02-what-is-database-sharding
+  - title: 什么时候需要分库分表？
+    order: 418
+    url: 2025-11-02-when-to-use-database-sharding
+  - title: 分库分表的策略有哪些？
+    order: 419
+    url: 2025-11-02-database-sharding-strategies
+  - title: 分库分表后如何解决跨库查询？
+    order: 420
+    url: 2025-11-02-cross-database-query-solutions
+  - title: 分库分表后如何解决分布式事务？
+    order: 421
+    url: 2025-11-02-distributed-transaction-in-sharding
+  - title: ShardingSphere的原理是什么？
+    order: 422
+    url: 2025-11-02-shardingsphere-principle
   分布式锁:
-    - title: "什么是分布式锁？"
-      order: 413
-      url: 2025-11-02-what-is-distributed-lock
-    - title: "分布式锁的实现方式有哪些？"
-      order: 414
-      url: 2025-11-02-distributed-lock-implementations
-    - title: "Redis实现分布式锁的原理？"
-      order: 415
-      url: 2025-11-02-redis-distributed-lock-principle
-    - title: "Zookeeper实现分布式锁的原理？"
-      order: 416
-      url: 2025-11-02-zookeeper-distributed-lock-principle
+  - title: 什么是分布式锁？
+    order: 413
+    url: 2025-11-02-what-is-distributed-lock
+  - title: 分布式锁的实现方式有哪些？
+    order: 414
+    url: 2025-11-02-distributed-lock-implementations
+  - title: Redis实现分布式锁的原理？
+    order: 415
+    url: 2025-11-02-redis-distributed-lock-principle
+  - title: Zookeeper实现分布式锁的原理？
+    order: 416
+    url: 2025-11-02-zookeeper-distributed-lock-principle
   并发:
-    - title: "Spring中的Bean是线程安全的吗？"
-      order: 358
-      url: 2025-11-02-spring-bean-thread-safety
+  - title: Spring中的Bean是线程安全的吗？
+    order: 358
+    url: 2025-11-02-spring-bean-thread-safety
   并发控制:
-    - title: "高并发情况下自增主键会不会重复，为什么？"
-      order: 319
-      url: 2025-11-02-mysql-auto-increment-concurrency
+  - title: 高并发情况下自增主键会不会重复，为什么？
+    order: 319
+    url: 2025-11-02-mysql-auto-increment-concurrency
   并发编程:
-    - title: "CopyOnWriteArrayList是如何实现的？"
-      order: 45
-      url: 2025-11-02-copyonwritearraylist-implementation
-    - title: "HashMap为什么线程不安全？"
-      order: 47
-      url: 2025-11-02-why-hashmap-not-thread-safe
-    - title: "ConcurrentHashMap是如何实现的？"
-      order: 58
-      url: 2025-11-02-concurrenthashmap-implementation
-    - title: "ConcurrentHashMap在JDK1.7和1.8中有什么不同？"
-      order: 59
-      url: 2025-11-02-concurrenthashmap-jdk7-vs-jdk8
-    - title: "JVM如何保证给对象分配内存过程的线程安全？"
-      order: 79
-      url: 2025-11-01-object-allocation-thread-safety
-    - title: "创建线程有几种方式？"
-      order: 128
-      url: 2025-11-02-thread-creation-methods
-    - title: "线程有几种状态，状态之间的流转是怎样的？"
-      order: 129
-      url: 2025-11-02-thread-states-and-transitions
-    - title: "Java是如何判断一个线程是否存活的？"
-      order: 130
-      url: 2025-11-02-thread-alive-check
-    - title: "Thread.sleep(0)的作用是什么？"
-      order: 131
-      url: 2025-11-02-thread-sleep-zero
-    - title: "什么是守护线程，和普通线程有什么区别？"
-      order: 132
-      url: 2025-11-02-daemon-thread
-    - title: "什么是多线程中的上下文切换？"
-      order: 133
-      url: 2025-11-02-thread-context-switch
-    - title: "线程是如何被调度的？"
-      order: 134
-      url: 2025-11-02-thread-scheduling
-    - title: "线程同步的方式有哪些？"
-      order: 135
-      url: 2025-11-02-thread-synchronization-methods
-    - title: "什么是死锁，如何解决？"
-      order: 136
-      url: 2025-11-02-deadlock-solution
-    - title: "run、start、wait、sleep、notify、notifyAll区别"
-      order: 137
-      url: 2025-11-02-thread-methods-comparison
-    - title: "什么是并发，什么是并行？"
-      order: 138
-      url: 2025-11-02-concurrency-vs-parallelism
-    - title: "能不能谈谈你对线程安全的理解？"
-      order: 139
-      url: 2025-11-02-thread-safety-understanding
-    - title: "有哪些实现线程安全的方案"
-      order: 140
-      url: 2025-11-02-thread-safety-solutions
-    - title: "并发编程中的原子性和数据库ACID的原子性一样吗？"
-      order: 141
-      url: 2025-11-02-atomicity-concurrency-vs-database
-    - title: "什么是Java内存模型（JMM）？"
-      order: 144
-      url: 2025-11-02-what-is-java-memory-model
-    - title: "什么是happens-before原则？"
-      order: 145
-      url: 2025-11-02-what-is-happens-before
-    - title: "happens-before和as-if-serial有啥区别和联系？"
-      order: 146
-      url: 2025-11-02-happens-before-vs-as-if-serial
-    - title: "有了MESI为啥还需要JMM？"
-      order: 147
-      url: 2025-11-02-why-jmm-when-mesi-exists
-    - title: "什么是总线嗅探和总线风暴，和JMM有什么关系？"
-      order: 148
-      url: 2025-11-02-bus-snooping-and-bus-storm
-    - title: "到底啥是内存屏障？到底怎么加的？"
-      order: 149
-      url: 2025-11-02-memory-barrier-explained
-    - title: "synchronized是怎么实现的？"
-      order: 162
-      url: 2025-11-02-synchronized-implementation
-    - title: "synchronized锁的是什么？"
-      order: 163
-      url: 2025-11-02-synchronized-lock-target
-    - title: "synchronized是如何保证原子性、可见性、有序性的？"
-      order: 164
-      url: 2025-11-02-synchronized-atomicity-visibility-ordering
-    - title: "synchronized的锁优化是怎样的？"
-      order: 165
-      url: 2025-11-02-synchronized-lock-optimization
-    - title: "synchronized的锁升级过程是怎样的？"
-      order: 166
-      url: 2025-11-02-synchronized-lock-upgrade
-    - title: "synchronized升级过程中有几次自旋？"
-      order: 167
-      url: 2025-11-02-synchronized-spin-times
-    - title: "synchronized的锁能降级吗？"
-      order: 168
-      url: 2025-11-02-synchronized-lock-downgrade
-    - title: "为什么JDK15要废弃偏向锁？"
-      order: 169
-      url: 2025-11-02-why-jdk15-deprecate-biased-locking
-    - title: "synchronized是否可重入"
-      order: 170
-      url: 2025-11-02-synchronized-reentrant
-    - title: "synchronized是非公平锁吗，那么是如何体现的？"
-      order: 171
-      url: 2025-11-02-synchronized-fairness
-    - title: "synchronized和ReentrantLock的区别"
-      order: 172
-      url: 2025-11-02-synchronized-vs-reentrantlock
-    - title: "synchronized和lock区别"
-      order: 173
-      url: 2025-11-02-synchronized-vs-lock
-    - title: "如何理解AQS？"
-      order: 176
-      url: 2025-11-02-understanding-aqs
-    - title: "AQS的同步队列和条件队列原理"
-      order: 177
-      url: 2025-11-02-aqs-sync-queue-and-condition-queue
-    - title: "AQS是如何实现线程的等待和唤醒的？"
-      order: 178
-      url: 2025-11-02-aqs-thread-wait-and-wakeup
-    - title: "AQS为什么采用双向链表？"
-      order: 179
-      url: 2025-11-02-why-aqs-uses-doubly-linked-list
-    - title: "什么是AQS的独占模式和共享模式？"
-      order: 180
-      url: 2025-11-02-aqs-exclusive-and-shared-mode
-    - title: "AQS操作类有哪些？"
-      order: 181
-      url: 2025-11-02-aqs-utility-classes
-    - title: "什么是可重入锁，怎么实现可重入锁？"
-      order: 182
-      url: 2025-11-02-reentrant-lock-concept-and-implementation
-    - title: "可重入锁的底层实现"
-      order: 183
-      url: 2025-11-02-reentrant-lock-implementation
-    - title: "公平锁和非公平锁的区别"
-      order: 184
-      url: 2025-11-02-fair-lock-vs-unfair-lock
-    - title: "Lock是否公平，能否实现非公平，如何实现？"
-      order: 185
-      url: 2025-11-02-lock-fairness-implementation
-    - title: "ReentrantLock增加了哪些高级功能？"
-      order: 186
-      url: 2025-11-02-reentrantlock-advanced-features
-    - title: "线程池多线程操作对象是否需要加volatile保障可见性？"
-      order: 194
-      url: 2025-11-02-threadpool-volatile-visibility
-    - title: "CountDownLatch、CyclicBarrier、Semaphore区别？"
-      order: 197
-      url: 2025-11-02-countdownlatch-cyclicbarrier-semaphore-differences
-    - title: "LongAdder和AtomicLong的区别？"
-      order: 198
-      url: 2025-11-02-longadder-vs-atomiclong
-    - title: "什么是ThreadLocal，如何实现的？"
-      order: 199
-      url: 2025-11-02-what-is-threadlocal-and-how-it-works
-    - title: "ThreadLocalMap的数据结构"
-      order: 200
-      url: 2025-11-02-threadlocalmap-data-structure
-    - title: "ThreadLocalMap的冲突解决机制"
-      order: 201
-      url: 2025-11-02-threadlocalmap-collision-resolution
-    - title: "ThreadLocalMap的扩容机制"
-      order: 202
-      url: 2025-11-02-threadlocalmap-resize-mechanism
-    - title: "ThreadLocal为什么会导致内存泄漏？如何解决？"
-      order: 203
-      url: 2025-11-02-threadlocal-memory-leak-causes-and-solutions
-    - title: "ThreadLocal的key是弱引用，在get()时发生GC后key会是null吗？"
-      order: 204
-      url: 2025-11-02-threadlocal-weak-reference-and-gc
-    - title: "ThreadLocal的应用场景有哪些？"
-      order: 205
-      url: 2025-11-02-threadlocal-use-cases
-    - title: "有了InheritableThreadLocal为啥还需要TransmittableThreadLocal？"
-      order: 206
-      url: 2025-11-02-inheritablethreadlocal-vs-transmittablethreadlocal
-    - title: "探测式清理和启发式清理"
-      order: 207
-      url: 2025-11-02-threadlocalmap-expunge-and-clean-mechanisms
-    - title: "父子线程之间怎么共享、传递数据？"
-      order: 208
-      url: 2025-11-02-parent-child-thread-data-sharing
-    - title: "为什么不能在try-catch中捕获子线程的异常？"
-      order: 209
-      url: 2025-11-02-why-cannot-catch-child-thread-exception-in-try-catch
-    - title: "如何实现主线程捕获子线程异常？"
-      order: 210
-      url: 2025-11-02-how-to-catch-child-thread-exceptions
-    - title: "Java线程出现异常，进程为啥不会退出？"
-      order: 211
-      url: 2025-11-02-thread-exception-not-exit-process
-    - title: "有三个线程T1,T2,T3如何保证顺序执行？"
-      order: 212
-      url: 2025-11-02-three-threads-sequential-execution
-    - title: "三个线程分别顺序打印0-100"
-      order: 213
-      url: 2025-11-02-three-threads-print-sequentially
-    - title: "JDK21中的虚拟线程是怎么回事？"
-      order: 214
-      url: 2025-11-02-jdk21-virtual-threads-introduction
-    - title: "为什么虚拟线程不能用synchronized？"
-      order: 215
-      url: 2025-11-02-why-virtual-threads-avoid-synchronized
-    - title: "为什么虚拟线程不要和线程池一起用？"
-      order: 216
-      url: 2025-11-02-why-virtual-threads-avoid-thread-pools
-    - title: "为什么虚拟线程尽量避免使用ThreadLocal？"
-      order: 217
-      url: 2025-11-02-why-virtual-threads-avoid-threadlocal
+  - title: CopyOnWriteArrayList是如何实现的？
+    order: 45
+    url: 2025-11-02-copyonwritearraylist-implementation
+  - title: HashMap为什么线程不安全？
+    order: 47
+    url: 2025-11-02-why-hashmap-not-thread-safe
+  - title: ConcurrentHashMap是如何实现的？
+    order: 58
+    url: 2025-11-02-concurrenthashmap-implementation
+  - title: ConcurrentHashMap在JDK1.7和1.8中有什么不同？
+    order: 59
+    url: 2025-11-02-concurrenthashmap-jdk7-vs-jdk8
+  - title: JVM如何保证给对象分配内存过程的线程安全？
+    order: 79
+    url: 2025-11-01-object-allocation-thread-safety
+  - title: 创建线程有几种方式？
+    order: 128
+    url: 2025-11-02-thread-creation-methods
+  - title: 线程有几种状态，状态之间的流转是怎样的？
+    order: 129
+    url: 2025-11-02-thread-states-and-transitions
+  - title: Java是如何判断一个线程是否存活的？
+    order: 130
+    url: 2025-11-02-thread-alive-check
+  - title: Thread.sleep(0)的作用是什么？
+    order: 131
+    url: 2025-11-02-thread-sleep-zero
+  - title: 什么是守护线程，和普通线程有什么区别？
+    order: 132
+    url: 2025-11-02-daemon-thread
+  - title: 什么是多线程中的上下文切换？
+    order: 133
+    url: 2025-11-02-thread-context-switch
+  - title: 线程是如何被调度的？
+    order: 134
+    url: 2025-11-02-thread-scheduling
+  - title: 线程同步的方式有哪些？
+    order: 135
+    url: 2025-11-02-thread-synchronization-methods
+  - title: 什么是死锁，如何解决？
+    order: 136
+    url: 2025-11-02-deadlock-solution
+  - title: run、start、wait、sleep、notify、notifyAll区别
+    order: 137
+    url: 2025-11-02-thread-methods-comparison
+  - title: 什么是并发，什么是并行？
+    order: 138
+    url: 2025-11-02-concurrency-vs-parallelism
+  - title: 能不能谈谈你对线程安全的理解？
+    order: 139
+    url: 2025-11-02-thread-safety-understanding
+  - title: 有哪些实现线程安全的方案
+    order: 140
+    url: 2025-11-02-thread-safety-solutions
+  - title: 并发编程中的原子性和数据库ACID的原子性一样吗？
+    order: 141
+    url: 2025-11-02-atomicity-concurrency-vs-database
+  - title: 什么是Java内存模型（JMM）？
+    order: 144
+    url: 2025-11-02-what-is-java-memory-model
+  - title: 什么是happens-before原则？
+    order: 145
+    url: 2025-11-02-what-is-happens-before
+  - title: happens-before和as-if-serial有啥区别和联系？
+    order: 146
+    url: 2025-11-02-happens-before-vs-as-if-serial
+  - title: 有了MESI为啥还需要JMM？
+    order: 147
+    url: 2025-11-02-why-jmm-when-mesi-exists
+  - title: 什么是总线嗅探和总线风暴，和JMM有什么关系？
+    order: 148
+    url: 2025-11-02-bus-snooping-and-bus-storm
+  - title: 到底啥是内存屏障？到底怎么加的？
+    order: 149
+    url: 2025-11-02-memory-barrier-explained
+  - title: synchronized是怎么实现的？
+    order: 162
+    url: 2025-11-02-synchronized-implementation
+  - title: synchronized锁的是什么？
+    order: 163
+    url: 2025-11-02-synchronized-lock-target
+  - title: synchronized是如何保证原子性、可见性、有序性的？
+    order: 164
+    url: 2025-11-02-synchronized-atomicity-visibility-ordering
+  - title: synchronized的锁优化是怎样的？
+    order: 165
+    url: 2025-11-02-synchronized-lock-optimization
+  - title: synchronized的锁升级过程是怎样的？
+    order: 166
+    url: 2025-11-02-synchronized-lock-upgrade
+  - title: synchronized升级过程中有几次自旋？
+    order: 167
+    url: 2025-11-02-synchronized-spin-times
+  - title: synchronized的锁能降级吗？
+    order: 168
+    url: 2025-11-02-synchronized-lock-downgrade
+  - title: 为什么JDK15要废弃偏向锁？
+    order: 169
+    url: 2025-11-02-why-jdk15-deprecate-biased-locking
+  - title: synchronized是否可重入
+    order: 170
+    url: 2025-11-02-synchronized-reentrant
+  - title: synchronized是非公平锁吗，那么是如何体现的？
+    order: 171
+    url: 2025-11-02-synchronized-fairness
+  - title: synchronized和ReentrantLock的区别
+    order: 172
+    url: 2025-11-02-synchronized-vs-reentrantlock
+  - title: synchronized和lock区别
+    order: 173
+    url: 2025-11-02-synchronized-vs-lock
+  - title: 如何理解AQS？
+    order: 176
+    url: 2025-11-02-understanding-aqs
+  - title: AQS的同步队列和条件队列原理
+    order: 177
+    url: 2025-11-02-aqs-sync-queue-and-condition-queue
+  - title: AQS是如何实现线程的等待和唤醒的？
+    order: 178
+    url: 2025-11-02-aqs-thread-wait-and-wakeup
+  - title: AQS为什么采用双向链表？
+    order: 179
+    url: 2025-11-02-why-aqs-uses-doubly-linked-list
+  - title: 什么是AQS的独占模式和共享模式？
+    order: 180
+    url: 2025-11-02-aqs-exclusive-and-shared-mode
+  - title: AQS操作类有哪些？
+    order: 181
+    url: 2025-11-02-aqs-utility-classes
+  - title: 什么是可重入锁，怎么实现可重入锁？
+    order: 182
+    url: 2025-11-02-reentrant-lock-concept-and-implementation
+  - title: 可重入锁的底层实现
+    order: 183
+    url: 2025-11-02-reentrant-lock-implementation
+  - title: 公平锁和非公平锁的区别
+    order: 184
+    url: 2025-11-02-fair-lock-vs-unfair-lock
+  - title: Lock是否公平，能否实现非公平，如何实现？
+    order: 185
+    url: 2025-11-02-lock-fairness-implementation
+  - title: ReentrantLock增加了哪些高级功能？
+    order: 186
+    url: 2025-11-02-reentrantlock-advanced-features
+  - title: 线程池多线程操作对象是否需要加volatile保障可见性？
+    order: 194
+    url: 2025-11-02-threadpool-volatile-visibility
+  - title: CountDownLatch、CyclicBarrier、Semaphore区别？
+    order: 197
+    url: 2025-11-02-countdownlatch-cyclicbarrier-semaphore-differences
+  - title: LongAdder和AtomicLong的区别？
+    order: 198
+    url: 2025-11-02-longadder-vs-atomiclong
+  - title: 什么是ThreadLocal，如何实现的？
+    order: 199
+    url: 2025-11-02-what-is-threadlocal-and-how-it-works
+  - title: ThreadLocalMap的数据结构
+    order: 200
+    url: 2025-11-02-threadlocalmap-data-structure
+  - title: ThreadLocalMap的冲突解决机制
+    order: 201
+    url: 2025-11-02-threadlocalmap-collision-resolution
+  - title: ThreadLocalMap的扩容机制
+    order: 202
+    url: 2025-11-02-threadlocalmap-resize-mechanism
+  - title: ThreadLocal为什么会导致内存泄漏？如何解决？
+    order: 203
+    url: 2025-11-02-threadlocal-memory-leak-causes-and-solutions
+  - title: ThreadLocal的key是弱引用，在get()时发生GC后key会是null吗？
+    order: 204
+    url: 2025-11-02-threadlocal-weak-reference-and-gc
+  - title: ThreadLocal的应用场景有哪些？
+    order: 205
+    url: 2025-11-02-threadlocal-use-cases
+  - title: 有了InheritableThreadLocal为啥还需要TransmittableThreadLocal？
+    order: 206
+    url: 2025-11-02-inheritablethreadlocal-vs-transmittablethreadlocal
+  - title: 探测式清理和启发式清理
+    order: 207
+    url: 2025-11-02-threadlocalmap-expunge-and-clean-mechanisms
+  - title: 父子线程之间怎么共享、传递数据？
+    order: 208
+    url: 2025-11-02-parent-child-thread-data-sharing
+  - title: 为什么不能在try-catch中捕获子线程的异常？
+    order: 209
+    url: 2025-11-02-why-cannot-catch-child-thread-exception-in-try-catch
+  - title: 如何实现主线程捕获子线程异常？
+    order: 210
+    url: 2025-11-02-how-to-catch-child-thread-exceptions
+  - title: Java线程出现异常，进程为啥不会退出？
+    order: 211
+    url: 2025-11-02-thread-exception-not-exit-process
+  - title: 有三个线程T1,T2,T3如何保证顺序执行？
+    order: 212
+    url: 2025-11-02-three-threads-sequential-execution
+  - title: 三个线程分别顺序打印0-100
+    order: 213
+    url: 2025-11-02-three-threads-print-sequentially
+  - title: JDK21中的虚拟线程是怎么回事？
+    order: 214
+    url: 2025-11-02-jdk21-virtual-threads-introduction
+  - title: 为什么虚拟线程不能用synchronized？
+    order: 215
+    url: 2025-11-02-why-virtual-threads-avoid-synchronized
+  - title: 为什么虚拟线程不要和线程池一起用？
+    order: 216
+    url: 2025-11-02-why-virtual-threads-avoid-thread-pools
+  - title: 为什么虚拟线程尽量避免使用ThreadLocal？
+    order: 217
+    url: 2025-11-02-why-virtual-threads-avoid-threadlocal
   异步编程:
-    - title: "CompletableFuture的底层是如何实现的？"
-      order: 195
-      url: 2025-11-02-completablefuture-implementation
-    - title: "如何对多线程进行编排？"
-      order: 196
-      url: 2025-11-02-multi-thread-orchestration
+  - title: CompletableFuture的底层是如何实现的？
+    order: 195
+    url: 2025-11-02-completablefuture-implementation
+  - title: 如何对多线程进行编排？
+    order: 196
+    url: 2025-11-02-multi-thread-orchestration
   性能优化:
-    - title: "SQL执行计划分析的时候，要关注哪些信息？"
-      order: 281
-      url: 2025-11-02-sql-execution-plan-key-points
-    - title: "如何进行SQL调优？"
-      order: 283
-      url: 2025-11-02-how-to-optimize-sql-queries
-    - title: "慢SQL的问题如何排查？"
-      order: 284
-      url: 2025-11-02-how-to-troubleshoot-slow-sql
-    - title: "执行计划中，key有值，还是很慢怎么办？"
-      order: 285
-      url: 2025-11-02-explain-key-exists-but-still-slow
-    - title: "ORDER BY是怎么实现的？"
-      order: 286
-      url: 2025-11-02-how-mysql-order-by-works
-    - title: "Using filesort能优化吗，怎么优化？"
-      order: 287
-      url: 2025-11-02-optimize-using-filesort
-    - title: "MySQL的深度分页如何优化？"
-      order: 288
-      url: 2025-11-02-mysql-deep-pagination-optimization
-    - title: "limit 0,100和limit 10000000,100一样吗？"
-      order: 289
-      url: 2025-11-02-limit-shallow-vs-deep-pagination
-    - title: "MySQL中like的模糊查询如何优化？"
-      order: 291
-      url: 2025-11-02-mysql-like-query-optimization
-    - title: "MySQL慢查询优化"
-      order: 293
-      url: 2025-11-02-mysql-slow-query-optimization
-    - title: "MySQL优化（综合）"
-      order: 295
-      url: 2025-11-02-comprehensive-mysql-optimization
-    - title: "MySQL获取主键ID的瓶颈在哪里？如何优化？"
-      order: 322
-      url: 2025-11-02-mysql-auto-increment-bottleneck
+  - title: SQL执行计划分析的时候，要关注哪些信息？
+    order: 281
+    url: 2025-11-02-sql-execution-plan-key-points
+  - title: 如何进行SQL调优？
+    order: 283
+    url: 2025-11-02-how-to-optimize-sql-queries
+  - title: 慢SQL的问题如何排查？
+    order: 284
+    url: 2025-11-02-how-to-troubleshoot-slow-sql
+  - title: 执行计划中，key有值，还是很慢怎么办？
+    order: 285
+    url: 2025-11-02-explain-key-exists-but-still-slow
+  - title: ORDER BY是怎么实现的？
+    order: 286
+    url: 2025-11-02-how-mysql-order-by-works
+  - title: Using filesort能优化吗，怎么优化？
+    order: 287
+    url: 2025-11-02-optimize-using-filesort
+  - title: MySQL的深度分页如何优化？
+    order: 288
+    url: 2025-11-02-mysql-deep-pagination-optimization
+  - title: limit 0,100和limit 10000000,100一样吗？
+    order: 289
+    url: 2025-11-02-limit-shallow-vs-deep-pagination
+  - title: MySQL中like的模糊查询如何优化？
+    order: 291
+    url: 2025-11-02-mysql-like-query-optimization
+  - title: MySQL慢查询优化
+    order: 293
+    url: 2025-11-02-mysql-slow-query-optimization
+  - title: MySQL优化（综合）
+    order: 295
+    url: 2025-11-02-comprehensive-mysql-optimization
+  - title: MySQL获取主键ID的瓶颈在哪里？如何优化？
+    order: 322
+    url: 2025-11-02-mysql-auto-increment-bottleneck
   持久化:
-    - title: "Redis的持久化机制有哪些？"
-      order: 341
-      url: 2025-11-02-redis-persistence-mechanisms
-    - title: "RDB和AOF的区别是什么？"
-      order: 342
-      url: 2025-11-02-rdb-vs-aof-differences
-    - title: "Redis AOF日志写入流程与刷盘策略"
-      order: 343
-      url: 2025-11-02-redis-aof-write-process-and-fsync
-    - title: "Redis故障恢复：RDB和AOF的区别"
-      order: 344
-      url: 2025-11-02-redis-recovery-rdb-vs-aof
+  - title: Redis的持久化机制有哪些？
+    order: 341
+    url: 2025-11-02-redis-persistence-mechanisms
+  - title: RDB和AOF的区别是什么？
+    order: 342
+    url: 2025-11-02-rdb-vs-aof-differences
+  - title: Redis AOF日志写入流程与刷盘策略
+    order: 343
+    url: 2025-11-02-redis-aof-write-process-and-fsync
+  - title: Redis故障恢复：RDB和AOF的区别
+    order: 344
+    url: 2025-11-02-redis-recovery-rdb-vs-aof
   数据安全:
-    - title: "数据库怎么做加密和解密？"
-      order: 324
-      url: 2025-11-02-database-encryption-decryption
-    - title: "数据库加密后怎么做模糊查询？"
-      order: 325
-      url: 2025-11-02-encrypted-data-fuzzy-search
+  - title: 数据库怎么做加密和解密？
+    order: 324
+    url: 2025-11-02-database-encryption-decryption
+  - title: 数据库加密后怎么做模糊查询？
+    order: 325
+    url: 2025-11-02-encrypted-data-fuzzy-search
   数据库:
-    - title: "从InnoDB索引结构分析索引Key长度限制"
-      order: 227
-      url: 2025-11-02-why-index-key-length-limit
-    - title: "MySQL索引建立与性能影响"
-      order: 237
-      url: 2025-11-02-mysql-index-creation-and-performance
-    - title: "MySQL索引存储与失效场景详解"
-      order: 238
-      url: 2025-11-02-mysql-index-storage-and-invalidation
-    - title: "MySQL选错索引的原因及解决方案"
-      order: 243
-      url: 2025-11-02-mysql-wrong-index-selection
-    - title: "WHERE条件顺序对索引的影响"
-      order: 244
-      url: 2025-11-02-where-condition-order-index
-    - title: "CHAR与VARCHAR的区别及使用场景"
-      order: 246
-      url: 2025-11-02-char-vs-varchar
-    - title: "CHAR、VARCHAR、TEXT的区别与VARCHAR长度限制详解"
-      order: 247
-      url: 2025-11-02-varchar-length-and-comparison
-    - title: "MySQL中BLOB与TEXT的区别及使用场景"
-      order: 248
-      url: 2025-11-02-blob-vs-text
-    - title: "什么是数据库事务？"
-      order: 249
-      url: 2025-11-02-what-is-database-transaction
-    - title: "MySQL事务ACID实现原理"
-      order: 250
-      url: 2025-11-02-mysql-acid-implementation
-    - title: "MySQL中的事务隔离级别"
-      order: 251
-      url: 2025-11-02-mysql-transaction-isolation-levels
-    - title: "什么是脏读、幻读、不可重复读？"
-      order: 252
-      url: 2025-11-02-dirty-read-phantom-read-non-repeatable-read
-    - title: "InnoDB如何解决脏读、不可重复读和幻读？"
-      order: 253
-      url: 2025-11-02-how-innodb-solves-read-problems
-    - title: "InnoDB的RR到底有没有解决幻读？"
-      order: 254
-      url: 2025-11-02-does-innodb-rr-solve-phantom-read
-    - title: "如何理解MVCC？"
-      order: 255
-      url: 2025-11-02-understanding-mvcc
-    - title: "什么是ReadView，什么样的ReadView可见？"
-      order: 256
-      url: 2025-11-02-what-is-readview
-    - title: "当前读和快照读有什么区别？"
-      order: 257
-      url: 2025-11-02-current-read-vs-snapshot-read
-    - title: "二级索引在索引覆盖时如何使用MVCC？"
-      order: 258
-      url: 2025-11-02-secondary-index-mvcc-with-covering-index
-    - title: "为什么MySQL默认使用RR隔离级别？"
-      order: 259
-      url: 2025-11-02-why-mysql-default-rr-isolation-level
-    - title: "为什么默认RR，大厂要改成RC？"
-      order: 260
-      url: 2025-11-02-why-change-rr-to-rc-in-production
-    - title: "MySQL的select会用到事务吗"
-      order: 261
-      url: 2025-11-02-mysql-select-and-transaction
-    - title: "介绍下InnoDB的锁机制"
-      order: 262
-      url: 2025-11-02-innodb-lock-mechanism
-    - title: "InnoDB中的表级锁、页级锁、行级锁"
-      order: 263
-      url: 2025-11-02-innodb-table-page-row-locks
-    - title: "MySQL的行级锁锁的到底是什么"
-      order: 264
-      url: 2025-11-02-mysql-row-lock-target
-    - title: "什么是排他锁和共享锁"
-      order: 265
-      url: 2025-11-02-exclusive-lock-and-shared-lock
-    - title: "什么是意向锁"
-      order: 266
-      url: 2025-11-02-intention-locks
-    - title: "FOR UPDATE语句InnoDB加了哪些锁"
-      order: 267
-      url: 2025-11-02-for-update-locks-in-innodb
-    - title: "什么是MySQL的元数据锁（MDL锁）？"
-      order: 268
-      url: 2025-11-02-mysql-metadata-lock
-    - title: "MySQL只操作同一条记录也会发生死锁吗"
-      order: 269
-      url: 2025-11-02-mysql-deadlock-on-same-row
-    - title: "数据库死锁如何解决"
-      order: 270
-      url: 2025-11-02-database-deadlock-solutions
-    - title: "MySQL锁机制全面解析"
-      order: 271
-      url: 2025-11-02-mysql-lock-mechanism-overview
-    - title: "乐观锁与悲观锁如何实现"
-      order: 272
-      url: 2025-11-02-optimistic-and-pessimistic-locks
-    - title: "数据库乐观锁的过程中完全没有加任何锁吗"
-      order: 273
-      url: 2025-11-02-optimistic-lock-no-database-locks
-    - title: "什么是数据库的锁升级,InnoDB支持吗"
-      order: 274
-      url: 2025-11-02-database-lock-escalation
-    - title: "InnoDB加索引会锁表吗？"
-      order: 275
-      url: 2025-11-02-innodb-add-index-table-lock
-    - title: "MySQL并发控制手段详解"
-      order: 276
-      url: 2025-11-02-mysql-concurrency-control
-    - title: "MySQL一条SQL语句的执行过程"
-      order: 277
-      url: 2025-11-02-mysql-sql-execution-process
-    - title: "SQL查询语句的执行顺序"
-      order: 278
-      url: 2025-11-02-sql-query-execution-order
-    - title: "为什么大厂不建议使用多表JOIN"
-      order: 279
-      url: 2025-11-02-why-avoid-multi-table-join
-    - title: "ON和WHERE的区别详解"
-      order: 280
-      url: 2025-11-02-on-vs-where-difference
-    - title: "MySQL优化器的索引成本计算"
-      order: 282
-      url: 2025-11-02-mysql-optimizer-index-cost
-    - title: "小表驱动大表的原理与性能优化"
-      order: 292
-      url: 2025-11-02-small-table-drives-large-table
-    - title: "MySQL存储引擎详解与对比"
-      order: 296
-      url: 2025-11-02-mysql-storage-engines
-    - title: "InnoDB Buffer Pool缓冲池详解"
-      order: 297
-      url: 2025-11-02-innodb-buffer-pool
-    - title: "Buffer Pool的读写过程详解"
-      order: 298
-      url: 2025-11-02-buffer-pool-read-write-process
-    - title: "InnoDB支持的行格式详解"
-      order: 299
-      url: 2025-11-02-innodb-row-formats
-    - title: "InnoDB的数据页与B+树的关系"
-      order: 300
-      url: 2025-11-02-innodb-data-page-and-btree
-    - title: "InnoDB的页分裂和页合并机制"
-      order: 301
-      url: 2025-11-02-innodb-page-split-and-merge
-    - title: "什么是事务的2阶段提交"
-      order: 302
-      url: 2025-11-02-mysql-two-phase-commit
-    - title: "InnoDB的一次更新事务是怎么实现的"
-      order: 303
-      url: 2025-11-02-innodb-update-transaction-implementation
-    - title: "undolog会一直存在吗？什么时候删除"
-      order: 304
-      url: 2025-11-02-undolog-lifecycle-and-purge
-    - title: "介绍下MySQL5.7中的组提交"
-      order: 305
-      url: 2025-11-02-mysql-group-commit-explained
-    - title: "MySQL执行大事务会存在什么问题"
-      order: 306
-      url: 2025-11-02-mysql-large-transaction-problems
-    - title: "binlog、redolog和undolog的区别"
-      order: 307
-      url: 2025-11-02-mysql-binlog-redolog-undolog-difference
-    - title: "MySQL主从复制的过程"
-      order: 308
-      url: 2025-11-02-mysql-master-slave-replication-process
-    - title: "MySQL的并行复制原理"
-      order: 309
-      url: 2025-11-02-mysql-parallel-replication-principle
-    - title: "MySQL主从复制详解"
-      order: 310
-      url: 2025-11-02-mysql-replication-overview
-    - title: "MySQL主从同步：binlog的三种模式详解"
-      order: 311
-      url: 2025-11-02-mysql-binlog-formats
-    - title: "MySQL三种日志、主从架构与复制原理"
-      order: 312
-      url: 2025-11-02-mysql-three-logs-and-replication
-    - title: "MySQL三种日志类型综合说明"
-      order: 313
-      url: 2025-11-02-mysql-three-logs-comprehensive-guide
-    - title: "什么是数据库的主从延迟，如何解决？"
-      order: 314
-      url: 2025-11-02-database-master-slave-replication-lag
-    - title: "数据库读写分离的代码实现方案"
-      order: 315
-      url: 2025-11-02-database-read-write-splitting-code-implementation
-    - title: "MySQL是AP的还是CP的系统？"
-      order: 316
-      url: 2025-11-02-mysql-ap-or-cp-system
-    - title: "什么是OnlineDDL"
-      order: 317
-      url: 2025-11-02-what-is-online-ddl
-    - title: "MySQL支持Emoji表情存储的完整解决方案"
-      order: 326
-      url: 2025-11-02-mysql-emoji-storage
-    - title: "MySQL分库分表方案与动态扩展策略"
-      order: 328
-      url: 2025-11-02-mysql-sharding-strategies
-    - title: "MySQL驱动表概念及选择策略"
-      order: 329
-      url: 2025-11-02-mysql-driving-table-selection
+  - title: 从InnoDB索引结构分析索引Key长度限制
+    order: 227
+    url: 2025-11-02-why-index-key-length-limit
+  - title: MySQL索引建立与性能影响
+    order: 237
+    url: 2025-11-02-mysql-index-creation-and-performance
+  - title: MySQL索引存储与失效场景详解
+    order: 238
+    url: 2025-11-02-mysql-index-storage-and-invalidation
+  - title: MySQL选错索引的原因及解决方案
+    order: 243
+    url: 2025-11-02-mysql-wrong-index-selection
+  - title: WHERE条件顺序对索引的影响
+    order: 244
+    url: 2025-11-02-where-condition-order-index
+  - title: CHAR与VARCHAR的区别及使用场景
+    order: 246
+    url: 2025-11-02-char-vs-varchar
+  - title: CHAR、VARCHAR、TEXT的区别与VARCHAR长度限制详解
+    order: 247
+    url: 2025-11-02-varchar-length-and-comparison
+  - title: MySQL中BLOB与TEXT的区别及使用场景
+    order: 248
+    url: 2025-11-02-blob-vs-text
+  - title: 什么是数据库事务？
+    order: 249
+    url: 2025-11-02-what-is-database-transaction
+  - title: MySQL事务ACID实现原理
+    order: 250
+    url: 2025-11-02-mysql-acid-implementation
+  - title: MySQL中的事务隔离级别
+    order: 251
+    url: 2025-11-02-mysql-transaction-isolation-levels
+  - title: 什么是脏读、幻读、不可重复读？
+    order: 252
+    url: 2025-11-02-dirty-read-phantom-read-non-repeatable-read
+  - title: InnoDB如何解决脏读、不可重复读和幻读？
+    order: 253
+    url: 2025-11-02-how-innodb-solves-read-problems
+  - title: InnoDB的RR到底有没有解决幻读？
+    order: 254
+    url: 2025-11-02-does-innodb-rr-solve-phantom-read
+  - title: 如何理解MVCC？
+    order: 255
+    url: 2025-11-02-understanding-mvcc
+  - title: 什么是ReadView，什么样的ReadView可见？
+    order: 256
+    url: 2025-11-02-what-is-readview
+  - title: 当前读和快照读有什么区别？
+    order: 257
+    url: 2025-11-02-current-read-vs-snapshot-read
+  - title: 二级索引在索引覆盖时如何使用MVCC？
+    order: 258
+    url: 2025-11-02-secondary-index-mvcc-with-covering-index
+  - title: 为什么MySQL默认使用RR隔离级别？
+    order: 259
+    url: 2025-11-02-why-mysql-default-rr-isolation-level
+  - title: 为什么默认RR，大厂要改成RC？
+    order: 260
+    url: 2025-11-02-why-change-rr-to-rc-in-production
+  - title: MySQL的select会用到事务吗
+    order: 261
+    url: 2025-11-02-mysql-select-and-transaction
+  - title: 介绍下InnoDB的锁机制
+    order: 262
+    url: 2025-11-02-innodb-lock-mechanism
+  - title: InnoDB中的表级锁、页级锁、行级锁
+    order: 263
+    url: 2025-11-02-innodb-table-page-row-locks
+  - title: MySQL的行级锁锁的到底是什么
+    order: 264
+    url: 2025-11-02-mysql-row-lock-target
+  - title: 什么是排他锁和共享锁
+    order: 265
+    url: 2025-11-02-exclusive-lock-and-shared-lock
+  - title: 什么是意向锁
+    order: 266
+    url: 2025-11-02-intention-locks
+  - title: FOR UPDATE语句InnoDB加了哪些锁
+    order: 267
+    url: 2025-11-02-for-update-locks-in-innodb
+  - title: 什么是MySQL的元数据锁（MDL锁）？
+    order: 268
+    url: 2025-11-02-mysql-metadata-lock
+  - title: MySQL只操作同一条记录也会发生死锁吗
+    order: 269
+    url: 2025-11-02-mysql-deadlock-on-same-row
+  - title: 数据库死锁如何解决
+    order: 270
+    url: 2025-11-02-database-deadlock-solutions
+  - title: MySQL锁机制全面解析
+    order: 271
+    url: 2025-11-02-mysql-lock-mechanism-overview
+  - title: 乐观锁与悲观锁如何实现
+    order: 272
+    url: 2025-11-02-optimistic-and-pessimistic-locks
+  - title: 数据库乐观锁的过程中完全没有加任何锁吗
+    order: 273
+    url: 2025-11-02-optimistic-lock-no-database-locks
+  - title: 什么是数据库的锁升级,InnoDB支持吗
+    order: 274
+    url: 2025-11-02-database-lock-escalation
+  - title: InnoDB加索引会锁表吗？
+    order: 275
+    url: 2025-11-02-innodb-add-index-table-lock
+  - title: MySQL并发控制手段详解
+    order: 276
+    url: 2025-11-02-mysql-concurrency-control
+  - title: MySQL一条SQL语句的执行过程
+    order: 277
+    url: 2025-11-02-mysql-sql-execution-process
+  - title: SQL查询语句的执行顺序
+    order: 278
+    url: 2025-11-02-sql-query-execution-order
+  - title: 为什么大厂不建议使用多表JOIN
+    order: 279
+    url: 2025-11-02-why-avoid-multi-table-join
+  - title: ON和WHERE的区别详解
+    order: 280
+    url: 2025-11-02-on-vs-where-difference
+  - title: MySQL优化器的索引成本计算
+    order: 282
+    url: 2025-11-02-mysql-optimizer-index-cost
+  - title: 小表驱动大表的原理与性能优化
+    order: 292
+    url: 2025-11-02-small-table-drives-large-table
+  - title: MySQL存储引擎详解与对比
+    order: 296
+    url: 2025-11-02-mysql-storage-engines
+  - title: InnoDB Buffer Pool缓冲池详解
+    order: 297
+    url: 2025-11-02-innodb-buffer-pool
+  - title: Buffer Pool的读写过程详解
+    order: 298
+    url: 2025-11-02-buffer-pool-read-write-process
+  - title: InnoDB支持的行格式详解
+    order: 299
+    url: 2025-11-02-innodb-row-formats
+  - title: InnoDB的数据页与B+树的关系
+    order: 300
+    url: 2025-11-02-innodb-data-page-and-btree
+  - title: InnoDB的页分裂和页合并机制
+    order: 301
+    url: 2025-11-02-innodb-page-split-and-merge
+  - title: 什么是事务的2阶段提交
+    order: 302
+    url: 2025-11-02-mysql-two-phase-commit
+  - title: InnoDB的一次更新事务是怎么实现的
+    order: 303
+    url: 2025-11-02-innodb-update-transaction-implementation
+  - title: undolog会一直存在吗？什么时候删除
+    order: 304
+    url: 2025-11-02-undolog-lifecycle-and-purge
+  - title: 介绍下MySQL5.7中的组提交
+    order: 305
+    url: 2025-11-02-mysql-group-commit-explained
+  - title: MySQL执行大事务会存在什么问题
+    order: 306
+    url: 2025-11-02-mysql-large-transaction-problems
+  - title: binlog、redolog和undolog的区别
+    order: 307
+    url: 2025-11-02-mysql-binlog-redolog-undolog-difference
+  - title: MySQL主从复制的过程
+    order: 308
+    url: 2025-11-02-mysql-master-slave-replication-process
+  - title: MySQL的并行复制原理
+    order: 309
+    url: 2025-11-02-mysql-parallel-replication-principle
+  - title: MySQL主从复制详解
+    order: 310
+    url: 2025-11-02-mysql-replication-overview
+  - title: MySQL主从同步：binlog的三种模式详解
+    order: 311
+    url: 2025-11-02-mysql-binlog-formats
+  - title: MySQL三种日志、主从架构与复制原理
+    order: 312
+    url: 2025-11-02-mysql-three-logs-and-replication
+  - title: MySQL三种日志类型综合说明
+    order: 313
+    url: 2025-11-02-mysql-three-logs-comprehensive-guide
+  - title: 什么是数据库的主从延迟，如何解决？
+    order: 314
+    url: 2025-11-02-database-master-slave-replication-lag
+  - title: 数据库读写分离的代码实现方案
+    order: 315
+    url: 2025-11-02-database-read-write-splitting-code-implementation
+  - title: MySQL是AP的还是CP的系统？
+    order: 316
+    url: 2025-11-02-mysql-ap-or-cp-system
+  - title: 什么是OnlineDDL
+    order: 317
+    url: 2025-11-02-what-is-online-ddl
+  - title: MySQL支持Emoji表情存储的完整解决方案
+    order: 326
+    url: 2025-11-02-mysql-emoji-storage
+  - title: MySQL分库分表方案与动态扩展策略
+    order: 328
+    url: 2025-11-02-mysql-sharding-strategies
+  - title: MySQL驱动表概念及选择策略
+    order: 329
+    url: 2025-11-02-mysql-driving-table-selection
   数据库优化:
-    - title: "MySQL怎么做热点数据高效更新？"
-      order: 318
-      url: 2025-11-02-mysql-hotspot-data-update
+  - title: MySQL怎么做热点数据高效更新？
+    order: 318
+    url: 2025-11-02-mysql-hotspot-data-update
   数据库原理:
-    - title: "什么情况会导致自增主键不连续？"
-      order: 321
-      url: 2025-11-02-mysql-auto-increment-gaps
+  - title: 什么情况会导致自增主键不连续？
+    order: 321
+    url: 2025-11-02-mysql-auto-increment-gaps
   数据库实战:
-    - title: "数据库扫表任务如何避免出现死循环？"
-      order: 323
-      url: 2025-11-02-database-scan-deadloop-prevention
+  - title: 数据库扫表任务如何避免出现死循环？
+    order: 323
+    url: 2025-11-02-database-scan-deadloop-prevention
   数据库设计:
-    - title: "MySQL自增主键用完了会怎么样？"
-      order: 320
-      url: 2025-11-02-mysql-auto-increment-exhausted
+  - title: MySQL自增主键用完了会怎么样？
+    order: 320
+    url: 2025-11-02-mysql-auto-increment-exhausted
   服务注册:
-    - title: "Eureka的工作原理是什么？"
-      order: 392
-      url: 2025-11-02-eureka-working-principle
-    - title: "Nacos和Eureka的区别？"
-      order: 397
-      url: 2025-11-02-nacos-vs-eureka
+  - title: Eureka的工作原理是什么？
+    order: 392
+    url: 2025-11-02-eureka-working-principle
+  - title: Nacos和Eureka的区别？
+    order: 397
+    url: 2025-11-02-nacos-vs-eureka
   服务调用:
-    - title: "Feign的工作原理是什么？"
-      order: 394
-      url: 2025-11-02-feign-working-principle
+  - title: Feign的工作原理是什么？
+    order: 394
+    url: 2025-11-02-feign-working-principle
   架构设计:
-    - title: "什么是微服务？"
-      order: 390
-      url: 2025-11-02-what-is-microservices
+  - title: 什么是微服务？
+    order: 390
+    url: 2025-11-02-what-is-microservices
   消息队列:
-    - title: "消息队列的使用场景有哪些？"
-      order: 424
-      url: 2025-11-02-message-queue-use-cases
+  - title: 消息队列的使用场景有哪些？
+    order: 424
+    url: 2025-11-02-message-queue-use-cases
   熔断降级:
-    - title: "Hystrix的熔断机制是什么？"
-      order: 395
-      url: 2025-11-02-hystrix-circuit-breaker
+  - title: Hystrix的熔断机制是什么？
+    order: 395
+    url: 2025-11-02-hystrix-circuit-breaker
   索引:
-    - title: "MySQL是如何保证唯一性索引的唯一性的？"
-      order: 226
-      url: 2025-11-02-mysql-unique-index-guarantee
+  - title: MySQL是如何保证唯一性索引的唯一性的？
+    order: 226
+    url: 2025-11-02-mysql-unique-index-guarantee
   索引优化:
-    - title: "什么是最左前缀匹配？为什么要遵守？"
-      order: 228
-      url: 2025-11-02-mysql-leftmost-prefix-matching
-    - title: "MySQL索引一定遵循最左前缀匹配吗？"
-      order: 229
-      url: 2025-11-02-mysql-leftmost-prefix-exceptions
-    - title: "A,B,C的联合索引，按照AB,AC,BC查询，能走索引吗？"
-      order: 230
-      url: 2025-11-02-mysql-composite-index-usage-patterns
-    - title: "a,b两个单独索引，where a=xx and b=xx走哪个索引？为什么？"
-      order: 231
-      url: 2025-11-02-mysql-dual-index-selection
-    - title: "什么是索引合并，原理是什么？"
-      order: 232
-      url: 2025-11-02-mysql-index-merge-explained
-    - title: "什么是索引跳跃扫描？"
-      order: 233
-      url: 2025-11-02-mysql-index-skip-scan
-    - title: "设计索引的时候有哪些原则？"
-      order: 234
-      url: 2025-11-02-mysql-index-design-principles
-    - title: "区分度不高的字段建索引一定没用吗？"
-      order: 235
-      url: 2025-11-02-mysql-low-selectivity-index
-    - title: "联合索引是越多越好吗？"
-      order: 236
-      url: 2025-11-02-mysql-too-many-indexes
-    - title: "MySQL索引失效情况"
-      order: 239
-      url: 2025-11-02-mysql-index-failure-scenarios
-    - title: "MySQL索引，最左匹配，索引覆盖，索引下推，索引失效情况，查询优化"
-      order: 240
-      url: 2025-11-02-mysql-index-comprehensive-guide
-    - title: "用了索引还是很慢，可能是什么原因？"
-      order: 241
-      url: 2025-11-02-mysql-index-slow-despite-usage
-    - title: "索引失效的问题如何排查？"
-      order: 242
-      url: 2025-11-02-mysql-index-failure-troubleshooting
+  - title: 什么是最左前缀匹配？为什么要遵守？
+    order: 228
+    url: 2025-11-02-mysql-leftmost-prefix-matching
+  - title: MySQL索引一定遵循最左前缀匹配吗？
+    order: 229
+    url: 2025-11-02-mysql-leftmost-prefix-exceptions
+  - title: A,B,C的联合索引，按照AB,AC,BC查询，能走索引吗？
+    order: 230
+    url: 2025-11-02-mysql-composite-index-usage-patterns
+  - title: a,b两个单独索引，where a=xx and b=xx走哪个索引？为什么？
+    order: 231
+    url: 2025-11-02-mysql-dual-index-selection
+  - title: 什么是索引合并，原理是什么？
+    order: 232
+    url: 2025-11-02-mysql-index-merge-explained
+  - title: 什么是索引跳跃扫描？
+    order: 233
+    url: 2025-11-02-mysql-index-skip-scan
+  - title: 设计索引的时候有哪些原则？
+    order: 234
+    url: 2025-11-02-mysql-index-design-principles
+  - title: 区分度不高的字段建索引一定没用吗？
+    order: 235
+    url: 2025-11-02-mysql-low-selectivity-index
+  - title: 联合索引是越多越好吗？
+    order: 236
+    url: 2025-11-02-mysql-too-many-indexes
+  - title: MySQL索引失效情况
+    order: 239
+    url: 2025-11-02-mysql-index-failure-scenarios
+  - title: MySQL索引，最左匹配，索引覆盖，索引下推，索引失效情况，查询优化
+    order: 240
+    url: 2025-11-02-mysql-index-comprehensive-guide
+  - title: 用了索引还是很慢，可能是什么原因？
+    order: 241
+    url: 2025-11-02-mysql-index-slow-despite-usage
+  - title: 索引失效的问题如何排查？
+    order: 242
+    url: 2025-11-02-mysql-index-failure-troubleshooting
   索引原理:
-    - title: "InnoDB为什么使用B+树实现索引？"
-      order: 218
-      url: 2025-11-02-why-innodb-uses-b-plus-tree-index
-    - title: "InnoDB中的索引类型？"
-      order: 219
-      url: 2025-11-02-innodb-index-types
-    - title: "什么是聚簇索引和非聚簇索引？"
-      order: 220
-      url: 2025-11-02-clustered-vs-non-clustered-index
-    - title: "什么是回表，怎么减少回表的次数？"
-      order: 221
-      url: 2025-11-02-what-is-index-lookup-and-how-to-reduce
-    - title: "什么是索引覆盖、索引下推？"
-      order: 222
-      url: 2025-11-02-covering-index-and-index-condition-pushdown
-    - title: "InnoDB和MyISAM有什么区别？"
-      order: 223
-      url: 2025-11-02-innodb-vs-myisam-differences
-    - title: "MyISAM的索引结构是怎么样的，它存在的问题是什么？"
-      order: 224
-      url: 2025-11-02-myisam-index-structure-and-problems
-    - title: "唯一索引和主键索引的区别？"
-      order: 225
-      url: 2025-11-02-unique-index-vs-primary-key-index
-    - title: "UUID和自增ID做主键哪个好，为什么？"
-      order: 245
-      url: 2025-11-02-uuid-vs-auto-increment-id-as-primary-key
+  - title: InnoDB为什么使用B+树实现索引？
+    order: 218
+    url: 2025-11-02-why-innodb-uses-b-plus-tree-index
+  - title: InnoDB中的索引类型？
+    order: 219
+    url: 2025-11-02-innodb-index-types
+  - title: 什么是聚簇索引和非聚簇索引？
+    order: 220
+    url: 2025-11-02-clustered-vs-non-clustered-index
+  - title: 什么是回表，怎么减少回表的次数？
+    order: 221
+    url: 2025-11-02-what-is-index-lookup-and-how-to-reduce
+  - title: 什么是索引覆盖、索引下推？
+    order: 222
+    url: 2025-11-02-covering-index-and-index-condition-pushdown
+  - title: InnoDB和MyISAM有什么区别？
+    order: 223
+    url: 2025-11-02-innodb-vs-myisam-differences
+  - title: MyISAM的索引结构是怎么样的，它存在的问题是什么？
+    order: 224
+    url: 2025-11-02-myisam-index-structure-and-problems
+  - title: 唯一索引和主键索引的区别？
+    order: 225
+    url: 2025-11-02-unique-index-vs-primary-key-index
+  - title: UUID和自增ID做主键哪个好，为什么？
+    order: 245
+    url: 2025-11-02-uuid-vs-auto-increment-id-as-primary-key
   线程基础:
-    - title: "创建线程有几种方式？"
-      order: 128
-      url: 2025-11-02-thread-creation-methods
-    - title: "线程有几种状态，状态之间的流转是怎样的？"
-      order: 129
-      url: 2025-11-02-thread-states-and-transitions
-    - title: "Java是如何判断一个线程是否存活的？"
-      order: 130
-      url: 2025-11-02-thread-alive-check
-    - title: "Thread.sleep(0)的作用是什么？"
-      order: 131
-      url: 2025-11-02-thread-sleep-zero
-    - title: "什么是守护线程，和普通线程有什么区别？"
-      order: 132
-      url: 2025-11-02-daemon-thread
-    - title: "什么是多线程中的上下文切换？"
-      order: 133
-      url: 2025-11-02-thread-context-switch
-    - title: "线程是如何被调度的？"
-      order: 134
-      url: 2025-11-02-thread-scheduling
-    - title: "线程同步的方式有哪些？"
-      order: 135
-      url: 2025-11-02-thread-synchronization-methods
-    - title: "什么是死锁，如何解决？"
-      order: 136
-      url: 2025-11-02-deadlock-solution
-    - title: "run、start、wait、sleep、notify、notifyAll区别"
-      order: 137
-      url: 2025-11-02-thread-methods-comparison
+  - title: 创建线程有几种方式？
+    order: 128
+    url: 2025-11-02-thread-creation-methods
+  - title: 线程有几种状态，状态之间的流转是怎样的？
+    order: 129
+    url: 2025-11-02-thread-states-and-transitions
+  - title: Java是如何判断一个线程是否存活的？
+    order: 130
+    url: 2025-11-02-thread-alive-check
+  - title: Thread.sleep(0)的作用是什么？
+    order: 131
+    url: 2025-11-02-thread-sleep-zero
+  - title: 什么是守护线程，和普通线程有什么区别？
+    order: 132
+    url: 2025-11-02-daemon-thread
+  - title: 什么是多线程中的上下文切换？
+    order: 133
+    url: 2025-11-02-thread-context-switch
+  - title: 线程是如何被调度的？
+    order: 134
+    url: 2025-11-02-thread-scheduling
+  - title: 线程同步的方式有哪些？
+    order: 135
+    url: 2025-11-02-thread-synchronization-methods
+  - title: 什么是死锁，如何解决？
+    order: 136
+    url: 2025-11-02-deadlock-solution
+  - title: run、start、wait、sleep、notify、notifyAll区别
+    order: 137
+    url: 2025-11-02-thread-methods-comparison
   线程池:
-    - title: "什么是线程池，如何实现的？"
-      order: 187
-      url: 2025-11-02-what-is-thread-pool-and-implementation
-    - title: "ForkJoinPool和ThreadPoolExecutor的区别是什么？"
-      order: 188
-      url: 2025-11-02-forkjoinpool-vs-threadpoolexecutor
-    - title: "线程池的拒绝策略有哪些？"
-      order: 189
-      url: 2025-11-02-thread-pool-rejection-policies
-    - title: "为什么不建议通过Executors构建线程池？"
-      order: 190
-      url: 2025-11-02-why-not-use-executors
-    - title: "线程数设定成多少更合适？"
-      order: 191
-      url: 2025-11-02-optimal-thread-pool-size
-    - title: "如何让Java的线程池顺序执行任务？"
-      order: 192
-      url: 2025-11-02-sequential-task-execution-in-thread-pool
-    - title: "如何实现一个动态线程池？"
-      order: 193
-      url: 2025-11-02-dynamic-thread-pool-implementation
+  - title: 什么是线程池，如何实现的？
+    order: 187
+    url: 2025-11-02-what-is-thread-pool-and-implementation
+  - title: ForkJoinPool和ThreadPoolExecutor的区别是什么？
+    order: 188
+    url: 2025-11-02-forkjoinpool-vs-threadpoolexecutor
+  - title: 线程池的拒绝策略有哪些？
+    order: 189
+    url: 2025-11-02-thread-pool-rejection-policies
+  - title: 为什么不建议通过Executors构建线程池？
+    order: 190
+    url: 2025-11-02-why-not-use-executors
+  - title: 线程数设定成多少更合适？
+    order: 191
+    url: 2025-11-02-optimal-thread-pool-size
+  - title: 如何让Java的线程池顺序执行任务？
+    order: 192
+    url: 2025-11-02-sequential-task-execution-in-thread-pool
+  - title: 如何实现一个动态线程池？
+    order: 193
+    url: 2025-11-02-dynamic-thread-pool-implementation
   缓存:
-    - title: "Redis的过期策略详解"
-      order: 351
-      url: 2025-11-02-redis-expiration-strategy
-    - title: "Redis内存淘汰策略详解"
-      order: 352
-      url: 2025-11-02-redis-memory-eviction-policy
+  - title: Redis的过期策略详解
+    order: 351
+    url: 2025-11-02-redis-expiration-strategy
+  - title: Redis内存淘汰策略详解
+    order: 352
+    url: 2025-11-02-redis-memory-eviction-policy
   设计模式:
-    - title: "什么是单例模式，如何实现一个单例？"
-      order: 34
-      url: 2025-11-02-singleton-pattern-implementation
-    - title: "什么是工厂模式？"
-      order: 35
-      url: 2025-11-02-factory-pattern-explained
-    - title: "什么是策略模式？"
-      order: 36
-      url: 2025-11-02-strategy-pattern-explained
-    - title: "什么是模板方法模式？"
-      order: 37
-      url: 2025-11-02-template-method-pattern-explained
-    - title: "什么是责任链模式？"
-      order: 38
-      url: 2025-11-02-chain-of-responsibility-pattern-explained
-    - title: "什么是观察者模式？"
-      order: 39
-      url: 2025-11-02-observer-pattern-explained
-    - title: "策略模式与代理模式的区别"
-      order: 40
-      url: 2025-11-02-strategy-pattern-vs-proxy-pattern
+  - title: 什么是单例模式，如何实现一个单例？
+    order: 34
+    url: 2025-11-02-singleton-pattern-implementation
+  - title: 什么是工厂模式？
+    order: 35
+    url: 2025-11-02-factory-pattern-explained
+  - title: 什么是策略模式？
+    order: 36
+    url: 2025-11-02-strategy-pattern-explained
+  - title: 什么是模板方法模式？
+    order: 37
+    url: 2025-11-02-template-method-pattern-explained
+  - title: 什么是责任链模式？
+    order: 38
+    url: 2025-11-02-chain-of-responsibility-pattern-explained
+  - title: 什么是观察者模式？
+    order: 39
+    url: 2025-11-02-observer-pattern-explained
+  - title: 策略模式与代理模式的区别
+    order: 40
+    url: 2025-11-02-strategy-pattern-vs-proxy-pattern
   负载均衡:
-    - title: "Ribbon的负载均衡策略有哪些？"
-      order: 393
-      url: 2025-11-02-ribbon-load-balancing-strategies
-    - title: "负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解"
-      order: 398
-      url: 2025-11-02-load-balance-strategies
+  - title: Ribbon的负载均衡策略有哪些？
+    order: 393
+    url: 2025-11-02-ribbon-load-balancing-strategies
+  - title: 负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解
+    order: 398
+    url: 2025-11-02-load-balance-strategies
   问题排查:
-    - title: "MySQL的limit+orderby为什么会数据重复？"
-      order: 290
-      url: 2025-11-02-mysql-limit-order-by-duplicate-data
-    - title: "MySQL慢查询的排除与优化"
-      order: 294
-      url: 2025-11-02-mysql-slow-query-troubleshooting
+  - title: MySQL的limit+orderby为什么会数据重复？
+    order: 290
+    url: 2025-11-02-mysql-limit-order-by-duplicate-data
+  - title: MySQL慢查询的排除与优化
+    order: 294
+    url: 2025-11-02-mysql-slow-query-troubleshooting
   集合框架:
-    - title: "ArrayList与LinkedList有什么区别？"
-      order: 41
-      url: 2025-11-02-arraylist-vs-linkedlist
-    - title: "ArrayList的扩容机制是怎样的？"
-      order: 42
-      url: 2025-11-02-arraylist-expansion-mechanism
-    - title: "ArrayList扩容机制详解：初始容量与1.5倍扩容"
-      order: 43
-      url: 2025-11-02-arraylist-expansion-details
-    - title: "ArrayList和LinkedList的时间复杂度"
-      order: 44
-      url: 2025-11-02-arraylist-linkedlist-time-complexity
-    - title: "CopyOnWriteArrayList是如何实现的？"
-      order: 45
-      url: 2025-11-02-copyonwritearraylist-implementation
-    - title: "HashMap的底层实现原理"
-      order: 46
-      url: 2025-11-02-hashmap-underlying-implementation
-    - title: "HashMap为什么线程不安全？"
-      order: 47
-      url: 2025-11-02-why-hashmap-not-thread-safe
-    - title: "HashMap的容量为什么是2的幂次方？"
-      order: 48
-      url: 2025-11-02-why-hashmap-capacity-power-of-two
-    - title: "HashMap的加载因子为什么是0.75？"
-      order: 49
-      url: 2025-11-02-why-hashmap-load-factor-0-75
-    - title: "HashMap什么时候扩容？"
-      order: 50
-      url: 2025-11-02-when-does-hashmap-resize
-    - title: "HashMap扩容机制详解"
-      order: 51
-      url: 2025-11-02-hashmap-resize-mechanism
-    - title: "HashMap的hash方法原理"
-      order: 52
-      url: 2025-11-02-hashmap-hash-method-principle
-    - title: "HashMap为什么在链表长度为8时转为红黑树？"
-      order: 53
-      url: 2025-11-02-why-hashmap-treeify-threshold-8
-    - title: "HashMap在JDK1.7和1.8中的区别"
-      order: 54
-      url: 2025-11-02-hashmap-jdk7-vs-jdk8
-    - title: "为什么HashMap有时候链表长度超过8也不树化？"
-      order: 55
-      url: 2025-11-02-why-hashmap-not-treeify-when-length-over-8
-    - title: "HashMap的key可以为null吗？"
-      order: 56
-      url: 2025-11-02-can-hashmap-key-be-null
-    - title: "Hashtable、HashMap、ConcurrentHashMap的区别"
-      order: 57
-      url: 2025-11-02-hashtable-hashmap-concurrenthashmap-differences
-    - title: "ConcurrentHashMap是如何实现的？"
-      order: 58
-      url: 2025-11-02-concurrenthashmap-implementation
-    - title: "ConcurrentHashMap在JDK1.7和1.8中有什么不同？"
-      order: 59
-      url: 2025-11-02-concurrenthashmap-jdk7-vs-jdk8
-    - title: "LinkedHashMap是如何实现的？"
-      order: 60
-      url: 2025-11-02-linkedhashmap-implementation
-    - title: "TreeMap和HashMap有什么区别？"
-      order: 61
-      url: 2025-11-02-treemap-vs-hashmap
-    - title: "WeakHashMap了解吗？"
-      order: 62
-      url: 2025-11-02-weakhashmap-explained
-    - title: "HashSet和HashMap有什么关系？"
-      order: 63
-      url: 2025-11-02-hashset-and-hashmap-relationship
-    - title: "PriorityQueue的底层实现原理"
-      order: 64
-      url: 2025-11-02-priorityqueue-implementation-principle
-    - title: "ArrayDeque和LinkedList作为队列的区别"
-      order: 65
-      url: 2025-11-02-arraydeque-vs-linkedlist-as-queue
+  - title: ArrayList与LinkedList有什么区别？
+    order: 41
+    url: 2025-11-02-arraylist-vs-linkedlist
+  - title: ArrayList的扩容机制是怎样的？
+    order: 42
+    url: 2025-11-02-arraylist-expansion-mechanism
+  - title: ArrayList扩容机制详解：初始容量与1.5倍扩容
+    order: 43
+    url: 2025-11-02-arraylist-expansion-details
+  - title: ArrayList和LinkedList的时间复杂度
+    order: 44
+    url: 2025-11-02-arraylist-linkedlist-time-complexity
+  - title: CopyOnWriteArrayList是如何实现的？
+    order: 45
+    url: 2025-11-02-copyonwritearraylist-implementation
+  - title: HashMap的底层实现原理
+    order: 46
+    url: 2025-11-02-hashmap-underlying-implementation
+  - title: HashMap为什么线程不安全？
+    order: 47
+    url: 2025-11-02-why-hashmap-not-thread-safe
+  - title: HashMap的容量为什么是2的幂次方？
+    order: 48
+    url: 2025-11-02-why-hashmap-capacity-power-of-two
+  - title: HashMap的加载因子为什么是0.75？
+    order: 49
+    url: 2025-11-02-why-hashmap-load-factor-0-75
+  - title: HashMap什么时候扩容？
+    order: 50
+    url: 2025-11-02-when-does-hashmap-resize
+  - title: HashMap扩容机制详解
+    order: 51
+    url: 2025-11-02-hashmap-resize-mechanism
+  - title: HashMap的hash方法原理
+    order: 52
+    url: 2025-11-02-hashmap-hash-method-principle
+  - title: HashMap为什么在链表长度为8时转为红黑树？
+    order: 53
+    url: 2025-11-02-why-hashmap-treeify-threshold-8
+  - title: HashMap在JDK1.7和1.8中的区别
+    order: 54
+    url: 2025-11-02-hashmap-jdk7-vs-jdk8
+  - title: 为什么HashMap有时候链表长度超过8也不树化？
+    order: 55
+    url: 2025-11-02-why-hashmap-not-treeify-when-length-over-8
+  - title: HashMap的key可以为null吗？
+    order: 56
+    url: 2025-11-02-can-hashmap-key-be-null
+  - title: Hashtable、HashMap、ConcurrentHashMap的区别
+    order: 57
+    url: 2025-11-02-hashtable-hashmap-concurrenthashmap-differences
+  - title: ConcurrentHashMap是如何实现的？
+    order: 58
+    url: 2025-11-02-concurrenthashmap-implementation
+  - title: ConcurrentHashMap在JDK1.7和1.8中有什么不同？
+    order: 59
+    url: 2025-11-02-concurrenthashmap-jdk7-vs-jdk8
+  - title: LinkedHashMap是如何实现的？
+    order: 60
+    url: 2025-11-02-linkedhashmap-implementation
+  - title: TreeMap和HashMap有什么区别？
+    order: 61
+    url: 2025-11-02-treemap-vs-hashmap
+  - title: WeakHashMap了解吗？
+    order: 62
+    url: 2025-11-02-weakhashmap-explained
+  - title: HashSet和HashMap有什么关系？
+    order: 63
+    url: 2025-11-02-hashset-and-hashmap-relationship
+  - title: PriorityQueue的底层实现原理
+    order: 64
+    url: 2025-11-02-priorityqueue-implementation-principle
+  - title: ArrayDeque和LinkedList作为队列的区别
+    order: 65
+    url: 2025-11-02-arraydeque-vs-linkedlist-as-queue
   高可用:
-    - title: "Redis故障恢复：RDB和AOF的区别"
-      order: 344
-      url: 2025-11-02-redis-recovery-rdb-vs-aof
+  - title: Redis故障恢复：RDB和AOF的区别
+    order: 344
+    url: 2025-11-02-redis-recovery-rdb-vs-aof
   高可用架构:
-    - title: "阿里的数据库能抗秒杀的原理"
-      order: 327
-      url: 2025-11-02-alibaba-database-anti-spike
+  - title: 阿里的数据库能抗秒杀的原理
+    order: 327
+    url: 2025-11-02-alibaba-database-anti-spike
