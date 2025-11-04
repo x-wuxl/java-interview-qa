@@ -91,10 +91,10 @@ Use these exact category names for consistency:
 ### Template System
 
 The site uses **Liquid** templating engine:
-- Category aggregation happens automatically via Liquid filters in layouts
 - Posts are accessed via `site.posts` collection
-- Categories are extracted and sorted dynamically in home.html and categories.html
-- Navigation between posts uses `page.previous` and `page.next`
+- Learning path order is defined in `_data/home_order.yml` (auto-generated from `学习路径排序_优化版.md`)
+- Homepage displays all questions organized by 17 categories with subsections
+- Navigation between posts uses global question order (1-461)
 
 ## Adding New Interview Questions
 
@@ -109,6 +109,8 @@ The site uses **Liquid** templating engine:
    // code here
    ```
    ````
+5. Add the question to `学习路径排序_优化版.md` in the appropriate position
+6. Run `python scripts/generate_home_data.py` to update the homepage data
 
 ## Technology Stack
 

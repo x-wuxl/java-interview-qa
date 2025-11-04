@@ -33,6 +33,8 @@ java-interview-qa/
 ├── _includes/            # 可复用的组件
 │   ├── header.html       # 页头
 │   └── footer.html       # 页脚
+├── _data/                # 数据文件
+│   └── home_order.yml    # 学习路径排序（自动生成）
 ├── _posts/               # 面试题文章（Markdown 格式）
 │   ├── 2024-01-01-hashmap-principle.md
 │   ├── 2024-01-02-java-memory-model.md
@@ -41,9 +43,11 @@ java-interview-qa/
 │   └── css/
 │       ├── style.css     # 主样式文件
 │       └── syntax.css    # 代码高亮样式
+├── scripts/              # 脚本文件
+│   └── generate_home_data.py  # 生成首页数据
 ├── index.md              # 首页
-├── categories.html       # 分类页面
 ├── about.html            # 关于页面
+├── 学习路径排序_优化版.md  # 学习路径定义
 └── README.md             # 项目说明
 ```
 
@@ -161,6 +165,15 @@ public class Example {
 - `分布式`
 - `设计模式`
 - `算法与数据结构`
+
+### 5. 更新学习路径
+
+1. 在 `学习路径排序_优化版.md` 中添加新题目（注意保持序号连续）
+2. 运行数据生成脚本：
+   ```bash
+   python scripts/generate_home_data.py
+   ```
+3. 数据文件 `_data/home_order.yml` 将自动更新
 
 ## 部署到 GitHub Pages
 

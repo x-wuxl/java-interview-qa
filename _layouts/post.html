@@ -15,9 +15,9 @@ layout: default
             <div class="post-categories">
                 分类：
                 {% for category in page.categories %}
-                <a href="{{ '/categories.html#' | append: category | relative_url }}" class="category-tag">
+                <span class="category-tag">
                     {{ category }}
-                </a>
+                </span>
                 {% endfor %}
             </div>
             {% endif %}
@@ -40,7 +40,7 @@ layout: default
     <footer class="post-footer">
         <div class="post-navigation">
             {% comment %}按全局顺序获取上一题和下一题{% endcomment %}
-            {% assign global_order = site.data.global_order.title_order %}
+            {% assign global_order = site.data.home_order.title_to_order %}
             {% assign current_order = global_order[page.title] %}
             
             {% if current_order %}
@@ -103,7 +103,7 @@ layout: default
         </div>
 
         <div class="back-to-categories">
-            <a href="{{ '/categories.html' | relative_url }}" class="btn">返回分类列表</a>
+            <a href="{{ '/' | relative_url }}" class="btn">返回首页</a>
         </div>
     </footer>
 </article>
