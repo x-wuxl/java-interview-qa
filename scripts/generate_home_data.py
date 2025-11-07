@@ -8,7 +8,7 @@ import os
 # 读取学习路径排序_优化版.md文件
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_dir = os.path.dirname(script_dir)
-input_file = os.path.join(project_dir, '学习路径排序_优化版.md')
+input_file = os.path.join(project_dir, '_data', '学习路径排序_优化版.md')
 output_file = os.path.join(project_dir, '_data', 'home_order.yml')
 
 if not os.path.exists(input_file):
