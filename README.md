@@ -1,14 +1,17 @@
 # Java 后端开发面试题库
 
-本项目旨在帮助 Java 后端开发者系统地准备技术面试。所有题目按照**"基础→进阶→框架→分布式"**的递进关系进行优化排序，形成完整的学习路径，帮助开发者循序渐进地掌握 Java 后端开发的核心知识。
+本项目旨在帮助 Java 后端开发者系统地准备技术面试。所有题目按照 **基础→进阶→框架→分布式** 的递进关系进行优化排序，形成完整的学习路径，帮助开发者循序渐进地掌握 Java 后端开发的核心知识。
 
 ## 在线访问
 
 访问网站：[https://x-wuxl.github.io/java-interview-qa](https://x-wuxl.github.io/java-interview-qa)
 
+---
+
 <div align="center">
   <img src="assets/images/reademe_img.png" alt="扶我起来，我还能学" width="200" />
 </div>
+
 
 ## 内容简介
 
