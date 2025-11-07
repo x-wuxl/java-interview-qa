@@ -11,15 +11,16 @@ permalink: /about.html
         <h2>项目简介</h2>
         <p>
             本站是一个专注于 Java 后端开发面试题的知识库，旨在帮助 Java 开发者更好地准备技术面试。
-            我们收集和整理了数百道常见的面试题目，涵盖 Java 基础、框架、数据库、中间件、分布式系统等多个领域。
+            我们收集和整理了 <strong>{{ site.data.home_order.title_to_order.size }} 道</strong>常见的面试题目，涵盖 Java 基础、Java并发、JVM、Spring框架、数据库、中间件、分布式系统等多个领域。
+            所有题目按照<strong>"基础→进阶→框架→分布式"</strong>的递进关系进行优化排序，形成完整的学习路径，帮助开发者循序渐进地掌握 Java 后端开发的核心知识。
         </p>
     </section>
 
     <section class="about-section">
         <h2>内容特色</h2>
         <ul>
-            <li><strong>系统全面</strong>：覆盖 Java 后端开发的各个技术栈</li>
-            <li><strong>分类清晰</strong>：按主题分类，便于针对性学习</li>
+            <li><strong>系统全面</strong>：覆盖 Java 后端开发的各个技术栈，共 {{ site.data.home_order.title_to_order.size }} 道精选题目</li>
+            <li><strong>学习路径</strong>：按照"基础→进阶→框架→分布式"的递进关系优化排序，形成完整的学习路径</li>
             <li><strong>答案详细</strong>：不仅给出答案，更注重原理解析</li>
             <li><strong>持续更新</strong>：定期补充新题目，紧跟技术发展</li>
             <li><strong>开源免费</strong>：所有内容免费开放，欢迎贡献</li>
@@ -36,17 +37,6 @@ permalink: /about.html
     </section>
 
     <section class="about-section">
-        <h2>技术栈</h2>
-        <p>本站使用以下技术构建：</p>
-        <ul>
-            <li><strong>Jekyll</strong>：静态网站生成器</li>
-            <li><strong>GitHub Pages</strong>：免费托管服务</li>
-            <li><strong>Markdown</strong>：内容编写格式</li>
-            <li><strong>Liquid</strong>：模板引擎</li>
-        </ul>
-    </section>
-
-    <section class="about-section">
         <h2>如何贡献</h2>
         <p>
             如果你发现了错误或有更好的答案，欢迎通过以下方式贡献：
@@ -54,7 +44,6 @@ permalink: /about.html
         <ol>
             <li>访问本项目的 <a href="https://github.com/x-wuxl/java-interview-qa" target="_blank">GitHub 仓库</a></li>
             <li>提交 Issue 或 Pull Request</li>
-            <li>按照规范添加新的面试题</li>
         </ol>
     </section>
 
@@ -114,7 +103,6 @@ permalink: /about.html
 
     .support-section {
         padding: 2rem 0;
-        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
         border-radius: 8px;
         margin: 2rem 0;
     }
@@ -130,7 +118,7 @@ permalink: /about.html
     }
 
     .support-qrcode img {
-        max-width: 220px;
+        max-width: 280px;
         width: 100%;
         height: auto;
         border-radius: 8px;
