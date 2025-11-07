@@ -17,6 +17,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Google Analytics
+google_analytics_id: G-FX2D2XS2QM
+
 # Build settings
 exclude:
   - Gemfile
