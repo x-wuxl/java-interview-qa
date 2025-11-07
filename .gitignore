@@ -13,6 +13,7 @@ Gemfile.lock
 # IDE 相关
 .vscode/
 .idea/
+.claude/
 *.swp
 *.swo
 *~

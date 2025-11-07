@@ -26,6 +26,15 @@ permalink: /about.html
         </ul>
     </section>
 
+    <section class="about-section support-section">
+        <h2>支持作者</h2>
+        <p class="support-text">如果这个知识库对你有帮助，欢迎请作者喝杯咖啡 ☕</p>
+        <div class="support-qrcode">
+            <img src="/assets/images/support.png" alt="微信赞赏码" />
+            <p class="support-hint">微信扫码赞赏，感谢支持更新！</p>
+        </div>
+    </section>
+
     <section class="about-section">
         <h2>技术栈</h2>
         <p>本站使用以下技术构建：</p>
@@ -101,5 +110,40 @@ permalink: /about.html
 
     .about-section a:hover {
         text-decoration: underline;
+    }
+
+    .support-section {
+        text-align: center;
+        padding: 2rem 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border-radius: 8px;
+        margin: 2rem 0;
+    }
+
+    .support-text {
+        font-size: 1.1rem;
+        color: var(--secondary-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .support-qrcode {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .support-qrcode img {
+        max-width: 180px;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 0.75rem;
+    }
+
+    .support-hint {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        margin-top: 0.5rem;
+        margin-bottom: 0;
     }
 </style>
