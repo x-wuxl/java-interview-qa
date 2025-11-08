@@ -1523,7 +1523,7 @@ title_to_order:
   Redis内存淘汰策略详解: 357
   Redis分布式锁的实现: 358
   Redis缓存一致性问题与解决方案: 359
-  用 stream 做消息队列行不行？: 360
+  用 Stream 做消息队列行不行？: 360
   Redis 7 实现延时队列: 361
   Redis 7 实现布隆过滤器: 362
   Redis 7 实现限流: 363
@@ -2007,7 +2007,7 @@ title_to_category:
   Redis内存淘汰策略详解: 六、Redis
   Redis分布式锁的实现: 六、Redis
   Redis缓存一致性问题与解决方案: 六、Redis
-  用 stream 做消息队列行不行？: 六、Redis
+  用 Stream 做消息队列行不行？: 六、Redis
   Redis 7 实现延时队列: 六、Redis
   Redis 7 实现布隆过滤器: 六、Redis
   Redis 7 实现限流: 六、Redis
