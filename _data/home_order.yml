@@ -743,381 +743,422 @@ sections:
       title: MySQL驱动表概念及选择策略
   questions: []
 - name: 六、Redis
-  range: 323-347
+  range: 323-364
   subsections:
-  - name: 6.1 数据结构
-    range: 323-329
+  - name: 6.2 数据结构
+    range: 324-335
     questions:
-    - order: 323
-      title: Redis有哪些数据结构？
     - order: 324
-      title: Redis底层结构
+      title: Redis有哪些数据结构？
     - order: 325
-      title: Redis的String是如何实现的？
+      title: Redis底层结构
     - order: 326
-      title: Redis的List是如何实现的？
+      title: 说说 listpack 结构
     - order: 327
-      title: Redis的Hash是如何实现的？
+      title: 说说 SDS 结构
     - order: 328
-      title: Redis的Set是如何实现的？
+      title: 说说 dict 结构
     - order: 329
-      title: Redis的ZSet是如何实现的？
+      title: Redis的String是如何实现的？
     - order: 330
-      title: 什么是跳表？为什么用跳表？
+      title: Redis的List是如何实现的？
     - order: 331
-      title: Redis跳表实现，hash底层实现，为什么使用ziplist，如何扩容
+      title: Redis的Hash是如何实现的？
     - order: 332
-      title: Redis的HyperLogLog了解过吗？
+      title: Redis的Set是如何实现的？
     - order: 333
-      title: Redis的优势，解决了哪些问题
-  - name: 6.2 持久化
-    range: 334-337
-    questions:
+      title: Redis的ZSet是如何实现的？
     - order: 334
-      title: Redis的持久化机制有哪些？
+      title: 什么是跳表？为什么用跳表？
     - order: 335
-      title: RDB和AOF的区别是什么？
+      title: Redis跳表实现，hash底层实现，为什么使用ziplist，如何扩容
     - order: 336
-      title: Redis AOF日志写入流程与刷盘策略
+      title: Redis的HyperLogLog了解过吗？
     - order: 337
-      title: Redis故障恢复：RDB和AOF的区别
-  - name: 6.3 高可用
-    range: 338-343
+      title: Redis的优势，解决了哪些问题
+  - name: 6.3 持久化
+    range: 338-341
     questions:
     - order: 338
-      title: Redis的主从复制原理
+      title: Redis的持久化机制有哪些？
     - order: 339
-      title: Redis主从复制过程详解
+      title: RDB和AOF的区别是什么？
     - order: 340
-      title: Redis如何实现高可用
+      title: Redis AOF日志写入流程与刷盘策略
     - order: 341
-      title: Redis的哨兵模式详解
-    - order: 342
-      title: Redis哨兵模式选主策略详解
-    - order: 343
-      title: Redis的集群模式详解
-  - name: 6.4 缓存策略
-    range: 344-347
+      title: Redis故障恢复：RDB和AOF的区别
+  - name: 6.4 高可用
+    range: 342-347
     questions:
+    - order: 342
+      title: Redis的主从复制原理
+    - order: 343
+      title: Redis主从复制过程详解
     - order: 344
-      title: Redis的过期策略详解
+      title: Redis如何实现高可用
     - order: 345
-      title: Redis内存淘汰策略详解
+      title: Redis的哨兵模式详解
     - order: 346
-      title: Redis分布式锁的实现
+      title: Redis哨兵模式选主策略详解
     - order: 347
-      title: Redis缓存一致性问题与解决方案
+      title: Redis的集群模式详解
+  - name: 6.5 线程模型与内存管理
+    range: 348-351
+    questions:
     - order: 348
+      title: Redis 7 懒惰删除
+    - order: 349
+      title: Redis 7 后台 IO
+    - order: 350
+      title: Redis 7 线程模型
+    - order: 351
+      title: Redis 7 如何做内存优化
+  - name: 6.6 事务与缓存问题
+    range: 352-355
+    questions:
+    - order: 352
+      title: Redis 7 事务
+    - order: 353
+      title: Redis 7 缓存穿透，缓存击穿，缓存雪崩问题
+    - order: 354
+      title: Redis 7 大 key 问题
+    - order: 355
       title: Redis热点key问题如何解决
-  questions: []
+  - name: 6.7 缓存策略与分布式锁
+    range: 356-359
+    questions:
+    - order: 356
+      title: Redis的过期策略详解
+    - order: 357
+      title: Redis内存淘汰策略详解
+    - order: 358
+      title: Redis分布式锁的实现
+    - order: 359
+      title: Redis缓存一致性问题与解决方案
+  - name: 6.8 高级应用
+    range: 360-364
+    questions:
+    - order: 360
+      title: 用 stream 做消息队列行不行？
+    - order: 361
+      title: Redis 7 实现延时队列
+    - order: 362
+      title: Redis 7 实现布隆过滤器
+    - order: 363
+      title: Redis 7 实现限流
+    - order: 364
+      title: Redis 7 RESP 协议
+  questions:
+  - order: 323
+    title: Redis 7 新特性
 - name: 七、Spring框架
-  range: 349-381
+  range: 365-398
   subsections:
   - name: 7.1 IOC与Bean
-    range: 349-357
+    range: 365-373
     questions:
-    - order: 349
+    - order: 365
       title: 介绍一下Spring的IOC
-    - order: 350
+    - order: 366
       title: Spring IOC与AOP全面解析
-    - order: 351
+    - order: 367
       title: Spring中的Bean是线程安全的吗？
-    - order: 352
+    - order: 368
       title: SpringBean的初始化过程详解
-    - order: 353
+    - order: 369
       title: SpringBean的生命周期详解
-    - order: 354
+    - order: 370
       title: Spring中的Bean作用域详解
-    - order: 355
+    - order: 371
       title: '@Lazy注解能解决循环依赖吗？'
-    - order: 356
+    - order: 372
       title: Spring循环依赖问题详解
-    - order: 357
+    - order: 373
       title: Spring三级缓存机制深度解析
   - name: 7.2 AOP
-    range: 358-361
+    range: 374-377
     questions:
-    - order: 358
+    - order: 374
       title: 介绍一下Spring的AOP
-    - order: 359
+    - order: 375
       title: AOP通知类型
-    - order: 360
+    - order: 376
       title: Spring AOP实现，动态代理
-    - order: 361
+    - order: 377
       title: Spring的AOP在什么场景下会失效？
   - name: 7.3 事务管理
-    range: 362-369
+    range: 378-386
     questions:
-    - order: 362
+    - order: 378
       title: Spring中如何开启事务？
-    - order: 363
+    - order: 379
       title: Spring的事务传播机制有哪些？
-    - order: 364
+    - order: 380
       title: Spring事务失效可能是哪些原因？
-    - order: 365
+    - order: 381
       title: Spring事务管理全面解析
-    - order: 366
+    - order: 382
       title: Spring事务实现原理及@Transactional注解原理
-    - order: 367
+    - order: 383
       title: Spring的事务在多线程下生效吗？为什么？
-    - order: 368
+    - order: 384
       title: 同时使用@Transactional与@Async时，事务会不会生效？
-    - order: 369
+    - order: 385
       title: Spring中的事务事件如何使用？
-    - order: 370
+    - order: 386
       title: 为什么不建议直接使用Spring的@Async？
   - name: 7.4 SpringBoot
-    range: 371-378
+    range: 387-394
     questions:
-    - order: 371
+    - order: 387
       title: SpringBoot和Spring的区别是什么？
-    - order: 372
+    - order: 388
       title: SpringBoot核心模块有哪些？
-    - order: 373
+    - order: 389
       title: SpringBoot是如何实现自动配置的？
-    - order: 374
+    - order: 390
       title: SpringBoot的启动流程是怎么样的？
-    - order: 375
+    - order: 391
       title: SpringBoot是如何实现main方法启动Web项目的？
-    - order: 376
+    - order: 392
       title: Spring6.0和SpringBoot3.0有什么新特性？
-    - order: 377
+    - order: 393
       title: 为什么SpringBoot3中移除了spring.factories？
-    - order: 378
+    - order: 394
       title: SpringBoot如何做优雅停机？
   - name: 7.5 其他
-    range: 379-381
+    range: 395-398
     questions:
-    - order: 379
+    - order: 395
       title: SpringMVC三层架构的好处
-    - order: 380
+    - order: 396
       title: Spring框架中用到的设计模式
-    - order: 381
+    - order: 397
       title: 如何自定义一个SpringBoot Starter？
-    - order: 382
+    - order: 398
       title: 实现一个SpringBoot Starter（实战案例）
   questions: []
 - name: 八、设计模式
-  range: 383-389
+  range: 399-405
   subsections: []
   questions:
-  - order: 383
+  - order: 399
     title: 什么是单例模式，如何实现一个单例？
-  - order: 384
+  - order: 400
     title: 什么是工厂模式？
-  - order: 385
+  - order: 401
     title: 什么是策略模式？
-  - order: 386
+  - order: 402
     title: 什么是模板方法模式？
-  - order: 387
+  - order: 403
     title: 什么是责任链模式？
-  - order: 388
+  - order: 404
     title: 什么是观察者模式？
-  - order: 389
+  - order: 405
     title: 策略模式与代理模式的区别
 - name: 九、分布式理论
-  range: 390-394
+  range: 406-410
   subsections: []
   questions:
-  - order: 390
+  - order: 406
     title: 什么是CAP理论？
-  - order: 391
+  - order: 407
     title: 什么是BASE理论？
-  - order: 392
+  - order: 408
     title: CAP协议、ACID理论、BASE理论、一致性模型对比详解
-  - order: 393
+  - order: 409
     title: 什么是最终一致性？
-  - order: 394
+  - order: 410
     title: 什么是一致性Hash？
 - name: 十、分布式ID
-  range: 395-397
+  range: 411-412
   subsections: []
   questions:
-  - order: 395
+  - order: 411
     title: 分布式ID生成方案有哪些？
-  - order: 396
+  - order: 412
     title: 雪花算法是什么？
 - name: 十一、分布式事务
-  range: 397-404
+  range: 413-419
   subsections: []
   questions:
-  - order: 397
+  - order: 413
     title: 什么是分布式事务？
-  - order: 398
+  - order: 414
     title: 分布式事务的解决方案有哪些？
-  - order: 399
+  - order: 415
     title: 分布式事务方案对比：2PC、3PC、TCC、消息补偿
-  - order: 400
+  - order: 416
     title: 什么是2PC和3PC？
-  - order: 401
+  - order: 417
     title: 什么是TCC？
-  - order: 402
+  - order: 418
     title: 什么是Saga？
-  - order: 403
+  - order: 419
     title: AT模式：Seata的自动化两阶段提交
 - name: 十二、分布式锁
-  range: 404-407
+  range: 420-423
   subsections: []
   questions:
-  - order: 404
+  - order: 420
     title: 什么是分布式锁？
-  - order: 405
+  - order: 421
     title: 分布式锁的实现方式有哪些？
-  - order: 406
+  - order: 422
     title: Redis实现分布式锁的原理？
-  - order: 407
+  - order: 423
     title: Zookeeper实现分布式锁的原理？
 - name: 十三、分库分表
-  range: 408-413
+  range: 424-429
   subsections: []
   questions:
-  - order: 408
+  - order: 424
     title: 什么是分库分表？
-  - order: 409
+  - order: 425
     title: 什么时候需要分库分表？
-  - order: 410
+  - order: 426
     title: 分库分表的策略有哪些？
-  - order: 411
+  - order: 427
     title: 分库分表后如何解决跨库查询？
-  - order: 412
+  - order: 428
     title: 分库分表后如何解决分布式事务？
-  - order: 413
+  - order: 429
     title: ShardingSphere的原理是什么？
 - name: 十四、微服务
-  range: 414-427
+  range: 430-444
   subsections: []
   questions:
-  - order: 414
+  - order: 430
     title: 什么是微服务？
-  - order: 415
+  - order: 431
     title: SpringCloud有哪些核心组件？
-  - order: 416
+  - order: 432
     title: Eureka的工作原理是什么？
-  - order: 417
+  - order: 433
     title: Ribbon的负载均衡策略有哪些？
-  - order: 418
+  - order: 434
     title: Feign的工作原理是什么？
-  - order: 419
+  - order: 435
     title: Hystrix的熔断机制是什么？
-  - order: 420
+  - order: 436
     title: Gateway的工作原理是什么？
-  - order: 421
+  - order: 437
     title: Nacos和Eureka的区别？
-  - order: 422
+  - order: 438
     title: 负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解
-  - order: 423
+  - order: 439
     title: Nacos 如何实现服务注册与发现
-  - order: 424
+  - order: 440
     title: Nacos 健康检查的机制是什么
-  - order: 425
+  - order: 441
     title: Nacos 自我保护的原理是什么
-  - order: 426
+  - order: 442
     title: Nacos 事件监听是如何设计的
-  - order: 427
+  - order: 443
     title: Nacos 是怎么保障高可用的
-  - order: 428
+  - order: 444
     title: Nacos 在设计上有什么缺陷
 - name: 十五、消息队列
-  range: 429-454
+  range: 445-470
   subsections:
   - name: 15.1 消息队列基础
-    range: 429-431
+    range: 445-447
     questions:
-    - order: 429
+    - order: 445
       title: 为什么要使用消息队列？
-    - order: 430
+    - order: 446
       title: 消息队列的使用场景有哪些？
-    - order: 431
+    - order: 447
       title: Kafka、ActiveMQ、RabbitMQ和RocketMQ都有哪些区别？
   - name: 15.2 Kafka
-    range: 432-439
+    range: 448-455
     questions:
-    - order: 432
+    - order: 448
       title: Kafka的架构是怎么样的？
-    - order: 433
+    - order: 449
       title: Kafka为什么有Topic还要用Partition？
-    - order: 434
+    - order: 450
       title: Kafka为什么这么快？
-    - order: 435
+    - order: 451
       title: Kafka消息的发送过程简单介绍一下？
-    - order: 436
+    - order: 452
       title: Kafka如何保证消息不丢失？
-    - order: 437
+    - order: 453
       title: 为什么Kafka没办法100%保证消息不丢失？
-    - order: 438
+    - order: 454
       title: Kafka怎么保证消费只消费一次的？
-    - order: 439
+    - order: 455
       title: Kafka如何实现顺序消费？
   - name: 15.3 RocketMQ
-    range: 440-442
+    range: 456-458
     questions:
-    - order: 440
+    - order: 456
       title: RocketMQ的架构是怎么样的？
-    - order: 441
+    - order: 457
       title: RocketMQ如何保证消息不丢失？
-    - order: 442
+    - order: 458
       title: RocketMQ的延迟消息是如何实现的？
   - name: 15.4 RabbitMQ
-    range: 443-446
+    range: 459-462
     questions:
-    - order: 443
+    - order: 459
       title: RabbitMQ的架构是怎么样的？
-    - order: 444
+    - order: 460
       title: RabbitMQ如何保证消息的可靠性？
-    - order: 445
+    - order: 461
       title: RabbitMQ死信队列（Dead Letter Queue）详解
-    - order: 446
+    - order: 462
       title: RabbitMQ的Exchange(交换器)有哪4种类型？
   questions: []
 - name: 十六、RPC
-  range: 447-461
+  range: 463-477
   subsections: []
   questions:
-  - order: 447
+  - order: 463
     title: 什么是RPC，和HTTP有什么区别？
-  - order: 448
+  - order: 464
     title: 为什么RPC要比HTTP更快一些？
-  - order: 449
+  - order: 465
     title: 什么场景只能用HTTP，不能用RPC？
-  - order: 450
+  - order: 466
     title: Dubbo的整体架构是怎么样的？
-  - order: 451
+  - order: 467
     title: Dubbo的服务调用的过程是什么样的？
-  - order: 452
+  - order: 468
     title: Dubbo如何实现像本地方法一样调用远程方法的？
-  - order: 453
+  - order: 469
     title: Dubbo支持哪些调用协议？
-  - order: 454
+  - order: 470
     title: Dubbo支持哪些序列化方式？
-  - order: 455
+  - order: 471
     title: Dubbo支持哪些负载均衡策略？
-  - order: 456
+  - order: 472
     title: Dubbo支持哪些服务治理？
-  - order: 457
+  - order: 473
     title: Dubbo服务发现与路由的概念有什么不同？
-  - order: 458
+  - order: 474
     title: Dubbo的SPI和JDK的SPI有什么区别？
-  - order: 459
+  - order: 475
     title: Dubbo为什么不用JDK的SPI？
-  - order: 460
+  - order: 476
     title: 什么是Dubbo的优雅停机，怎么实现的？
-  - order: 461
+  - order: 477
     title: 什么是泛化调用？
 - name: 十七、ElasticSearch
-  range: 462-467
+  range: 478-483
   subsections: []
   questions:
-  - order: 462
+  - order: 478
     title: 为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？
-  - order: 463
+  - order: 479
     title: 什么是倒排索引？
-  - order: 464
+  - order: 480
     title: ElasticSearch 为什么快？
-  - order: 465
+  - order: 481
     title: 什么是 ElasticSearch 的深度分页问题？如何解决？
-  - order: 466
+  - order: 482
     title: 如何保证 ES 和数据库的数据一致性？
-  - order: 467
+  - order: 483
     title: 如何优化 ElasticSearch 搜索性能？
 title_to_order:
   如何理解Java中的多态？: 1
@@ -1442,151 +1483,167 @@ title_to_order:
   阿里的数据库能抗秒杀的原理: 320
   MySQL分库分表方案与动态扩展策略: 321
   MySQL驱动表概念及选择策略: 322
-  Redis有哪些数据结构？: 323
-  Redis底层结构: 324
-  Redis的String是如何实现的？: 325
-  Redis的List是如何实现的？: 326
-  Redis的Hash是如何实现的？: 327
-  Redis的Set是如何实现的？: 328
-  Redis的ZSet是如何实现的？: 329
-  什么是跳表？为什么用跳表？: 330
-  Redis跳表实现，hash底层实现，为什么使用ziplist，如何扩容: 331
-  Redis的HyperLogLog了解过吗？: 332
-  Redis的优势，解决了哪些问题: 333
-  Redis的持久化机制有哪些？: 334
-  RDB和AOF的区别是什么？: 335
-  Redis AOF日志写入流程与刷盘策略: 336
-  Redis故障恢复：RDB和AOF的区别: 337
-  Redis的主从复制原理: 338
-  Redis主从复制过程详解: 339
-  Redis如何实现高可用: 340
-  Redis的哨兵模式详解: 341
-  Redis哨兵模式选主策略详解: 342
-  Redis的集群模式详解: 343
-  Redis的过期策略详解: 344
-  Redis内存淘汰策略详解: 345
-  Redis分布式锁的实现: 346
-  Redis缓存一致性问题与解决方案: 347
-  Redis热点key问题如何解决: 348
-  介绍一下Spring的IOC: 349
-  Spring IOC与AOP全面解析: 350
-  Spring中的Bean是线程安全的吗？: 351
-  SpringBean的初始化过程详解: 352
-  SpringBean的生命周期详解: 353
-  Spring中的Bean作用域详解: 354
-  '@Lazy注解能解决循环依赖吗？': 355
-  Spring循环依赖问题详解: 356
-  Spring三级缓存机制深度解析: 357
-  介绍一下Spring的AOP: 358
-  AOP通知类型: 359
-  Spring AOP实现，动态代理: 360
-  Spring的AOP在什么场景下会失效？: 361
-  Spring中如何开启事务？: 362
-  Spring的事务传播机制有哪些？: 363
-  Spring事务失效可能是哪些原因？: 364
-  Spring事务管理全面解析: 365
-  Spring事务实现原理及@Transactional注解原理: 366
-  Spring的事务在多线程下生效吗？为什么？: 367
-  同时使用@Transactional与@Async时，事务会不会生效？: 368
-  Spring中的事务事件如何使用？: 369
-  为什么不建议直接使用Spring的@Async？: 370
-  SpringBoot和Spring的区别是什么？: 371
-  SpringBoot核心模块有哪些？: 372
-  SpringBoot是如何实现自动配置的？: 373
-  SpringBoot的启动流程是怎么样的？: 374
-  SpringBoot是如何实现main方法启动Web项目的？: 375
-  Spring6.0和SpringBoot3.0有什么新特性？: 376
-  为什么SpringBoot3中移除了spring.factories？: 377
-  SpringBoot如何做优雅停机？: 378
-  SpringMVC三层架构的好处: 379
-  Spring框架中用到的设计模式: 380
-  如何自定义一个SpringBoot Starter？: 381
-  实现一个SpringBoot Starter（实战案例）: 382
-  什么是单例模式，如何实现一个单例？: 383
-  什么是工厂模式？: 384
-  什么是策略模式？: 385
-  什么是模板方法模式？: 386
-  什么是责任链模式？: 387
-  什么是观察者模式？: 388
-  策略模式与代理模式的区别: 389
-  什么是CAP理论？: 390
-  什么是BASE理论？: 391
-  CAP协议、ACID理论、BASE理论、一致性模型对比详解: 392
-  什么是最终一致性？: 393
-  什么是一致性Hash？: 394
-  分布式ID生成方案有哪些？: 395
-  雪花算法是什么？: 396
-  什么是分布式事务？: 397
-  分布式事务的解决方案有哪些？: 398
-  分布式事务方案对比：2PC、3PC、TCC、消息补偿: 399
-  什么是2PC和3PC？: 400
-  什么是TCC？: 401
-  什么是Saga？: 402
-  AT模式：Seata的自动化两阶段提交: 403
-  什么是分布式锁？: 404
-  分布式锁的实现方式有哪些？: 405
-  Redis实现分布式锁的原理？: 406
-  Zookeeper实现分布式锁的原理？: 407
-  什么是分库分表？: 408
-  什么时候需要分库分表？: 409
-  分库分表的策略有哪些？: 410
-  分库分表后如何解决跨库查询？: 411
-  分库分表后如何解决分布式事务？: 412
-  ShardingSphere的原理是什么？: 413
-  什么是微服务？: 414
-  SpringCloud有哪些核心组件？: 415
-  Eureka的工作原理是什么？: 416
-  Ribbon的负载均衡策略有哪些？: 417
-  Feign的工作原理是什么？: 418
-  Hystrix的熔断机制是什么？: 419
-  Gateway的工作原理是什么？: 420
-  Nacos和Eureka的区别？: 421
-  负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解: 422
-  Nacos 如何实现服务注册与发现: 423
-  Nacos 健康检查的机制是什么: 424
-  Nacos 自我保护的原理是什么: 425
-  Nacos 事件监听是如何设计的: 426
-  Nacos 是怎么保障高可用的: 427
-  Nacos 在设计上有什么缺陷: 428
-  为什么要使用消息队列？: 429
-  消息队列的使用场景有哪些？: 430
-  Kafka、ActiveMQ、RabbitMQ和RocketMQ都有哪些区别？: 431
-  Kafka的架构是怎么样的？: 432
-  Kafka为什么有Topic还要用Partition？: 433
-  Kafka为什么这么快？: 434
-  Kafka消息的发送过程简单介绍一下？: 435
-  Kafka如何保证消息不丢失？: 436
-  为什么Kafka没办法100%保证消息不丢失？: 437
-  Kafka怎么保证消费只消费一次的？: 438
-  Kafka如何实现顺序消费？: 439
-  RocketMQ的架构是怎么样的？: 440
-  RocketMQ如何保证消息不丢失？: 441
-  RocketMQ的延迟消息是如何实现的？: 442
-  RabbitMQ的架构是怎么样的？: 443
-  RabbitMQ如何保证消息的可靠性？: 444
-  RabbitMQ死信队列（Dead Letter Queue）详解: 445
-  RabbitMQ的Exchange(交换器)有哪4种类型？: 446
-  什么是RPC，和HTTP有什么区别？: 447
-  为什么RPC要比HTTP更快一些？: 448
-  什么场景只能用HTTP，不能用RPC？: 449
-  Dubbo的整体架构是怎么样的？: 450
-  Dubbo的服务调用的过程是什么样的？: 451
-  Dubbo如何实现像本地方法一样调用远程方法的？: 452
-  Dubbo支持哪些调用协议？: 453
-  Dubbo支持哪些序列化方式？: 454
-  Dubbo支持哪些负载均衡策略？: 455
-  Dubbo支持哪些服务治理？: 456
-  Dubbo服务发现与路由的概念有什么不同？: 457
-  Dubbo的SPI和JDK的SPI有什么区别？: 458
-  Dubbo为什么不用JDK的SPI？: 459
-  什么是Dubbo的优雅停机，怎么实现的？: 460
-  什么是泛化调用？: 461
-  为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？: 462
-  什么是倒排索引？: 463
-  ElasticSearch 为什么快？: 464
-  什么是 ElasticSearch 的深度分页问题？如何解决？: 465
-  如何保证 ES 和数据库的数据一致性？: 466
-  如何优化 ElasticSearch 搜索性能？: 467
+  Redis 7 新特性: 323
+  Redis有哪些数据结构？: 324
+  Redis底层结构: 325
+  说说 listpack 结构: 326
+  说说 SDS 结构: 327
+  说说 dict 结构: 328
+  Redis的String是如何实现的？: 329
+  Redis的List是如何实现的？: 330
+  Redis的Hash是如何实现的？: 331
+  Redis的Set是如何实现的？: 332
+  Redis的ZSet是如何实现的？: 333
+  什么是跳表？为什么用跳表？: 334
+  Redis跳表实现，hash底层实现，为什么使用ziplist，如何扩容: 335
+  Redis的HyperLogLog了解过吗？: 336
+  Redis的优势，解决了哪些问题: 337
+  Redis的持久化机制有哪些？: 338
+  RDB和AOF的区别是什么？: 339
+  Redis AOF日志写入流程与刷盘策略: 340
+  Redis故障恢复：RDB和AOF的区别: 341
+  Redis的主从复制原理: 342
+  Redis主从复制过程详解: 343
+  Redis如何实现高可用: 344
+  Redis的哨兵模式详解: 345
+  Redis哨兵模式选主策略详解: 346
+  Redis的集群模式详解: 347
+  Redis 7 懒惰删除: 348
+  Redis 7 后台 IO: 349
+  Redis 7 线程模型: 350
+  Redis 7 如何做内存优化: 351
+  Redis 7 事务: 352
+  Redis 7 缓存穿透，缓存击穿，缓存雪崩问题: 353
+  Redis 7 大 key 问题: 354
+  Redis热点key问题如何解决: 355
+  Redis的过期策略详解: 356
+  Redis内存淘汰策略详解: 357
+  Redis分布式锁的实现: 358
+  Redis缓存一致性问题与解决方案: 359
+  用 stream 做消息队列行不行？: 360
+  Redis 7 实现延时队列: 361
+  Redis 7 实现布隆过滤器: 362
+  Redis 7 实现限流: 363
+  Redis 7 RESP 协议: 364
+  介绍一下Spring的IOC: 365
+  Spring IOC与AOP全面解析: 366
+  Spring中的Bean是线程安全的吗？: 367
+  SpringBean的初始化过程详解: 368
+  SpringBean的生命周期详解: 369
+  Spring中的Bean作用域详解: 370
+  '@Lazy注解能解决循环依赖吗？': 371
+  Spring循环依赖问题详解: 372
+  Spring三级缓存机制深度解析: 373
+  介绍一下Spring的AOP: 374
+  AOP通知类型: 375
+  Spring AOP实现，动态代理: 376
+  Spring的AOP在什么场景下会失效？: 377
+  Spring中如何开启事务？: 378
+  Spring的事务传播机制有哪些？: 379
+  Spring事务失效可能是哪些原因？: 380
+  Spring事务管理全面解析: 381
+  Spring事务实现原理及@Transactional注解原理: 382
+  Spring的事务在多线程下生效吗？为什么？: 383
+  同时使用@Transactional与@Async时，事务会不会生效？: 384
+  Spring中的事务事件如何使用？: 385
+  为什么不建议直接使用Spring的@Async？: 386
+  SpringBoot和Spring的区别是什么？: 387
+  SpringBoot核心模块有哪些？: 388
+  SpringBoot是如何实现自动配置的？: 389
+  SpringBoot的启动流程是怎么样的？: 390
+  SpringBoot是如何实现main方法启动Web项目的？: 391
+  Spring6.0和SpringBoot3.0有什么新特性？: 392
+  为什么SpringBoot3中移除了spring.factories？: 393
+  SpringBoot如何做优雅停机？: 394
+  SpringMVC三层架构的好处: 395
+  Spring框架中用到的设计模式: 396
+  如何自定义一个SpringBoot Starter？: 397
+  实现一个SpringBoot Starter（实战案例）: 398
+  什么是单例模式，如何实现一个单例？: 399
+  什么是工厂模式？: 400
+  什么是策略模式？: 401
+  什么是模板方法模式？: 402
+  什么是责任链模式？: 403
+  什么是观察者模式？: 404
+  策略模式与代理模式的区别: 405
+  什么是CAP理论？: 406
+  什么是BASE理论？: 407
+  CAP协议、ACID理论、BASE理论、一致性模型对比详解: 408
+  什么是最终一致性？: 409
+  什么是一致性Hash？: 410
+  分布式ID生成方案有哪些？: 411
+  雪花算法是什么？: 412
+  什么是分布式事务？: 413
+  分布式事务的解决方案有哪些？: 414
+  分布式事务方案对比：2PC、3PC、TCC、消息补偿: 415
+  什么是2PC和3PC？: 416
+  什么是TCC？: 417
+  什么是Saga？: 418
+  AT模式：Seata的自动化两阶段提交: 419
+  什么是分布式锁？: 420
+  分布式锁的实现方式有哪些？: 421
+  Redis实现分布式锁的原理？: 422
+  Zookeeper实现分布式锁的原理？: 423
+  什么是分库分表？: 424
+  什么时候需要分库分表？: 425
+  分库分表的策略有哪些？: 426
+  分库分表后如何解决跨库查询？: 427
+  分库分表后如何解决分布式事务？: 428
+  ShardingSphere的原理是什么？: 429
+  什么是微服务？: 430
+  SpringCloud有哪些核心组件？: 431
+  Eureka的工作原理是什么？: 432
+  Ribbon的负载均衡策略有哪些？: 433
+  Feign的工作原理是什么？: 434
+  Hystrix的熔断机制是什么？: 435
+  Gateway的工作原理是什么？: 436
+  Nacos和Eureka的区别？: 437
+  负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解: 438
+  Nacos 如何实现服务注册与发现: 439
+  Nacos 健康检查的机制是什么: 440
+  Nacos 自我保护的原理是什么: 441
+  Nacos 事件监听是如何设计的: 442
+  Nacos 是怎么保障高可用的: 443
+  Nacos 在设计上有什么缺陷: 444
+  为什么要使用消息队列？: 445
+  消息队列的使用场景有哪些？: 446
+  Kafka、ActiveMQ、RabbitMQ和RocketMQ都有哪些区别？: 447
+  Kafka的架构是怎么样的？: 448
+  Kafka为什么有Topic还要用Partition？: 449
+  Kafka为什么这么快？: 450
+  Kafka消息的发送过程简单介绍一下？: 451
+  Kafka如何保证消息不丢失？: 452
+  为什么Kafka没办法100%保证消息不丢失？: 453
+  Kafka怎么保证消费只消费一次的？: 454
+  Kafka如何实现顺序消费？: 455
+  RocketMQ的架构是怎么样的？: 456
+  RocketMQ如何保证消息不丢失？: 457
+  RocketMQ的延迟消息是如何实现的？: 458
+  RabbitMQ的架构是怎么样的？: 459
+  RabbitMQ如何保证消息的可靠性？: 460
+  RabbitMQ死信队列（Dead Letter Queue）详解: 461
+  RabbitMQ的Exchange(交换器)有哪4种类型？: 462
+  什么是RPC，和HTTP有什么区别？: 463
+  为什么RPC要比HTTP更快一些？: 464
+  什么场景只能用HTTP，不能用RPC？: 465
+  Dubbo的整体架构是怎么样的？: 466
+  Dubbo的服务调用的过程是什么样的？: 467
+  Dubbo如何实现像本地方法一样调用远程方法的？: 468
+  Dubbo支持哪些调用协议？: 469
+  Dubbo支持哪些序列化方式？: 470
+  Dubbo支持哪些负载均衡策略？: 471
+  Dubbo支持哪些服务治理？: 472
+  Dubbo服务发现与路由的概念有什么不同？: 473
+  Dubbo的SPI和JDK的SPI有什么区别？: 474
+  Dubbo为什么不用JDK的SPI？: 475
+  什么是Dubbo的优雅停机，怎么实现的？: 476
+  什么是泛化调用？: 477
+  为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？: 478
+  什么是倒排索引？: 479
+  ElasticSearch 为什么快？: 480
+  什么是 ElasticSearch 的深度分页问题？如何解决？: 481
+  如何保证 ES 和数据库的数据一致性？: 482
+  如何优化 ElasticSearch 搜索性能？: 483
 title_to_category:
   如何理解Java中的多态？: 一、Java基础
   接口和抽象类的区别，如何选择？: 一、Java基础
@@ -1910,8 +1967,12 @@ title_to_category:
   阿里的数据库能抗秒杀的原理: 五、数据库MySQL
   MySQL分库分表方案与动态扩展策略: 五、数据库MySQL
   MySQL驱动表概念及选择策略: 五、数据库MySQL
+  Redis 7 新特性: 六、Redis
   Redis有哪些数据结构？: 六、Redis
   Redis底层结构: 六、Redis
+  说说 listpack 结构: 六、Redis
+  说说 SDS 结构: 六、Redis
+  说说 dict 结构: 六、Redis
   Redis的String是如何实现的？: 六、Redis
   Redis的List是如何实现的？: 六、Redis
   Redis的Hash是如何实现的？: 六、Redis
@@ -1931,11 +1992,23 @@ title_to_category:
   Redis的哨兵模式详解: 六、Redis
   Redis哨兵模式选主策略详解: 六、Redis
   Redis的集群模式详解: 六、Redis
+  Redis 7 懒惰删除: 六、Redis
+  Redis 7 后台 IO: 六、Redis
+  Redis 7 线程模型: 六、Redis
+  Redis 7 如何做内存优化: 六、Redis
+  Redis 7 事务: 六、Redis
+  Redis 7 缓存穿透，缓存击穿，缓存雪崩问题: 六、Redis
+  Redis 7 大 key 问题: 六、Redis
+  Redis热点key问题如何解决: 六、Redis
   Redis的过期策略详解: 六、Redis
   Redis内存淘汰策略详解: 六、Redis
   Redis分布式锁的实现: 六、Redis
   Redis缓存一致性问题与解决方案: 六、Redis
-  Redis热点key问题如何解决: 六、Redis
+  用 stream 做消息队列行不行？: 六、Redis
+  Redis 7 实现延时队列: 六、Redis
+  Redis 7 实现布隆过滤器: 六、Redis
+  Redis 7 实现限流: 六、Redis
+  Redis 7 RESP 协议: 六、Redis
   介绍一下Spring的IOC: 七、Spring框架
   Spring IOC与AOP全面解析: 七、Spring框架
   Spring中的Bean是线程安全的吗？: 七、Spring框架
