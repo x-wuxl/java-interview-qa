@@ -811,22 +811,22 @@ sections:
     range: 348-351
     questions:
     - order: 348
-      title: Redis 7 懒惰删除
+      title: Redis 7 懒惰删除机制详解
     - order: 349
-      title: Redis 7 后台 IO
+      title: Redis 7 后台IO机制深度解析
     - order: 350
-      title: Redis 7 线程模型
+      title: Redis 7 线程模型完整解析
     - order: 351
-      title: Redis 7 如何做内存优化
+      title: Redis 7 内存优化详解
   - name: 6.6 事务与缓存问题
     range: 352-355
     questions:
     - order: 352
-      title: Redis 7 事务
+      title: Redis 7 事务机制深度解析
     - order: 353
-      title: Redis 7 缓存穿透，缓存击穿，缓存雪崩问题
+      title: Redis 7 缓存穿透、缓存击穿、缓存雪崩问题
     - order: 354
-      title: Redis 7 大 key 问题
+      title: Redis 大 key 问题
     - order: 355
       title: Redis热点key问题如何解决
   - name: 6.7 缓存策略与分布式锁
@@ -1511,13 +1511,13 @@ title_to_order:
   Redis的哨兵模式详解: 345
   Redis哨兵模式选主策略详解: 346
   Redis的集群模式详解: 347
-  Redis 7 懒惰删除: 348
-  Redis 7 后台 IO: 349
-  Redis 7 线程模型: 350
-  Redis 7 如何做内存优化: 351
-  Redis 7 事务: 352
-  Redis 7 缓存穿透，缓存击穿，缓存雪崩问题: 353
-  Redis 7 大 key 问题: 354
+  Redis 7 懒惰删除机制详解: 348
+  Redis 7 后台IO机制深度解析: 349
+  Redis 7 线程模型完整解析: 350
+  Redis 7 内存优化详解: 351
+  Redis 7 事务机制深度解析: 352
+  Redis 7 缓存穿透、缓存击穿、缓存雪崩问题: 353
+  Redis 大 key 问题: 354
   Redis热点key问题如何解决: 355
   Redis的过期策略详解: 356
   Redis内存淘汰策略详解: 357
@@ -1995,13 +1995,13 @@ title_to_category:
   Redis的哨兵模式详解: 六、Redis
   Redis哨兵模式选主策略详解: 六、Redis
   Redis的集群模式详解: 六、Redis
-  Redis 7 懒惰删除: 六、Redis
-  Redis 7 后台 IO: 六、Redis
-  Redis 7 线程模型: 六、Redis
-  Redis 7 如何做内存优化: 六、Redis
-  Redis 7 事务: 六、Redis
-  Redis 7 缓存穿透，缓存击穿，缓存雪崩问题: 六、Redis
-  Redis 7 大 key 问题: 六、Redis
+  Redis 7 懒惰删除机制详解: 六、Redis
+  Redis 7 后台IO机制深度解析: 六、Redis
+  Redis 7 线程模型完整解析: 六、Redis
+  Redis 7 内存优化详解: 六、Redis
+  Redis 7 事务机制深度解析: 六、Redis
+  Redis 7 缓存穿透、缓存击穿、缓存雪崩问题: 六、Redis
+  Redis 大 key 问题: 六、Redis
   Redis热点key问题如何解决: 六、Redis
   Redis的过期策略详解: 六、Redis
   Redis内存淘汰策略详解: 六、Redis
