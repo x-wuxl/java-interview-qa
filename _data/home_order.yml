@@ -852,7 +852,7 @@ sections:
     - order: 363
       title: Redis 7 实现限流
     - order: 364
-      title: Redis 7 RESP 协议
+      title: Redis 7 RESP 协议详解
   questions: []
 - name: 七、Spring框架
   range: 365-398
@@ -1527,7 +1527,7 @@ title_to_order:
   Redis 7 实现延时队列: 361
   Redis 7 实现布隆过滤器: 362
   Redis 7 实现限流: 363
-  Redis 7 RESP 协议: 364
+  Redis 7 RESP 协议详解: 364
   介绍一下Spring的IOC: 365
   Spring IOC与AOP全面解析: 366
   Spring中的Bean是线程安全的吗？: 367
@@ -2011,7 +2011,7 @@ title_to_category:
   Redis 7 实现延时队列: 六、Redis
   Redis 7 实现布隆过滤器: 六、Redis
   Redis 7 实现限流: 六、Redis
-  Redis 7 RESP 协议: 六、Redis
+  Redis 7 RESP 协议详解: 六、Redis
   介绍一下Spring的IOC: 七、Spring框架
   Spring IOC与AOP全面解析: 七、Spring框架
   Spring中的Bean是线程安全的吗？: 七、Spring框架
