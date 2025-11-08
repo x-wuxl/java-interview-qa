@@ -745,6 +745,11 @@ sections:
 - name: 六、Redis
   range: 323-364
   subsections:
+  - name: 6.1 Redis 7 新特性
+    range: 323-323
+    questions:
+    - order: 323
+      title: Redis 7 新特性
   - name: 6.2 数据结构
     range: 324-335
     questions:
@@ -848,9 +853,7 @@ sections:
       title: Redis 7 实现限流
     - order: 364
       title: Redis 7 RESP 协议
-  questions:
-  - order: 323
-    title: Redis 7 新特性
+  questions: []
 - name: 七、Spring框架
   range: 365-398
   subsections:

@@ -48,12 +48,14 @@ for line in content.split('\n'):
         current_subsection = None
         continue
 
-    # 匹配子分类标题，如：### 3.1 内存结构（59-68）
-    match = re.match(r'^###\s+(.+?)（(\d+)-(\d+)）', line)
+    # 匹配子分类标题，支持两种格式：
+    # 1. ### 3.1 内存结构（59-68）
+    # 2. ### 6.1 Redis 7 新特性（323）
+    match = re.match(r'^###\s+(.+?)（(\d+)(?:-(\d+))?）', line)
     if match:
         subsection_name = match.group(1)
         start_num = int(match.group(2))
-        end_num = int(match.group(3))
+        end_num = int(match.group(3)) if match.group(3) else start_num  # 如果没有结束数字，使用起始数字
 
         if current_section:
             current_subsection = {
