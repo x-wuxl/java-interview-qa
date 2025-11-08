@@ -844,7 +844,7 @@ sections:
     range: 360-364
     questions:
     - order: 360
-      title: 用 stream 做消息队列行不行？
+      title: 用 Stream 做消息队列行不行？
     - order: 361
       title: Redis 7 实现延时队列
     - order: 362
