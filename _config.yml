@@ -6,6 +6,18 @@ url: "https://x-wuxl.github.io"
 
 author: "wuxl"
 
+# SEO Keywords
+keywords: "Java面试, Java后端, 面试题, Spring框架, JVM, 并发编程, 集合框架, 数据库, 分布式系统, 设计模式, 算法, Java基础, 中间件, Redis, MySQL, MyBatis, Spring Boot, 多线程"
+
+# Language
+lang: zh-CN
+
+# Social
+social:
+  name: wuxl
+  links:
+    - https://github.com/x-wuxl
+
 # Theme
 theme: minima
 markdown: kramdown
