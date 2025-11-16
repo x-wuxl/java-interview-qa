@@ -6,90 +6,45 @@ count(1)、count(*) 与 count(列名) 的区别？
 SQL 约束有哪几种呢？
 drop、delete 与truncate 的区别
 UNION 与UNION ALL 的区别？
-什么的 Redlock 算法
-为什么 Redis 6.0 之后改多线程呢？
+什么是 Redlock 算法
+为什么 Redis 6.0 之后改多线程？
 什么是幂等？如何解决幂等性问题？
 如何处理消息队列的消息积压问题
 消息中间件如何做到高可用
 如何保证数据一致性，事务消息如何实现
 什么叫做阻塞队列的有界和无界
-说说 HTTP 常用的状态码及其含义？
-HTTP 常用的请求方式，区别和用途？
-请简单说一下你了解的端口及对应的服务？
-说下计算机网络体系结构
-如何理解 HTTP 协议的无状态的
-从浏览器地址栏输入 url 到显示主页的过程
-说下 HTTP 1.0，1.1，2.0 的区别
-POST 和 GET 有哪些区别？
-在交互过程中如果数据传送完了，还不想断开连接怎么办， 怎么维持？
-HTTP 与 HTTPS 的区别。
-Https 流程是怎样的？
-说说什么的数字签名？ 什么的数字证书？
-对称加密与非对称加密有什么区别
-说说 DNS 的解析过程？
-什么的 CSRF 攻击，如何避免
-聊聊五层计算机网络体系结构中，每一层对应的网络协议有哪些？
-说说 WebSocket 与socket 的区别
-什么的 DoS、DDoS、DRDoS 攻击？
-什么的 XSS 攻击，如何避免?
-Http 请求的过程与原理
-forward 和 redirect 的区别？
-聊聊 SQL 注入？
-请详细介绍一下 TCP 的三次握手机制
-TCP 握手为什么的三次，为什么不能两次？不能四次？
-TCP 四次挥手过程?
-TCP 挥手为什么需要四次呢？
-TCP 四次挥手过程中，为什么需要等待 2MSL，才进入CLOSED 关闭状态？
-说说 TCP 是如何确保可靠性的呢？
-说说 TCP 报文首部有哪些字段，其作用又分别是什么？
-请简述 TCP 和 UDP 的区别
-说说 TCP重传机制
-聊聊 TCP 的滑动窗口
-说说 TCP 的流量控制？
-TCP 的拥塞控制
-说说半连接队列和 SYN Flood 攻击的关系
-TCP 的粘包和拆包
-Nagle 算法与延迟确认
-IP 地址有哪些分类？
-说下 ARP 协议的工作过程？
-有了 IP 地址，为什么还要用 MAC 地址？
-TCP 和 UDP 分别对应的常见应用层协议有哪些？
-聊聊保活计时器的作用
-聊聊 ARP 协议
-URI 和URL 的区别
-Session 和 Cookie 的区别。
-工作中使用过Zookeeper 嘛？你知道它是什么，有什么用途呢？
-说下什么是命名服务，什么是配置管理？
-你提到了 znode 节点，那你知道 znode 有几种类型呢？zookeeper的数据模型是怎样的呢？
+工作中使用过 Zookeeper 吗？你知道它是什么？有什么用途？
+什么是 Zookeeper 的命名服务？什么是配置管理？
+你知道 znode 有几种类型呢？Zookeeper 的数据模型是怎样的呢？
 你知道 znode 节点里面存储的是什么吗？
 你知道 znode 节点上的监听机制嘛？讲下Zookeeper watch机制吧
 你对 Zookeeper 的数据结构都有一定了解，那你讲下Zookeeper 的特性吧
-你刚提到顺序一致性，那 zookeeper 是如何保证事务的顺序一致性的呢？
-你提到了 Leader，你知道 Zookeeper 的服务器有几种角色嘛？Zookeeper 下 Server 工作状态又有几种呢？
-你说到服务器角色是基于 ZooKeeper 集群的，那你画一下 ZooKeeper 集群部署图吧？ZooKeeper 是如何保证主从节点数据一致性的呢？
-Leader挂了，进入崩溃恢复，是如何选举Leader 的呢？你讲一下 ZooKeeper 选举机制吧
-好的，最后一道题，你说说dubbo和Zookeeper 的关系吧，为什么选择 Zookeeper 作为注册中心？
-Zookeeper中的Watch机制的原理？
-equals 与==的区别
+Zookeeper 是如何保证事务的顺序一致性的？
+你知道 Zookeeper 的服务器有几种角色？Zookeeper 下 Server 工作状态又有几种呢？
+ZooKeeper 是如何保证主从节点数据一致性的呢？
+讲一下 ZooKeeper 选举机制
+说说 Dubbo 和 Zookeeper 的关系，为什么选择 Zookeeper 作为注册中心？
+Zookeeper 中的 Watch 机制的原理？
+equals 与 == 的区别
 final, finally, finalize 的区别
 重载和重写的区别
-两个对象的 hashCode()相同，则 equals()是否也一定为 true？
+两个对象的 hashCode() 相同，则 equals() 是否也一定为 true？
 Comparator 与 Comparable 有什么区别？
-int 和 Integer 有什么区别，还有 Integer 缓存的实现
+int 和 Integer 有什么区别？Integer 缓存是怎样实现的
 面向对象的特征
 &和&&的区别
 讲讲类的实例化顺序，比如父类静态数据，构造函数，子类静态数据，构造函数
 如何将 GB2312 编码的字符串转换为 ISO-8859-1 编码的字符串呢？
 静态内部类与非静态内部类有什么区别
 反射中，Class.forName 和 ClassLoader 的区别
-JDK 动态代理与 cglib 实现的区别
-error 和exception 的区别，CheckedException，RuntimeException 的区别
+JDK 动态代理与 Cglib 实现的区别
+error 和 exception 的区别，CheckedException，RuntimeException 的区别
 JDK 和 JRE 有什么区别？
 谈谈自定义注解的场景及实现
 说说你熟悉的设计模式有哪些？
 抽象工厂和工厂方法模式的区别？
 可以在 static 环境中访问非 static 变量吗？
-用最有效率的方法计算 2 乘以 8？
+用最有效率的方法计算 2 乘以 8
 构造器是否可被重写？
 char 型变量中能不能存贮一个中文汉字，为什么？
 如何实现对象克隆？
@@ -99,14 +54,14 @@ for-each 与常规 for 循环的效率对比
 请列出 5 个运行时异常。
 两个不相等的对象有可能具有相同的 hashcode 吗？
 访问修饰符 public,private,protected,以及default 的区别？
-如何将字符串反转呢？
+如何将字符串反转？
 描述动态代理的几种实现方式，它们分别有什么优缺点
 在自己的代码中，如果创建一个 java.lang.String 类，这个类是否可以被类加载器加载？为什么？
 匿名内部类是什么？如何访问在其外面定义的变量呢？
 break 和 continue 有什么区别？
 try-catch-finally-return 执行顺序
 简述一下面向对象的”六原则一法则”。
-switch 是否能作用在 byte 上，是否能作用在 long上，是否能作用在 String 上？
+switch 是否能作用在 byte 上，是否能作用在 long 上，是否能作用在 String 上？
 数组有没有length()方法？String 有没有length()方法？
 是否可以从一个静态（static）方法内部发出对非静态（non-static）方法的调用？
 this 和super 关键字的作用
