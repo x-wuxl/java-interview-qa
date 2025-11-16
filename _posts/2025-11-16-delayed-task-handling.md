@@ -1,0 +1,33 @@
+---
+layout: post
+title: "如何处理延时任务场景？"
+date: 2025-11-16
+categories: ["系统设计与高并发实战"]
+tags: ["延时任务", "消息队列", "系统设计"]
+description: "对比多种延时任务方案及其实现要点。"
+---
+
+### 核心概念
+延时任务用于在未来某个时间点触发逻辑，常见于订单超时关单、延迟消息通知等场景。核心关注可靠触达、时间精度与可扩展性。
+
+### 原理或源码关键点
+1. **数据库轮询**：表中记录执行时间字段，定时任务扫描；实现简单但吞吐低，需配合分片与悲观/乐观锁防重。
+2. **DelayQueue/时间轮**：JDK `DelayQueue` 基于最小堆，Redis ZSet + score 也可模拟；高并发场景多使用 Hashed Wheel Timer（Netty）降低时间复杂度。
+3. **消息队列延时特性**：如 RocketMQ 延迟级别、RabbitMQ 死信队列 + TTL、Kafka Topic 层级；通过 MQ 确保可靠性与水平扩展。
+4. **分布式调度平台**：如 xxl-job、Elastic-Job，使用分布式锁抢主节点调度并支持失败重试。
+
+### 性能与分布式考量
+- 需处理幂等：消费时写入业务表状态或使用 Redis SETNX 保证只执行一次。
+- 时间精度与成本权衡：毫秒级可用时间轮，本级可用 MQ；批量触发可按桶分组减少 IO。
+- 多机房部署要保证调度中心有主备，延迟任务数据存于共享存储（Redis/MQ），并有反查或补偿机制。
+
+### 示例与总结
+```java
+DelayQueue<DelayedTask> queue = new DelayQueue<>();
+queue.put(new DelayedTask(orderId, 30, TimeUnit.MINUTES));
+while (true) {
+    DelayedTask task = queue.take();
+    closeOrder(task.getOrderId());
+}
+```
+延时任务方案需按“容量 × 精度 × 可靠性”选择：小规模选 DB/DelayQueue，中等规模用 Redis/时间轮，大规模则依赖 MQ 延迟队列 + 调度平台，配合幂等与补偿确保业务一致性。
