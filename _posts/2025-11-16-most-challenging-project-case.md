@@ -21,10 +21,4 @@ description: "回顾高并发项目的挑战、负责模块与解决方案。"
 - 采用多活部署，Redis 与 MQ 均做跨 AZ 同步；关键写操作具备幂等和补偿机制。
 - 引入自动调参：根据 Prometheus 指标动态调整线程池和限流阈值。
 
-### 示例与总结
-```java
-CompletableFuture<Pricing> pricing = CompletableFuture.supplyAsync(() -> pricingService.calc(ctx));
-CompletableFuture<Risk> risk = CompletableFuture.supplyAsync(() -> riskService.check(ctx));
-OrderResult result = pricing.thenCombine(risk, this::merge).get(100, TimeUnit.MILLISECONDS);
-```
 该项目的经验在于“服务拆分 + 流量治理 + 数据校验”三层防护：结构上消峰分治，执行上异步化、缓存化，治理上实时监控与压测演练，最终保障了活动零事故。

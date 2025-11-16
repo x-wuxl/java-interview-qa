@@ -21,13 +21,4 @@ description: "对比多种延时任务方案及其实现要点。"
 - 时间精度与成本权衡：毫秒级可用时间轮，本级可用 MQ；批量触发可按桶分组减少 IO。
 - 多机房部署要保证调度中心有主备，延迟任务数据存于共享存储（Redis/MQ），并有反查或补偿机制。
 
-### 示例与总结
-```java
-DelayQueue<DelayedTask> queue = new DelayQueue<>();
-queue.put(new DelayedTask(orderId, 30, TimeUnit.MINUTES));
-while (true) {
-    DelayedTask task = queue.take();
-    closeOrder(task.getOrderId());
-}
-```
 延时任务方案需按“容量 × 精度 × 可靠性”选择：小规模选 DB/DelayQueue，中等规模用 Redis/时间轮，大规模则依赖 MQ 延迟队列 + 调度平台，配合幂等与补偿确保业务一致性。

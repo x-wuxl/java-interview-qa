@@ -23,10 +23,4 @@ description: "讲解跨机房短链系统的设计思路。"
 - **容灾**：机房级故障时通过 GSLB 将流量切换至备机房；数据层采用多副本 + 冷热备份。定期做演练验证 RPO/RTO。
 - **安全**：短链新增风控参数（签名、过期时间、访问次数）并记录审计日志。
 
-### 示例与总结
-```java
-String shortCode = base62.encode(idGenerator.nextId());
-redisCluster.setex(shortCode, ttl, longUrl);
-return domain + "/" + shortCode;
-```
 跨机房短链的设计要点是“全球路由 + 多活存储 + 强一致发号 + 完整监控”：通过多层缓存、异地容灾与安全防护实现低延迟、高可靠和可审计的短链服务。

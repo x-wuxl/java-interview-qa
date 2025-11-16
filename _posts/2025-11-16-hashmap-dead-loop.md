@@ -21,8 +21,4 @@ HashMap 在 JDK7 及之前使用数组 + 链表结构，通过拉链法解决冲
 - 结合 `computeIfAbsent`、`putIfAbsent` 等原子操作，减少竞态。
 - 监控扩容频率：初始容量设置为 `expectedSize / loadFactor`，降低迁移次数。
 
-### 示例与总结
-```java
-Map<String, Object> safeMap = new ConcurrentHashMap<>();
-```
 HashMap 死循环本质是多线程同时 resize 时链表被拆散/反转形成环。正确做法是在并发场景使用线程安全容器或外部同步，并提前规划容量以避免频繁扩容。

@@ -22,16 +22,4 @@ description: "解析短视频评论系统及好友增强方案。"
 - 评论服务多活部署，依靠一致性哈希路由请求；好友数据可引入边缓存（Guava + Redis）减少查询延迟。
 - 可观测性：埋点统计评论成功率、延迟、失败原因，自动触发限流或降级（如仅返回缓存）。
 
-### 示例与总结
-```sql
-CREATE TABLE comment (
-  id BIGINT PRIMARY KEY,
-  video_id BIGINT,
-  root_id BIGINT,
-  parent_id BIGINT,
-  content VARCHAR(500),
-  heat_score DOUBLE,
-  ctime TIMESTAMP
-) PARTITION BY HASH(video_id);
-```
 抖音评论系统的关键是“数据分层 + 缓存 + 图关系”：写入异步化、读取缓存化，好友关系通过图数据提升排序体验，并结合风控与多活部署确保体验与安全。

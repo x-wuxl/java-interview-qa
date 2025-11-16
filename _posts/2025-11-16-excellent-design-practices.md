@@ -22,12 +22,4 @@ description: "总结高质量系统设计与编码实践。"
 - 引入 Saga/TCC 保证跨服务事务一致性，结合幂等 token 防止重复执行。
 - 对接口层进行限速和租户隔离，避免“噪声邻居”。
 
-### 示例与总结
-```java
-public interface PricingPolicy {
-    Money quote(OrderContext ctx);
-}
-@Component
-class FlashSalePolicy implements PricingPolicy { ... }
-```
 优秀设计来源于可持续演进：先建清晰的领域边界，再以策略/责任链等模式保持可扩展，最后通过自动化、可观测与治理手段保证运行质量。
