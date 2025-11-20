@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "为什么Dubbo不用JDK的SPI？"
+title: "Dubbo为什么不用JDK的SPI？"
 date: 2025-11-02
 categories: [中间件, Dubbo]
 tags: [Dubbo, SPI, 扩展机制, 架构设计]
