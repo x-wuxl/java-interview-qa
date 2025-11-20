@@ -4,10 +4,10 @@
 
 sections:
 - name: 一、Java基础
-  range: 1-78
+  range: 1-79
   subsections:
   - name: 1.1 面向对象基础
-    range: 1-10
+    range: 1-11
     questions:
     - order: 1
       title: 面向对象有哪些特征？
@@ -29,1254 +29,1439 @@ sections:
       title: 如何实现对象克隆？
     - order: 10
       title: 什么是反射机制？为什么反射慢？
-  - name: 1.2 基本数据类型与运算
-    range: 11-18
-    questions:
     - order: 11
-      title: int 和 Integer 有何区别？Integer 缓存如何实现？
+      title: 反射中 Class.forName 与 ClassLoader 有何区别？
+  - name: 1.2 基本数据类型与运算
+    range: 12-19
+    questions:
     - order: 12
-      title: 两个 Integer 对象比较时，为什么 100 等于 100 而 1000 不等于 1000？
+      title: int 和 Integer 有何区别？Integer 缓存如何实现？
     - order: 13
-      title: 能否将 int 强制转换为 byte？若超出 byte 范围会怎样？
+      title: 两个 Integer 对象比较时，为什么 100 等于 100 而 1000 不等于 1000？
     - order: 14
-      title: 语句 float f = 3.4; 是否正确？
+      title: 能否将 int 强制转换为 byte？若超出 byte 范围会怎样？
     - order: 15
-      title: char 类型变量能否存储中文汉字？为什么？
+      title: 语句 float f = 3.4; 是否正确？
     - order: 16
-      title: '& 与 && 有何区别？'
+      title: char 类型变量能否存储中文汉字？为什么？
     - order: 17
-      title: 如何以最高效率计算 2 乘以 8？
+      title: '& 与 && 有何区别？'
     - order: 18
+      title: 如何以最高效率计算 2 乘以 8？
+    - order: 19
       title: 除了对 2 取余，如何快速判断一个数的奇偶性？
   - name: 1.3 Object类与equals/hashCode
-    range: 19-24
+    range: 20-25
     questions:
-    - order: 19
-      title: Object 中定义了哪些方法？
     - order: 20
-      title: equals 与 == 有何区别？
+      title: Object 中定义了哪些方法？
     - order: 21
-      title: 有了equals为什么还需要hashCode方法
+      title: equals 与 == 有何区别？
     - order: 22
-      title: 两个对象的 hashCode 相同，equals 是否一定为 true？
+      title: 有了equals为什么还需要hashCode方法
     - order: 23
-      title: 两个不相等的对象是否可能拥有相同的 hashCode？
+      title: 两个对象的 hashCode 相同，equals 是否一定为 true？
     - order: 24
+      title: 两个不相等的对象是否可能拥有相同的 hashCode？
+    - order: 25
       title: Comparator 与 Comparable 有何区别？
   - name: 1.4 String类
-    range: 25-39
+    range: 26-40
     questions:
-    - order: 25
-      title: String、StringBuilder和StringBuffer的区别？
     - order: 26
-      title: String为什么设计成不可变的？
+      title: String、StringBuilder和StringBuffer的区别？
     - order: 27
-      title: String是如何实现不可变的？
+      title: String为什么设计成不可变的？
     - order: 28
-      title: String有长度限制吗？是多少？
+      title: String是如何实现不可变的？
     - order: 29
-      title: String中intern的原理是什么？
+      title: String有长度限制吗？是多少？
     - order: 30
-      title: 为什么JDK9中把String的char[]改成了byte[]？
+      title: String中intern的原理是什么？
     - order: 31
-      title: JDK9中对字符串的拼接做了什么优化？
+      title: 为什么JDK9中把String的char[]改成了byte[]？
     - order: 32
-      title: 字符串常量是什么时候进入到字符串常量池的？
+      title: JDK9中对字符串的拼接做了什么优化？
     - order: 33
-      title: String a = "ab"; String b = "a" + "b"; a==b吗？
+      title: 字符串常量是什么时候进入到字符串常量池的？
     - order: 34
-      title: String str = new String("hollis")创建了几个对象？
+      title: String a = "ab"; String b = "a" + "b"; a==b吗？
     - order: 35
-      title: 如何将字符串反转？
+      title: String str = new String("hollis")创建了几个对象？
     - order: 36
-      title: 数组是否有 length() 方法？String 是否有 length() 方法？
+      title: 如何将字符串反转？
     - order: 37
-      title: BigDecimal(double)和BigDecimal(String)有什么区别
+      title: 数组是否有 length() 方法？String 是否有 length() 方法？
     - order: 38
-      title: 为什么不能用BigDecimal的equals方法做等值比较
+      title: BigDecimal(double)和BigDecimal(String)有什么区别
     - order: 39
+      title: 为什么不能用BigDecimal的equals方法做等值比较
+    - order: 40
       title: 为什么不能用浮点数表示金额
   - name: 1.5 关键字与修饰符
-    range: 40-50
+    range: 41-51
     questions:
-    - order: 40
-      title: final、finally、finalize 有何区别？
     - order: 41
-      title: public、private、protected 以及 default 访问修饰符有何区别？
+      title: final、finally、finalize 有何区别？
     - order: 42
-      title: 可以在 static 环境中访问非 static 变量吗？
+      title: public、private、protected 以及 default 访问修饰符有何区别？
     - order: 43
-      title: 能否在 static 方法内部调用非 static 方法？
+      title: 可以在 static 环境中访问非 static 变量吗？
     - order: 44
-      title: 静态内部类与非静态内部类有何区别？
+      title: 能否在 static 方法内部调用非 static 方法？
     - order: 45
-      title: 什么是匿名内部类？如何访问其外部定义的变量？
+      title: 静态内部类与非静态内部类有何区别？
     - order: 46
-      title: this 和 super 关键字的作用是什么？
+      title: 什么是匿名内部类？如何访问其外部定义的变量？
     - order: 47
-      title: 构造器可以被重写吗？
+      title: this 和 super 关键字的作用是什么？
     - order: 48
-      title: 重载与重写的区别是什么？
+      title: 构造器可以被重写吗？
     - order: 49
-      title: 描述类的实例化顺序（父类静态成员、构造函数、子类静态成员、构造函数）
+      title: 重载与重写的区别是什么？
     - order: 50
+      title: 描述类的实例化顺序（父类静态成员、构造函数、子类静态成员、构造函数）
+    - order: 51
       title: 自定义注解有哪些场景？如何实现？
   - name: 1.6 异常处理
-    range: 51-58
+    range: 52-59
     questions:
-    - order: 51
-      title: Error 与 Exception 有何区别？CheckedException 与 RuntimeException 有何差异？
     - order: 52
-      title: 什么是受检异常与非受检异常？
+      title: Error 与 Exception 有何区别？CheckedException 与 RuntimeException 有何差异？
     - order: 53
-      title: 所有异常的共同祖先是什么？常见的运行时异常有哪些？
+      title: 什么是受检异常与非受检异常？
     - order: 54
-      title: 请列出 5 个常见的运行时异常
+      title: 所有异常的共同祖先是什么？常见的运行时异常有哪些？
     - order: 55
-      title: try-catch-finally-return 的执行顺序是什么？
+      title: 请列出 5 个常见的运行时异常
     - order: 56
-      title: break 与 continue 有何区别？
+      title: try-catch-finally-return 的执行顺序是什么？
     - order: 57
-      title: switch 能作用于 byte、long、String 吗？
+      title: break 与 continue 有何区别？
     - order: 58
+      title: switch 能作用于 byte、long、String 吗？
+    - order: 59
       title: for-each 与常规 for 循环的效率如何对比？
   - name: 1.7 泛型与序列化
-    range: 59-66
+    range: 60-67
     questions:
-    - order: 59
-      title: 什么是泛型？有什么好处？
     - order: 60
-      title: 什么是类型擦除
+      title: 什么是泛型？有什么好处？
     - order: 61
-      title: 泛型中K、T、V、E、Object等分别代表什么含义
+      title: 什么是类型擦除
     - order: 62
-      title: 泛型中上下界限定符extends和super有什么区别
+      title: 泛型中K、T、V、E、Object等分别代表什么含义
     - order: 63
-      title: 什么是序列化与反序列化
+      title: 泛型中上下界限定符extends和super有什么区别
     - order: 64
-      title: Java序列化的原理是什么
+      title: 什么是序列化与反序列化
     - order: 65
-      title: 你知道fastjson的反序列化漏洞吗
+      title: Java序列化的原理是什么
     - order: 66
+      title: 你知道fastjson的反序列化漏洞吗
+    - order: 67
       title: serialVersionUID有何用途？如果没定义会有什么问题？
   - name: 1.8 IO与新特性
-    range: 67-78
+    range: 68-79
     questions:
-    - order: 67
-      title: 什么是AIO、BIO和NIO？
     - order: 68
-      title: Lambda表达式是如何实现的
+      title: 什么是AIO、BIO和NIO？
     - order: 69
-      title: Stream的并行流一定比串行流更快吗
+      title: Lambda表达式是如何实现的
     - order: 70
-      title: Arrays.sort使用什么排序算法实现的
+      title: Stream的并行流一定比串行流更快吗
     - order: 71
-      title: SimpleDateFormat是线程安全的吗？使用时应该注意什么
+      title: Arrays.sort使用什么排序算法实现的
     - order: 72
-      title: JDK6、JDK7、JDK8 分别提供了哪些新特性？
+      title: SimpleDateFormat是线程安全的吗？使用时应该注意什么
     - order: 73
-      title: 什么是代理？为什么要使用动态代理？
+      title: JDK6、JDK7、JDK8 分别提供了哪些新特性？
     - order: 74
-      title: 动态代理有哪些实现方式？各自的优缺点是什么？
+      title: 什么是代理？为什么要使用动态代理？
     - order: 75
-      title: JDK 动态代理与 CGLIB 的实现有何区别？
+      title: 动态代理有哪些实现方式？各自的优缺点是什么？
     - order: 76
-      title: 在 DCL 单例写法中为什么要做两次检查？
+      title: JDK 动态代理与 CGLIB 的实现有何区别？
     - order: 77
-      title: 单例对象在什么情况下可能被破坏？
+      title: 在 DCL 单例写法中为什么要做两次检查？
     - order: 78
+      title: 单例对象在什么情况下可能被破坏？
+    - order: 79
       title: 抽象工厂模式与工厂方法模式有何区别？
   questions: []
 - name: 二、集合框架
-  range: 79-103
+  range: 80-106
   subsections: []
   questions:
-  - order: 79
-    title: ArrayList与LinkedList有什么区别？
   - order: 80
-    title: ArrayList的扩容机制是怎样的？
+    title: ArrayList与LinkedList有什么区别？
   - order: 81
-    title: ArrayList扩容机制详解：初始容量与1.5倍扩容
+    title: ArrayList的扩容机制是怎样的？
   - order: 82
-    title: ArrayList和LinkedList的时间复杂度
+    title: ArrayList扩容机制详解：初始容量与1.5倍扩容
   - order: 83
-    title: CopyOnWriteArrayList是如何实现的？
+    title: ArrayList和LinkedList的时间复杂度
   - order: 84
-    title: HashMap的底层实现原理
+    title: CopyOnWriteArrayList是如何实现的？
   - order: 85
-    title: HashMap为什么线程不安全？
+    title: HashMap的底层实现原理
   - order: 86
-    title: HashMap的容量为什么是2的幂次方？
+    title: HashMap为什么线程不安全？
   - order: 87
-    title: HashMap的加载因子为什么是0.75？
+    title: 为什么 HashMap 会产生死循环？
   - order: 88
-    title: HashMap什么时候扩容？
+    title: HashMap的容量为什么是2的幂次方？
   - order: 89
-    title: HashMap扩容机制详解
+    title: HashMap的加载因子为什么是0.75？
   - order: 90
-    title: HashMap的hash方法原理
+    title: HashMap什么时候扩容？
   - order: 91
-    title: HashMap为什么在链表长度为8时转为红黑树？
+    title: HashMap扩容机制详解
   - order: 92
-    title: HashMap在JDK1.7和1.8中的区别
+    title: HashMap的hash方法原理
   - order: 93
-    title: 为什么HashMap有时候链表长度超过8也不树化？
+    title: HashMap为什么在链表长度为8时转为红黑树？
   - order: 94
-    title: HashMap的key可以为null吗？
+    title: HashMap在JDK1.7和1.8中的区别
   - order: 95
-    title: Hashtable、HashMap、ConcurrentHashMap的区别
+    title: 为什么HashMap有时候链表长度超过8也不树化？
   - order: 96
-    title: ConcurrentHashMap是如何实现的？
+    title: HashMap的key可以为null吗？
   - order: 97
-    title: ConcurrentHashMap在JDK1.7和1.8中有什么不同？
+    title: Hashtable、HashMap、ConcurrentHashMap的区别
   - order: 98
-    title: LinkedHashMap是如何实现的？
+    title: ConcurrentHashMap是如何实现的？
   - order: 99
-    title: TreeMap和HashMap有什么区别？
+    title: ConcurrentHashMap在JDK1.7和1.8中有什么不同？
   - order: 100
-    title: WeakHashMap了解吗？
+    title: LinkedHashMap是如何实现的？
   - order: 101
-    title: HashSet和HashMap有什么关系？
+    title: TreeMap和HashMap有什么区别？
   - order: 102
-    title: PriorityQueue的底层实现原理
+    title: WeakHashMap了解吗？
   - order: 103
+    title: HashSet和HashMap有什么关系？
+  - order: 104
+    title: PriorityQueue的底层实现原理
+  - order: 105
     title: ArrayDeque和LinkedList作为队列的区别
+  - order: 106
+    title: 跳表与 B+ 树有何区别？
 - name: 三、JVM
-  range: 104-165
+  range: 107-173
   subsections:
   - name: 3.1 内存结构
-    range: 104-113
+    range: 107-118
     questions:
-    - order: 104
-      title: JVM的运行时内存区域是怎样的？
-    - order: 105
-      title: JVM为什么要把堆和栈区分出来呢？
-    - order: 106
-      title: 虚拟机中的堆一定是线程共享的吗？
     - order: 107
-      title: 什么是方法区？是如何实现的？
+      title: JVM的运行时内存区域是怎样的？
     - order: 108
-      title: 方法区存储什么数据？
+      title: JVM为什么要把堆和栈区分出来呢？
     - order: 109
-      title: Java的堆是如何分代的？为什么分代？
+      title: 虚拟机中的堆一定是线程共享的吗？
     - order: 110
-      title: 什么是堆外内存？如何使用堆外内存？
+      title: 什么是方法区？是如何实现的？
     - order: 111
-      title: OutOfMemory和StackOverflow的区别是什么？
+      title: 方法区存储什么数据？
     - order: 112
-      title: 内存泄漏和内存溢出的区别是什么？
+      title: Java的堆是如何分代的？为什么分代？
     - order: 113
-      title: 一个Java进程占用的内存都有哪些部分？
+      title: 什么是堆外内存？如何使用堆外内存？
     - order: 114
+      title: OutOfMemory和StackOverflow的区别是什么？
+    - order: 115
+      title: 在什么情况下会发生栈内存溢出？
+    - order: 116
+      title: 内存泄漏和内存溢出的区别是什么？
+    - order: 117
+      title: 一个Java进程占用的内存都有哪些部分？
+    - order: 118
       title: JVM内存结构全面解析
   - name: 3.2 对象与内存分配
-    range: 115-119
+    range: 119-125
     questions:
-    - order: 115
-      title: JVM是如何创建对象的？
-    - order: 116
-      title: 一个对象的结构是什么样的？
-    - order: 117
-      title: JVM如何保证给对象分配内存过程的线程安全？
-    - order: 118
-      title: Java中的对象一定在堆上分配内存吗？
     - order: 119
-      title: 什么是逃逸分析？
-  - name: 3.3 垃圾回收
-    range: 120-139
-    questions:
+      title: JVM是如何创建对象的？
     - order: 120
-      title: JVM如何判断对象是否存活？
+      title: 一个对象的结构是什么样的？
     - order: 121
-      title: 什么是强引用、软引用、弱引用和虚引用？
+      title: 一个空的 Java Object 对象占用多少内存？
     - order: 122
-      title: JVM有哪些垃圾回收算法
+      title: JVM如何保证给对象分配内存过程的线程安全？
     - order: 123
-      title: 新生代和老年代的GC算法
+      title: Java中的对象一定在堆上分配内存吗？
     - order: 124
-      title: JVM中一次完整的GC流程是怎样的
+      title: 什么是逃逸分析？
     - order: 125
-      title: YoungGC和FullGC的触发条件是什么
-    - order: 126
-      title: FullGC多久一次算正常
-    - order: 127
-      title: 什么是三色标记算法
-    - order: 128
-      title: 什么是跨代引用，有什么问题
-    - order: 129
-      title: 什么是STW（Stop-The-World）及其影响
-    - order: 130
-      title: 什么是安全点（Safe Point），有什么作用
-    - order: 131
-      title: 介绍下CMS的垃圾回收过程
-    - order: 132
-      title: G1和CMS有什么区别？
-    - order: 133
-      title: 为什么G1从JDK9之后成为默认的垃圾回收器？
-    - order: 134
-      title: JDK11中新出的ZGC有什么特点？
-    - order: 135
-      title: Java8和Java11的GC有什么区别？
-    - order: 136
-      title: 新生代和老年代的垃圾回收器有何区别？
-    - order: 137
-      title: 项目中如何选择垃圾回收器？为啥选择这个？
-    - order: 138
-      title: 说一说JVM的并发回收和并行回收
-    - order: 139
-      title: 新生代如果只有一个Eden+一个Survivor可以吗？
-  - name: 3.4 类加载
-    range: 140-149
+      title: JVM 为什么使用元空间替换永久代？
+  - name: 3.3 垃圾回收
+    range: 126-148
     questions:
+    - order: 126
+      title: JVM如何判断对象是否存活？
+    - order: 127
+      title: 什么是强引用、软引用、弱引用和虚引用？
+    - order: 128
+      title: JVM有哪些垃圾回收算法
+    - order: 129
+      title: 新生代和老年代的GC算法
+    - order: 130
+      title: JVM中一次完整的GC流程是怎样的
+    - order: 131
+      title: YoungGC和FullGC的触发条件是什么
+    - order: 132
+      title: FullGC多久一次算正常
+    - order: 133
+      title: 什么是三色标记算法
+    - order: 134
+      title: 什么是跨代引用，有什么问题
+    - order: 135
+      title: 什么是STW（Stop-The-World）及其影响
+    - order: 136
+      title: 什么是安全点（Safe Point），有什么作用
+    - order: 137
+      title: 介绍下CMS的垃圾回收过程
+    - order: 138
+      title: G1和CMS有什么区别？
+    - order: 139
+      title: 为什么G1从JDK9之后成为默认的垃圾回收器？
     - order: 140
-      title: Java中的类什么时候会被加载？
+      title: JDK11中新出的ZGC有什么特点？
     - order: 141
-      title: Java中类加载的过程是怎么样的？
+      title: Java8和Java11的GC有什么区别？
     - order: 142
-      title: Java类加载流程与过程
+      title: 新生代和老年代的垃圾回收器有何区别？
     - order: 143
-      title: 类的生命周期是怎么样的？
+      title: 项目中如何选择垃圾回收器？为啥选择这个？
     - order: 144
-      title: 什么是双亲委派？如何破坏？
+      title: 说一说JVM的并发回收和并行回收
     - order: 145
-      title: 双亲委派机制的核心思想是什么？
+      title: 新生代如果只有一个Eden+一个Survivor可以吗？
     - order: 146
-      title: 双亲委派机制如何打破（详细补充）
+      title: JVM 分代年龄为什么是 15 次？可以设置为 25 次吗？
+  - name: 3.4 类加载
+    range: 147-156
+    questions:
     - order: 147
-      title: 破坏双亲委派之后，能重写String类吗？
+      title: Java中的类什么时候会被加载？
     - order: 148
-      title: 如何判断JVM中类和其他类是不是同一个类？
+      title: Java中类加载的过程是怎么样的？
     - order: 149
+      title: Java类加载流程与过程
+    - order: 150
+      title: 类的生命周期是怎么样的？
+    - order: 151
+      title: 什么是双亲委派？如何破坏？
+    - order: 152
+      title: 双亲委派机制的核心思想是什么？
+    - order: 153
+      title: 双亲委派机制如何打破（详细补充）
+    - order: 154
+      title: 破坏双亲委派之后，能重写String类吗？
+    - order: 155
+      title: 如何判断JVM中类和其他类是不是同一个类？
+    - order: 156
       title: JDK 1.8和1.9中类加载器有哪些不同？
   - name: 3.5 常量池
-    range: 150-152
+    range: 157-159
     questions:
-    - order: 150
+    - order: 157
       title: 什么是Class常量池，和运行时常量池关系是什么？
-    - order: 151
+    - order: 158
       title: 运行时常量池和字符串常量池的关系是什么？
-    - order: 152
+    - order: 159
       title: 字符串常量池是如何实现的？
   - name: 3.6 编译与优化
-    range: 153-158
+    range: 160-165
     questions:
-    - order: 153
+    - order: 160
       title: 什么是编译和反编译？
-    - order: 154
+    - order: 161
       title: Java一定就是平台无关的吗？
-    - order: 155
+    - order: 162
       title: Java是如何实现平台无关的？
-    - order: 156
+    - order: 163
       title: Java是编译型还是解释型语言？
-    - order: 157
+    - order: 164
       title: 什么是AOT编译？和JIT有啥区别？
-    - order: 158
+    - order: 165
       title: 简单介绍一下JIT优化技术？
   - name: 3.7 JVM工具与调优
-    range: 159-165
+    range: 166-173
     questions:
-    - order: 159
+    - order: 166
       title: 常见的JVM工具有哪些
-    - order: 160
+    - order: 167
       title: JVM调优参数详解
-    - order: 161
+    - order: 168
       title: 常用的JVM启动参数有哪些
-    - order: 162
+    - order: 169
       title: Java发生了OOM一定会导致JVM退出吗
-    - order: 163
+    - order: 170
       title: 什么情况会导致JVM退出
-    - order: 164
+    - order: 171
       title: 对JDK进程执行kill -9有什么影响
-    - order: 165
+    - order: 172
       title: 什么是SPI，和API有什么区别
   questions: []
 - name: 四、并发编程
-  range: 166-255
+  range: 173-281
   subsections:
   - name: 4.1 线程基础
-    range: 166-175
+    range: 173-184
     questions:
-    - order: 166
-      title: 创建线程有几种方式？
-    - order: 167
-      title: 线程有几种状态，状态之间的流转是怎样的？
-    - order: 168
-      title: Java是如何判断一个线程是否存活的？
-    - order: 169
-      title: Thread.sleep(0)的作用是什么？
-    - order: 170
-      title: 什么是守护线程，和普通线程有什么区别？
-    - order: 171
-      title: 什么是多线程中的上下文切换？
-    - order: 172
-      title: 线程是如何被调度的？
     - order: 173
-      title: 线程同步的方式有哪些？
+      title: 创建线程有几种方式？
     - order: 174
-      title: 什么是死锁，如何解决？
+      title: 线程有几种状态，状态之间的流转是怎样的？
     - order: 175
-      title: run、start、wait、sleep、notify、notifyAll区别
-  - name: 4.2 线程安全
-    range: 176-181
-    questions:
+      title: Java是如何判断一个线程是否存活的？
     - order: 176
-      title: 什么是并发，什么是并行？
+      title: Thread.sleep(0)的作用是什么？
     - order: 177
-      title: 能不能谈谈你对线程安全的理解？
+      title: 什么是守护线程，和普通线程有什么区别？
     - order: 178
-      title: 有哪些实现线程安全的方案
+      title: 什么是多线程中的上下文切换？
     - order: 179
-      title: 并发编程中的原子性和数据库ACID的原子性一样吗？
+      title: 线程是如何被调度的？
     - order: 180
-      title: 指令重排序
+      title: 线程同步的方式有哪些？
     - order: 181
-      title: final关键字与可见性是否有关
-  - name: 4.3 Java内存模型
-    range: 182-191
-    questions:
+      title: 什么是死锁，如何解决？
     - order: 182
-      title: 什么是Java内存模型（JMM）？
+      title: run、start、wait、sleep、notify、notifyAll区别
     - order: 183
-      title: 什么是happens-before原则？
+      title: 线程有哪些结束方式？
     - order: 184
-      title: happens-before和as-if-serial有啥区别和联系？
+      title: 如何打印线程栈信息？
+  - name: 4.2 线程安全
+    range: 185-191
+    questions:
     - order: 185
-      title: 有了MESI为啥还需要JMM？
+      title: 什么是并发，什么是并行？
     - order: 186
-      title: 什么是总线嗅探和总线风暴，和JMM有什么关系？
+      title: 能不能谈谈你对线程安全的理解？
     - order: 187
-      title: 到底啥是内存屏障？到底怎么加的？
+      title: 有哪些实现线程安全的方案
     - order: 188
-      title: volatile能保证原子性吗？为什么？
+      title: 并发编程中的原子性和数据库ACID的原子性一样吗？
     - order: 189
-      title: 有了synchronized为什么还需要volatile
+      title: 指令重排序
     - order: 190
-      title: volatile如何保证可见性和有序性
+      title: final关键字与可见性是否有关
     - order: 191
-      title: volatile关键字与禁止重排序如何解决多线程可见性
-  - name: 4.4 CAS与原子类
-    range: 192-199
+      title: 同步与异步有何区别？
+  - name: 4.3 Java内存模型
+    range: 192-201
     questions:
     - order: 192
-      title: 什么是CAS？存在什么问题？
+      title: 什么是Java内存模型（JMM）？
     - order: 193
-      title: 介绍下CAS
+      title: 什么是happens-before原则？
     - order: 194
-      title: CAS操作类
+      title: happens-before和as-if-serial有啥区别和联系？
     - order: 195
-      title: CAS一定有自旋吗？
+      title: 有了MESI为啥还需要JMM？
     - order: 196
-      title: CAS在操作系统层面是如何保证原子性的
+      title: 什么是总线嗅探和总线风暴，和JMM有什么关系？
     - order: 197
-      title: 有了CAS为啥还需要volatile
+      title: 到底啥是内存屏障？到底怎么加的？
     - order: 198
-      title: ABA问题
+      title: volatile能保证原子性吗？为什么？
     - order: 199
+      title: 有了synchronized为什么还需要volatile
+    - order: 200
+      title: volatile如何保证可见性和有序性
+    - order: 201
+      title: volatile关键字与禁止重排序如何解决多线程可见性
+  - name: 4.4 CAS与原子类
+    range: 202-209
+    questions:
+    - order: 202
+      title: 什么是CAS？存在什么问题？
+    - order: 203
+      title: 介绍下CAS
+    - order: 204
+      title: CAS操作类
+    - order: 205
+      title: CAS一定有自旋吗？
+    - order: 206
+      title: CAS在操作系统层面是如何保证原子性的
+    - order: 207
+      title: 有了CAS为啥还需要volatile
+    - order: 208
+      title: ABA问题
+    - order: 209
       title: 什么是Unsafe？
   - name: 4.5 synchronized
-    range: 200-213
+    range: 210-223
     questions:
-    - order: 200
-      title: synchronized是怎么实现的？
-    - order: 201
-      title: synchronized锁的是什么？
-    - order: 202
-      title: synchronized是如何保证原子性、可见性、有序性的？
-    - order: 203
-      title: synchronized的锁优化是怎样的？
-    - order: 204
-      title: synchronized的锁升级过程是怎样的？
-    - order: 205
-      title: synchronized升级过程中有几次自旋？
-    - order: 206
-      title: synchronized的锁能降级吗？
-    - order: 207
-      title: 为什么JDK15要废弃偏向锁？
-    - order: 208
-      title: synchronized是否可重入
-    - order: 209
-      title: synchronized是非公平锁吗，那么是如何体现的？
     - order: 210
-      title: synchronized和ReentrantLock的区别
+      title: synchronized是怎么实现的？
     - order: 211
-      title: synchronized和lock区别
+      title: synchronized锁的是什么？
     - order: 212
-      title: int a = 1是原子性操作吗
+      title: synchronized是如何保证原子性、可见性、有序性的？
     - order: 213
+      title: synchronized的锁优化是怎样的？
+    - order: 214
+      title: synchronized的锁升级过程是怎样的？
+    - order: 215
+      title: synchronized升级过程中有几次自旋？
+    - order: 216
+      title: synchronized的锁能降级吗？
+    - order: 217
+      title: 为什么JDK15要废弃偏向锁？
+    - order: 218
+      title: synchronized是否可重入
+    - order: 219
+      title: synchronized是非公平锁吗，那么是如何体现的？
+    - order: 220
+      title: synchronized和ReentrantLock的区别
+    - order: 221
+      title: synchronized和lock区别
+    - order: 222
+      title: int a = 1是原子性操作吗
+    - order: 223
       title: 如何保证多线程下i++结果正确
   - name: 4.6 AQS与锁
-    range: 214-224
+    range: 224-234
     questions:
-    - order: 214
-      title: 如何理解AQS？
-    - order: 215
-      title: AQS的同步队列和条件队列原理
-    - order: 216
-      title: AQS是如何实现线程的等待和唤醒的？
-    - order: 217
-      title: AQS为什么采用双向链表？
-    - order: 218
-      title: 什么是AQS的独占模式和共享模式？
-    - order: 219
-      title: AQS操作类有哪些？
-    - order: 220
-      title: 什么是可重入锁，怎么实现可重入锁？
-    - order: 221
-      title: 可重入锁的底层实现
-    - order: 222
-      title: 公平锁和非公平锁的区别
-    - order: 223
-      title: Lock是否公平，能否实现非公平，如何实现？
     - order: 224
+      title: 如何理解AQS？
+    - order: 225
+      title: AQS的同步队列和条件队列原理
+    - order: 226
+      title: AQS是如何实现线程的等待和唤醒的？
+    - order: 227
+      title: AQS为什么采用双向链表？
+    - order: 228
+      title: 什么是AQS的独占模式和共享模式？
+    - order: 229
+      title: AQS操作类有哪些？
+    - order: 230
+      title: 什么是可重入锁，怎么实现可重入锁？
+    - order: 231
+      title: 可重入锁的底层实现
+    - order: 232
+      title: 公平锁和非公平锁的区别
+    - order: 233
+      title: Lock是否公平，能否实现非公平，如何实现？
+    - order: 234
       title: ReentrantLock增加了哪些高级功能？
   - name: 4.7 线程池
-    range: 225-232
+    range: 235-247
     questions:
-    - order: 225
-      title: 什么是线程池，如何实现的？
-    - order: 226
-      title: ForkJoinPool和ThreadPoolExecutor的区别是什么？
-    - order: 227
-      title: 线程池的拒绝策略有哪些？
-    - order: 228
-      title: 为什么不建议通过Executors构建线程池？
-    - order: 229
-      title: 线程数设定成多少更合适？
-    - order: 230
-      title: 如何让Java的线程池顺序执行任务？
-    - order: 231
-      title: 如何实现一个动态线程池？
-    - order: 232
-      title: 线程池多线程操作对象是否需要加volatile保障可见性？
-  - name: 4.8 并发工具类
-    range: 233-246
-    questions:
-    - order: 233
-      title: CompletableFuture的底层是如何实现的？
-    - order: 234
-      title: 如何对多线程进行编排？
     - order: 235
-      title: CountDownLatch、CyclicBarrier、Semaphore区别？
+      title: 什么是线程池，如何实现的？
     - order: 236
-      title: LongAdder和AtomicLong的区别？
+      title: ForkJoinPool和ThreadPoolExecutor的区别是什么？
     - order: 237
-      title: 什么是ThreadLocal，如何实现的？
+      title: 线程池的拒绝策略有哪些？
     - order: 238
-      title: ThreadLocalMap的数据结构
+      title: 为什么不建议通过Executors构建线程池？
     - order: 239
-      title: ThreadLocalMap的冲突解决机制
+      title: 线程数设定成多少更合适？
     - order: 240
-      title: ThreadLocalMap的扩容机制
+      title: 如何让Java的线程池顺序执行任务？
     - order: 241
-      title: ThreadLocal为什么会导致内存泄漏？如何解决？
+      title: 如何实现一个动态线程池？
     - order: 242
-      title: ThreadLocal的key是弱引用，在get()时发生GC后key会是null吗？
+      title: 线程池多线程操作对象是否需要加volatile保障可见性？
     - order: 243
-      title: ThreadLocal的应用场景有哪些？
+      title: 线程池有哪些状态？如何获取多线程并发执行结果？
     - order: 244
-      title: 有了InheritableThreadLocal为啥还需要TransmittableThreadLocal？
+      title: 线程池的原理是什么？各参数有什么作用？
     - order: 245
-      title: 探测式清理和启发式清理
+      title: 线程池有哪些参数？分别代表什么含义
     - order: 246
-      title: 父子线程之间怎么共享、传递数据？
-  - name: 4.9 多线程实战
-    range: 247-255
-    questions:
+      title: Future 如何通过阻塞等待获取结果？
     - order: 247
-      title: 为什么不能在try-catch中捕获子线程的异常？
+      title: 如何安全地中断一个正在运行的线程？
+  - name: 4.8 并发工具类
+    range: 248-261
+    questions:
     - order: 248
-      title: 如何实现主线程捕获子线程异常？
+      title: CompletableFuture的底层是如何实现的？
     - order: 249
-      title: Java线程出现异常，进程为啥不会退出？
+      title: 如何对多线程进行编排？
     - order: 250
-      title: 有三个线程T1,T2,T3如何保证顺序执行？
+      title: CountDownLatch、CyclicBarrier、Semaphore区别？
     - order: 251
-      title: 三个线程分别顺序打印0-100
+      title: LongAdder和AtomicLong的区别？
     - order: 252
-      title: JDK21中的虚拟线程是怎么回事？
+      title: 什么是ThreadLocal，如何实现的？
     - order: 253
-      title: 为什么虚拟线程不能用synchronized？
+      title: ThreadLocalMap的数据结构
     - order: 254
-      title: 为什么虚拟线程不要和线程池一起用？
+      title: ThreadLocalMap的冲突解决机制
     - order: 255
+      title: ThreadLocalMap的扩容机制
+    - order: 256
+      title: ThreadLocal为什么会导致内存泄漏？如何解决？
+    - order: 257
+      title: ThreadLocal的key是弱引用，在get()时发生GC后key会是null吗？
+    - order: 258
+      title: ThreadLocal的应用场景有哪些？
+    - order: 259
+      title: 有了InheritableThreadLocal为啥还需要TransmittableThreadLocal？
+    - order: 260
+      title: 探测式清理和启发式清理
+    - order: 261
+      title: 父子线程之间怎么共享、传递数据？
+    - order: 262
+      title: 如何理解 Fork/Join 框架？
+    - order: 263
+      title: 谈谈你对时间轮的理解。
+    - order: 264
+      title: 阻塞队列的有界与无界是什么意思？
+  - name: 4.9 多线程实战
+    range: 265-272
+    questions:
+    - order: 265
+      title: 为什么不能在try-catch中捕获子线程的异常？
+    - order: 266
+      title: 如何实现主线程捕获子线程异常？
+    - order: 267
+      title: Java线程出现异常，进程为啥不会退出？
+    - order: 268
+      title: 有三个线程T1,T2,T3如何保证顺序执行？
+    - order: 269
+      title: 三个线程分别顺序打印0-100
+    - order: 270
+      title: JDK21中的虚拟线程是怎么回事？
+    - order: 271
+      title: 为什么虚拟线程不能用synchronized？
+    - order: 272
+      title: 为什么虚拟线程不要和线程池一起用？
+    - order: 273
       title: 为什么虚拟线程尽量避免使用ThreadLocal？
   questions: []
 - name: 五、数据库MySQL
-  range: 256-367
+  range: 274-390
   subsections:
   - name: 5.1 索引原理
-    range: 256-281
+    range: 274-301
     questions:
-    - order: 256
-      title: InnoDB为什么使用B+树实现索引？
-    - order: 257
-      title: InnoDB中的索引类型？
-    - order: 258
-      title: 什么是聚簇索引和非聚簇索引？
-    - order: 259
-      title: 什么是回表，怎么减少回表的次数？
-    - order: 260
-      title: 什么是索引覆盖、索引下推？
-    - order: 261
-      title: InnoDB和MyISAM有什么区别？
-    - order: 262
-      title: MyISAM的索引结构是怎么样的，它存在的问题是什么？
-    - order: 263
-      title: 唯一索引和主键索引的区别？
-    - order: 264
-      title: MySQL是如何保证唯一性索引的唯一性的？
-    - order: 265
-      title: 从InnoDB索引结构分析索引Key长度限制
-    - order: 266
-      title: 什么是最左前缀匹配？为什么要遵守？
-    - order: 267
-      title: MySQL索引一定遵循最左前缀匹配吗？
-    - order: 268
-      title: A,B,C的联合索引，按照AB,AC,BC查询，能走索引吗？
-    - order: 269
-      title: a,b两个单独索引，where a=xx and b=xx走哪个索引？为什么？
-    - order: 270
-      title: 什么是索引合并，原理是什么？
-    - order: 271
-      title: 什么是索引跳跃扫描？
-    - order: 272
-      title: 设计索引的时候有哪些原则？
-    - order: 273
-      title: 区分度不高的字段建索引一定没用吗？
     - order: 274
-      title: 联合索引是越多越好吗？
+      title: InnoDB为什么使用B+树实现索引？
     - order: 275
-      title: MySQL索引建立与性能影响
+      title: InnoDB中的索引类型？
     - order: 276
-      title: MySQL索引存储与失效场景详解
+      title: 什么是聚簇索引和非聚簇索引？
     - order: 277
-      title: MySQL索引失效情况
+      title: 什么是回表，怎么减少回表的次数？
     - order: 278
-      title: MySQL索引，最左匹配，索引覆盖，索引下推，索引失效情况，查询优化
+      title: 什么是索引覆盖、索引下推？
     - order: 279
-      title: 用了索引还是很慢，可能是什么原因？
+      title: InnoDB和MyISAM有什么区别？
     - order: 280
-      title: 索引失效的问题如何排查？
+      title: MyISAM的索引结构是怎么样的，它存在的问题是什么？
     - order: 281
-      title: MySQL选错索引的原因及解决方案
-  - name: 5.2 数据类型
-    range: 282-286
-    questions:
+      title: 唯一索引和主键索引的区别？
     - order: 282
-      title: WHERE条件顺序对索引的影响
+      title: MySQL是如何保证唯一性索引的唯一性的？
     - order: 283
-      title: UUID和自增ID做主键哪个好，为什么？
+      title: 从InnoDB索引结构分析索引Key长度限制
     - order: 284
-      title: CHAR与VARCHAR的区别及使用场景
+      title: 什么是最左前缀匹配？为什么要遵守？
     - order: 285
-      title: CHAR、VARCHAR、TEXT的区别与VARCHAR长度限制详解
+      title: MySQL索引一定遵循最左前缀匹配吗？
     - order: 286
-      title: MySQL中BLOB与TEXT的区别及使用场景
-  - name: 5.3 事务与隔离级别
-    range: 287-299
-    questions:
+      title: A,B,C的联合索引，按照AB,AC,BC查询，能走索引吗？
     - order: 287
-      title: 什么是数据库事务？
+      title: a,b两个单独索引，where a=xx and b=xx走哪个索引？为什么？
     - order: 288
-      title: MySQL事务ACID实现原理
+      title: 什么是索引合并，原理是什么？
     - order: 289
-      title: MySQL中的事务隔离级别
+      title: 什么是索引跳跃扫描？
     - order: 290
-      title: 什么是脏读、幻读、不可重复读？
+      title: 设计索引的时候有哪些原则？
     - order: 291
-      title: InnoDB如何解决脏读、不可重复读和幻读？
+      title: 区分度不高的字段建索引一定没用吗？
     - order: 292
-      title: InnoDB的RR到底有没有解决幻读？
+      title: 联合索引是越多越好吗？
     - order: 293
-      title: 如何理解MVCC？
+      title: MySQL索引建立与性能影响
     - order: 294
-      title: 什么是ReadView，什么样的ReadView可见？
+      title: MySQL索引存储与失效场景详解
     - order: 295
-      title: 当前读和快照读有什么区别？
+      title: MySQL索引失效情况
     - order: 296
-      title: 二级索引在索引覆盖时如何使用MVCC？
+      title: MySQL索引，最左匹配，索引覆盖，索引下推，索引失效情况，查询优化
     - order: 297
-      title: 为什么MySQL默认使用RR隔离级别？
+      title: 用了索引还是很慢，可能是什么原因？
     - order: 298
-      title: 为什么默认RR，大厂要改成RC？
+      title: 索引失效的问题如何排查？
     - order: 299
-      title: MySQL的select会用到事务吗
-  - name: 5.4 锁机制
-    range: 300-314
-    questions:
+      title: MySQL选错索引的原因及解决方案
     - order: 300
-      title: 介绍下InnoDB的锁机制
+      title: 创建索引的三种方式
     - order: 301
-      title: InnoDB中的表级锁、页级锁、行级锁
+      title: 为什么命中索引的 SQL 比不命中更快？
+  - name: 5.2 数据类型
+    range: 302-308
+    questions:
     - order: 302
-      title: MySQL的行级锁锁的到底是什么
+      title: WHERE条件顺序对索引的影响
     - order: 303
-      title: 什么是排他锁和共享锁
+      title: UUID和自增ID做主键哪个好，为什么？
     - order: 304
-      title: 什么是意向锁
+      title: CHAR与VARCHAR的区别及使用场景
     - order: 305
-      title: FOR UPDATE语句InnoDB加了哪些锁
+      title: CHAR、VARCHAR、TEXT的区别与VARCHAR长度限制详解
     - order: 306
-      title: 什么是MySQL的元数据锁（MDL锁）？
+      title: MySQL中BLOB与TEXT的区别及使用场景
     - order: 307
-      title: MySQL只操作同一条记录也会发生死锁吗
+      title: 存储 MD5 值应使用 VARCHAR 还是 CHAR？
     - order: 308
-      title: 数据库死锁如何解决
+      title: 谈谈你对 NoSQL 的理解。
+  - name: 5.3 事务与隔离级别
+    range: 309-322
+    questions:
     - order: 309
-      title: MySQL锁机制全面解析
+      title: 什么是数据库事务？
     - order: 310
-      title: 乐观锁与悲观锁如何实现
+      title: MySQL事务ACID实现原理
     - order: 311
-      title: 数据库乐观锁的过程中完全没有加任何锁吗
+      title: MySQL中的事务隔离级别
     - order: 312
-      title: 什么是数据库的锁升级,InnoDB支持吗
+      title: 什么是脏读、幻读、不可重复读？
     - order: 313
-      title: InnoDB加索引会锁表吗？
+      title: InnoDB如何解决脏读、不可重复读和幻读？
     - order: 314
+      title: InnoDB的RR到底有没有解决幻读？
+    - order: 315
+      title: 如何理解MVCC？
+    - order: 316
+      title: 什么是ReadView，什么样的ReadView可见？
+    - order: 317
+      title: 当前读和快照读有什么区别？
+    - order: 318
+      title: 二级索引在索引覆盖时如何使用MVCC？
+    - order: 319
+      title: 为什么MySQL默认使用RR隔离级别？
+    - order: 320
+      title: 为什么默认RR，大厂要改成RC？
+    - order: 321
+      title: MySQL的select会用到事务吗
+    - order: 322
+      title: 数据库隔离级别与锁之间的关系是什么？
+  - name: 5.4 锁机制
+    range: 323-337
+    questions:
+    - order: 323
+      title: 介绍下InnoDB的锁机制
+    - order: 324
+      title: InnoDB中的表级锁、页级锁、行级锁
+    - order: 325
+      title: MySQL的行级锁锁的到底是什么
+    - order: 326
+      title: 什么是排他锁和共享锁
+    - order: 327
+      title: 什么是意向锁
+    - order: 328
+      title: FOR UPDATE语句InnoDB加了哪些锁
+    - order: 329
+      title: 什么是MySQL的元数据锁（MDL锁）？
+    - order: 330
+      title: MySQL只操作同一条记录也会发生死锁吗
+    - order: 331
+      title: 数据库死锁如何解决
+    - order: 332
+      title: MySQL锁机制全面解析
+    - order: 333
+      title: 乐观锁与悲观锁如何实现
+    - order: 334
+      title: 数据库乐观锁的过程中完全没有加任何锁吗
+    - order: 335
+      title: 什么是数据库的锁升级,InnoDB支持吗
+    - order: 336
+      title: InnoDB加索引会锁表吗？
+    - order: 337
       title: MySQL并发控制手段详解
   - name: 5.5 SQL执行与优化
-    range: 315-333
+    range: 338-360
     questions:
-    - order: 315
-      title: MySQL一条SQL语句的执行过程
-    - order: 316
-      title: SQL查询语句的执行顺序
-    - order: 317
-      title: 为什么大厂不建议使用多表JOIN
-    - order: 318
-      title: ON和WHERE的区别详解
-    - order: 319
-      title: SQL执行计划分析的时候，要关注哪些信息？
-    - order: 320
-      title: MySQL优化器的索引成本计算
-    - order: 321
-      title: 如何进行SQL调优？
-    - order: 322
-      title: 慢SQL的问题如何排查？
-    - order: 323
-      title: 执行计划中，key有值，还是很慢怎么办？
-    - order: 324
-      title: ORDER BY是怎么实现的？
-    - order: 325
-      title: Using filesort能优化吗，怎么优化？
-    - order: 326
-      title: MySQL的深度分页如何优化？
-    - order: 327
-      title: limit 0,100和limit 10000000,100一样吗？
-    - order: 328
-      title: MySQL的limit+orderby为什么会数据重复？
-    - order: 329
-      title: MySQL中like的模糊查询如何优化？
-    - order: 330
-      title: 小表驱动大表的原理与性能优化
-    - order: 331
-      title: MySQL慢查询优化
-    - order: 332
-      title: MySQL慢查询的排除与优化
-    - order: 333
-      title: MySQL优化（综合）
-  - name: 5.6 存储引擎与Buffer Pool
-    range: 334-339
-    questions:
-    - order: 334
-      title: MySQL存储引擎详解与对比
-    - order: 335
-      title: InnoDB Buffer Pool缓冲池详解
-    - order: 336
-      title: Buffer Pool的读写过程详解
-    - order: 337
-      title: InnoDB支持的行格式详解
     - order: 338
-      title: InnoDB的数据页与B+树的关系
+      title: MySQL一条SQL语句的执行过程
     - order: 339
-      title: InnoDB的页分裂和页合并机制
-  - name: 5.7 日志系统
-    range: 340-351
-    questions:
+      title: SQL查询语句的执行顺序
     - order: 340
-      title: 什么是事务的2阶段提交
+      title: 为什么大厂不建议使用多表JOIN
     - order: 341
-      title: InnoDB的一次更新事务是怎么实现的
+      title: ON和WHERE的区别详解
     - order: 342
-      title: undolog会一直存在吗？什么时候删除
+      title: SQL执行计划分析的时候，要关注哪些信息？
     - order: 343
-      title: 介绍下MySQL5.7中的组提交
+      title: MySQL优化器的索引成本计算
     - order: 344
-      title: MySQL执行大事务会存在什么问题
+      title: 如何进行SQL调优？
     - order: 345
-      title: binlog、redolog和undolog的区别
+      title: 慢SQL的问题如何排查？
     - order: 346
-      title: MySQL主从复制的过程
+      title: 执行计划中，key有值，还是很慢怎么办？
     - order: 347
-      title: MySQL的并行复制原理
+      title: ORDER BY是怎么实现的？
     - order: 348
-      title: MySQL主从复制详解
+      title: Using filesort能优化吗，怎么优化？
     - order: 349
-      title: MySQL主从同步：binlog的三种模式详解
+      title: MySQL的深度分页如何优化？
     - order: 350
-      title: MySQL三种日志、主从架构与复制原理
+      title: limit 0,100和limit 10000000,100一样吗？
     - order: 351
-      title: MySQL三种日志类型综合说明
-  - name: 5.8 主从复制与高可用
-    range: 352-355
-    questions:
+      title: MySQL的limit+orderby为什么会数据重复？
     - order: 352
-      title: 什么是数据库的主从延迟，如何解决？
+      title: MySQL中like的模糊查询如何优化？
     - order: 353
-      title: 数据库读写分离的代码实现方案
+      title: 小表驱动大表的原理与性能优化
     - order: 354
-      title: MySQL是AP的还是CP的系统？
+      title: MySQL慢查询优化
     - order: 355
-      title: 什么是OnlineDDL
-  - name: 5.9 MySQL实战问题
-    range: 356-366
-    questions:
+      title: MySQL慢查询的排除与优化
     - order: 356
-      title: MySQL怎么做热点数据高效更新？
+      title: MySQL优化（综合）
     - order: 357
-      title: 高并发情况下自增主键会不会重复，为什么？
+      title: COUNT(1)、COUNT(*) 与 COUNT(列名) 有何区别？
     - order: 358
-      title: MySQL自增主键用完了会怎么样？
+      title: UNION 与 UNION ALL 有何区别？
     - order: 359
-      title: 什么情况会导致自增主键不连续？
+      title: DROP、DELETE 与 TRUNCATE 有何区别？
     - order: 360
-      title: MySQL获取主键ID的瓶颈在哪里？如何优化？
+      title: SQL 约束有哪几种？
+  - name: 5.6 存储引擎与Buffer Pool
+    range: 361-367
+    questions:
     - order: 361
-      title: 数据库扫表任务如何避免出现死循环？
+      title: MySQL存储引擎详解与对比
     - order: 362
-      title: 数据库怎么做加密和解密？
+      title: InnoDB Buffer Pool缓冲池详解
     - order: 363
-      title: 数据库加密后怎么做模糊查询？
+      title: Buffer Pool的读写过程详解
     - order: 364
-      title: MySQL支持Emoji表情存储的完整解决方案
+      title: InnoDB支持的行格式详解
     - order: 365
-      title: 阿里的数据库能抗秒杀的原理
+      title: InnoDB的数据页与B+树的关系
     - order: 366
-      title: MySQL分库分表方案与动态扩展策略
+      title: InnoDB的页分裂和页合并机制
     - order: 367
-      title: MySQL驱动表概念及选择策略
-  questions: []
-- name: 六、Redis
-  range: 368-409
-  subsections:
-  - name: 6.1 Redis 7 新特性
-    range: 368-368
+      title: 什么是存储过程？有哪些优缺点？
+  - name: 5.7 日志系统
+    range: 368-379
     questions:
     - order: 368
+      title: 什么是事务的2阶段提交
+    - order: 369
+      title: InnoDB的一次更新事务是怎么实现的
+    - order: 370
+      title: undolog会一直存在吗？什么时候删除
+    - order: 371
+      title: 介绍下MySQL5.7中的组提交
+    - order: 372
+      title: MySQL执行大事务会存在什么问题
+    - order: 373
+      title: binlog、redolog和undolog的区别
+    - order: 374
+      title: MySQL主从复制的过程
+    - order: 375
+      title: MySQL的并行复制原理
+    - order: 376
+      title: MySQL主从复制详解
+    - order: 377
+      title: MySQL主从同步：binlog的三种模式详解
+    - order: 378
+      title: MySQL三种日志、主从架构与复制原理
+    - order: 379
+      title: MySQL三种日志类型综合说明
+  - name: 5.8 主从复制与高可用
+    range: 380-384
+    questions:
+    - order: 380
+      title: 什么是数据库的主从延迟，如何解决？
+    - order: 381
+      title: 数据库读写分离的代码实现方案
+    - order: 382
+      title: MySQL是AP的还是CP的系统？
+    - order: 383
+      title: 什么是OnlineDDL
+    - order: 384
+      title: 你们的 MySQL 架构是什么样的？
+  - name: 5.9 MySQL实战问题
+    range: 385-390
+    questions:
+    - order: 385
+      title: MySQL怎么做热点数据高效更新？
+    - order: 386
+      title: 高并发情况下自增主键会不会重复，为什么？
+    - order: 387
+      title: MySQL自增主键用完了会怎么样？
+    - order: 388
+      title: 什么情况会导致自增主键不连续？
+    - order: 389
+      title: MySQL获取主键ID的瓶颈在哪里？如何优化？
+    - order: 390
+      title: 数据库扫表任务如何避免出现死循环？
+    - order: 391
+      title: 数据库怎么做加密和解密？
+    - order: 392
+      title: 数据库加密后怎么做模糊查询？
+    - order: 393
+      title: MySQL支持Emoji表情存储的完整解决方案
+    - order: 394
+      title: 阿里的数据库能抗秒杀的原理
+    - order: 395
+      title: MySQL分库分表方案与动态扩展策略
+    - order: 396
+      title: MySQL驱动表概念及选择策略
+    - order: 397
+      title: 百万级及以上数据如何安全删除？
+    - order: 398
+      title: 如何保证 MySQL 数据不丢失？
+  questions: []
+- name: 六、Redis
+  range: 399-421
+  subsections:
+  - name: 6.1 Redis 7 新特性
+    range: 399-399
+    questions:
+    - order: 399
       title: Redis 7 新特性
   - name: 6.2 数据结构
-    range: 369-382
+    range: 400-413
     questions:
-    - order: 369
+    - order: 400
       title: Redis有哪些数据结构？
-    - order: 370
+    - order: 401
       title: Redis底层结构
-    - order: 371
+    - order: 402
       title: 说说 listpack 结构
-    - order: 372
+    - order: 403
       title: 说说 SDS 结构
-    - order: 373
+    - order: 404
       title: 说说 dict 结构
-    - order: 374
+    - order: 405
       title: Redis的String是如何实现的？
-    - order: 375
+    - order: 406
       title: Redis的List是如何实现的？
-    - order: 376
+    - order: 407
       title: Redis的Hash是如何实现的？
-    - order: 377
+    - order: 408
       title: Redis的Set是如何实现的？
-    - order: 378
+    - order: 409
       title: Redis的ZSet是如何实现的？
-    - order: 379
+    - order: 410
       title: 什么是跳表？为什么用跳表？
-    - order: 380
+    - order: 411
       title: Redis跳表实现，hash底层实现，为什么使用ziplist，如何扩容
-    - order: 381
+    - order: 412
       title: Redis的HyperLogLog了解过吗？
-    - order: 382
+    - order: 413
       title: Redis的优势，解决了哪些问题
   - name: 6.3 持久化
-    range: 383-386
+    range: 414-417
     questions:
-    - order: 383
+    - order: 414
       title: Redis的持久化机制有哪些？
-    - order: 384
+    - order: 415
       title: RDB和AOF的区别是什么？
-    - order: 385
+    - order: 416
       title: Redis AOF日志写入流程与刷盘策略
-    - order: 386
+    - order: 417
       title: Redis故障恢复：RDB和AOF的区别
   - name: 6.4 高可用
-    range: 387-392
+    range: 418-423
     questions:
-    - order: 387
+    - order: 418
       title: Redis的主从复制原理
-    - order: 388
+    - order: 419
       title: Redis主从复制过程详解
-    - order: 389
+    - order: 420
       title: Redis如何实现高可用
-    - order: 390
+    - order: 421
       title: Redis的哨兵模式详解
-    - order: 391
+    - order: 422
       title: Redis哨兵模式选主策略详解
-    - order: 392
+    - order: 423
       title: Redis的集群模式详解
   - name: 6.5 线程模型与内存管理
-    range: 393-396
+    range: 424-427
     questions:
-    - order: 393
+    - order: 424
       title: Redis 7 懒惰删除机制详解
-    - order: 394
+    - order: 425
       title: Redis 7 后台IO机制深度解析
-    - order: 395
+    - order: 426
       title: Redis 7 线程模型完整解析
-    - order: 396
+    - order: 427
       title: Redis 7 内存优化详解
   - name: 6.6 事务与缓存问题
-    range: 397-400
+    range: 428-431
     questions:
-    - order: 397
+    - order: 428
       title: Redis 7 事务机制深度解析
-    - order: 398
+    - order: 429
       title: Redis 7 缓存穿透、缓存击穿、缓存雪崩问题
-    - order: 399
+    - order: 430
       title: Redis 大 key 问题
-    - order: 400
+    - order: 431
       title: Redis热点key问题如何解决
   - name: 6.7 缓存策略与分布式锁
-    range: 401-404
-    questions:
-    - order: 401
-      title: Redis的过期策略详解
-    - order: 402
-      title: Redis内存淘汰策略详解
-    - order: 403
-      title: Redis分布式锁的实现
-    - order: 404
-      title: Redis缓存一致性问题与解决方案
-  - name: 6.8 高级应用
-    range: 405-409
-    questions:
-    - order: 405
-      title: 用 Stream 做消息队列行不行？
-    - order: 406
-      title: Redis 7 实现延时队列
-    - order: 407
-      title: Redis 7 实现布隆过滤器
-    - order: 408
-      title: Redis 7 实现限流
-    - order: 409
-      title: Redis 7 RESP 协议详解
-  questions: []
-- name: 七、Spring框架
-  range: 410-443
-  subsections:
-  - name: 7.1 IOC与Bean
-    range: 410-418
-    questions:
-    - order: 410
-      title: 介绍一下Spring的IOC
-    - order: 411
-      title: Spring IOC与AOP全面解析
-    - order: 412
-      title: Spring中的Bean是线程安全的吗？
-    - order: 413
-      title: SpringBean的初始化过程详解
-    - order: 414
-      title: SpringBean的生命周期详解
-    - order: 415
-      title: Spring中的Bean作用域详解
-    - order: 416
-      title: '@Lazy注解能解决循环依赖吗？'
-    - order: 417
-      title: Spring循环依赖问题详解
-    - order: 418
-      title: Spring三级缓存机制深度解析
-  - name: 7.2 AOP
-    range: 419-422
-    questions:
-    - order: 419
-      title: 介绍一下Spring的AOP
-    - order: 420
-      title: AOP通知类型
-    - order: 421
-      title: Spring AOP实现，动态代理
-    - order: 422
-      title: Spring的AOP在什么场景下会失效？
-  - name: 7.3 事务管理
-    range: 423-431
-    questions:
-    - order: 423
-      title: Spring中如何开启事务？
-    - order: 424
-      title: Spring的事务传播机制有哪些？
-    - order: 425
-      title: Spring事务失效可能是哪些原因？
-    - order: 426
-      title: Spring事务管理全面解析
-    - order: 427
-      title: Spring事务实现原理及@Transactional注解原理
-    - order: 428
-      title: Spring的事务在多线程下生效吗？为什么？
-    - order: 429
-      title: 同时使用@Transactional与@Async时，事务会不会生效？
-    - order: 430
-      title: Spring中的事务事件如何使用？
-    - order: 431
-      title: 为什么不建议直接使用Spring的@Async？
-  - name: 7.4 SpringBoot
-    range: 432-439
+    range: 432-436
     questions:
     - order: 432
-      title: SpringBoot和Spring的区别是什么？
+      title: Redis的过期策略详解
     - order: 433
-      title: SpringBoot核心模块有哪些？
+      title: Redis内存淘汰策略详解
     - order: 434
-      title: SpringBoot是如何实现自动配置的？
+      title: Redis分布式锁的实现
     - order: 435
-      title: SpringBoot的启动流程是怎么样的？
+      title: Redis缓存一致性问题与解决方案
     - order: 436
-      title: SpringBoot是如何实现main方法启动Web项目的？
+      title: 什么是 Redlock 算法？
+  - name: 6.8 高级应用
+    range: 437-445
+    questions:
     - order: 437
-      title: Spring6.0和SpringBoot3.0有什么新特性？
+      title: 用 Stream 做消息队列行不行？
     - order: 438
-      title: 为什么SpringBoot3中移除了spring.factories？
+      title: Redis 7 实现延时队列
     - order: 439
+      title: Redis 7 实现布隆过滤器
+    - order: 440
+      title: Redis 7 实现限流
+    - order: 441
+      title: Redis 7 RESP 协议详解
+    - order: 442
+      title: 为什么 Redis 6.0 之后改为多线程？
+    - order: 443
+      title: 如何使用 Redis 实现数据去重？
+    - order: 444
+      title: 项目中如何使用 Redis？有哪些场景？
+    - order: 445
+      title: WatchDog 的实现原理是什么？
+  questions: []
+- name: 七、Spring框架
+  range: 446-466
+  subsections:
+  - name: 7.1 IOC与Bean
+    range: 446-455
+    questions:
+    - order: 446
+      title: 介绍一下Spring的IOC
+    - order: 447
+      title: 为什么要使用 Spring 框架？
+    - order: 448
+      title: Spring IOC与AOP全面解析
+    - order: 449
+      title: Spring中的Bean是线程安全的吗？
+    - order: 450
+      title: SpringBean的初始化过程详解
+    - order: 451
+      title: SpringBean的生命周期详解
+    - order: 452
+      title: Spring中的Bean作用域详解
+    - order: 453
+      title: '@Lazy注解能解决循环依赖吗？'
+    - order: 454
+      title: Spring循环依赖问题详解
+    - order: 455
+      title: Spring三级缓存机制深度解析
+  - name: 7.2 AOP
+    range: 456-459
+    questions:
+    - order: 456
+      title: 介绍一下Spring的AOP
+    - order: 457
+      title: AOP通知类型
+    - order: 458
+      title: Spring AOP实现，动态代理
+    - order: 459
+      title: Spring的AOP在什么场景下会失效？
+  - name: 7.3 事务管理
+    range: 460-468
+    questions:
+    - order: 460
+      title: Spring中如何开启事务？
+    - order: 461
+      title: Spring的事务传播机制有哪些？
+    - order: 462
+      title: Spring事务失效可能是哪些原因？
+    - order: 463
+      title: Spring事务管理全面解析
+    - order: 464
+      title: Spring事务实现原理及@Transactional注解原理
+    - order: 465
+      title: Spring的事务在多线程下生效吗？为什么？
+    - order: 466
+      title: 同时使用@Transactional与@Async时，事务会不会生效？
+    - order: 467
+      title: Spring中的事务事件如何使用？
+    - order: 468
+      title: 为什么不建议直接使用Spring的@Async？
+  - name: 7.4 SpringBoot
+    range: 469-477
+    questions:
+    - order: 469
+      title: SpringBoot和Spring的区别是什么？
+    - order: 470
+      title: 为什么越来越多人选择 Spring Boot？
+    - order: 471
+      title: 为什么 Spring Boot 倡导约定优于配置？
+    - order: 472
+      title: SpringBoot核心模块有哪些？
+    - order: 473
+      title: SpringBoot是如何实现自动配置的？
+    - order: 474
+      title: SpringBoot的启动流程是怎么样的？
+    - order: 475
+      title: SpringBoot是如何实现main方法启动Web项目的？
+    - order: 476
+      title: Spring6.0和SpringBoot3.0有什么新特性？
+    - order: 477
+      title: 为什么SpringBoot3中移除了spring.factories？
+    - order: 478
       title: SpringBoot如何做优雅停机？
   - name: 7.5 其他
-    range: 440-443
+    range: 479-482
     questions:
-    - order: 440
+    - order: 479
       title: SpringMVC三层架构的好处
-    - order: 441
+    - order: 480
       title: Spring框架中用到的设计模式
-    - order: 442
+    - order: 481
       title: 如何自定义一个SpringBoot Starter？
-    - order: 443
+    - order: 482
       title: 实现一个SpringBoot Starter（实战案例）
+  - name: 7.6 MyBatis
+    range: 483-485
+    questions:
+    - order: 483
+      title: MyBatis 如何实现分页？
+    - order: 484
+      title: 'MyBatis 配置中的 #{} 与 ${} 有何区别？'
+    - order: 485
+      title: MyBatis 何时使用一级缓存？何时使用二级缓存？
   questions: []
 - name: 八、设计模式
-  range: 444-450
+  range: 486-492
   subsections: []
   questions:
-  - order: 444
+  - order: 486
     title: 什么是单例模式，如何实现一个单例？
-  - order: 445
+  - order: 487
     title: 什么是工厂模式？
-  - order: 446
+  - order: 488
     title: 什么是策略模式？
-  - order: 447
+  - order: 489
     title: 什么是模板方法模式？
-  - order: 448
+  - order: 490
     title: 什么是责任链模式？
-  - order: 449
+  - order: 491
     title: 什么是观察者模式？
-  - order: 450
+  - order: 492
     title: 策略模式与代理模式的区别
 - name: 九、分布式理论
-  range: 451-455
+  range: 493-500
   subsections: []
   questions:
-  - order: 451
+  - order: 493
     title: 什么是CAP理论？
-  - order: 452
+  - order: 494
     title: 什么是BASE理论？
-  - order: 453
+  - order: 495
     title: CAP协议、ACID理论、BASE理论、一致性模型对比详解
-  - order: 454
+  - order: 496
     title: 什么是最终一致性？
-  - order: 455
+  - order: 497
     title: 什么是一致性Hash？
+  - order: 498
+    title: 什么是幂等？如何解决幂等性问题？
+  - order: 499
+    title: Paxos 协议的工作流程是什么？
+  - order: 500
+    title: Raft 算法的原理是什么？
 - name: 十、分布式ID
-  range: 456-457
+  range: 501-502
   subsections: []
   questions:
-  - order: 456
+  - order: 501
     title: 分布式ID生成方案有哪些？
-  - order: 457
+  - order: 502
     title: 雪花算法是什么？
 - name: 十一、分布式事务
-  range: 458-464
+  range: 503-509
   subsections: []
   questions:
-  - order: 458
+  - order: 503
     title: 什么是分布式事务？
-  - order: 459
+  - order: 504
     title: 分布式事务的解决方案有哪些？
-  - order: 460
+  - order: 505
     title: 分布式事务方案对比：2PC、3PC、TCC、消息补偿
-  - order: 461
+  - order: 506
     title: 什么是2PC和3PC？
-  - order: 462
+  - order: 507
     title: 什么是TCC？
-  - order: 463
+  - order: 508
     title: 什么是Saga？
-  - order: 464
+  - order: 509
     title: AT模式：Seata的自动化两阶段提交
 - name: 十二、分布式锁
-  range: 465-468
+  range: 510-513
   subsections: []
   questions:
-  - order: 465
+  - order: 510
     title: 什么是分布式锁？
-  - order: 466
+  - order: 511
     title: 分布式锁的实现方式有哪些？
-  - order: 467
+  - order: 512
     title: Redis实现分布式锁的原理？
-  - order: 468
+  - order: 513
     title: Zookeeper实现分布式锁的原理？
 - name: 十三、分库分表
-  range: 469-474
+  range: 514-519
   subsections: []
   questions:
-  - order: 469
+  - order: 514
     title: 什么是分库分表？
-  - order: 470
+  - order: 515
     title: 什么时候需要分库分表？
-  - order: 471
+  - order: 516
     title: 分库分表的策略有哪些？
-  - order: 472
+  - order: 517
     title: 分库分表后如何解决跨库查询？
-  - order: 473
+  - order: 518
     title: 分库分表后如何解决分布式事务？
-  - order: 474
+  - order: 519
     title: ShardingSphere的原理是什么？
 - name: 十四、微服务
-  range: 475-489
+  range: 520-534
   subsections: []
   questions:
-  - order: 475
+  - order: 520
     title: 什么是微服务？
-  - order: 476
+  - order: 521
     title: SpringCloud有哪些核心组件？
-  - order: 477
+  - order: 522
     title: Eureka的工作原理是什么？
-  - order: 478
+  - order: 523
     title: Ribbon的负载均衡策略有哪些？
-  - order: 479
+  - order: 524
     title: Feign的工作原理是什么？
-  - order: 480
+  - order: 525
     title: Hystrix的熔断机制是什么？
-  - order: 481
+  - order: 526
     title: Gateway的工作原理是什么？
-  - order: 482
+  - order: 527
     title: Nacos和Eureka的区别？
-  - order: 483
+  - order: 528
     title: 负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解
-  - order: 484
+  - order: 529
     title: Nacos 如何实现服务注册与发现
-  - order: 485
+  - order: 530
     title: Nacos 健康检查的机制是什么
-  - order: 486
+  - order: 531
     title: Nacos 自我保护的原理是什么
-  - order: 487
+  - order: 532
     title: Nacos 事件监听是如何设计的
-  - order: 488
+  - order: 533
     title: Nacos 是怎么保障高可用的
-  - order: 489
+  - order: 534
     title: Nacos 在设计上有什么缺陷
 - name: 十五、消息队列
-  range: 490-507
+  range: 535-556
   subsections:
   - name: 15.1 消息队列基础
-    range: 490-492
+    range: 535-540
     questions:
-    - order: 490
+    - order: 535
       title: 为什么要使用消息队列？
-    - order: 491
+    - order: 536
       title: 消息队列的使用场景有哪些？
-    - order: 492
+    - order: 537
       title: Kafka、ActiveMQ、RabbitMQ和RocketMQ都有哪些区别？
+    - order: 538
+      title: 如何处理消息队列的消息积压问题？
+    - order: 539
+      title: 消息中间件如何做到高可用？
+    - order: 540
+      title: 谈谈你对 Pulsar 的理解。
   - name: 15.2 Kafka
-    range: 493-500
+    range: 541-548
     questions:
-    - order: 493
+    - order: 541
       title: Kafka的架构是怎么样的？
-    - order: 494
+    - order: 542
       title: Kafka为什么有Topic还要用Partition？
-    - order: 495
+    - order: 543
       title: Kafka为什么这么快？
-    - order: 496
+    - order: 544
       title: Kafka消息的发送过程简单介绍一下？
-    - order: 497
+    - order: 545
       title: Kafka如何保证消息不丢失？
-    - order: 498
+    - order: 546
       title: 为什么Kafka没办法100%保证消息不丢失？
-    - order: 499
+    - order: 547
       title: Kafka怎么保证消费只消费一次的？
-    - order: 500
+    - order: 548
       title: Kafka如何实现顺序消费？
   - name: 15.3 RocketMQ
-    range: 501-503
+    range: 549-551
     questions:
-    - order: 501
+    - order: 549
       title: RocketMQ的架构是怎么样的？
-    - order: 502
+    - order: 550
       title: RocketMQ如何保证消息不丢失？
-    - order: 503
+    - order: 551
       title: RocketMQ的延迟消息是如何实现的？
   - name: 15.4 RabbitMQ
-    range: 504-507
+    range: 552-556
     questions:
-    - order: 504
+    - order: 552
       title: RabbitMQ的架构是怎么样的？
-    - order: 505
+    - order: 553
       title: RabbitMQ如何保证消息的可靠性？
-    - order: 506
+    - order: 554
+      title: 如何保证 RabbitMQ 的高可用性？
+    - order: 555
       title: RabbitMQ死信队列（Dead Letter Queue）详解
-    - order: 507
+    - order: 556
       title: RabbitMQ的Exchange(交换器)有哪4种类型？
   questions: []
 - name: 十六、RPC
-  range: 508-522
+  range: 557-569
   subsections: []
   questions:
-  - order: 508
+  - order: 557
     title: 什么是RPC，和HTTP有什么区别？
-  - order: 509
+  - order: 558
     title: 为什么RPC要比HTTP更快一些？
-  - order: 510
+  - order: 559
     title: 什么场景只能用HTTP，不能用RPC？
-  - order: 511
+  - order: 560
     title: Dubbo的整体架构是怎么样的？
-  - order: 512
+  - order: 561
     title: Dubbo的服务调用的过程是什么样的？
-  - order: 513
+  - order: 562
     title: Dubbo如何实现像本地方法一样调用远程方法的？
-  - order: 514
+  - order: 563
     title: Dubbo支持哪些调用协议？
-  - order: 515
+  - order: 564
     title: Dubbo支持哪些序列化方式？
-  - order: 516
+  - order: 565
     title: Dubbo支持哪些负载均衡策略？
-  - order: 517
+  - order: 566
     title: Dubbo支持哪些服务治理？
-  - order: 518
+  - order: 567
     title: Dubbo服务发现与路由的概念有什么不同？
-  - order: 519
+  - order: 568
     title: Dubbo的SPI和JDK的SPI有什么区别？
-  - order: 520
+  - order: 569
     title: Dubbo为什么不用JDK的SPI？
-  - order: 521
+  - order: 570
     title: 什么是Dubbo的优雅停机，怎么实现的？
-  - order: 522
+  - order: 571
     title: 什么是泛化调用？
 - name: 十七、ElasticSearch
-  range: 523-528
+  range: 572-577
   subsections: []
   questions:
-  - order: 523
+  - order: 572
     title: 为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？
-  - order: 524
+  - order: 573
     title: 什么是倒排索引？
-  - order: 525
+  - order: 574
     title: ElasticSearch 为什么快？
-  - order: 526
+  - order: 575
     title: 什么是 ElasticSearch 的深度分页问题？如何解决？
-  - order: 527
+  - order: 576
     title: 如何保证 ES 和数据库的数据一致性？
-  - order: 528
+  - order: 577
     title: 如何优化 ElasticSearch 搜索性能？
+- name: 十八、ZooKeeper
+  range: 578-590
+  subsections: []
+  questions:
+  - order: 578
+    title: 工作中使用过 ZooKeeper 吗？它是什么？有哪些用途？
+  - order: 579
+    title: 什么是 ZooKeeper 的命名服务和配置管理？
+  - order: 580
+    title: ZNode 有几种类型？ZooKeeper 的数据模型是什么样的？
+  - order: 581
+    title: ZNode 节点中存储的是什么？
+  - order: 582
+    title: ZNode 节点的监听机制是什么？请讲讲 ZooKeeper Watch 机制。
+  - order: 583
+    title: 你对 ZooKeeper 的特性有哪些了解？
+  - order: 584
+    title: ZooKeeper 如何保证事务的顺序一致性？
+  - order: 585
+    title: ZooKeeper 的服务器有几种角色？Server 有哪些工作状态？
+  - order: 586
+    title: ZooKeeper 如何保证主从节点数据一致性？
+  - order: 587
+    title: 讲一下 ZooKeeper 的选举机制。
+  - order: 588
+    title: Dubbo 与 ZooKeeper 有什么关系？为什么选择 ZooKeeper 作为注册中心？
+  - order: 589
+    title: ZooKeeper 如何保证一致性？ZAB 协议的原理是什么？ZooKeeper 属于强一致性吗？
+  - order: 590
+    title: 谈谈你对 ZooKeeper 的理解。
+- name: 十九、Netty
+  range: 591-597
+  subsections: []
+  questions:
+  - order: 591
+    title: 请解释 Netty 中 Reactor 模式。
+  - order: 592
+    title: 什么是零拷贝？Netty 如何实现零拷贝？
+  - order: 593
+    title: 为什么 Netty 线程池默认大小为 CPU 核数的两倍？
+  - order: 594
+    title: Netty 是什么？为什么要使用 Netty？
+  - order: 595
+    title: Netty 提供了哪些线程模型？
+  - order: 596
+    title: Netty 有哪些核心组件？
+  - order: 597
+    title: 谈谈你对 Netty Pipeline 工作原理的理解。
+- name: 二十、架构设计与实战场景
+  range: 598-613
+  subsections: []
+  questions:
+  - order: 598
+    title: 微服务架构设计与划分实践
+  - order: 599
+    title: 服务网格（Service Mesh）深度解析
+  - order: 600
+    title: 如何在 3 分钟内概览互联网架构 20 年来的演进？
+  - order: 601
+    title: 为什么放弃 FastDFS 而选择 MinIO？
+  - order: 602
+    title: 云原生（Cloud Native）全面解析
+  - order: 603
+    title: 谈谈你对 IaaS、PaaS、SaaS 的理解。
+  - order: 604
+    title: 当项目访问量激增时如何应对？
+  - order: 605
+    title: 秒杀场景中常用的限流算法有哪些？
+  - order: 606
+    title: 如何处理延时任务场景？
+  - order: 607
+    title: 如何实现排行榜，例如高考成绩排序？
+  - order: 608
+    title: 介绍你做过的最具挑战性的项目、负责的模块以及应对方案。
+  - order: 609
+    title: 如何防止优惠券被重复刷取？
+  - order: 610
+    title: 聊聊项目中的优秀设计与代码实践。
+  - order: 611
+    title: 如何设计抖音评论系统？如果加入好友关系该怎么做？
+  - order: 612
+    title: 如何设计跨机房部署的短链服务？
+  - order: 613
+    title: 当 CPU 突然飙高、系统反应变慢时如何排查？
 title_to_order:
   面向对象有哪些特征？: 1
   如何理解Java中的多态？: 2
@@ -1288,524 +1473,609 @@ title_to_order:
   什么是深拷贝和浅拷贝？: 8
   如何实现对象克隆？: 9
   什么是反射机制？为什么反射慢？: 10
-  int 和 Integer 有何区别？Integer 缓存如何实现？: 11
-  两个 Integer 对象比较时，为什么 100 等于 100 而 1000 不等于 1000？: 12
-  能否将 int 强制转换为 byte？若超出 byte 范围会怎样？: 13
-  语句 float f = 3.4; 是否正确？: 14
-  char 类型变量能否存储中文汉字？为什么？: 15
-  '& 与 && 有何区别？': 16
-  如何以最高效率计算 2 乘以 8？: 17
-  除了对 2 取余，如何快速判断一个数的奇偶性？: 18
-  Object 中定义了哪些方法？: 19
-  equals 与 == 有何区别？: 20
-  有了equals为什么还需要hashCode方法: 21
-  两个对象的 hashCode 相同，equals 是否一定为 true？: 22
-  两个不相等的对象是否可能拥有相同的 hashCode？: 23
-  Comparator 与 Comparable 有何区别？: 24
-  String、StringBuilder和StringBuffer的区别？: 25
-  String为什么设计成不可变的？: 26
-  String是如何实现不可变的？: 27
-  String有长度限制吗？是多少？: 28
-  String中intern的原理是什么？: 29
-  为什么JDK9中把String的char[]改成了byte[]？: 30
-  JDK9中对字符串的拼接做了什么优化？: 31
-  字符串常量是什么时候进入到字符串常量池的？: 32
-  String a = "ab"; String b = "a" + "b"; a==b吗？: 33
-  String str = new String("hollis")创建了几个对象？: 34
-  如何将字符串反转？: 35
-  数组是否有 length() 方法？String 是否有 length() 方法？: 36
-  BigDecimal(double)和BigDecimal(String)有什么区别: 37
-  为什么不能用BigDecimal的equals方法做等值比较: 38
-  为什么不能用浮点数表示金额: 39
-  final、finally、finalize 有何区别？: 40
-  public、private、protected 以及 default 访问修饰符有何区别？: 41
-  可以在 static 环境中访问非 static 变量吗？: 42
-  能否在 static 方法内部调用非 static 方法？: 43
-  静态内部类与非静态内部类有何区别？: 44
-  什么是匿名内部类？如何访问其外部定义的变量？: 45
-  this 和 super 关键字的作用是什么？: 46
-  构造器可以被重写吗？: 47
-  重载与重写的区别是什么？: 48
-  描述类的实例化顺序（父类静态成员、构造函数、子类静态成员、构造函数）: 49
-  自定义注解有哪些场景？如何实现？: 50
-  Error 与 Exception 有何区别？CheckedException 与 RuntimeException 有何差异？: 51
-  什么是受检异常与非受检异常？: 52
-  所有异常的共同祖先是什么？常见的运行时异常有哪些？: 53
-  请列出 5 个常见的运行时异常: 54
-  try-catch-finally-return 的执行顺序是什么？: 55
-  break 与 continue 有何区别？: 56
-  switch 能作用于 byte、long、String 吗？: 57
-  for-each 与常规 for 循环的效率如何对比？: 58
-  什么是泛型？有什么好处？: 59
-  什么是类型擦除: 60
-  泛型中K、T、V、E、Object等分别代表什么含义: 61
-  泛型中上下界限定符extends和super有什么区别: 62
-  什么是序列化与反序列化: 63
-  Java序列化的原理是什么: 64
-  你知道fastjson的反序列化漏洞吗: 65
-  serialVersionUID有何用途？如果没定义会有什么问题？: 66
-  什么是AIO、BIO和NIO？: 67
-  Lambda表达式是如何实现的: 68
-  Stream的并行流一定比串行流更快吗: 69
-  Arrays.sort使用什么排序算法实现的: 70
-  SimpleDateFormat是线程安全的吗？使用时应该注意什么: 71
-  JDK6、JDK7、JDK8 分别提供了哪些新特性？: 72
-  什么是代理？为什么要使用动态代理？: 73
-  动态代理有哪些实现方式？各自的优缺点是什么？: 74
-  JDK 动态代理与 CGLIB 的实现有何区别？: 75
-  在 DCL 单例写法中为什么要做两次检查？: 76
-  单例对象在什么情况下可能被破坏？: 77
-  抽象工厂模式与工厂方法模式有何区别？: 78
-  ArrayList与LinkedList有什么区别？: 79
-  ArrayList的扩容机制是怎样的？: 80
-  ArrayList扩容机制详解：初始容量与1.5倍扩容: 81
-  ArrayList和LinkedList的时间复杂度: 82
-  CopyOnWriteArrayList是如何实现的？: 83
-  HashMap的底层实现原理: 84
-  HashMap为什么线程不安全？: 85
-  HashMap的容量为什么是2的幂次方？: 86
-  HashMap的加载因子为什么是0.75？: 87
-  HashMap什么时候扩容？: 88
-  HashMap扩容机制详解: 89
-  HashMap的hash方法原理: 90
-  HashMap为什么在链表长度为8时转为红黑树？: 91
-  HashMap在JDK1.7和1.8中的区别: 92
-  为什么HashMap有时候链表长度超过8也不树化？: 93
-  HashMap的key可以为null吗？: 94
-  Hashtable、HashMap、ConcurrentHashMap的区别: 95
-  ConcurrentHashMap是如何实现的？: 96
-  ConcurrentHashMap在JDK1.7和1.8中有什么不同？: 97
-  LinkedHashMap是如何实现的？: 98
-  TreeMap和HashMap有什么区别？: 99
-  WeakHashMap了解吗？: 100
-  HashSet和HashMap有什么关系？: 101
-  PriorityQueue的底层实现原理: 102
-  ArrayDeque和LinkedList作为队列的区别: 103
-  JVM的运行时内存区域是怎样的？: 104
-  JVM为什么要把堆和栈区分出来呢？: 105
-  虚拟机中的堆一定是线程共享的吗？: 106
-  什么是方法区？是如何实现的？: 107
-  方法区存储什么数据？: 108
-  Java的堆是如何分代的？为什么分代？: 109
-  什么是堆外内存？如何使用堆外内存？: 110
-  OutOfMemory和StackOverflow的区别是什么？: 111
-  内存泄漏和内存溢出的区别是什么？: 112
-  一个Java进程占用的内存都有哪些部分？: 113
-  JVM内存结构全面解析: 114
-  JVM是如何创建对象的？: 115
-  一个对象的结构是什么样的？: 116
-  JVM如何保证给对象分配内存过程的线程安全？: 117
-  Java中的对象一定在堆上分配内存吗？: 118
-  什么是逃逸分析？: 119
-  JVM如何判断对象是否存活？: 120
-  什么是强引用、软引用、弱引用和虚引用？: 121
-  JVM有哪些垃圾回收算法: 122
-  新生代和老年代的GC算法: 123
-  JVM中一次完整的GC流程是怎样的: 124
-  YoungGC和FullGC的触发条件是什么: 125
-  FullGC多久一次算正常: 126
-  什么是三色标记算法: 127
-  什么是跨代引用，有什么问题: 128
-  什么是STW（Stop-The-World）及其影响: 129
-  什么是安全点（Safe Point），有什么作用: 130
-  介绍下CMS的垃圾回收过程: 131
-  G1和CMS有什么区别？: 132
-  为什么G1从JDK9之后成为默认的垃圾回收器？: 133
-  JDK11中新出的ZGC有什么特点？: 134
-  Java8和Java11的GC有什么区别？: 135
-  新生代和老年代的垃圾回收器有何区别？: 136
-  项目中如何选择垃圾回收器？为啥选择这个？: 137
-  说一说JVM的并发回收和并行回收: 138
-  新生代如果只有一个Eden+一个Survivor可以吗？: 139
-  Java中的类什么时候会被加载？: 140
-  Java中类加载的过程是怎么样的？: 141
-  Java类加载流程与过程: 142
-  类的生命周期是怎么样的？: 143
-  什么是双亲委派？如何破坏？: 144
-  双亲委派机制的核心思想是什么？: 145
-  双亲委派机制如何打破（详细补充）: 146
-  破坏双亲委派之后，能重写String类吗？: 147
-  如何判断JVM中类和其他类是不是同一个类？: 148
-  JDK 1.8和1.9中类加载器有哪些不同？: 149
-  什么是Class常量池，和运行时常量池关系是什么？: 150
-  运行时常量池和字符串常量池的关系是什么？: 151
-  字符串常量池是如何实现的？: 152
-  什么是编译和反编译？: 153
-  Java一定就是平台无关的吗？: 154
-  Java是如何实现平台无关的？: 155
-  Java是编译型还是解释型语言？: 156
-  什么是AOT编译？和JIT有啥区别？: 157
-  简单介绍一下JIT优化技术？: 158
-  常见的JVM工具有哪些: 159
-  JVM调优参数详解: 160
-  常用的JVM启动参数有哪些: 161
-  Java发生了OOM一定会导致JVM退出吗: 162
-  什么情况会导致JVM退出: 163
-  对JDK进程执行kill -9有什么影响: 164
-  什么是SPI，和API有什么区别: 165
-  创建线程有几种方式？: 166
-  线程有几种状态，状态之间的流转是怎样的？: 167
-  Java是如何判断一个线程是否存活的？: 168
-  Thread.sleep(0)的作用是什么？: 169
-  什么是守护线程，和普通线程有什么区别？: 170
-  什么是多线程中的上下文切换？: 171
-  线程是如何被调度的？: 172
-  线程同步的方式有哪些？: 173
-  什么是死锁，如何解决？: 174
-  run、start、wait、sleep、notify、notifyAll区别: 175
-  什么是并发，什么是并行？: 176
-  能不能谈谈你对线程安全的理解？: 177
-  有哪些实现线程安全的方案: 178
-  并发编程中的原子性和数据库ACID的原子性一样吗？: 179
-  指令重排序: 180
-  final关键字与可见性是否有关: 181
-  什么是Java内存模型（JMM）？: 182
-  什么是happens-before原则？: 183
-  happens-before和as-if-serial有啥区别和联系？: 184
-  有了MESI为啥还需要JMM？: 185
-  什么是总线嗅探和总线风暴，和JMM有什么关系？: 186
-  到底啥是内存屏障？到底怎么加的？: 187
-  volatile能保证原子性吗？为什么？: 188
-  有了synchronized为什么还需要volatile: 189
-  volatile如何保证可见性和有序性: 190
-  volatile关键字与禁止重排序如何解决多线程可见性: 191
-  什么是CAS？存在什么问题？: 192
-  介绍下CAS: 193
-  CAS操作类: 194
-  CAS一定有自旋吗？: 195
-  CAS在操作系统层面是如何保证原子性的: 196
-  有了CAS为啥还需要volatile: 197
-  ABA问题: 198
-  什么是Unsafe？: 199
-  synchronized是怎么实现的？: 200
-  synchronized锁的是什么？: 201
-  synchronized是如何保证原子性、可见性、有序性的？: 202
-  synchronized的锁优化是怎样的？: 203
-  synchronized的锁升级过程是怎样的？: 204
-  synchronized升级过程中有几次自旋？: 205
-  synchronized的锁能降级吗？: 206
-  为什么JDK15要废弃偏向锁？: 207
-  synchronized是否可重入: 208
-  synchronized是非公平锁吗，那么是如何体现的？: 209
-  synchronized和ReentrantLock的区别: 210
-  synchronized和lock区别: 211
-  int a = 1是原子性操作吗: 212
-  如何保证多线程下i++结果正确: 213
-  如何理解AQS？: 214
-  AQS的同步队列和条件队列原理: 215
-  AQS是如何实现线程的等待和唤醒的？: 216
-  AQS为什么采用双向链表？: 217
-  什么是AQS的独占模式和共享模式？: 218
-  AQS操作类有哪些？: 219
-  什么是可重入锁，怎么实现可重入锁？: 220
-  可重入锁的底层实现: 221
-  公平锁和非公平锁的区别: 222
-  Lock是否公平，能否实现非公平，如何实现？: 223
-  ReentrantLock增加了哪些高级功能？: 224
-  什么是线程池，如何实现的？: 225
-  ForkJoinPool和ThreadPoolExecutor的区别是什么？: 226
-  线程池的拒绝策略有哪些？: 227
-  为什么不建议通过Executors构建线程池？: 228
-  线程数设定成多少更合适？: 229
-  如何让Java的线程池顺序执行任务？: 230
-  如何实现一个动态线程池？: 231
-  线程池多线程操作对象是否需要加volatile保障可见性？: 232
-  CompletableFuture的底层是如何实现的？: 233
-  如何对多线程进行编排？: 234
-  CountDownLatch、CyclicBarrier、Semaphore区别？: 235
-  LongAdder和AtomicLong的区别？: 236
-  什么是ThreadLocal，如何实现的？: 237
-  ThreadLocalMap的数据结构: 238
-  ThreadLocalMap的冲突解决机制: 239
-  ThreadLocalMap的扩容机制: 240
-  ThreadLocal为什么会导致内存泄漏？如何解决？: 241
-  ThreadLocal的key是弱引用，在get()时发生GC后key会是null吗？: 242
-  ThreadLocal的应用场景有哪些？: 243
-  有了InheritableThreadLocal为啥还需要TransmittableThreadLocal？: 244
-  探测式清理和启发式清理: 245
-  父子线程之间怎么共享、传递数据？: 246
-  为什么不能在try-catch中捕获子线程的异常？: 247
-  如何实现主线程捕获子线程异常？: 248
-  Java线程出现异常，进程为啥不会退出？: 249
-  有三个线程T1,T2,T3如何保证顺序执行？: 250
-  三个线程分别顺序打印0-100: 251
-  JDK21中的虚拟线程是怎么回事？: 252
-  为什么虚拟线程不能用synchronized？: 253
-  为什么虚拟线程不要和线程池一起用？: 254
-  为什么虚拟线程尽量避免使用ThreadLocal？: 255
-  InnoDB为什么使用B+树实现索引？: 256
-  InnoDB中的索引类型？: 257
-  什么是聚簇索引和非聚簇索引？: 258
-  什么是回表，怎么减少回表的次数？: 259
-  什么是索引覆盖、索引下推？: 260
-  InnoDB和MyISAM有什么区别？: 261
-  MyISAM的索引结构是怎么样的，它存在的问题是什么？: 262
-  唯一索引和主键索引的区别？: 263
-  MySQL是如何保证唯一性索引的唯一性的？: 264
-  从InnoDB索引结构分析索引Key长度限制: 265
-  什么是最左前缀匹配？为什么要遵守？: 266
-  MySQL索引一定遵循最左前缀匹配吗？: 267
-  A,B,C的联合索引，按照AB,AC,BC查询，能走索引吗？: 268
-  a,b两个单独索引，where a=xx and b=xx走哪个索引？为什么？: 269
-  什么是索引合并，原理是什么？: 270
-  什么是索引跳跃扫描？: 271
-  设计索引的时候有哪些原则？: 272
-  区分度不高的字段建索引一定没用吗？: 273
-  联合索引是越多越好吗？: 274
-  MySQL索引建立与性能影响: 275
-  MySQL索引存储与失效场景详解: 276
-  MySQL索引失效情况: 277
-  MySQL索引，最左匹配，索引覆盖，索引下推，索引失效情况，查询优化: 278
-  用了索引还是很慢，可能是什么原因？: 279
-  索引失效的问题如何排查？: 280
-  MySQL选错索引的原因及解决方案: 281
-  WHERE条件顺序对索引的影响: 282
-  UUID和自增ID做主键哪个好，为什么？: 283
-  CHAR与VARCHAR的区别及使用场景: 284
-  CHAR、VARCHAR、TEXT的区别与VARCHAR长度限制详解: 285
-  MySQL中BLOB与TEXT的区别及使用场景: 286
-  什么是数据库事务？: 287
-  MySQL事务ACID实现原理: 288
-  MySQL中的事务隔离级别: 289
-  什么是脏读、幻读、不可重复读？: 290
-  InnoDB如何解决脏读、不可重复读和幻读？: 291
-  InnoDB的RR到底有没有解决幻读？: 292
-  如何理解MVCC？: 293
-  什么是ReadView，什么样的ReadView可见？: 294
-  当前读和快照读有什么区别？: 295
-  二级索引在索引覆盖时如何使用MVCC？: 296
-  为什么MySQL默认使用RR隔离级别？: 297
-  为什么默认RR，大厂要改成RC？: 298
-  MySQL的select会用到事务吗: 299
-  介绍下InnoDB的锁机制: 300
-  InnoDB中的表级锁、页级锁、行级锁: 301
-  MySQL的行级锁锁的到底是什么: 302
-  什么是排他锁和共享锁: 303
-  什么是意向锁: 304
-  FOR UPDATE语句InnoDB加了哪些锁: 305
-  什么是MySQL的元数据锁（MDL锁）？: 306
-  MySQL只操作同一条记录也会发生死锁吗: 307
-  数据库死锁如何解决: 308
-  MySQL锁机制全面解析: 309
-  乐观锁与悲观锁如何实现: 310
-  数据库乐观锁的过程中完全没有加任何锁吗: 311
-  什么是数据库的锁升级,InnoDB支持吗: 312
-  InnoDB加索引会锁表吗？: 313
-  MySQL并发控制手段详解: 314
-  MySQL一条SQL语句的执行过程: 315
-  SQL查询语句的执行顺序: 316
-  为什么大厂不建议使用多表JOIN: 317
-  ON和WHERE的区别详解: 318
-  SQL执行计划分析的时候，要关注哪些信息？: 319
-  MySQL优化器的索引成本计算: 320
-  如何进行SQL调优？: 321
-  慢SQL的问题如何排查？: 322
-  执行计划中，key有值，还是很慢怎么办？: 323
-  ORDER BY是怎么实现的？: 324
-  Using filesort能优化吗，怎么优化？: 325
-  MySQL的深度分页如何优化？: 326
-  limit 0,100和limit 10000000,100一样吗？: 327
-  MySQL的limit+orderby为什么会数据重复？: 328
-  MySQL中like的模糊查询如何优化？: 329
-  小表驱动大表的原理与性能优化: 330
-  MySQL慢查询优化: 331
-  MySQL慢查询的排除与优化: 332
-  MySQL优化（综合）: 333
-  MySQL存储引擎详解与对比: 334
-  InnoDB Buffer Pool缓冲池详解: 335
-  Buffer Pool的读写过程详解: 336
-  InnoDB支持的行格式详解: 337
-  InnoDB的数据页与B+树的关系: 338
-  InnoDB的页分裂和页合并机制: 339
-  什么是事务的2阶段提交: 340
-  InnoDB的一次更新事务是怎么实现的: 341
-  undolog会一直存在吗？什么时候删除: 342
-  介绍下MySQL5.7中的组提交: 343
-  MySQL执行大事务会存在什么问题: 344
-  binlog、redolog和undolog的区别: 345
-  MySQL主从复制的过程: 346
-  MySQL的并行复制原理: 347
-  MySQL主从复制详解: 348
-  MySQL主从同步：binlog的三种模式详解: 349
-  MySQL三种日志、主从架构与复制原理: 350
-  MySQL三种日志类型综合说明: 351
-  什么是数据库的主从延迟，如何解决？: 352
-  数据库读写分离的代码实现方案: 353
-  MySQL是AP的还是CP的系统？: 354
-  什么是OnlineDDL: 355
-  MySQL怎么做热点数据高效更新？: 356
-  高并发情况下自增主键会不会重复，为什么？: 357
-  MySQL自增主键用完了会怎么样？: 358
-  什么情况会导致自增主键不连续？: 359
-  MySQL获取主键ID的瓶颈在哪里？如何优化？: 360
-  数据库扫表任务如何避免出现死循环？: 361
-  数据库怎么做加密和解密？: 362
-  数据库加密后怎么做模糊查询？: 363
-  MySQL支持Emoji表情存储的完整解决方案: 364
-  阿里的数据库能抗秒杀的原理: 365
-  MySQL分库分表方案与动态扩展策略: 366
-  MySQL驱动表概念及选择策略: 367
-  Redis 7 新特性: 368
-  Redis有哪些数据结构？: 369
-  Redis底层结构: 370
-  说说 listpack 结构: 371
-  说说 SDS 结构: 372
-  说说 dict 结构: 373
-  Redis的String是如何实现的？: 374
-  Redis的List是如何实现的？: 375
-  Redis的Hash是如何实现的？: 376
-  Redis的Set是如何实现的？: 377
-  Redis的ZSet是如何实现的？: 378
-  什么是跳表？为什么用跳表？: 379
-  Redis跳表实现，hash底层实现，为什么使用ziplist，如何扩容: 380
-  Redis的HyperLogLog了解过吗？: 381
-  Redis的优势，解决了哪些问题: 382
-  Redis的持久化机制有哪些？: 383
-  RDB和AOF的区别是什么？: 384
-  Redis AOF日志写入流程与刷盘策略: 385
-  Redis故障恢复：RDB和AOF的区别: 386
-  Redis的主从复制原理: 387
-  Redis主从复制过程详解: 388
-  Redis如何实现高可用: 389
-  Redis的哨兵模式详解: 390
-  Redis哨兵模式选主策略详解: 391
-  Redis的集群模式详解: 392
-  Redis 7 懒惰删除机制详解: 393
-  Redis 7 后台IO机制深度解析: 394
-  Redis 7 线程模型完整解析: 395
-  Redis 7 内存优化详解: 396
-  Redis 7 事务机制深度解析: 397
-  Redis 7 缓存穿透、缓存击穿、缓存雪崩问题: 398
-  Redis 大 key 问题: 399
-  Redis热点key问题如何解决: 400
-  Redis的过期策略详解: 401
-  Redis内存淘汰策略详解: 402
-  Redis分布式锁的实现: 403
-  Redis缓存一致性问题与解决方案: 404
-  用 Stream 做消息队列行不行？: 405
-  Redis 7 实现延时队列: 406
-  Redis 7 实现布隆过滤器: 407
-  Redis 7 实现限流: 408
-  Redis 7 RESP 协议详解: 409
-  介绍一下Spring的IOC: 410
-  Spring IOC与AOP全面解析: 411
-  Spring中的Bean是线程安全的吗？: 412
-  SpringBean的初始化过程详解: 413
-  SpringBean的生命周期详解: 414
-  Spring中的Bean作用域详解: 415
-  '@Lazy注解能解决循环依赖吗？': 416
-  Spring循环依赖问题详解: 417
-  Spring三级缓存机制深度解析: 418
-  介绍一下Spring的AOP: 419
-  AOP通知类型: 420
-  Spring AOP实现，动态代理: 421
-  Spring的AOP在什么场景下会失效？: 422
-  Spring中如何开启事务？: 423
-  Spring的事务传播机制有哪些？: 424
-  Spring事务失效可能是哪些原因？: 425
-  Spring事务管理全面解析: 426
-  Spring事务实现原理及@Transactional注解原理: 427
-  Spring的事务在多线程下生效吗？为什么？: 428
-  同时使用@Transactional与@Async时，事务会不会生效？: 429
-  Spring中的事务事件如何使用？: 430
-  为什么不建议直接使用Spring的@Async？: 431
-  SpringBoot和Spring的区别是什么？: 432
-  SpringBoot核心模块有哪些？: 433
-  SpringBoot是如何实现自动配置的？: 434
-  SpringBoot的启动流程是怎么样的？: 435
-  SpringBoot是如何实现main方法启动Web项目的？: 436
-  Spring6.0和SpringBoot3.0有什么新特性？: 437
-  为什么SpringBoot3中移除了spring.factories？: 438
-  SpringBoot如何做优雅停机？: 439
-  SpringMVC三层架构的好处: 440
-  Spring框架中用到的设计模式: 441
-  如何自定义一个SpringBoot Starter？: 442
-  实现一个SpringBoot Starter（实战案例）: 443
-  什么是单例模式，如何实现一个单例？: 444
-  什么是工厂模式？: 445
-  什么是策略模式？: 446
-  什么是模板方法模式？: 447
-  什么是责任链模式？: 448
-  什么是观察者模式？: 449
-  策略模式与代理模式的区别: 450
-  什么是CAP理论？: 451
-  什么是BASE理论？: 452
-  CAP协议、ACID理论、BASE理论、一致性模型对比详解: 453
-  什么是最终一致性？: 454
-  什么是一致性Hash？: 455
-  分布式ID生成方案有哪些？: 456
-  雪花算法是什么？: 457
-  什么是分布式事务？: 458
-  分布式事务的解决方案有哪些？: 459
-  分布式事务方案对比：2PC、3PC、TCC、消息补偿: 460
-  什么是2PC和3PC？: 461
-  什么是TCC？: 462
-  什么是Saga？: 463
-  AT模式：Seata的自动化两阶段提交: 464
-  什么是分布式锁？: 465
-  分布式锁的实现方式有哪些？: 466
-  Redis实现分布式锁的原理？: 467
-  Zookeeper实现分布式锁的原理？: 468
-  什么是分库分表？: 469
-  什么时候需要分库分表？: 470
-  分库分表的策略有哪些？: 471
-  分库分表后如何解决跨库查询？: 472
-  分库分表后如何解决分布式事务？: 473
-  ShardingSphere的原理是什么？: 474
-  什么是微服务？: 475
-  SpringCloud有哪些核心组件？: 476
-  Eureka的工作原理是什么？: 477
-  Ribbon的负载均衡策略有哪些？: 478
-  Feign的工作原理是什么？: 479
-  Hystrix的熔断机制是什么？: 480
-  Gateway的工作原理是什么？: 481
-  Nacos和Eureka的区别？: 482
-  负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解: 483
-  Nacos 如何实现服务注册与发现: 484
-  Nacos 健康检查的机制是什么: 485
-  Nacos 自我保护的原理是什么: 486
-  Nacos 事件监听是如何设计的: 487
-  Nacos 是怎么保障高可用的: 488
-  Nacos 在设计上有什么缺陷: 489
-  为什么要使用消息队列？: 490
-  消息队列的使用场景有哪些？: 491
-  Kafka、ActiveMQ、RabbitMQ和RocketMQ都有哪些区别？: 492
-  Kafka的架构是怎么样的？: 493
-  Kafka为什么有Topic还要用Partition？: 494
-  Kafka为什么这么快？: 495
-  Kafka消息的发送过程简单介绍一下？: 496
-  Kafka如何保证消息不丢失？: 497
-  为什么Kafka没办法100%保证消息不丢失？: 498
-  Kafka怎么保证消费只消费一次的？: 499
-  Kafka如何实现顺序消费？: 500
-  RocketMQ的架构是怎么样的？: 501
-  RocketMQ如何保证消息不丢失？: 502
-  RocketMQ的延迟消息是如何实现的？: 503
-  RabbitMQ的架构是怎么样的？: 504
-  RabbitMQ如何保证消息的可靠性？: 505
-  RabbitMQ死信队列（Dead Letter Queue）详解: 506
-  RabbitMQ的Exchange(交换器)有哪4种类型？: 507
-  什么是RPC，和HTTP有什么区别？: 508
-  为什么RPC要比HTTP更快一些？: 509
-  什么场景只能用HTTP，不能用RPC？: 510
-  Dubbo的整体架构是怎么样的？: 511
-  Dubbo的服务调用的过程是什么样的？: 512
-  Dubbo如何实现像本地方法一样调用远程方法的？: 513
-  Dubbo支持哪些调用协议？: 514
-  Dubbo支持哪些序列化方式？: 515
-  Dubbo支持哪些负载均衡策略？: 516
-  Dubbo支持哪些服务治理？: 517
-  Dubbo服务发现与路由的概念有什么不同？: 518
-  Dubbo的SPI和JDK的SPI有什么区别？: 519
-  Dubbo为什么不用JDK的SPI？: 520
-  什么是Dubbo的优雅停机，怎么实现的？: 521
-  什么是泛化调用？: 522
-  为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？: 523
-  什么是倒排索引？: 524
-  ElasticSearch 为什么快？: 525
-  什么是 ElasticSearch 的深度分页问题？如何解决？: 526
-  如何保证 ES 和数据库的数据一致性？: 527
-  如何优化 ElasticSearch 搜索性能？: 528
+  反射中 Class.forName 与 ClassLoader 有何区别？: 11
+  int 和 Integer 有何区别？Integer 缓存如何实现？: 12
+  两个 Integer 对象比较时，为什么 100 等于 100 而 1000 不等于 1000？: 13
+  能否将 int 强制转换为 byte？若超出 byte 范围会怎样？: 14
+  语句 float f = 3.4; 是否正确？: 15
+  char 类型变量能否存储中文汉字？为什么？: 16
+  '& 与 && 有何区别？': 17
+  如何以最高效率计算 2 乘以 8？: 18
+  除了对 2 取余，如何快速判断一个数的奇偶性？: 19
+  Object 中定义了哪些方法？: 20
+  equals 与 == 有何区别？: 21
+  有了equals为什么还需要hashCode方法: 22
+  两个对象的 hashCode 相同，equals 是否一定为 true？: 23
+  两个不相等的对象是否可能拥有相同的 hashCode？: 24
+  Comparator 与 Comparable 有何区别？: 25
+  String、StringBuilder和StringBuffer的区别？: 26
+  String为什么设计成不可变的？: 27
+  String是如何实现不可变的？: 28
+  String有长度限制吗？是多少？: 29
+  String中intern的原理是什么？: 30
+  为什么JDK9中把String的char[]改成了byte[]？: 31
+  JDK9中对字符串的拼接做了什么优化？: 32
+  字符串常量是什么时候进入到字符串常量池的？: 33
+  String a = "ab"; String b = "a" + "b"; a==b吗？: 34
+  String str = new String("hollis")创建了几个对象？: 35
+  如何将字符串反转？: 36
+  数组是否有 length() 方法？String 是否有 length() 方法？: 37
+  BigDecimal(double)和BigDecimal(String)有什么区别: 38
+  为什么不能用BigDecimal的equals方法做等值比较: 39
+  为什么不能用浮点数表示金额: 40
+  final、finally、finalize 有何区别？: 41
+  public、private、protected 以及 default 访问修饰符有何区别？: 42
+  可以在 static 环境中访问非 static 变量吗？: 43
+  能否在 static 方法内部调用非 static 方法？: 44
+  静态内部类与非静态内部类有何区别？: 45
+  什么是匿名内部类？如何访问其外部定义的变量？: 46
+  this 和 super 关键字的作用是什么？: 47
+  构造器可以被重写吗？: 48
+  重载与重写的区别是什么？: 49
+  描述类的实例化顺序（父类静态成员、构造函数、子类静态成员、构造函数）: 50
+  自定义注解有哪些场景？如何实现？: 51
+  Error 与 Exception 有何区别？CheckedException 与 RuntimeException 有何差异？: 52
+  什么是受检异常与非受检异常？: 53
+  所有异常的共同祖先是什么？常见的运行时异常有哪些？: 54
+  请列出 5 个常见的运行时异常: 55
+  try-catch-finally-return 的执行顺序是什么？: 56
+  break 与 continue 有何区别？: 57
+  switch 能作用于 byte、long、String 吗？: 58
+  for-each 与常规 for 循环的效率如何对比？: 59
+  什么是泛型？有什么好处？: 60
+  什么是类型擦除: 61
+  泛型中K、T、V、E、Object等分别代表什么含义: 62
+  泛型中上下界限定符extends和super有什么区别: 63
+  什么是序列化与反序列化: 64
+  Java序列化的原理是什么: 65
+  你知道fastjson的反序列化漏洞吗: 66
+  serialVersionUID有何用途？如果没定义会有什么问题？: 67
+  什么是AIO、BIO和NIO？: 68
+  Lambda表达式是如何实现的: 69
+  Stream的并行流一定比串行流更快吗: 70
+  Arrays.sort使用什么排序算法实现的: 71
+  SimpleDateFormat是线程安全的吗？使用时应该注意什么: 72
+  JDK6、JDK7、JDK8 分别提供了哪些新特性？: 73
+  什么是代理？为什么要使用动态代理？: 74
+  动态代理有哪些实现方式？各自的优缺点是什么？: 75
+  JDK 动态代理与 CGLIB 的实现有何区别？: 76
+  在 DCL 单例写法中为什么要做两次检查？: 77
+  单例对象在什么情况下可能被破坏？: 78
+  抽象工厂模式与工厂方法模式有何区别？: 79
+  ArrayList与LinkedList有什么区别？: 80
+  ArrayList的扩容机制是怎样的？: 81
+  ArrayList扩容机制详解：初始容量与1.5倍扩容: 82
+  ArrayList和LinkedList的时间复杂度: 83
+  CopyOnWriteArrayList是如何实现的？: 84
+  HashMap的底层实现原理: 85
+  HashMap为什么线程不安全？: 86
+  为什么 HashMap 会产生死循环？: 87
+  HashMap的容量为什么是2的幂次方？: 88
+  HashMap的加载因子为什么是0.75？: 89
+  HashMap什么时候扩容？: 90
+  HashMap扩容机制详解: 91
+  HashMap的hash方法原理: 92
+  HashMap为什么在链表长度为8时转为红黑树？: 93
+  HashMap在JDK1.7和1.8中的区别: 94
+  为什么HashMap有时候链表长度超过8也不树化？: 95
+  HashMap的key可以为null吗？: 96
+  Hashtable、HashMap、ConcurrentHashMap的区别: 97
+  ConcurrentHashMap是如何实现的？: 98
+  ConcurrentHashMap在JDK1.7和1.8中有什么不同？: 99
+  LinkedHashMap是如何实现的？: 100
+  TreeMap和HashMap有什么区别？: 101
+  WeakHashMap了解吗？: 102
+  HashSet和HashMap有什么关系？: 103
+  PriorityQueue的底层实现原理: 104
+  ArrayDeque和LinkedList作为队列的区别: 105
+  跳表与 B+ 树有何区别？: 106
+  JVM的运行时内存区域是怎样的？: 107
+  JVM为什么要把堆和栈区分出来呢？: 108
+  虚拟机中的堆一定是线程共享的吗？: 109
+  什么是方法区？是如何实现的？: 110
+  方法区存储什么数据？: 111
+  Java的堆是如何分代的？为什么分代？: 112
+  什么是堆外内存？如何使用堆外内存？: 113
+  OutOfMemory和StackOverflow的区别是什么？: 114
+  在什么情况下会发生栈内存溢出？: 115
+  内存泄漏和内存溢出的区别是什么？: 116
+  一个Java进程占用的内存都有哪些部分？: 117
+  JVM内存结构全面解析: 118
+  JVM是如何创建对象的？: 119
+  一个对象的结构是什么样的？: 120
+  一个空的 Java Object 对象占用多少内存？: 121
+  JVM如何保证给对象分配内存过程的线程安全？: 122
+  Java中的对象一定在堆上分配内存吗？: 123
+  什么是逃逸分析？: 124
+  JVM 为什么使用元空间替换永久代？: 125
+  JVM如何判断对象是否存活？: 126
+  什么是强引用、软引用、弱引用和虚引用？: 127
+  JVM有哪些垃圾回收算法: 128
+  新生代和老年代的GC算法: 129
+  JVM中一次完整的GC流程是怎样的: 130
+  YoungGC和FullGC的触发条件是什么: 131
+  FullGC多久一次算正常: 132
+  什么是三色标记算法: 133
+  什么是跨代引用，有什么问题: 134
+  什么是STW（Stop-The-World）及其影响: 135
+  什么是安全点（Safe Point），有什么作用: 136
+  介绍下CMS的垃圾回收过程: 137
+  G1和CMS有什么区别？: 138
+  为什么G1从JDK9之后成为默认的垃圾回收器？: 139
+  JDK11中新出的ZGC有什么特点？: 140
+  Java8和Java11的GC有什么区别？: 141
+  新生代和老年代的垃圾回收器有何区别？: 142
+  项目中如何选择垃圾回收器？为啥选择这个？: 143
+  说一说JVM的并发回收和并行回收: 144
+  新生代如果只有一个Eden+一个Survivor可以吗？: 145
+  JVM 分代年龄为什么是 15 次？可以设置为 25 次吗？: 146
+  Java中的类什么时候会被加载？: 147
+  Java中类加载的过程是怎么样的？: 148
+  Java类加载流程与过程: 149
+  类的生命周期是怎么样的？: 150
+  什么是双亲委派？如何破坏？: 151
+  双亲委派机制的核心思想是什么？: 152
+  双亲委派机制如何打破（详细补充）: 153
+  破坏双亲委派之后，能重写String类吗？: 154
+  如何判断JVM中类和其他类是不是同一个类？: 155
+  JDK 1.8和1.9中类加载器有哪些不同？: 156
+  什么是Class常量池，和运行时常量池关系是什么？: 157
+  运行时常量池和字符串常量池的关系是什么？: 158
+  字符串常量池是如何实现的？: 159
+  什么是编译和反编译？: 160
+  Java一定就是平台无关的吗？: 161
+  Java是如何实现平台无关的？: 162
+  Java是编译型还是解释型语言？: 163
+  什么是AOT编译？和JIT有啥区别？: 164
+  简单介绍一下JIT优化技术？: 165
+  常见的JVM工具有哪些: 166
+  JVM调优参数详解: 167
+  常用的JVM启动参数有哪些: 168
+  Java发生了OOM一定会导致JVM退出吗: 169
+  什么情况会导致JVM退出: 170
+  对JDK进程执行kill -9有什么影响: 171
+  什么是SPI，和API有什么区别: 172
+  创建线程有几种方式？: 173
+  线程有几种状态，状态之间的流转是怎样的？: 174
+  Java是如何判断一个线程是否存活的？: 175
+  Thread.sleep(0)的作用是什么？: 176
+  什么是守护线程，和普通线程有什么区别？: 177
+  什么是多线程中的上下文切换？: 178
+  线程是如何被调度的？: 179
+  线程同步的方式有哪些？: 180
+  什么是死锁，如何解决？: 181
+  run、start、wait、sleep、notify、notifyAll区别: 182
+  线程有哪些结束方式？: 183
+  如何打印线程栈信息？: 184
+  什么是并发，什么是并行？: 185
+  能不能谈谈你对线程安全的理解？: 186
+  有哪些实现线程安全的方案: 187
+  并发编程中的原子性和数据库ACID的原子性一样吗？: 188
+  指令重排序: 189
+  final关键字与可见性是否有关: 190
+  同步与异步有何区别？: 191
+  什么是Java内存模型（JMM）？: 192
+  什么是happens-before原则？: 193
+  happens-before和as-if-serial有啥区别和联系？: 194
+  有了MESI为啥还需要JMM？: 195
+  什么是总线嗅探和总线风暴，和JMM有什么关系？: 196
+  到底啥是内存屏障？到底怎么加的？: 197
+  volatile能保证原子性吗？为什么？: 198
+  有了synchronized为什么还需要volatile: 199
+  volatile如何保证可见性和有序性: 200
+  volatile关键字与禁止重排序如何解决多线程可见性: 201
+  什么是CAS？存在什么问题？: 202
+  介绍下CAS: 203
+  CAS操作类: 204
+  CAS一定有自旋吗？: 205
+  CAS在操作系统层面是如何保证原子性的: 206
+  有了CAS为啥还需要volatile: 207
+  ABA问题: 208
+  什么是Unsafe？: 209
+  synchronized是怎么实现的？: 210
+  synchronized锁的是什么？: 211
+  synchronized是如何保证原子性、可见性、有序性的？: 212
+  synchronized的锁优化是怎样的？: 213
+  synchronized的锁升级过程是怎样的？: 214
+  synchronized升级过程中有几次自旋？: 215
+  synchronized的锁能降级吗？: 216
+  为什么JDK15要废弃偏向锁？: 217
+  synchronized是否可重入: 218
+  synchronized是非公平锁吗，那么是如何体现的？: 219
+  synchronized和ReentrantLock的区别: 220
+  synchronized和lock区别: 221
+  int a = 1是原子性操作吗: 222
+  如何保证多线程下i++结果正确: 223
+  如何理解AQS？: 224
+  AQS的同步队列和条件队列原理: 225
+  AQS是如何实现线程的等待和唤醒的？: 226
+  AQS为什么采用双向链表？: 227
+  什么是AQS的独占模式和共享模式？: 228
+  AQS操作类有哪些？: 229
+  什么是可重入锁，怎么实现可重入锁？: 230
+  可重入锁的底层实现: 231
+  公平锁和非公平锁的区别: 232
+  Lock是否公平，能否实现非公平，如何实现？: 233
+  ReentrantLock增加了哪些高级功能？: 234
+  什么是线程池，如何实现的？: 235
+  ForkJoinPool和ThreadPoolExecutor的区别是什么？: 236
+  线程池的拒绝策略有哪些？: 237
+  为什么不建议通过Executors构建线程池？: 238
+  线程数设定成多少更合适？: 239
+  如何让Java的线程池顺序执行任务？: 240
+  如何实现一个动态线程池？: 241
+  线程池多线程操作对象是否需要加volatile保障可见性？: 242
+  线程池有哪些状态？如何获取多线程并发执行结果？: 243
+  线程池的原理是什么？各参数有什么作用？: 244
+  线程池有哪些参数？分别代表什么含义: 245
+  Future 如何通过阻塞等待获取结果？: 246
+  如何安全地中断一个正在运行的线程？: 247
+  CompletableFuture的底层是如何实现的？: 248
+  如何对多线程进行编排？: 249
+  CountDownLatch、CyclicBarrier、Semaphore区别？: 250
+  LongAdder和AtomicLong的区别？: 251
+  什么是ThreadLocal，如何实现的？: 252
+  ThreadLocalMap的数据结构: 253
+  ThreadLocalMap的冲突解决机制: 254
+  ThreadLocalMap的扩容机制: 255
+  ThreadLocal为什么会导致内存泄漏？如何解决？: 256
+  ThreadLocal的key是弱引用，在get()时发生GC后key会是null吗？: 257
+  ThreadLocal的应用场景有哪些？: 258
+  有了InheritableThreadLocal为啥还需要TransmittableThreadLocal？: 259
+  探测式清理和启发式清理: 260
+  父子线程之间怎么共享、传递数据？: 261
+  如何理解 Fork/Join 框架？: 262
+  谈谈你对时间轮的理解。: 263
+  阻塞队列的有界与无界是什么意思？: 264
+  为什么不能在try-catch中捕获子线程的异常？: 265
+  如何实现主线程捕获子线程异常？: 266
+  Java线程出现异常，进程为啥不会退出？: 267
+  有三个线程T1,T2,T3如何保证顺序执行？: 268
+  三个线程分别顺序打印0-100: 269
+  JDK21中的虚拟线程是怎么回事？: 270
+  为什么虚拟线程不能用synchronized？: 271
+  为什么虚拟线程不要和线程池一起用？: 272
+  为什么虚拟线程尽量避免使用ThreadLocal？: 273
+  InnoDB为什么使用B+树实现索引？: 274
+  InnoDB中的索引类型？: 275
+  什么是聚簇索引和非聚簇索引？: 276
+  什么是回表，怎么减少回表的次数？: 277
+  什么是索引覆盖、索引下推？: 278
+  InnoDB和MyISAM有什么区别？: 279
+  MyISAM的索引结构是怎么样的，它存在的问题是什么？: 280
+  唯一索引和主键索引的区别？: 281
+  MySQL是如何保证唯一性索引的唯一性的？: 282
+  从InnoDB索引结构分析索引Key长度限制: 283
+  什么是最左前缀匹配？为什么要遵守？: 284
+  MySQL索引一定遵循最左前缀匹配吗？: 285
+  A,B,C的联合索引，按照AB,AC,BC查询，能走索引吗？: 286
+  a,b两个单独索引，where a=xx and b=xx走哪个索引？为什么？: 287
+  什么是索引合并，原理是什么？: 288
+  什么是索引跳跃扫描？: 289
+  设计索引的时候有哪些原则？: 290
+  区分度不高的字段建索引一定没用吗？: 291
+  联合索引是越多越好吗？: 292
+  MySQL索引建立与性能影响: 293
+  MySQL索引存储与失效场景详解: 294
+  MySQL索引失效情况: 295
+  MySQL索引，最左匹配，索引覆盖，索引下推，索引失效情况，查询优化: 296
+  用了索引还是很慢，可能是什么原因？: 297
+  索引失效的问题如何排查？: 298
+  MySQL选错索引的原因及解决方案: 299
+  创建索引的三种方式: 300
+  为什么命中索引的 SQL 比不命中更快？: 301
+  WHERE条件顺序对索引的影响: 302
+  UUID和自增ID做主键哪个好，为什么？: 303
+  CHAR与VARCHAR的区别及使用场景: 304
+  CHAR、VARCHAR、TEXT的区别与VARCHAR长度限制详解: 305
+  MySQL中BLOB与TEXT的区别及使用场景: 306
+  存储 MD5 值应使用 VARCHAR 还是 CHAR？: 307
+  谈谈你对 NoSQL 的理解。: 308
+  什么是数据库事务？: 309
+  MySQL事务ACID实现原理: 310
+  MySQL中的事务隔离级别: 311
+  什么是脏读、幻读、不可重复读？: 312
+  InnoDB如何解决脏读、不可重复读和幻读？: 313
+  InnoDB的RR到底有没有解决幻读？: 314
+  如何理解MVCC？: 315
+  什么是ReadView，什么样的ReadView可见？: 316
+  当前读和快照读有什么区别？: 317
+  二级索引在索引覆盖时如何使用MVCC？: 318
+  为什么MySQL默认使用RR隔离级别？: 319
+  为什么默认RR，大厂要改成RC？: 320
+  MySQL的select会用到事务吗: 321
+  数据库隔离级别与锁之间的关系是什么？: 322
+  介绍下InnoDB的锁机制: 323
+  InnoDB中的表级锁、页级锁、行级锁: 324
+  MySQL的行级锁锁的到底是什么: 325
+  什么是排他锁和共享锁: 326
+  什么是意向锁: 327
+  FOR UPDATE语句InnoDB加了哪些锁: 328
+  什么是MySQL的元数据锁（MDL锁）？: 329
+  MySQL只操作同一条记录也会发生死锁吗: 330
+  数据库死锁如何解决: 331
+  MySQL锁机制全面解析: 332
+  乐观锁与悲观锁如何实现: 333
+  数据库乐观锁的过程中完全没有加任何锁吗: 334
+  什么是数据库的锁升级,InnoDB支持吗: 335
+  InnoDB加索引会锁表吗？: 336
+  MySQL并发控制手段详解: 337
+  MySQL一条SQL语句的执行过程: 338
+  SQL查询语句的执行顺序: 339
+  为什么大厂不建议使用多表JOIN: 340
+  ON和WHERE的区别详解: 341
+  SQL执行计划分析的时候，要关注哪些信息？: 342
+  MySQL优化器的索引成本计算: 343
+  如何进行SQL调优？: 344
+  慢SQL的问题如何排查？: 345
+  执行计划中，key有值，还是很慢怎么办？: 346
+  ORDER BY是怎么实现的？: 347
+  Using filesort能优化吗，怎么优化？: 348
+  MySQL的深度分页如何优化？: 349
+  limit 0,100和limit 10000000,100一样吗？: 350
+  MySQL的limit+orderby为什么会数据重复？: 351
+  MySQL中like的模糊查询如何优化？: 352
+  小表驱动大表的原理与性能优化: 353
+  MySQL慢查询优化: 354
+  MySQL慢查询的排除与优化: 355
+  MySQL优化（综合）: 356
+  COUNT(1)、COUNT(*) 与 COUNT(列名) 有何区别？: 357
+  UNION 与 UNION ALL 有何区别？: 358
+  DROP、DELETE 与 TRUNCATE 有何区别？: 359
+  SQL 约束有哪几种？: 360
+  MySQL存储引擎详解与对比: 361
+  InnoDB Buffer Pool缓冲池详解: 362
+  Buffer Pool的读写过程详解: 363
+  InnoDB支持的行格式详解: 364
+  InnoDB的数据页与B+树的关系: 365
+  InnoDB的页分裂和页合并机制: 366
+  什么是存储过程？有哪些优缺点？: 367
+  什么是事务的2阶段提交: 368
+  InnoDB的一次更新事务是怎么实现的: 369
+  undolog会一直存在吗？什么时候删除: 370
+  介绍下MySQL5.7中的组提交: 371
+  MySQL执行大事务会存在什么问题: 372
+  binlog、redolog和undolog的区别: 373
+  MySQL主从复制的过程: 374
+  MySQL的并行复制原理: 375
+  MySQL主从复制详解: 376
+  MySQL主从同步：binlog的三种模式详解: 377
+  MySQL三种日志、主从架构与复制原理: 378
+  MySQL三种日志类型综合说明: 379
+  什么是数据库的主从延迟，如何解决？: 380
+  数据库读写分离的代码实现方案: 381
+  MySQL是AP的还是CP的系统？: 382
+  什么是OnlineDDL: 383
+  你们的 MySQL 架构是什么样的？: 384
+  MySQL怎么做热点数据高效更新？: 385
+  高并发情况下自增主键会不会重复，为什么？: 386
+  MySQL自增主键用完了会怎么样？: 387
+  什么情况会导致自增主键不连续？: 388
+  MySQL获取主键ID的瓶颈在哪里？如何优化？: 389
+  数据库扫表任务如何避免出现死循环？: 390
+  数据库怎么做加密和解密？: 391
+  数据库加密后怎么做模糊查询？: 392
+  MySQL支持Emoji表情存储的完整解决方案: 393
+  阿里的数据库能抗秒杀的原理: 394
+  MySQL分库分表方案与动态扩展策略: 395
+  MySQL驱动表概念及选择策略: 396
+  百万级及以上数据如何安全删除？: 397
+  如何保证 MySQL 数据不丢失？: 398
+  Redis 7 新特性: 399
+  Redis有哪些数据结构？: 400
+  Redis底层结构: 401
+  说说 listpack 结构: 402
+  说说 SDS 结构: 403
+  说说 dict 结构: 404
+  Redis的String是如何实现的？: 405
+  Redis的List是如何实现的？: 406
+  Redis的Hash是如何实现的？: 407
+  Redis的Set是如何实现的？: 408
+  Redis的ZSet是如何实现的？: 409
+  什么是跳表？为什么用跳表？: 410
+  Redis跳表实现，hash底层实现，为什么使用ziplist，如何扩容: 411
+  Redis的HyperLogLog了解过吗？: 412
+  Redis的优势，解决了哪些问题: 413
+  Redis的持久化机制有哪些？: 414
+  RDB和AOF的区别是什么？: 415
+  Redis AOF日志写入流程与刷盘策略: 416
+  Redis故障恢复：RDB和AOF的区别: 417
+  Redis的主从复制原理: 418
+  Redis主从复制过程详解: 419
+  Redis如何实现高可用: 420
+  Redis的哨兵模式详解: 421
+  Redis哨兵模式选主策略详解: 422
+  Redis的集群模式详解: 423
+  Redis 7 懒惰删除机制详解: 424
+  Redis 7 后台IO机制深度解析: 425
+  Redis 7 线程模型完整解析: 426
+  Redis 7 内存优化详解: 427
+  Redis 7 事务机制深度解析: 428
+  Redis 7 缓存穿透、缓存击穿、缓存雪崩问题: 429
+  Redis 大 key 问题: 430
+  Redis热点key问题如何解决: 431
+  Redis的过期策略详解: 432
+  Redis内存淘汰策略详解: 433
+  Redis分布式锁的实现: 434
+  Redis缓存一致性问题与解决方案: 435
+  什么是 Redlock 算法？: 436
+  用 Stream 做消息队列行不行？: 437
+  Redis 7 实现延时队列: 438
+  Redis 7 实现布隆过滤器: 439
+  Redis 7 实现限流: 440
+  Redis 7 RESP 协议详解: 441
+  为什么 Redis 6.0 之后改为多线程？: 442
+  如何使用 Redis 实现数据去重？: 443
+  项目中如何使用 Redis？有哪些场景？: 444
+  WatchDog 的实现原理是什么？: 445
+  介绍一下Spring的IOC: 446
+  为什么要使用 Spring 框架？: 447
+  Spring IOC与AOP全面解析: 448
+  Spring中的Bean是线程安全的吗？: 449
+  SpringBean的初始化过程详解: 450
+  SpringBean的生命周期详解: 451
+  Spring中的Bean作用域详解: 452
+  '@Lazy注解能解决循环依赖吗？': 453
+  Spring循环依赖问题详解: 454
+  Spring三级缓存机制深度解析: 455
+  介绍一下Spring的AOP: 456
+  AOP通知类型: 457
+  Spring AOP实现，动态代理: 458
+  Spring的AOP在什么场景下会失效？: 459
+  Spring中如何开启事务？: 460
+  Spring的事务传播机制有哪些？: 461
+  Spring事务失效可能是哪些原因？: 462
+  Spring事务管理全面解析: 463
+  Spring事务实现原理及@Transactional注解原理: 464
+  Spring的事务在多线程下生效吗？为什么？: 465
+  同时使用@Transactional与@Async时，事务会不会生效？: 466
+  Spring中的事务事件如何使用？: 467
+  为什么不建议直接使用Spring的@Async？: 468
+  SpringBoot和Spring的区别是什么？: 469
+  为什么越来越多人选择 Spring Boot？: 470
+  为什么 Spring Boot 倡导约定优于配置？: 471
+  SpringBoot核心模块有哪些？: 472
+  SpringBoot是如何实现自动配置的？: 473
+  SpringBoot的启动流程是怎么样的？: 474
+  SpringBoot是如何实现main方法启动Web项目的？: 475
+  Spring6.0和SpringBoot3.0有什么新特性？: 476
+  为什么SpringBoot3中移除了spring.factories？: 477
+  SpringBoot如何做优雅停机？: 478
+  SpringMVC三层架构的好处: 479
+  Spring框架中用到的设计模式: 480
+  如何自定义一个SpringBoot Starter？: 481
+  实现一个SpringBoot Starter（实战案例）: 482
+  MyBatis 如何实现分页？: 483
+  'MyBatis 配置中的 #{} 与 ${} 有何区别？': 484
+  MyBatis 何时使用一级缓存？何时使用二级缓存？: 485
+  什么是单例模式，如何实现一个单例？: 486
+  什么是工厂模式？: 487
+  什么是策略模式？: 488
+  什么是模板方法模式？: 489
+  什么是责任链模式？: 490
+  什么是观察者模式？: 491
+  策略模式与代理模式的区别: 492
+  什么是CAP理论？: 493
+  什么是BASE理论？: 494
+  CAP协议、ACID理论、BASE理论、一致性模型对比详解: 495
+  什么是最终一致性？: 496
+  什么是一致性Hash？: 497
+  什么是幂等？如何解决幂等性问题？: 498
+  Paxos 协议的工作流程是什么？: 499
+  Raft 算法的原理是什么？: 500
+  分布式ID生成方案有哪些？: 501
+  雪花算法是什么？: 502
+  什么是分布式事务？: 503
+  分布式事务的解决方案有哪些？: 504
+  分布式事务方案对比：2PC、3PC、TCC、消息补偿: 505
+  什么是2PC和3PC？: 506
+  什么是TCC？: 507
+  什么是Saga？: 508
+  AT模式：Seata的自动化两阶段提交: 509
+  什么是分布式锁？: 510
+  分布式锁的实现方式有哪些？: 511
+  Redis实现分布式锁的原理？: 512
+  Zookeeper实现分布式锁的原理？: 513
+  什么是分库分表？: 514
+  什么时候需要分库分表？: 515
+  分库分表的策略有哪些？: 516
+  分库分表后如何解决跨库查询？: 517
+  分库分表后如何解决分布式事务？: 518
+  ShardingSphere的原理是什么？: 519
+  什么是微服务？: 520
+  SpringCloud有哪些核心组件？: 521
+  Eureka的工作原理是什么？: 522
+  Ribbon的负载均衡策略有哪些？: 523
+  Feign的工作原理是什么？: 524
+  Hystrix的熔断机制是什么？: 525
+  Gateway的工作原理是什么？: 526
+  Nacos和Eureka的区别？: 527
+  负载均衡策略有哪些？轮询、权重、随机、最小连接数等策略详解: 528
+  Nacos 如何实现服务注册与发现: 529
+  Nacos 健康检查的机制是什么: 530
+  Nacos 自我保护的原理是什么: 531
+  Nacos 事件监听是如何设计的: 532
+  Nacos 是怎么保障高可用的: 533
+  Nacos 在设计上有什么缺陷: 534
+  为什么要使用消息队列？: 535
+  消息队列的使用场景有哪些？: 536
+  Kafka、ActiveMQ、RabbitMQ和RocketMQ都有哪些区别？: 537
+  如何处理消息队列的消息积压问题？: 538
+  消息中间件如何做到高可用？: 539
+  谈谈你对 Pulsar 的理解。: 540
+  Kafka的架构是怎么样的？: 541
+  Kafka为什么有Topic还要用Partition？: 542
+  Kafka为什么这么快？: 543
+  Kafka消息的发送过程简单介绍一下？: 544
+  Kafka如何保证消息不丢失？: 545
+  为什么Kafka没办法100%保证消息不丢失？: 546
+  Kafka怎么保证消费只消费一次的？: 547
+  Kafka如何实现顺序消费？: 548
+  RocketMQ的架构是怎么样的？: 549
+  RocketMQ如何保证消息不丢失？: 550
+  RocketMQ的延迟消息是如何实现的？: 551
+  RabbitMQ的架构是怎么样的？: 552
+  RabbitMQ如何保证消息的可靠性？: 553
+  如何保证 RabbitMQ 的高可用性？: 554
+  RabbitMQ死信队列（Dead Letter Queue）详解: 555
+  RabbitMQ的Exchange(交换器)有哪4种类型？: 556
+  什么是RPC，和HTTP有什么区别？: 557
+  为什么RPC要比HTTP更快一些？: 558
+  什么场景只能用HTTP，不能用RPC？: 559
+  Dubbo的整体架构是怎么样的？: 560
+  Dubbo的服务调用的过程是什么样的？: 561
+  Dubbo如何实现像本地方法一样调用远程方法的？: 562
+  Dubbo支持哪些调用协议？: 563
+  Dubbo支持哪些序列化方式？: 564
+  Dubbo支持哪些负载均衡策略？: 565
+  Dubbo支持哪些服务治理？: 566
+  Dubbo服务发现与路由的概念有什么不同？: 567
+  Dubbo的SPI和JDK的SPI有什么区别？: 568
+  Dubbo为什么不用JDK的SPI？: 569
+  什么是Dubbo的优雅停机，怎么实现的？: 570
+  什么是泛化调用？: 571
+  为什么要使用 ElasticSearch？和传统关系数据库（如 MySQL）有什么不同？: 572
+  什么是倒排索引？: 573
+  ElasticSearch 为什么快？: 574
+  什么是 ElasticSearch 的深度分页问题？如何解决？: 575
+  如何保证 ES 和数据库的数据一致性？: 576
+  如何优化 ElasticSearch 搜索性能？: 577
+  工作中使用过 ZooKeeper 吗？它是什么？有哪些用途？: 578
+  什么是 ZooKeeper 的命名服务和配置管理？: 579
+  ZNode 有几种类型？ZooKeeper 的数据模型是什么样的？: 580
+  ZNode 节点中存储的是什么？: 581
+  ZNode 节点的监听机制是什么？请讲讲 ZooKeeper Watch 机制。: 582
+  你对 ZooKeeper 的特性有哪些了解？: 583
+  ZooKeeper 如何保证事务的顺序一致性？: 584
+  ZooKeeper 的服务器有几种角色？Server 有哪些工作状态？: 585
+  ZooKeeper 如何保证主从节点数据一致性？: 586
+  讲一下 ZooKeeper 的选举机制。: 587
+  Dubbo 与 ZooKeeper 有什么关系？为什么选择 ZooKeeper 作为注册中心？: 588
+  ZooKeeper 如何保证一致性？ZAB 协议的原理是什么？ZooKeeper 属于强一致性吗？: 589
+  谈谈你对 ZooKeeper 的理解。: 590
+  请解释 Netty 中 Reactor 模式。: 591
+  什么是零拷贝？Netty 如何实现零拷贝？: 592
+  为什么 Netty 线程池默认大小为 CPU 核数的两倍？: 593
+  Netty 是什么？为什么要使用 Netty？: 594
+  Netty 提供了哪些线程模型？: 595
+  Netty 有哪些核心组件？: 596
+  谈谈你对 Netty Pipeline 工作原理的理解。: 597
+  微服务架构设计与划分实践: 598
+  服务网格（Service Mesh）深度解析: 599
+  如何在 3 分钟内概览互联网架构 20 年来的演进？: 600
+  为什么放弃 FastDFS 而选择 MinIO？: 601
+  云原生（Cloud Native）全面解析: 602
+  谈谈你对 IaaS、PaaS、SaaS 的理解。: 603
+  当项目访问量激增时如何应对？: 604
+  秒杀场景中常用的限流算法有哪些？: 605
+  如何处理延时任务场景？: 606
+  如何实现排行榜，例如高考成绩排序？: 607
+  介绍你做过的最具挑战性的项目、负责的模块以及应对方案。: 608
+  如何防止优惠券被重复刷取？: 609
+  聊聊项目中的优秀设计与代码实践。: 610
+  如何设计抖音评论系统？如果加入好友关系该怎么做？: 611
+  如何设计跨机房部署的短链服务？: 612
+  当 CPU 突然飙高、系统反应变慢时如何排查？: 613
 title_to_category:
   面向对象有哪些特征？: 一、Java基础
   如何理解Java中的多态？: 一、Java基础
@@ -1817,6 +2087,7 @@ title_to_category:
   什么是深拷贝和浅拷贝？: 一、Java基础
   如何实现对象克隆？: 一、Java基础
   什么是反射机制？为什么反射慢？: 一、Java基础
+  反射中 Class.forName 与 ClassLoader 有何区别？: 一、Java基础
   int 和 Integer 有何区别？Integer 缓存如何实现？: 一、Java基础
   两个 Integer 对象比较时，为什么 100 等于 100 而 1000 不等于 1000？: 一、Java基础
   能否将 int 强制转换为 byte？若超出 byte 范围会怎样？: 一、Java基础
@@ -1892,6 +2163,7 @@ title_to_category:
   CopyOnWriteArrayList是如何实现的？: 二、集合框架
   HashMap的底层实现原理: 二、集合框架
   HashMap为什么线程不安全？: 二、集合框架
+  为什么 HashMap 会产生死循环？: 二、集合框架
   HashMap的容量为什么是2的幂次方？: 二、集合框架
   HashMap的加载因子为什么是0.75？: 二、集合框架
   HashMap什么时候扩容？: 二、集合框架
@@ -1910,6 +2182,7 @@ title_to_category:
   HashSet和HashMap有什么关系？: 二、集合框架
   PriorityQueue的底层实现原理: 二、集合框架
   ArrayDeque和LinkedList作为队列的区别: 二、集合框架
+  跳表与 B+ 树有何区别？: 二、集合框架
   JVM的运行时内存区域是怎样的？: 三、JVM
   JVM为什么要把堆和栈区分出来呢？: 三、JVM
   虚拟机中的堆一定是线程共享的吗？: 三、JVM
@@ -1918,14 +2191,17 @@ title_to_category:
   Java的堆是如何分代的？为什么分代？: 三、JVM
   什么是堆外内存？如何使用堆外内存？: 三、JVM
   OutOfMemory和StackOverflow的区别是什么？: 三、JVM
+  在什么情况下会发生栈内存溢出？: 三、JVM
   内存泄漏和内存溢出的区别是什么？: 三、JVM
   一个Java进程占用的内存都有哪些部分？: 三、JVM
   JVM内存结构全面解析: 三、JVM
   JVM是如何创建对象的？: 三、JVM
   一个对象的结构是什么样的？: 三、JVM
+  一个空的 Java Object 对象占用多少内存？: 三、JVM
   JVM如何保证给对象分配内存过程的线程安全？: 三、JVM
   Java中的对象一定在堆上分配内存吗？: 三、JVM
   什么是逃逸分析？: 三、JVM
+  JVM 为什么使用元空间替换永久代？: 三、JVM
   JVM如何判断对象是否存活？: 三、JVM
   什么是强引用、软引用、弱引用和虚引用？: 三、JVM
   JVM有哪些垃圾回收算法: 三、JVM
@@ -1946,6 +2222,7 @@ title_to_category:
   项目中如何选择垃圾回收器？为啥选择这个？: 三、JVM
   说一说JVM的并发回收和并行回收: 三、JVM
   新生代如果只有一个Eden+一个Survivor可以吗？: 三、JVM
+  JVM 分代年龄为什么是 15 次？可以设置为 25 次吗？: 三、JVM
   Java中的类什么时候会被加载？: 三、JVM
   Java中类加载的过程是怎么样的？: 三、JVM
   Java类加载流程与过程: 三、JVM
@@ -1982,12 +2259,15 @@ title_to_category:
   线程同步的方式有哪些？: 四、并发编程
   什么是死锁，如何解决？: 四、并发编程
   run、start、wait、sleep、notify、notifyAll区别: 四、并发编程
+  线程有哪些结束方式？: 四、并发编程
+  如何打印线程栈信息？: 四、并发编程
   什么是并发，什么是并行？: 四、并发编程
   能不能谈谈你对线程安全的理解？: 四、并发编程
   有哪些实现线程安全的方案: 四、并发编程
   并发编程中的原子性和数据库ACID的原子性一样吗？: 四、并发编程
   指令重排序: 四、并发编程
   final关键字与可见性是否有关: 四、并发编程
+  同步与异步有何区别？: 四、并发编程
   什么是Java内存模型（JMM）？: 四、并发编程
   什么是happens-before原则？: 四、并发编程
   happens-before和as-if-serial有啥区别和联系？: 四、并发编程
@@ -2039,6 +2319,11 @@ title_to_category:
   如何让Java的线程池顺序执行任务？: 四、并发编程
   如何实现一个动态线程池？: 四、并发编程
   线程池多线程操作对象是否需要加volatile保障可见性？: 四、并发编程
+  线程池有哪些状态？如何获取多线程并发执行结果？: 四、并发编程
+  线程池的原理是什么？各参数有什么作用？: 四、并发编程
+  线程池有哪些参数？分别代表什么含义: 四、并发编程
+  Future 如何通过阻塞等待获取结果？: 四、并发编程
+  如何安全地中断一个正在运行的线程？: 四、并发编程
   CompletableFuture的底层是如何实现的？: 四、并发编程
   如何对多线程进行编排？: 四、并发编程
   CountDownLatch、CyclicBarrier、Semaphore区别？: 四、并发编程
@@ -2053,6 +2338,9 @@ title_to_category:
   有了InheritableThreadLocal为啥还需要TransmittableThreadLocal？: 四、并发编程
   探测式清理和启发式清理: 四、并发编程
   父子线程之间怎么共享、传递数据？: 四、并发编程
+  如何理解 Fork/Join 框架？: 四、并发编程
+  谈谈你对时间轮的理解。: 四、并发编程
+  阻塞队列的有界与无界是什么意思？: 四、并发编程
   为什么不能在try-catch中捕获子线程的异常？: 四、并发编程
   如何实现主线程捕获子线程异常？: 四、并发编程
   Java线程出现异常，进程为啥不会退出？: 四、并发编程
@@ -2088,11 +2376,15 @@ title_to_category:
   用了索引还是很慢，可能是什么原因？: 五、数据库MySQL
   索引失效的问题如何排查？: 五、数据库MySQL
   MySQL选错索引的原因及解决方案: 五、数据库MySQL
+  创建索引的三种方式: 五、数据库MySQL
+  为什么命中索引的 SQL 比不命中更快？: 五、数据库MySQL
   WHERE条件顺序对索引的影响: 五、数据库MySQL
   UUID和自增ID做主键哪个好，为什么？: 五、数据库MySQL
   CHAR与VARCHAR的区别及使用场景: 五、数据库MySQL
   CHAR、VARCHAR、TEXT的区别与VARCHAR长度限制详解: 五、数据库MySQL
   MySQL中BLOB与TEXT的区别及使用场景: 五、数据库MySQL
+  存储 MD5 值应使用 VARCHAR 还是 CHAR？: 五、数据库MySQL
+  谈谈你对 NoSQL 的理解。: 五、数据库MySQL
   什么是数据库事务？: 五、数据库MySQL
   MySQL事务ACID实现原理: 五、数据库MySQL
   MySQL中的事务隔离级别: 五、数据库MySQL
@@ -2106,6 +2398,7 @@ title_to_category:
   为什么MySQL默认使用RR隔离级别？: 五、数据库MySQL
   为什么默认RR，大厂要改成RC？: 五、数据库MySQL
   MySQL的select会用到事务吗: 五、数据库MySQL
+  数据库隔离级别与锁之间的关系是什么？: 五、数据库MySQL
   介绍下InnoDB的锁机制: 五、数据库MySQL
   InnoDB中的表级锁、页级锁、行级锁: 五、数据库MySQL
   MySQL的行级锁锁的到底是什么: 五、数据库MySQL
@@ -2140,12 +2433,17 @@ title_to_category:
   MySQL慢查询优化: 五、数据库MySQL
   MySQL慢查询的排除与优化: 五、数据库MySQL
   MySQL优化（综合）: 五、数据库MySQL
+  COUNT(1)、COUNT(*) 与 COUNT(列名) 有何区别？: 五、数据库MySQL
+  UNION 与 UNION ALL 有何区别？: 五、数据库MySQL
+  DROP、DELETE 与 TRUNCATE 有何区别？: 五、数据库MySQL
+  SQL 约束有哪几种？: 五、数据库MySQL
   MySQL存储引擎详解与对比: 五、数据库MySQL
   InnoDB Buffer Pool缓冲池详解: 五、数据库MySQL
   Buffer Pool的读写过程详解: 五、数据库MySQL
   InnoDB支持的行格式详解: 五、数据库MySQL
   InnoDB的数据页与B+树的关系: 五、数据库MySQL
   InnoDB的页分裂和页合并机制: 五、数据库MySQL
+  什么是存储过程？有哪些优缺点？: 五、数据库MySQL
   什么是事务的2阶段提交: 五、数据库MySQL
   InnoDB的一次更新事务是怎么实现的: 五、数据库MySQL
   undolog会一直存在吗？什么时候删除: 五、数据库MySQL
@@ -2162,6 +2460,7 @@ title_to_category:
   数据库读写分离的代码实现方案: 五、数据库MySQL
   MySQL是AP的还是CP的系统？: 五、数据库MySQL
   什么是OnlineDDL: 五、数据库MySQL
+  你们的 MySQL 架构是什么样的？: 五、数据库MySQL
   MySQL怎么做热点数据高效更新？: 五、数据库MySQL
   高并发情况下自增主键会不会重复，为什么？: 五、数据库MySQL
   MySQL自增主键用完了会怎么样？: 五、数据库MySQL
@@ -2174,6 +2473,8 @@ title_to_category:
   阿里的数据库能抗秒杀的原理: 五、数据库MySQL
   MySQL分库分表方案与动态扩展策略: 五、数据库MySQL
   MySQL驱动表概念及选择策略: 五、数据库MySQL
+  百万级及以上数据如何安全删除？: 五、数据库MySQL
+  如何保证 MySQL 数据不丢失？: 五、数据库MySQL
   Redis 7 新特性: 六、Redis
   Redis有哪些数据结构？: 六、Redis
   Redis底层结构: 六、Redis
@@ -2211,12 +2512,18 @@ title_to_category:
   Redis内存淘汰策略详解: 六、Redis
   Redis分布式锁的实现: 六、Redis
   Redis缓存一致性问题与解决方案: 六、Redis
+  什么是 Redlock 算法？: 六、Redis
   用 Stream 做消息队列行不行？: 六、Redis
   Redis 7 实现延时队列: 六、Redis
   Redis 7 实现布隆过滤器: 六、Redis
   Redis 7 实现限流: 六、Redis
   Redis 7 RESP 协议详解: 六、Redis
+  为什么 Redis 6.0 之后改为多线程？: 六、Redis
+  如何使用 Redis 实现数据去重？: 六、Redis
+  项目中如何使用 Redis？有哪些场景？: 六、Redis
+  WatchDog 的实现原理是什么？: 六、Redis
   介绍一下Spring的IOC: 七、Spring框架
+  为什么要使用 Spring 框架？: 七、Spring框架
   Spring IOC与AOP全面解析: 七、Spring框架
   Spring中的Bean是线程安全的吗？: 七、Spring框架
   SpringBean的初始化过程详解: 七、Spring框架
@@ -2239,6 +2546,8 @@ title_to_category:
   Spring中的事务事件如何使用？: 七、Spring框架
   为什么不建议直接使用Spring的@Async？: 七、Spring框架
   SpringBoot和Spring的区别是什么？: 七、Spring框架
+  为什么越来越多人选择 Spring Boot？: 七、Spring框架
+  为什么 Spring Boot 倡导约定优于配置？: 七、Spring框架
   SpringBoot核心模块有哪些？: 七、Spring框架
   SpringBoot是如何实现自动配置的？: 七、Spring框架
   SpringBoot的启动流程是怎么样的？: 七、Spring框架
@@ -2250,6 +2559,9 @@ title_to_category:
   Spring框架中用到的设计模式: 七、Spring框架
   如何自定义一个SpringBoot Starter？: 七、Spring框架
   实现一个SpringBoot Starter（实战案例）: 七、Spring框架
+  MyBatis 如何实现分页？: 七、Spring框架
+  'MyBatis 配置中的 #{} 与 ${} 有何区别？': 七、Spring框架
+  MyBatis 何时使用一级缓存？何时使用二级缓存？: 七、Spring框架
   什么是单例模式，如何实现一个单例？: 八、设计模式
   什么是工厂模式？: 八、设计模式
   什么是策略模式？: 八、设计模式
@@ -2262,6 +2574,9 @@ title_to_category:
   CAP协议、ACID理论、BASE理论、一致性模型对比详解: 九、分布式理论
   什么是最终一致性？: 九、分布式理论
   什么是一致性Hash？: 九、分布式理论
+  什么是幂等？如何解决幂等性问题？: 九、分布式理论
+  Paxos 协议的工作流程是什么？: 九、分布式理论
+  Raft 算法的原理是什么？: 九、分布式理论
   分布式ID生成方案有哪些？: 十、分布式ID
   雪花算法是什么？: 十、分布式ID
   什么是分布式事务？: 十一、分布式事务
@@ -2299,6 +2614,9 @@ title_to_category:
   为什么要使用消息队列？: 十五、消息队列
   消息队列的使用场景有哪些？: 十五、消息队列
   Kafka、ActiveMQ、RabbitMQ和RocketMQ都有哪些区别？: 十五、消息队列
+  如何处理消息队列的消息积压问题？: 十五、消息队列
+  消息中间件如何做到高可用？: 十五、消息队列
+  谈谈你对 Pulsar 的理解。: 十五、消息队列
   Kafka的架构是怎么样的？: 十五、消息队列
   Kafka为什么有Topic还要用Partition？: 十五、消息队列
   Kafka为什么这么快？: 十五、消息队列
@@ -2312,6 +2630,7 @@ title_to_category:
   RocketMQ的延迟消息是如何实现的？: 十五、消息队列
   RabbitMQ的架构是怎么样的？: 十五、消息队列
   RabbitMQ如何保证消息的可靠性？: 十五、消息队列
+  如何保证 RabbitMQ 的高可用性？: 十五、消息队列
   RabbitMQ死信队列（Dead Letter Queue）详解: 十五、消息队列
   RabbitMQ的Exchange(交换器)有哪4种类型？: 十五、消息队列
   什么是RPC，和HTTP有什么区别？: 十六、RPC
@@ -2335,3 +2654,39 @@ title_to_category:
   什么是 ElasticSearch 的深度分页问题？如何解决？: 十七、ElasticSearch
   如何保证 ES 和数据库的数据一致性？: 十七、ElasticSearch
   如何优化 ElasticSearch 搜索性能？: 十七、ElasticSearch
+  工作中使用过 ZooKeeper 吗？它是什么？有哪些用途？: 十八、ZooKeeper
+  什么是 ZooKeeper 的命名服务和配置管理？: 十八、ZooKeeper
+  ZNode 有几种类型？ZooKeeper 的数据模型是什么样的？: 十八、ZooKeeper
+  ZNode 节点中存储的是什么？: 十八、ZooKeeper
+  ZNode 节点的监听机制是什么？请讲讲 ZooKeeper Watch 机制。: 十八、ZooKeeper
+  你对 ZooKeeper 的特性有哪些了解？: 十八、ZooKeeper
+  ZooKeeper 如何保证事务的顺序一致性？: 十八、ZooKeeper
+  ZooKeeper 的服务器有几种角色？Server 有哪些工作状态？: 十八、ZooKeeper
+  ZooKeeper 如何保证主从节点数据一致性？: 十八、ZooKeeper
+  讲一下 ZooKeeper 的选举机制。: 十八、ZooKeeper
+  Dubbo 与 ZooKeeper 有什么关系？为什么选择 ZooKeeper 作为注册中心？: 十八、ZooKeeper
+  ZooKeeper 如何保证一致性？ZAB 协议的原理是什么？ZooKeeper 属于强一致性吗？: 十八、ZooKeeper
+  谈谈你对 ZooKeeper 的理解。: 十八、ZooKeeper
+  请解释 Netty 中 Reactor 模式。: 十九、Netty
+  什么是零拷贝？Netty 如何实现零拷贝？: 十九、Netty
+  为什么 Netty 线程池默认大小为 CPU 核数的两倍？: 十九、Netty
+  Netty 是什么？为什么要使用 Netty？: 十九、Netty
+  Netty 提供了哪些线程模型？: 十九、Netty
+  Netty 有哪些核心组件？: 十九、Netty
+  谈谈你对 Netty Pipeline 工作原理的理解。: 十九、Netty
+  微服务架构设计与划分实践: 二十、架构设计与实战场景
+  服务网格（Service Mesh）深度解析: 二十、架构设计与实战场景
+  如何在 3 分钟内概览互联网架构 20 年来的演进？: 二十、架构设计与实战场景
+  为什么放弃 FastDFS 而选择 MinIO？: 二十、架构设计与实战场景
+  云原生（Cloud Native）全面解析: 二十、架构设计与实战场景
+  谈谈你对 IaaS、PaaS、SaaS 的理解。: 二十、架构设计与实战场景
+  当项目访问量激增时如何应对？: 二十、架构设计与实战场景
+  秒杀场景中常用的限流算法有哪些？: 二十、架构设计与实战场景
+  如何处理延时任务场景？: 二十、架构设计与实战场景
+  如何实现排行榜，例如高考成绩排序？: 二十、架构设计与实战场景
+  介绍你做过的最具挑战性的项目、负责的模块以及应对方案。: 二十、架构设计与实战场景
+  如何防止优惠券被重复刷取？: 二十、架构设计与实战场景
+  聊聊项目中的优秀设计与代码实践。: 二十、架构设计与实战场景
+  如何设计抖音评论系统？如果加入好友关系该怎么做？: 二十、架构设计与实战场景
+  如何设计跨机房部署的短链服务？: 二十、架构设计与实战场景
+  当 CPU 突然飙高、系统反应变慢时如何排查？: 二十、架构设计与实战场景

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "线程池有哪些参数？分别代表什么含义？"
+title: "线程池有哪些参数？分别代表什么含义"
 date: 2025-11-19
 categories: [Java并发, 调优]
 tags: [ThreadPoolExecutor, 参数调优, 面试题]

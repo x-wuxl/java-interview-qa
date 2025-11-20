@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "谈谈你对时间轮的理解"
+title: "谈谈你对时间轮的理解。"
 date: 2025-11-19
 categories: [分布式, 算法]
 tags: [时间轮, Kafka, Netty, 定时器, 面试题]
