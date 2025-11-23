@@ -61,15 +61,13 @@ layout: default
                 {% endif %}
                 
                 {% comment %}查找下一题{% endcomment %}
-                {% if next_order <= 461 %}
-                    {% for post in site.posts %}
-                        {% assign post_order = global_order[post.title] %}
-                        {% if post_order == next_order %}
-                            {% assign next_post = post %}
-                            {% break %}
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
+                {% for post in site.posts %}
+                    {% assign post_order = global_order[post.title] %}
+                    {% if post_order == next_order %}
+                        {% assign next_post = post %}
+                        {% break %}
+                    {% endif %}
+                {% endfor %}
                 
                 {% if prev_post %}
                 <div class="prev-post">
