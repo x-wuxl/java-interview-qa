@@ -27,7 +27,7 @@ back_to_top: true
 back_to_top_text: "回到顶部"
 
 # 页脚
-footer_content: "Copyright &copy; 2025 wuxl. Java 后端面试题库，共613道题目"
+
 
 # Aux links
 aux_links:
