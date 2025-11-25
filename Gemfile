@@ -4,7 +4,7 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.3.3"
 
 # Just the Docs 主题
-gem "just-the-docs", "0.8.2"
+gem "just-the-docs"
 
 # Jekyll 插件
 group :jekyll_plugins do
