@@ -64,6 +64,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-remote-theme  # Required for remote_theme to work on GitHub Pages
 
 # Google Analytics
 google_analytics_id: G-FX2D2XS2QM

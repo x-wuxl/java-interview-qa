@@ -11,6 +11,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-seo-tag", "~> 2.8"
   gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-remote-theme", "~> 0.4"
 end
 
 # Ruby 3.0+ 需要
