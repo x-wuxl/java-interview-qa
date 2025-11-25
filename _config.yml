@@ -9,8 +9,8 @@ author: "wuxl"
 # Language
 lang: zh-CN
 
-# Theme - Just the Docs (最简配置)
-remote_theme: just-the-docs/just-the-docs
+# Theme - Just the Docs
+theme: just-the-docs
 
 # 启用搜索
 search_enabled: true
@@ -35,7 +35,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-remote-theme
 
 # Google Analytics
 google_analytics_id: G-FX2D2XS2QM
