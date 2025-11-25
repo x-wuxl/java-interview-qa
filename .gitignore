@@ -32,3 +32,9 @@ Desktop.ini
 # 临时文件
 *.tmp
 *.bak
+
+# 迁移临时文件
+_config_*.yml
+*_BACKUP.yml
+NAVIGATION_FIX.md
+DEPLOYMENT_GUIDE.md
