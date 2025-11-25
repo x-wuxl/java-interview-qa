@@ -18,10 +18,46 @@ social:
   links:
     - https://github.com/x-wuxl
 
-# Theme
-theme: minima
+# Theme - Just the Docs
+remote_theme: just-the-docs/just-the-docs@v0.8.0
 markdown: kramdown
 highlighter: rouge
+
+# Just the Docs 主题配置
+# 启用搜索功能
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+# 导航设置
+nav_sort: case_insensitive
+
+# 启用面包屑导航
+breadcrumb_nav_enabled: true
+
+# 启用回到顶部按钮
+back_to_top: true
+back_to_top_text: "回到顶部"
+
+# 页脚内容
+footer_content: "Copyright &copy; 2025 wuxl. 本站内容遵循学习路径递进逻辑，共613道Java后端面试题。"
+
+# 代码高亮主题
+color_scheme: light
+
+# Aux links (右上角链接)
+aux_links:
+  "GitHub 仓库":
+    - "https://github.com/x-wuxl/java-interview-qa"
+
+# 设置外部链接在新标签页打开
+aux_links_new_tab: true
 
 # Plugins (these work natively on GitHub Pages)
 plugins:
@@ -32,9 +68,202 @@ plugins:
 # Google Analytics
 google_analytics_id: G-FX2D2XS2QM
 
+# Collections 配置 - 按分类组织题目
+collections:
+  java-basics:
+    output: true
+    permalink: /:collection/:name
+  collections:
+    output: true
+    permalink: /:collection/:name
+  jvm:
+    output: true
+    permalink: /:collection/:name
+  concurrent:
+    output: true
+    permalink: /:collection/:name
+  mysql:
+    output: true
+    permalink: /:collection/:name
+  redis:
+    output: true
+    permalink: /:collection/:name
+  spring:
+    output: true
+    permalink: /:collection/:name
+  design-patterns:
+    output: true
+    permalink: /:collection/:name
+  distributed-theory:
+    output: true
+    permalink: /:collection/:name
+  distributed-id:
+    output: true
+    permalink: /:collection/:name
+  distributed-transaction:
+    output: true
+    permalink: /:collection/:name
+  distributed-lock:
+    output: true
+    permalink: /:collection/:name
+  sharding:
+    output: true
+    permalink: /:collection/:name
+  microservices:
+    output: true
+    permalink: /:collection/:name
+  message-queue:
+    output: true
+    permalink: /:collection/:name
+  rpc:
+    output: true
+    permalink: /:collection/:name
+  elasticsearch:
+    output: true
+    permalink: /:collection/:name
+  zookeeper:
+    output: true
+    permalink: /:collection/:name
+  netty:
+    output: true
+    permalink: /:collection/:name
+  architecture:
+    output: true
+    permalink: /:collection/:name
+
+# Just the Docs 默认设置
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "java-basics"
+    values:
+      layout: "default"
+      parent: "Java基础"
+  - scope:
+      path: ""
+      type: "collections"
+    values:
+      layout: "default"
+      parent: "集合框架"
+  - scope:
+      path: ""
+      type: "jvm"
+    values:
+      layout: "default"
+      parent: "JVM"
+  - scope:
+      path: ""
+      type: "concurrent"
+    values:
+      layout: "default"
+      parent: "并发编程"
+  - scope:
+      path: ""
+      type: "mysql"
+    values:
+      layout: "default"
+      parent: "数据库MySQL"
+  - scope:
+      path: ""
+      type: "redis"
+    values:
+      layout: "default"
+      parent: "Redis"
+  - scope:
+      path: ""
+      type: "spring"
+    values:
+      layout: "default"
+      parent: "Spring框架"
+  - scope:
+      path: ""
+      type: "design-patterns"
+    values:
+      layout: "default"
+      parent: "设计模式"
+  - scope:
+      path: ""
+      type: "distributed-theory"
+    values:
+      layout: "default"
+      parent: "分布式理论"
+  - scope:
+      path: ""
+      type: "distributed-id"
+    values:
+      layout: "default"
+      parent: "分布式ID"
+  - scope:
+      path: ""
+      type: "distributed-transaction"
+    values:
+      layout: "default"
+      parent: "分布式事务"
+  - scope:
+      path: ""
+      type: "distributed-lock"
+    values:
+      layout: "default"
+      parent: "分布式锁"
+  - scope:
+      path: ""
+      type: "sharding"
+    values:
+      layout: "default"
+      parent: "分库分表"
+  - scope:
+      path: ""
+      type: "microservices"
+    values:
+      layout: "default"
+      parent: "微服务"
+  - scope:
+      path: ""
+      type: "message-queue"
+    values:
+      layout: "default"
+      parent: "消息队列"
+  - scope:
+      path: ""
+      type: "rpc"
+    values:
+      layout: "default"
+      parent: "RPC"
+  - scope:
+      path: ""
+      type: "elasticsearch"
+    values:
+      layout: "default"
+      parent: "ElasticSearch"
+  - scope:
+      path: ""
+      type: "zookeeper"
+    values:
+      layout: "default"
+      parent: "ZooKeeper"
+  - scope:
+      path: ""
+      type: "netty"
+    values:
+      layout: "default"
+      parent: "Netty"
+  - scope:
+      path: ""
+      type: "architecture"
+    values:
+      layout: "default"
+      parent: "架构设计与实战"
+
 # Build settings
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - LICENSE
+  - scripts/
+  - _data/学习路径排序_优化版.md
+  - 新增题目操作指南.md

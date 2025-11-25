@@ -3,13 +3,14 @@ source "https://rubygems.org"
 # Jekyll 版本
 gem "jekyll", "~> 4.3"
 
-# GitHub Pages 兼容
-gem "github-pages", group: :jekyll_plugins
+# Just the Docs 主题
+gem "just-the-docs", "~> 0.8.0"
 
 # Jekyll 插件
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-seo-tag", "~> 2.8"
+  gem "jekyll-sitemap", "~> 1.4"
 end
 
 # Ruby 3.0+ 需要

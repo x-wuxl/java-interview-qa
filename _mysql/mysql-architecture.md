@@ -1,0 +1,50 @@
+---
+title: 你们的 MySQL 架构是什么样的？
+categories: [Database]
+tags: [MySQL, Architecture, High Availability]
+description: 宏观角度解析 MySQL 的逻辑架构（Server 层与引擎层）以及生产环境中常用的高可用架构（主从、分库分表）。
+keywords: MySQL Architecture, InnoDB, Master-Slave, 分库分表, 高可用
+nav_order: 384
+parent: 数据库MySQL
+---
+## 1. MySQL 逻辑架构
+
+从内部视角看，MySQL 分为两层：**Server 层** 和 **存储引擎层**。
+
+### 1.1 Server 层 (通用逻辑)
+所有跨存储引擎的功能都在这一层实现：
+1.  **连接器 (Connector)**：管理连接，权限验证。
+2.  **查询缓存 (Query Cache)**：(MySQL 8.0 已移除) 鸡肋功能，命中率低。
+3.  **分析器 (Parser)**：词法分析，语法分析。
+4.  **优化器 (Optimizer)**：生成执行计划，选择索引。
+5.  **执行器 (Executor)**：调用引擎接口，返回结果。
+
+### 1.2 存储引擎层 (Storage Engine)
+负责数据的存储和提取。架构是**插件式**的。
+- **InnoDB**：默认引擎。支持事务、行锁、外键。
+- **MyISAM**：不支持事务，只支持表锁。
+- **Memory**：内存引擎，速度快但断电丢失。
+
+## 2. 生产环境高可用架构
+
+从运维部署视角看，我们的 MySQL 架构通常是：
+
+### 2.1 基础主从架构 (Master-Slave)
+- **一主多从**：Master 负责写，Slave 负责读（读写分离）。
+- **同步机制**：基于 Binlog 的异步复制或半同步复制（Semi-sync）。
+
+### 2.2 高可用方案 (HA)
+- **MHA / Orchestrator**：监控主库状态，主库宕机时自动故障转移（Failover），将从库提升为主库。
+- **双主模式 (Master-Master)**：两个节点互为主从，通常配合 Keepalived 使用，同一时间只写其中一个 VIP。
+
+### 2.3 分布式/分库分表
+当单表数据量超过 2000万 或 单库并发过高时：
+- **垂直拆分**：按业务模块拆分到不同库（如用户库、订单库）。
+- **水平拆分**：使用 **ShardingSphere** 或 **MyCat** 中间件，按 UserID 取模将数据分散到多个库表中。
+
+## 3. 总结
+
+**面试回答示例：**
+"我们的 MySQL 架构分为两部分看。
+逻辑上，MySQL 是 Server 层加插件式存储引擎层，我们全线使用 InnoDB 引擎。
+物理部署上，我们采用 **一主两从** 的架构，配合 **MHA** 做高可用切换。对于核心交易表，我们使用了 **ShardingSphere** 进行了分库分表，按 UserID 取模分片，保证单表数据量控制在 1000万以内。"
