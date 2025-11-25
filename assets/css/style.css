@@ -41,7 +41,7 @@ body {
 .site-header {
     background-color: var(--secondary-color);
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .site-title {
@@ -85,7 +85,12 @@ body {
     min-height: calc(100vh - 200px);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
     line-height: 1.3;
     margin-top: 1.5rem;
@@ -261,23 +266,6 @@ a:hover {
     padding: 0.2rem 0.6rem;
     border-radius: 3px;
     font-size: 0.85rem;
-    margin-right: 0.5rem;
-    color: var(--text-color);
-}
-
-.category-tag {
-    display: inline-block;
-    background: var(--primary-color);
-    color: white;
-    padding: 0.2rem 0.8rem;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    margin-right: 0.5rem;
-    text-decoration: none;
-}
-
-.category-tag:hover {
-    background: var(--hover-color);
     color: white;
     text-decoration: none;
 }
@@ -325,21 +313,6 @@ a:hover {
 
 .btn:hover .btn-icon {
     transform: translateX(3px);
-}
-
-/* ===================================
-   Footer Styles
-   =================================== */
-.site-footer {
-    background: var(--secondary-color);
-    color: #fff;
-    padding: 3rem 0 1rem;
-    margin-top: 4rem;
-}
-
-.footer-col-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -419,16 +392,16 @@ a:hover {
         text-align: center;
     }
 
-    .site-nav .menu-icon > svg {
+    .site-nav .menu-icon>svg {
         fill: #fff;
     }
 
-    .site-nav input ~ .trigger {
+    .site-nav input~.trigger {
         clear: both;
         display: none;
     }
 
-    .site-nav input:checked ~ .trigger {
+    .site-nav input:checked~.trigger {
         display: block;
         padding-bottom: 5px;
     }
@@ -513,7 +486,7 @@ a:hover {
     padding: 0.2rem 0.4rem;
     font-family: monospace;
     font-size: 0.85em;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Questions Container */
@@ -631,7 +604,7 @@ a:hover {
     transform: translateY(-50%);
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     padding: 1rem;
     max-width: 220px;
     max-height: 70vh;
@@ -826,4 +799,3 @@ a:hover {
     background-color: rgba(52, 152, 219, 0.1);
     border-radius: 4px;
 }
-
