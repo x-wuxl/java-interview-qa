@@ -775,3 +775,55 @@ a:hover {
         font-size: 0.7rem;
     }
 }
+
+/* ===================================
+   Just the Docs Theme Overrides & Fixes
+   =================================== */
+
+/* 1. Fix Title Overflow */
+.site-title {
+    font-size: 1.2rem !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    display: block !important;
+    padding-right: 1rem;
+}
+
+/* 2. Fix Navigation Alignment & Style */
+.nav-list-link {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 32px;
+    padding: 0.2rem 0.5rem !important;
+}
+
+.nav-list-expander {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 32px !important;
+    width: 32px !important;
+}
+
+.nav-list-expander svg {
+    top: auto !important;
+    position: relative !important;
+}
+
+/* Improve Nav Item Spacing */
+.nav-list-item {
+    margin-bottom: 2px !important;
+}
+
+/* 3. Hide Default Footer Credits */
+.site-footer-credits {
+    display: none !important;
+}
+
+/* 4. General Nav Improvements */
+.nav-list-link:hover {
+    text-decoration: none !important;
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: 4px;
+}
+

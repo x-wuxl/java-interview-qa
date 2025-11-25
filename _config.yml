@@ -58,5 +58,5 @@ exclude:
   - scripts/
   - _data/学习路径排序_优化版.md
   - 新增题目操作指南.md
-  - NAVIGATION_FIX.md
   - _posts/
+  - CLAUDE.md
