@@ -10,7 +10,11 @@ author: "wuxl"
 lang: zh-CN
 
 # Theme - Just the Docs
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
+
+# Markdown and syntax highlighting
+markdown: kramdown
+highlighter: rouge
 
 # 启用搜索
 search_enabled: true
@@ -35,6 +39,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 # Google Analytics
 google_analytics_id: G-FX2D2XS2QM
