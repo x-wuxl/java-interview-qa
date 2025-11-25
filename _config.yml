@@ -33,6 +33,8 @@ footer_content: "Copyright &copy; 2025 wuxl. Java 后端面试题库，共613道
 aux_links:
   "GitHub":
     - "https://github.com/x-wuxl/java-interview-qa"
+  "支持作者":
+    - "/java-interview-qa/about.html"
 
 # Plugins
 plugins:
