@@ -21,6 +21,18 @@
 
 /* PC端：侧边栏显示时的布局 */
 @media (min-width: 50rem) {
+
+    /* 覆盖主题默认的居中布局计算 - 这是关键！ */
+    .side-bar+.main {
+        margin-left: 264px !important;
+        /* 固定为侧边栏宽度，不再使用主题的居中计算 */
+    }
+
+    /* 让主内容区域不受默认的66.5rem限制 */
+    .main {
+        max-width: none !important;
+    }
+
     .main-content-wrap {
         max-width: none !important;
     }
@@ -33,9 +45,16 @@
 
 /* 大屏幕优化：限制整体最大宽度避免内容过宽 */
 @media (min-width: 87.5rem) {
-    .main-content-wrap {
-        max-width: 1800px !important;
-        margin: 0 auto !important;
+
+    /* 整体容器最大宽度 - 主内容区域 */
+    .side-bar+.main {
+        max-width: calc(1800px - 264px) !important;
+        /* 1800px总宽 - 侧边栏264px = 1536px */
+        margin-left: 264px !important;
+    }
+
+    .main {
+        max-width: calc(1800px - 264px) !important;
     }
 }
 
