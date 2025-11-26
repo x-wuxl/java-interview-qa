@@ -1,12 +1,6 @@
 /* ===================================
-   CSS Reset and Base Styles
+   CSS Variables
    =================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
     --primary-color: #3498db;
     --secondary-color: #2c3e50;
@@ -21,111 +15,9 @@
     --danger-color: #e74c3c;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-}
-
-.wrapper {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 /* ===================================
-   Header Styles
+   Post Layout Styles (for post.html)
    =================================== */
-.site-header {
-    background-color: var(--secondary-color);
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.site-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fff !important;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.site-title:hover {
-    color: var(--primary-color) !important;
-}
-
-.site-nav {
-    float: right;
-    line-height: 2.5rem;
-}
-
-.site-nav .page-link {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 2rem;
-    transition: color 0.3s ease;
-}
-
-.site-nav .page-link:hover {
-    color: var(--primary-color);
-}
-
-.nav-trigger,
-.menu-icon {
-    display: none;
-}
-
-/* ===================================
-   Main Content Styles
-   =================================== */
-.page-content {
-    padding: 3rem 0;
-    min-height: calc(100vh - 200px);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 600;
-    line-height: 1.3;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--secondary-color);
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--hover-color);
-    border-bottom: 1px solid var(--border-color);
-}
-
 .post-title {
     font-size: 1.8rem;
     color: var(--secondary-color);
@@ -299,143 +191,17 @@ a:hover {
 
 .btn:hover .btn-icon {
     transform: translateX(3px);
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-col h3 {
-    color: #fff;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.footer-col p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #bdc3c7;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-links a {
-    color: #bdc3c7;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: var(--primary-color);
-}
-
-.footer-bottom {
-    border-top: 1px solid #34495e;
-    padding-top: 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #bdc3c7;
-}
-
-.footer-bottom a {
-    color: var(--primary-color);
 }
 
 /* ===================================
-   Responsive Styles
+   Home Page Styles (for home.html)
    =================================== */
-@media screen and (max-width: 768px) {
-    .site-nav {
-        position: absolute;
-        top: 3.5rem;
-        right: 1rem;
-        background-color: var(--secondary-color);
-        border: 1px solid #34495e;
-        border-radius: 5px;
-        text-align: right;
-    }
-
-    .site-nav label[for="nav-trigger"] {
-        display: block;
-        float: right;
-        width: 36px;
-        height: 36px;
-        z-index: 2;
-        cursor: pointer;
-    }
-
-    .site-nav .menu-icon {
-        display: block;
-        float: right;
-        width: 36px;
-        height: 26px;
-        line-height: 0;
-        padding-top: 10px;
-        text-align: center;
-    }
-
-    .site-nav .menu-icon>svg {
-        fill: #fff;
-    }
-
-    .site-nav input~.trigger {
-        clear: both;
-        display: none;
-    }
-
-    .site-nav input:checked~.trigger {
-        display: block;
-        padding-bottom: 5px;
-    }
-
-    .site-nav .page-link {
-        display: block;
-        padding: 5px 10px;
-        margin-left: 0;
-    }
-
-    .post-navigation {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .post-title {
-        font-size: 2rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    .wrapper {
-        padding: 0 15px;
-    }
-
-    h1 {
-        font-size: 1.75rem;
-    }
-}
-
-/* ===================================
-   Home Page Styles
-   =================================== */
-
 .home-page {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
 }
 
-/* Header Section */
 .home-header {
     text-align: center;
     padding: 2rem 0;
@@ -471,7 +237,6 @@ a:hover {
     border-radius: 3px;
     padding: 0.2rem 0.4rem;
     font-family: monospace;
-    scroll-margin-top: 80px;
 }
 
 .section-title {
@@ -490,7 +255,6 @@ a:hover {
     font-weight: normal;
 }
 
-/* Subsection Styles */
 .subsection {
     margin-bottom: 1.5rem;
 }
@@ -503,7 +267,6 @@ a:hover {
     border-left: 3px solid var(--success-color);
 }
 
-/* Question List */
 .question-list {
     list-style: none;
     padding: 0;
@@ -654,7 +417,9 @@ a:hover {
     box-shadow: 0 6px 16px rgba(52, 152, 219, 0.5);
 }
 
-/* Responsive Design */
+/* ===================================
+   Responsive Design
+   =================================== */
 @media screen and (max-width: 1199px) {
     .sidebar-nav {
         display: none;
@@ -699,6 +464,10 @@ a:hover {
         bottom: 1rem;
         right: 1rem;
     }
+
+    .post-navigation {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -715,55 +484,4 @@ a:hover {
         height: 20px;
         font-size: 0.7rem;
     }
-}
-
-/* ===================================
-   Just the Docs Theme Overrides & Fixes
-   =================================== */
-
-/* 1. Fix Title Overflow */
-.site-title {
-    font-size: 1.2rem !important;
-    line-height: 1.4 !important;
-    white-space: normal !important;
-    display: block !important;
-    padding-right: 1rem;
-}
-
-/* 2. Fix Navigation Alignment & Style */
-.nav-list-link {
-    display: flex !important;
-    align-items: center !important;
-    min-height: 32px;
-    padding: 0.2rem 0.5rem !important;
-}
-
-.nav-list-expander {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    height: 32px !important;
-    width: 32px !important;
-}
-
-.nav-list-expander svg {
-    top: auto !important;
-    position: relative !important;
-}
-
-/* Improve Nav Item Spacing */
-.nav-list-item {
-    margin-bottom: 2px !important;
-}
-
-/* 3. Hide Default Footer Credits */
-.site-footer-credits {
-    display: none !important;
-}
-
-/* 4. General Nav Improvements */
-.nav-list-link:hover {
-    text-decoration: none !important;
-    background-color: rgba(52, 152, 219, 0.1);
-    border-radius: 4px;
 }
