@@ -123,20 +123,6 @@ a {
 
 a:hover {
     color: var(--hover-color);
-    text-decoration: underline;
-}
-
-/* ===================================
-   Post/Article Styles
-   =================================== */
-.post {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.post-header {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
     border-bottom: 1px solid var(--border-color);
 }
 
