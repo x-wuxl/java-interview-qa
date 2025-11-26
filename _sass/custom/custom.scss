@@ -1,0 +1,160 @@
+/* ===================================
+   Just the Docs Theme Custom Overrides
+   =================================== */
+
+/* ===================================
+   问题1: PC端宽度优化 - 更好地利用屏幕空间
+   =================================== */
+
+/* 覆盖主容器的最大宽度限制 */
+.main-content-wrap,
+.main-content,
+.site-header,
+.site-footer {
+    max-width: none !important;
+}
+
+/* 主内容区域使用更宽的布局 */
+.main {
+    max-width: 95% !important;
+    margin: 0 auto;
+}
+
+/* 侧边栏 + 主内容的整体容器 */
+.side-bar {
+    width: 280px !important;
+    min-width: 280px !important;
+}
+
+/* 当侧边栏显示时，主内容区域的宽度 */
+@media (min-width: 50rem) {
+    .main-content-wrap {
+        max-width: none !important;
+        width: 100% !important;
+    }
+
+    .main-content {
+        max-width: none !important;
+        margin-left: 280px !important;
+        width: calc(100% - 280px) !important;
+    }
+}
+
+/* 大屏幕上进一步优化 */
+@media (min-width: 66.5rem) {
+    .main {
+        max-width: 1800px !important;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .main-content {
+        max-width: none !important;
+    }
+}
+
+/* ===================================
+   问题2: 移动端导航栏和标题显示优化
+   =================================== */
+
+/* 移动端标题优化 - 确保文字完整显示 */
+@media (max-width: 49.99rem) {
+
+    /* 网站标题 - 允许换行，确保完整显示 */
+    .site-title {
+        font-size: 1rem !important;
+        line-height: 1.3 !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        max-width: calc(100vw - 100px) !important;
+        padding-right: 0.5rem !important;
+    }
+
+    /* 顶部导航区域 */
+    .site-header {
+        padding: 0.75rem 1rem !important;
+    }
+
+    /* 导航菜单按钮 - 确保有足够空间 */
+    .site-button {
+        margin-left: 0.5rem !important;
+    }
+
+    /* 侧边栏导航 - 移动端优化 */
+    .site-nav,
+    .aux-nav {
+        padding-top: 0.5rem !important;
+    }
+
+    /* 导航链接文字 - 确保可读性 */
+    .nav-list .nav-list-item .nav-list-link {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        padding: 0.5rem 0.75rem !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+    }
+
+    /* 导航列表项 */
+    .nav-list-item {
+        margin: 0.25rem 0 !important;
+    }
+
+    /* 修复移动端菜单按钮对齐 */
+    .site-header .site-button {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* 小屏手机进一步优化 */
+@media (max-width: 31.25rem) {
+    .site-title {
+        font-size: 0.9rem !important;
+        max-width: calc(100vw - 80px) !important;
+    }
+
+    .nav-list .nav-list-item .nav-list-link {
+        font-size: 13px !important;
+        padding: 0.4rem 0.6rem !important;
+    }
+}
+
+/* ===================================
+   额外优化: 改善整体阅读体验
+   =================================== */
+
+/* 内容区域的内边距优化 */
+.main-content {
+    padding: 2rem 2rem 3rem !important;
+}
+
+@media (max-width: 49.99rem) {
+    .main-content {
+        padding: 1.5rem 1rem 2rem !important;
+    }
+}
+
+/* 确保代码块在宽屏上也能充分利用空间 */
+.main-content pre {
+    max-width: 100% !important;
+}
+
+/* 表格响应式优化 */
+.main-content table {
+    display: block !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+}
+
+/* 搜索框在移动端的优化 */
+@media (max-width: 49.99rem) {
+    .search {
+        padding: 0.5rem !important;
+    }
+
+    .search-input {
+        font-size: 14px !important;
+    }
+}
