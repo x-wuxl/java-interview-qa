@@ -13,7 +13,7 @@ permalink: /
 {: .fs-6 .fw-300 }
 
 [开始学习](#学习路径){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[GitHub 仓库](https://github.com/x-wuxl/java-interview-qa){: .btn .fs-5 .mb-4 .mb-md-0 }
+[GitHub 仓库](https://github.com/x-wuxl/java-interview-qa){: .btn .fs-5 .mb-4 .mb-md-0 target="_blank" rel="noopener" }
 
 ---
 

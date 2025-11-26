@@ -1,39 +1,18 @@
 <div class="custom-footer-content">
     <hr style="margin: 2rem 0; border: none; border-top: 1px solid #e0e0e0;">
 
-    <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-        <div>
-            <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: #2c3e50;">{{ site.title | escape }}</h3>
-            <p style="font-size: 0.9rem; color: #6c757d; line-height: 1.6;">{{ site.description | escape }}</p>
-        </div>
-
-        <div>
-            <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: #2c3e50;">快速链接</h3>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin-bottom: 0.5rem;"><a href="{{ '/' | relative_url }}"
-                        style="font-size: 0.9rem; color: #3498db; text-decoration: none;">首页</a></li>
-                <li style="margin-bottom: 0.5rem;"><a href="{{ '/about.html' | relative_url }}"
-                        style="font-size: 0.9rem; color: #3498db; text-decoration: none;">关于本站</a></li>
-            </ul>
-
-            <h3 style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #2c3e50;">友链</h3>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin-bottom: 0.5rem;"><a href="https://x-wuxl.github.io/" target="_blank"
-                        rel="noopener noreferrer"
-                        style="font-size: 0.9rem; color: #3498db; text-decoration: none;">像素信标</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: #2c3e50;">关于</h3>
-            <p style="font-size: 0.9rem; color: #6c757d; line-height: 1.6;">
-                本站收录了数百道 Java 后端开发面试题及详细答案，
-                涵盖 Java 基础、集合框架、并发编程、JVM、Spring、数据库等主题。
-            </p>
-        </div>
+    <!-- 友链区域 -->
+    <div style="margin-bottom: 2rem;">
+        <h3 style="font-size: 1.1rem; margin: 0 0 1rem 0; color: #2c3e50; font-weight: 600;">友情链接</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 1.5rem;">
+            <li>
+                <a href="https://x-wuxl.github.io/" target="_blank" rel="noopener noreferrer"
+                    style="font-size: 0.95rem; color: #3498db; text-decoration: none; transition: color 0.2s;">像素信标</a>
+            </li>
+        </ul>
     </div>
 
+    <!-- 版权信息 -->
     <div style="padding-top: 1rem; text-align: center; border-top: 1px solid #e0e0e0;">
         <p style="font-size: 0.85rem; color: #6c757d; margin: 0;">
             &copy; {{ 'now' | date: "%Y" }} {{ site.author | escape }}.
