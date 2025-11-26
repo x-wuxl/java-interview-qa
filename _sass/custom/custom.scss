@@ -14,42 +14,28 @@
     max-width: none !important;
 }
 
-/* 主内容区域使用更宽的布局 */
-.main {
-    max-width: 95% !important;
-    margin: 0 auto;
-}
-
-/* 侧边栏 + 主内容的整体容器 */
+/* 侧边栏宽度 */
 .side-bar {
-    width: 280px !important;
-    min-width: 280px !important;
+    width: 264px !important;
 }
 
-/* 当侧边栏显示时，主内容区域的宽度 */
+/* PC端：侧边栏显示时的布局 */
 @media (min-width: 50rem) {
     .main-content-wrap {
         max-width: none !important;
-        width: 100% !important;
     }
 
     .main-content {
         max-width: none !important;
-        margin-left: 280px !important;
-        width: calc(100% - 280px) !important;
+        /* 让主内容区域充分利用空间，紧跟侧边栏 */
     }
 }
 
-/* 大屏幕上进一步优化 */
-@media (min-width: 66.5rem) {
-    .main {
-        max-width: 1800px !important;
-        margin: 0 auto;
-        padding: 0 2rem;
-    }
-
-    .main-content {
-        max-width: none !important;
+/* 大屏幕优化：限制整体最大宽度避免内容过宽 */
+@media (min-width: 87.5rem) {
+    .main-content-wrap {
+        max-width: 1600px !important;
+        margin: 0 auto !important;
     }
 }
 
