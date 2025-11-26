@@ -471,24 +471,6 @@ a:hover {
     border-radius: 3px;
     padding: 0.2rem 0.4rem;
     font-family: monospace;
-    font-size: 0.85em;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Questions Container */
-.questions-container {
-    margin-right: 0;
-}
-
-@media screen and (min-width: 1200px) {
-    .questions-container {
-        margin-right: 260px;
-    }
-}
-
-/* Section Styles */
-.question-section {
-    margin-bottom: 3rem;
     scroll-margin-top: 80px;
 }
 
