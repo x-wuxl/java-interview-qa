@@ -33,6 +33,9 @@ back_to_top_text: "回到顶部"
 aux_links:
   "GitHub":
     - "https://github.com/x-wuxl/java-interview-qa"
+  "支持作者":
+    - "/java-interview-qa/about.html"
+
 
 # 让辅助链接在新标签页打开
 aux_links_new_tab: true
