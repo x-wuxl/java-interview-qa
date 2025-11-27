@@ -10,9 +10,7 @@ permalink: /docs/distributed-id/
 
 题目范围：第 501-502 题，共 2 道题目
 
-本分类包含 Java 后端开发中关于 **分布式ID** 的核心面试题。
-
-题目按照循序渐进的学习路径组织，建议按顺序学习。
+**核心考点**：雪花算法 · UUID · 数据库自增 · Redis生成 · 美团Leaf · 百度UidGenerator
 
 ---
 

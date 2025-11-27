@@ -10,9 +10,7 @@ permalink: /docs/concurrent/
 
 题目范围：第 173-281 题，共 109 道题目
 
-本分类包含 Java 后端开发中关于 **并发编程** 的核心面试题。
-
-题目按照循序渐进的学习路径组织，建议按顺序学习。
+**核心考点**：线程生命周期 · synchronized · volatile · CAS · AQS · 线程池 · 死锁 · JMM内存模型 · happens-before
 
 ---
 

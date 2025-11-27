@@ -10,9 +10,7 @@ permalink: /docs/java-collections/
 
 题目范围：第 80-106 题，共 27 道题目
 
-本分类包含 Java 后端开发中关于 **集合框架** 的核心面试题。
-
-题目按照循序渐进的学习路径组织，建议按顺序学习。
+**核心考点**：HashMap原理 · ConcurrentHashMap · ArrayList vs LinkedList · 红黑树 · 扩容机制 · fail-fast机制
 
 ---
 
