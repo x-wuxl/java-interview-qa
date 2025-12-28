@@ -50,10 +50,6 @@ plugins:
 # Google Analytics
 google_analytics_id: G-FX2D2XS2QM
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-
 exclude:
   - Gemfile
   - Gemfile.lock
