@@ -11,7 +11,7 @@
 <div align="center">
   <img src="assets/images/hungry_java.png" alt="好饿啊，早知道不学Java了" width="200" />
   <img src="assets/images/still_learning.png" alt="扶我起来，我还能学" width="200" />
-  <img src="assets/images/3k_fine.png" alt="扶我起来，我还能学" width="200" />
+  <img src="assets/images/3k_fine.jpg" alt="行行行，3000一月我也可以的" width="200" />
 </div>
 
 
@@ -28,6 +28,7 @@
 - 🎨 **设计模式**：单例、工厂、策略、责任链等常用设计模式
 - 🌐 **分布式系统**：CAP/BASE 理论、分布式 ID、分布式事务、分布式锁、分库分表、微服务等
 - 🚀 **中间件**：消息队列（Kafka、RocketMQ、RabbitMQ）、RPC（Dubbo）、ElasticSearch 等
+- 💼 **大厂项目场景实战**：稳定性保障、性能优化、高并发处理、数据一致性、分库分表实战等
 
 ---
 
