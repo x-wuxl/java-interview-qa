@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xwuxl.com/java-interview-qa/sitemap.xml
